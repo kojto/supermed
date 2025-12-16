@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_trinity_prescription,trinity.prescription,model_trinity_prescription,,1,1,1,1
+access_trinity_prescription_template,trinity.prescription.template,model_trinity_prescription_template,,1,1,1,1
+access_trinity_prescription_dosage_instruction,trinity.prescription.dosage.instruction,model_trinity_prescription_dosage_instruction,,1,1,1,1
+access_trinity_prescription_fetch,trinity.prescription.fetch,model_trinity_prescription_fetch,,1,1,1,1
+access_trinity_prescription_validation_wizard,trinity.prescription.validation.wizard,model_trinity_prescription_validation_wizard,,1,1,1,1

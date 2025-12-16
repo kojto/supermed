@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="view_trinity_patient_form_inherit_prescription" model="ir.ui.view">
+            <field name="name">trinity.patient.form.inherit.prescription</field>
+            <field name="model">trinity.patient</field>
+            <field name="inherit_id" ref="trinity_patient.view_trinity_patient_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//sheet" position="inside">
+                    <div class="row" invisible="not prescription_ids">
+                        <group class="col-lg-12">
+                            <separator class="col-lg-12 separator"/>
+                            <field name="prescription_ids">
+                                <list class="ko-list-main" default_order="prescription_authoredOn desc" create="false" delete="false">
+                                    <field name="prescription_authoredOn"/>
+                                    <field name="prescription_category"/>
+                                    <field name="medication_medicationCode_DisplayValue"/>
+                                </list>
+                            </field>
+                        </group>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

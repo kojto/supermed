@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<!-- List View -->
+		<record id="view_prescription_list" model="ir.ui.view">
+			<field name="name">trinity.prescription.list</field>
+			<field name="model">trinity.prescription</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" default_order="prescription_lrn desc">
+					<field name="response_nrnPrescription" optional="show"/>
+					<field name="prescription_lrn" optional="show"/>
+					<field name="prescription_basedOn_lrn" optional="show"/>
+					<field name="prescription_basedOn_nrn" optional="show"/>
+					<field name="prescription_authoredOn" optional="show"/>
+					<field name="prescription_category" optional="show"/>
+					<field name="prescription_isProtocolBased" optional="hide"/>
+					<field name="prescription_protocolNumber" optional="hide"/>
+					<field name="prescription_protocolDate" optional="hide"/>
+					<field name="prescription_rhifNumber" optional="hide"/>
+					<field name="prescription_financingSource" optional="hide"/>
+					<field name="prescription_dispensationType" optional="hide"/>
+					<field name="prescription_allowedRepeatsNumber" optional="hide"/>
+					<field name="prescription_supplements" optional="hide"/>
+					<field name="group_groupIdentifier" optional="hide"/>
+					<field name="medication_sequenceId" optional="hide"/>
+					<field name="medication_medicationCode_name" optional="show"/>
+					<field name="medication_medicationCode" optional="hide"/>
+					<field name="medication_priority" optional="hide"/>
+					<field name="medication_note" optional="hide"/>
+					<field name="medication_icd_code" optional="hide"/>
+					<field name="medication_nhifCode" optional="show"/>
+					<field name="medication_quantityValue" optional="hide"/>
+					<field name="medication_isQuantityByForm" optional="hide"/>
+					<field name="medication_isSubstitutionAllowed" optional="hide"/>
+					<field name="effectiveDosePeriod_start" optional="hide"/>
+					<field name="effectiveDosePeriod_end" optional="hide"/>
+					<field name="dosageInstruction_sequence" optional="hide"/>
+					<field name="dosageInstruction_asNeeded" optional="hide"/>
+					<field name="dosageInstruction_route" optional="hide"/>
+					<field name="dosageInstruction_doseQuantityValue" optional="hide"/>
+					<field name="dosageInstruction_doseQuantityCode_UCUM" optional="hide"/>
+					<field name="dosageInstruction_doseQuantityCode" optional="hide"/>
+					<field name="dosageInstruction_frequency" optional="hide"/>
+					<field name="dosageInstruction_period" optional="hide"/>
+					<field name="dosageInstruction_periodUnit" optional="hide"/>
+					<field name="dosageInstruction_boundsDuration" optional="hide"/>
+					<field name="dosageInstruction_boundsDurationUnit" optional="hide"/>
+					<field name="dosageInstruction_text" optional="hide"/>
+					<field name="dosageInstruction_interpretation" optional="hide"/>
+					<field name="subject_full" optional="show"/>
+					<field name="subject_phone" optional="show"/>
+					<field name="subject_identifier" optional="show"/>
+					<field name="subject_identifierType" optional="hide"/>
+					<field name="subject_prBookNumber" optional="hide"/>
+					<field name="subject_nhifInsuranceNumber" optional="hide"/>
+					<field name="subject_birthDate" optional="hide"/>
+					<field name="subject_gender" optional="hide"/>
+					<field name="subject_age" optional="hide"/>
+					<field name="subject_weight" optional="hide"/>
+					<field name="subject_given" optional="hide"/>
+					<field name="subject_middle" optional="hide"/>
+					<field name="subject_family" optional="hide"/>
+					<field name="subject_isPregnant" optional="hide"/>
+					<field name="subject_isBreastFeeding" optional="hide"/>
+					<field name="subject_country" optional="hide"/>
+					<field name="subject_county" optional="hide"/>
+					<field name="subject_city" optional="hide"/>
+					<field name="subject_postalCode" optional="hide"/>
+					<field name="subject_email" optional="hide"/>
+					<field name="requester_pmi" optional="hide"/>
+					<field name="requester_pmiDeputy" optional="hide"/>
+					<field name="requester_qualification" optional="hide"/>
+					<field name="requester_qualification_nhif" optional="hide"/>
+					<field name="requester_role" optional="hide"/>
+					<field name="requester_practiceNumber" optional="hide"/>
+					<field name="requester_rhifAreaNumber" optional="hide"/>
+					<field name="requester_nhifNumber" optional="hide"/>
+					<field name="requester_phone" optional="hide"/>
+					<field name="requester_email" optional="hide"/>
+					<field name="response_status" optional="hide"/>
+				</list>
+			</field>
+		</record>
+		<!-- Form View -->
+		<record id="view_prescription_form" model="ir.ui.view">
+			<field name="name">trinity.prescription.form</field>
+			<field name="model">trinity.prescription</field>
+			<field name="arch" type="xml">
+				<form>
+					<link rel="stylesheet" type="text/css" href="/trinity_file_assets/static/src/css/custom.css"/>
+					<sheet>
+						<div class="d-flex justify-content-between align-items-center mb-3 ko-form-main-header-line">
+							<div class="w-100 px-0">
+								<div class="row no-gutters">
+									<div class="col-lg-8">
+										<div class="ko-form-view-title mt-1 ms-0">
+											<span>
+												<field name="prescription_category" readonly="1" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+											</span>
+										</div>
+									</div>
+									<div class="col-lg-4" invisible="response_status == '3' or response_status == '4' or response_status == '5' or response_status == '6' or response_status == '7'" groups="trinity_medical_facility.group_trinity_doctor_users">
+										<div class="d-flex justify-content-end">
+											<div invisible="not user_token_is_expired">
+												<button name="getToken" string="Изгради връзка с НЗИС" type="object" class="btn btn-outline-danger btn-sm" onclick="getToken()"/>
+											</div>
+											<div invisible="user_token_is_expired">
+												<button name="getSignatureP001" string="Активирай рецепта" type="object" class="btn btn-outline-primary btn-sm" onclick="getSignatureP001()" invisible="response_status_key == '1' or response_status_key == '5'"/>
+												<button name="getSignatureP007" string="Анулирай рецепта" type="object" class="btn btn-outline-primary btn-sm" onclick="getSignatureP007()" invisible="response_status_key != '1' or response_status_key == '5'"/>
+                                                <button name="validate_all_prescription_constraints" string="Валидирай" type="object" class="btn btn-outline-primary btn-sm"/>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class='row'>
+							<group class='col-lg-6'>
+                                <separator class='col-lg-12 separator'/>
+								<field name="subject_full"/>
+                                <field name="subject_identifier" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+                                <field name="subject_birthDate"/>
+                                <field name="subject_gender" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+								<field name="subject_phone"/>
+							</group>
+							<group class='col-lg-6'>
+                                <separator class='col-lg-12 separator'/>
+								<field name="response_status" readonly="1" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+								<field name="response_nrnPrescription" invisible="not response_nrnPrescription" readonly="1"/>
+								<field name="prescription_authoredOn" readonly="1"/>
+								<field name="prescription_basedOn_lrn" readonly="1" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+								<field name="medication_icd_code" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+							</group>
+						</div>
+						<div class='row'>
+							<group class="col-lg-12">
+                                <separator class='col-lg-12 separator'/>
+								<field name="prescription_template_name" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+								<field name="see_details" widget="boolean_toggle"/>
+							</group>
+						</div>
+						<div class='row' invisible="not see_details">
+							<group class="col-lg-6">
+                                <separator class='col-lg-12 separator'/>
+								<field name="prescription_category" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+								<field name="medication_medicationCode_name" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+								<field name="medication_form_name" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+								<field name="medication_priority" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+								<field name="medication_note" invisible="medication_priority == '1'"/>
+								<field name="medication_icd_code" invisible="prescription_category not in ['T2', 'T3', 'T6', 'T7']" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+								<field name="medication_nhifCode_name" invisible="prescription_category == '2'" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+								<field name="medication_sequenceId"/>
+								<field name="medication_quantityValue"/>
+								<field name="medication_isQuantityByForm" widget="boolean_toggle"/>
+								<field name="medication_isSubstitutionAllowed" widget="boolean_toggle"/>
+							</group>
+							<group class="col-lg-6">
+                                <separator class='col-lg-12 separator'/>
+								<field name="prescription_basedOn_nrn" readonly="1"/>
+								<field name="prescription_lrn" readonly="1"/>
+								<field name="prescription_authoredOn" readonly="1"/>
+								<field name="prescription_rhifNumber" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+								<field name="prescription_financingSource" widget="input" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+								<field name="prescription_dispensationType" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+								<field name="prescription_allowedRepeatsNumber"/>
+								<field name="prescription_isProtocolBased" widget="boolean_toggle"/>
+								<field name="prescription_protocolNumber" invisible="not prescription_isProtocolBased"/>
+								<field name="prescription_protocolDate" invisible="not prescription_isProtocolBased"/>
+							</group>
+							<group class="col-lg-12" invisible="prescription_category not in ['T2', 'T3']">
+                                <separator class='col-lg-12 separator'/>
+								<field name="group_groupIdentifier" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+							</group>
+							<group class="col-lg-6">
+                                <separator class='col-lg-12 separator'/>
+								<field name="effectiveDosePeriod_start"/>
+								<field name="effectiveDosePeriod_end"/>
+								<field name="dosageInstruction_frequency"/>
+								<field name="dosageInstruction_period"/>
+								<field name="dosageInstruction_periodUnit_name" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+								<field name="dosageInstruction_boundsDuration"/>
+								<field name="dosageInstruction_boundsDurationUnit_name" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+							</group>
+							<group class="col-lg-6">
+                                <separator class='col-lg-12 separator'/>
+								<field name="dosageInstruction_sequence"/>
+								<field name="dosageInstruction_asNeeded" widget="boolean_toggle"/>
+								<field name="dosageInstruction_route_name" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+								<field name="dosageInstruction_doseQuantityValue"/>
+								<field name="dosageInstruction_doseQuantityCode_name" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+							</group>
+                            <group class="col-lg-12">
+                                <separator class='col-lg-12 separator'/>
+                                <field name="dosageInstructions_id">
+                                    <list editable="bottom" order="active_from desc" class="ko-list-main">
+                                        <field name="prescription_template_id" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+                                        <field name="dosageInstruction_when" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+                                        <field name="dosageInstruction_when_name"/>
+                                        <field name="dosageInstruction_offset"/>
+                                    </list>
+                                </field>
+                            </group>
+                            <group class="col-lg-12">
+                                <separator class='col-lg-12 separator'/>
+                                <field name="dosageInstruction_interpretation"/>
+                            </group>
+							<group class="col-lg-6">
+                                <separator class='col-lg-12 separator'/>
+								<field name="subject_isPregnant" widget="boolean_toggle"/>
+								<field name="subject_isBreastFeeding" widget="boolean_toggle"/>
+							</group>
+						</div>
+						<div class='row' invisible="response_status not in ['1']">
+							<group class='col-lg-12'>
+							    <separator class='col-lg-12 separator'/>
+							    <h2 class='col-lg-12'>Анулиране на рецептата</h2>
+								<field name="revokeReason"/>
+							</group>
+						</div>
+						<div class='row d-none'>
+							<group class='col-lg-12'>
+                                <separator class='col-lg-12 separator'/>
+                                <field name="response_status_key" readonly="1"/>
+								<field name="P001" id="P001" widget="text"/>
+								<field name="P002" id="P002" widget="text"/>
+								<field name="SignedInfo_P001" id="SignedInfo_P001" widget="text"/>
+								<field name="SignedInfo_P001_signature" id="SignedInfo_P001_signature" widget="text"/>
+								<field name="P001_signed" id="P001_signed"/>
+                                <separator class='col-lg-12 separator'/>
+								<field name="P007" id="P007" widget="text"/>
+								<field name="P008" id="P008" widget="text"/>
+								<field name="SignedInfo_P007" id="SignedInfo_P007" widget="text"/>
+								<field name="SignedInfo_P007_signature" id="SignedInfo_P007_signature" widget="text"/>
+								<field name="P007_signed" id="P007_signed"/>
+                                <separator class='col-lg-12 separator'/>
+								<field name="user_token_certificate" id="user_token_certificate" widget="text"/>
+								<field name="supermed_certificate" id="supermed_certificate" widget="text"/>
+								<field name="tokenRequest" id="tokenRequest" widget="text"/>
+								<field name="SignedInfo_tokenRequest" id="SignedInfo_tokenRequest" widget="text"/>
+								<field name="SignedInfo_tokenRequest_signature" id="SignedInfo_tokenRequest_signature" widget="text"/>
+								<field name="tokenRequest_signed" id="tokenRequest_signed" widget="text"/>
+								<field name="tokenResponse" id="tokenResponse" widget="text"/>
+								<field name="user_token_expiresOnDatetime" id="user_token_expiresOnDatetime"/>
+								<field name="user_token_is_expired" id="user_token_is_expired"/>
+                                <separator class='col-lg-12 separator'/>
+                            </group>
+                            <group class='col-lg-12'>
+								<button name="post_token_api_request" type="object"/>
+								<button name="P001_api_request" type="object"/>
+								<button name="P007_api_request" type="object"/>
+							</group>
+						</div>
+						<div class='row' groups="base.group_system">
+							<group class='col-lg-12'>
+                                <field name="response_status_key" readonly="1"/>
+								<field name="P001" id="P001" widget="text"/>
+								<field name="P002" id="P002" widget="text"/>
+								<field name="SignedInfo_P001" id="SignedInfo_P001" widget="text"/>
+								<field name="SignedInfo_P001_signature" id="SignedInfo_P001_signature" widget="text"/>
+								<field name="P001_signed" id="P001_signed"/>
+								<button name="P001_api_request" type="object"/>
+								<field name="P007" id="P007" widget="text"/>
+								<field name="P008" id="P008" widget="text"/>
+								<field name="SignedInfo_P007" id="SignedInfo_P007" widget="text"/>
+								<field name="SignedInfo_P007_signature" id="SignedInfo_P007_signature" widget="text"/>
+								<field name="P007_signed" id="P007_signed"/>
+								<button name="P007_api_request" type="object"/>
+								<field name="user_token_certificate" id="user_token_certificate" widget="text"/>
+								<field name="supermed_certificate" id="supermed_certificate" widget="text"/>
+								<field name="tokenRequest" id="tokenRequest" widget="text"/>
+								<field name="SignedInfo_tokenRequest" id="SignedInfo_tokenRequest" widget="text"/>
+								<field name="SignedInfo_tokenRequest_signature" id="SignedInfo_tokenRequest_signature" widget="text"/>
+								<field name="tokenRequest_signed" id="tokenRequest_signed" widget="text"/>
+								<field name="tokenResponse" id="tokenResponse" widget="text"/>
+								<field name="user_token_expiresOnDatetime" id="user_token_expiresOnDatetime"/>
+								<field name="user_token_is_expired" id="user_token_is_expired"/>
+								<button name="post_token_api_request" type="object"/>
+							</group>
+						</div>
+					</sheet>
+				<script type="text/javascript" src="/trinity_file_assets/static/src/js/getToken.js"/>
+				<script type="text/javascript" src="/trinity_file_assets/static/src/js/getSignature.js"/>
+				<script type="text/javascript" src="/trinity_file_assets/static/src/js/getSignatureNhifMessages.js"/>
+				</form>
+			</field>
+		</record>
+		<!-- Search View -->
+		<record id="view_prescription_search" model="ir.ui.view">
+			<field name="name">trinity.prescription.search</field>
+			<field name="model">trinity.prescription</field>
+			<field name="arch" type="xml">
+				<search string="prescription">
+					<field name="prescription_lrn" string="Рецепта №"/>
+					<field name="prescription_basedOn_lrn" string="Основано на Амб. №" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+					<field name="prescription_basedOn_nrn" string="Основано на НРН"/>
+					<field name="prescription_authoredOn" string="Дата на издаване"/>
+					<field name="prescription_category" string="Категория рецепта" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+					<field name="prescription_rhifNumber" string="РЗОК №" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+					<field name="medication_medicationCode_name" string="Име на медикамента" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+					<field name="medication_nhifCode" string="НЗОК код"/>
+					<field name="subject_identifier" string="ЕГН" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+					<field name="subject_full" string="Пациент"/>
+					<field name="requester_pmi" string="УИН" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+				</search>
+			</field>
+		</record>
+		<!-- Actions -->
+		<record id="action_prescription_list" model="ir.actions.act_window">
+			<field name="name">Рецепти</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.prescription</field>
+			<field name="view_mode">list,form</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+                    Рецепти
+                </p>
+			</field>
+		</record>
+		<record id="action_prescription_form" model="ir.actions.act_window">
+			<field name="name">Нова рецепта</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.prescription</field>
+			<field name="view_mode">form</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+                    Нова рецепта
+                </p>
+			</field>
+		</record>
+		<!-- Menu Items -->
+		<menuitem name="Рецепти" id="menu_prescriptions_parent" sequence="4"/>
+		<menuitem name="Рецепти" id="menu_prescriptions_child" parent="menu_prescriptions_parent" action="action_prescription_list" sequence="10"/>
+	</data>
+</odoo>

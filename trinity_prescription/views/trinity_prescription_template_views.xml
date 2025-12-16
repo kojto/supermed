@@ -1,0 +1,155 @@
+<odoo>
+	<data>
+		<record model="ir.ui.view" id="view_trinity_prescription_template_list">
+			<field name="name">trinity.prescription.template.list</field>
+			<field name="model">trinity.prescription.template</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1">
+					<field name="prescription_template_name"/>
+					<field name="user_id"/>
+					<field name="company_id"/>
+					<field name="prescription_financingSource" optional="hide"/>
+					<field name="prescription_dispensationType" optional="hide"/>
+					<field name="prescription_allowedRepeatsNumber" optional="hide"/>
+					<field name="prescription_supplements" optional="hide"/>
+					<field name="group_groupIdentifier" optional="hide"/>
+					<field name="medication_sequenceId" optional="hide"/>
+					<field name="medication_medicationCode_name" optional="show"/>
+					<field name="medication_medicationCode" optional="hide"/>
+					<field name="medication_priority" optional="hide"/>
+					<field name="medication_note" optional="hide"/>
+					<field name="medication_icd_code" optional="hide"/>
+					<field name="medication_nhifCode" optional="hide"/>
+					<field name="medication_quantityValue" optional="hide"/>
+					<field name="medication_isQuantityByForm" optional="hide"/>
+					<field name="medication_isSubstitutionAllowed" optional="hide"/>
+					<field name="dosageInstruction_asNeeded" optional="hide"/>
+					<field name="dosageInstruction_route" optional="hide"/>
+					<field name="dosageInstruction_doseQuantityValue" optional="hide"/>
+					<field name="dosageInstruction_doseQuantityCode_UCUM" optional="hide"/>
+					<field name="dosageInstruction_doseQuantityCode" optional="hide"/>
+					<field name="dosageInstruction_frequency" optional="hide"/>
+					<field name="dosageInstruction_period" optional="hide"/>
+					<field name="dosageInstruction_periodUnit" optional="hide"/>
+					<field name="dosageInstruction_boundsDuration" optional="hide"/>
+					<field name="dosageInstruction_boundsDurationUnit" optional="hide"/>
+					<field name="dosageInstruction_text" optional="hide"/>
+				</list>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="view_trinity_prescription_template_form">
+			<field name="name">trinity.prescription.template.form</field>
+			<field name="model">trinity.prescription.template</field>
+			<field name="arch" type="xml">
+				<form>
+					<link rel="stylesheet" type="text/css" href="/trinity_file_assets/static/src/css/custom.css"/>
+
+					<link rel="stylesheet" type="text/css" href="/trinity_file_assets/static/src/css/custom.css"/>
+					<sheet>
+						<div class="d-flex justify-content-between align-items-center mb-3 ko-form-main-header-line">
+							<div class="w-100 px-0">
+								<div class="row no-gutters">
+									<div class="col-lg-8">
+										<div class="ko-form-view-title mt-1 ms-0">
+											<span>
+												<field name="prescription_category" readonly="1" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class='row'>
+							<group class="col-lg-12">
+                                <separator class='col-lg-12 separator'/>
+								<field name="prescription_template_name" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+							</group>
+						</div>
+						<div class='row'>
+							<group class="col-lg-6">
+                                <separator class='col-lg-12 separator'/>
+								<field name="prescription_category" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+								<field name="medication_medicationCode_name" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+								<field name="medication_form_name" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+								<field name="medication_priority" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+								<field name="medication_note" invisible="medication_priority == '1'"/>
+								<field name="medication_icd_code" invisible="prescription_category not in ['T2', 'T3', 'T6', 'T7']" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+								<field name="medication_nhifCode_name" invisible="prescription_category == '2'" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+								<field name="medication_sequenceId"/>
+								<field name="medication_quantityValue"/>
+								<field name="medication_isQuantityByForm" widget="boolean_toggle"/>
+								<field name="medication_isSubstitutionAllowed" widget="boolean_toggle"/>
+							</group>
+							<group class="col-lg-6">
+                                <separator class='col-lg-12 separator'/>
+								<field name="prescription_financingSource" widget="input" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+								<field name="prescription_dispensationType" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+								<field name="prescription_allowedRepeatsNumber"/>
+							</group>
+							<group class="col-lg-12" invisible="prescription_category not in ['T2', 'T3']">
+                                <separator class='col-lg-12 separator'/>
+								<field name="group_groupIdentifier" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+							</group>
+							<group class="col-lg-6">
+                                <separator class='col-lg-12 separator'/>
+								<field name="dosageInstruction_frequency"/>
+								<field name="dosageInstruction_period"/>
+								<field name="dosageInstruction_periodUnit_name" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+								<field name="dosageInstruction_boundsDuration"/>
+								<field name="dosageInstruction_boundsDurationUnit_name" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+							</group>
+							<group class="col-lg-6">
+                                <separator class='col-lg-12 separator'/>
+								<field name="dosageInstruction_asNeeded" widget="boolean_toggle"/>
+								<field name="dosageInstruction_route_name" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+								<field name="dosageInstruction_doseQuantityValue"/>
+								<field name="dosageInstruction_doseQuantityCode_name" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+							</group>
+                            <group class="col-lg-12">
+                                <separator class='col-lg-12 separator'/>
+                                <field name="dosageInstructions_id">
+                                    <list editable="bottom" order="active_from desc" class="ko-list-main">
+                                        <field name="prescription_template_id" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+                                        <field name="dosageInstruction_when" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+                                        <field name="dosageInstruction_when_name"/>
+                                        <field name="dosageInstruction_offset"/>
+                                    </list>
+                                </field>
+                            </group>
+						</div>
+					</sheet>
+				<script type="text/javascript" src="/trinity_file_assets/static/src/js/getToken.js"/>
+				<script type="text/javascript" src="/trinity_file_assets/static/src/js/getSignature.js"/>
+				<script type="text/javascript" src="/trinity_file_assets/static/src/js/getSignatureNhifMessages.js"/>
+				</form>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="view_trinity_prescription_template_search">
+			<field name="name">trinity.prescription.template.search</field>
+			<field name="model">trinity.prescription.template</field>
+			<field name="arch" type="xml">
+				<search string="Prescription template">
+					<field name="prescription_template_name"/>
+					<field name="user_id"/>
+					<field name="company_id"/>
+					<field name="medication_medicationCode_name"/>
+				</search>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_prescription_template">
+			<field name="name">Шаблони за рецепти</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.prescription.template</field>
+			<field name="view_mode">list,form</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">Създай шаблон за рецепта</p>
+			</field>
+		</record>
+
+		<menuitem name="Шаблони за рецепти" id="menu_prescription_template" parent="menu_prescriptions_parent" sequence="30" action="action_trinity_prescription_template"/>
+	</data>
+</odoo>

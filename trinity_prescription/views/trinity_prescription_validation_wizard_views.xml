@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+                <!-- Validation Wizard Form View -->
+        <record id="view_trinity_prescription_validation_wizard_form" model="ir.ui.view">
+            <field name="name">trinity.prescription.validation.wizard.form</field>
+            <field name="model">trinity.prescription.validation.wizard</field>
+            <field name="arch" type="xml">
+                <form string="">
+                    <style> .modal-dialog {max-width: 600px !important;}</style>
+                    <sheet>
+                        <group invisible="is_success">
+                            <field name="prescription_id" readonly="1"/>
+                            <field name="error_count" readonly="1" widget="integer"/>
+                        </group>
+
+                        <div class="bg-light mt-3 p-3 rounded">
+                            <field name="error_messages" widget="html" nolabel="1"/>
+                        </div>
+
+                        <field name="is_success" invisible="1"/>
+                    </sheet>
+                    <footer>
+                        <button string="Затвори" class="btn-primary" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="view_prescription_fetch_list" model="ir.ui.view">
+			<field name="name">trinity.prescription.fetch.list</field>
+			<field name="model">trinity.prescription.fetch</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" default_order="id desc">
+					<field name="create_date" optional="show"/>
+					<field name="retrieve_nrnPrescription" optional="show"/>
+					<field name="doctor_id" optional="show"/>
+				</list>
+			</field>
+		</record>
+		<record id="view_prescription_fetch_form" model="ir.ui.view">
+			<field name="name">trinity.prescription.fetch.form</field>
+			<field name="model">trinity.prescription.fetch</field>
+			<field name="arch" type="xml">
+				<form>
+					<link rel="stylesheet" type="text/css" href="/trinity_file_assets/static/src/css/custom.css"/>
+					<sheet>
+						<div class="d-flex justify-content-between align-items-center mb-3 ko-form-main-header-line">
+							<div class="w-100 px-0">
+								<div class="row no-gutters">
+									<div class="col-lg-8">
+										<div class="ko-form-view-title mt-1 ms-0">
+											<span>Извличане на Е-рецепта</span>
+										</div>
+									</div>
+									<div class="col-lg-4" groups="trinity_medical_facility.group_trinity_doctor_users">
+										<div class="d-flex justify-content-end">
+											<div invisible="not user_token_is_expired">
+												<button name="getToken" string="Изгради връзка с НЗИС" type="object" class="btn btn-outline-danger btn-sm" onclick="getToken()"/>
+											</div>
+											<div invisible="user_token_is_expired">
+												<button name="getSignatureP017" string="Извлечи рецепта" type="object" class="btn btn-outline-primary btn-sm" onclick="getSignatureP017()"/>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class='row'>
+							<group class='col-lg-6'>
+                                <separator class='col-lg-12 separator'/>
+								<field name="retrieve_nrnPrescription" placeholder="Въведете НРН на рецептата"/>
+							</group>
+							<group class='col-lg-12' invisible="P018 == False">
+                                <separator class='col-lg-12 separator'/>
+								<field name="P018" readonly="1"/>
+							</group>
+						</div>
+						<div class='row d-none'>
+							<group class='col-lg-12'>
+								<field name="P017" id="P017" widget="text"/>
+								<field name="P018" id="P018" widget="text"/>
+								<field name="SignedInfo_P017" id="SignedInfo_P017" widget="text"/>
+								<field name="SignedInfo_P017_signature" id="SignedInfo_P017_signature" widget="text"/>
+								<field name="P017_signed" id="P017_signed"/>
+								<field name="user_token_certificate" id="user_token_certificate" widget="text"/>
+								<field name="supermed_certificate" id="supermed_certificate" widget="text"/>
+								<field name="tokenRequest" id="tokenRequest" widget="text"/>
+								<field name="SignedInfo_tokenRequest" id="SignedInfo_tokenRequest" widget="text"/>
+								<field name="SignedInfo_tokenRequest_signature" id="SignedInfo_tokenRequest_signature" widget="text"/>
+								<field name="tokenRequest_signed" id="tokenRequest_signed" widget="text"/>
+								<field name="tokenResponse" id="tokenResponse" widget="text"/>
+								<field name="user_token_expiresOnDatetime" id="user_token_expiresOnDatetime"/>
+								<field name="user_token_is_expired" id="user_token_is_expired"/>
+							</group>
+							<group class='col-lg-12'>
+								<button name="P017_api_request" type="object"/>
+								<button name="post_token_api_request" type="object"/>
+							</group>
+						</div>
+						<div class='row' groups="base.group_system">
+							<group class='col-lg-12'>
+								<field name="P017" id="P017" widget="text"/>
+								<field name="P018" id="P018" widget="text"/>
+								<field name="SignedInfo_P017" id="SignedInfo_P017" widget="text"/>
+								<field name="SignedInfo_P017_signature" id="SignedInfo_P017_signature" widget="text"/>
+								<field name="P017_signed" id="P017_signed"/>
+								<field name="user_token_certificate" id="user_token_certificate" widget="text"/>
+								<field name="supermed_certificate" id="supermed_certificate" widget="text"/>
+								<field name="tokenRequest" id="tokenRequest" widget="text"/>
+								<field name="SignedInfo_tokenRequest" id="SignedInfo_tokenRequest" widget="text"/>
+								<field name="SignedInfo_tokenRequest_signature" id="SignedInfo_tokenRequest_signature" widget="text"/>
+								<field name="tokenRequest_signed" id="tokenRequest_signed" widget="text"/>
+								<field name="tokenResponse" id="tokenResponse" widget="text"/>
+								<field name="user_token_expiresOnDatetime" id="user_token_expiresOnDatetime"/>
+								<field name="user_token_is_expired" id="user_token_is_expired"/>
+							</group>
+						</div>
+					</sheet>
+				<script type="text/javascript" src="/trinity_file_assets/static/src/js/getToken.js"/>
+				<script type="text/javascript" src="/trinity_file_assets/static/src/js/getSignature.js"/>
+				<script type="text/javascript" src="/trinity_file_assets/static/src/js/getSignatureNhifMessages.js"/>
+				</form>
+			</field>
+		</record>
+		<record id="view_prescription_fetch_search" model="ir.ui.view">
+			<field name="name">trinity.prescription.fetch.search</field>
+			<field name="model">trinity.prescription.fetch</field>
+			<field name="arch" type="xml">
+				<search string="prescription_fetch">
+					<field name="retrieve_nrnPrescription" string="НРН на рецепта"/>
+					<field name="doctor_id" string="УИН на лекар" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+				</search>
+			</field>
+		</record>
+		<record id="action_prescription_fetch_list" model="ir.actions.act_window">
+			<field name="name">Извличане на рецепти</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.prescription.fetch</field>
+			<field name="view_mode">list,form</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+                    Извличане на рецепти от НЗИС по НРН
+                </p>
+			</field>
+		</record>
+		<record id="action_prescription_fetch_form" model="ir.actions.act_window">
+			<field name="name">Ново извличане</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.prescription.fetch</field>
+			<field name="view_mode">form</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+                    Извличане на рецепта
+                </p>
+			</field>
+		</record>
+		<menuitem name="Извличане на рецепти" id="menu_prescription_fetch" parent="menu_prescriptions_parent" action="action_prescription_fetch_list" sequence="20"/>
+	</data>
+</odoo>
