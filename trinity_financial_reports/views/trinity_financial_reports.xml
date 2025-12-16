@@ -1,0 +1,166 @@
+<odoo>
+	<data>
+		<!-- List Views -->
+		<record model="ir.ui.view" id="view_trinity_financial_reports_list">
+			<field name="name">trinity.financial.reports.list</field>
+			<field name="model">trinity.financial.reports</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" default_order="financial_reports_lrn desc">
+					<field name="financial_reports_lrn"/>
+					<field name="cost_bearer_id"/>
+					<field name="main_dr_performing_doctor_id"/>
+					<field name="company_name"/>
+					<field name="company_vat"/>
+					<field name="date_start"/>
+					<field name="date_end"/>
+					<field name="fr_nhif"/>
+				</list>
+			</field>
+		</record>
+		<!-- Form Views -->
+		<record model="ir.ui.view" id="view_trinity_financial_reports_form">
+			<field name="name">trinity.financial.reports.form</field>
+			<field name="model">trinity.financial.reports</field>
+			<field name="arch" type="xml">
+				<form>
+					<link rel="stylesheet" type="text/css" href="/trinity_file_assets/static/src/css/custom.css"/>
+					<style>
+                        .o_list_renderer tbody tr:has(td[colspan]:only-child):not(:has(a)) {
+                            display: none !important;
+                        }
+                        .o_list_renderer.o_renderer.table-responsive .o_list_table th[data-name="unit"],
+                        .o_list_renderer.o_renderer.table-responsive .o_list_table td[name="unit"] {
+                            max-width: 600px !important;
+                            text-align: left !important;
+                        }
+                        .o_list_renderer.o_renderer.table-responsive .o_list_table th[data-name="unit_quantity"],
+                        .o_list_renderer.o_renderer.table-responsive .o_list_table td[name="unit_quantity"] {
+                            max-width: 100px !important;
+                        }
+                        .o_list_renderer.o_renderer.table-responsive .o_list_table th[data-name="unit_price"],
+                        .o_list_renderer.o_renderer.table-responsive .o_list_table td[name="unit_price"] {
+                            max-width: 100px !important;
+                        }
+                        .o_list_renderer.o_renderer.table-responsive .o_list_table th[data-name="total_price"],
+                        .o_list_renderer.o_renderer.table-responsive .o_list_table td[name="total_price"] {
+                            max-width: 100px !important;
+                        }
+                        table > thead > tr {
+                            border-left: 1px solid rgba(11, 83, 148, 0.2) !important;
+                            border-right: 1px solid rgba(11, 83, 148, 0.2) !important;
+                            border-bottom: 1px solid rgba(11, 83, 148, 0.2) !important;
+                            border-top: 1px solid rgba(11, 83, 148, 0.2) !important;
+                        }
+                        table > thead > tr > th {
+                            border-left: 0px !important;
+                            border-right: 0px !important;
+                            border-bottom: 0px !important;
+                            border-top: 0px !important;
+                        }
+                    </style>
+					<sheet>
+						<div class="d-flex align-items-center mb-4">
+							<h1>Финансов отчет</h1>
+						</div>
+						<div class="row mb-2">
+							<label string="към фирма:" for="cost_bearer_id" class="o_form_label col-lg-3"/>
+							<field name="cost_bearer_id" class="col-lg-6" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+						</div>
+						<div class="row mb-2" invisible="cost_bearer_id_name != 'НЗОК'">
+							<label string="за лекар:" for="main_dr_performing_doctor_id" class="o_form_label col-lg-3"/>
+							<field name="main_dr_performing_doctor_id" class="col-lg-6" domain="[('active', '=', True)]" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+						</div>
+						<div class="row mb-2">
+							<label string="от:/до:" for="date_start" class="o_form_label col-lg-3"/>
+							<field class="col-lg-3" name="date_start"/>
+							<field class="col-lg-3" name="date_end"/>
+						</div>
+						<div class="row mb-2">
+							<label for="set_dates_to_current_month" class="o_form_label col-lg-3"/>
+							<div class="d-flex justify-content-evenly col-lg-6 pe-1">
+								<button string="" class="btn btn-outline-primary btn-md fa fa-angle-double-left" type="object" name="backward_one_year"/>
+								<button string="" class="btn btn-outline-primary btn-md fa fa-angle-left" type="object" name="backward_one_month"/>
+								<button string="днес" type="object" name="set_dates_to_today" class="btn btn-outline-primary btn-md"/>
+								<button string="тази седмица" type="object" name="set_dates_to_current_week" class="btn btn-outline-primary btn-md"/>
+								<button string="този месец" type="object" name="set_dates_to_current_month" class="btn btn-outline-primary btn-md"/>
+								<button string="този година" type="object" name="set_dates_to_current_year" class="btn btn-outline-primary btn-md"/>
+								<button string="" class="btn btn-outline-primary btn-md fa fa-angle-right" type="object" name="forward_one_month"/>
+								<button string="" class="btn btn-outline-primary btn-md fa fa-angle-double-right" type="object" name="forward_one_year"/>
+							</div>
+						</div>
+						<div style="margin: 20px; display: flex; justify-content: right;" invisible="cost_bearer_id_name == 'НЗОК' or not cost_bearer_id_name">
+							<button name="export_xlsx_xlm_file" string="Създай отчет" type="object" class="btn btn-outline-primary btn-md m-2" invisible="last_xlsx_export_filename"/>
+							<button name="create_invoice_from_financial_report" string="Създай фактура" type="object" class="btn btn-outline-primary btn-md m-2" invisible="not last_xlsx_export_filename or invoice_attachment"/>
+						</div>
+						<div style="margin: 20px; display: flex; justify-content: right;" invisible="cost_bearer_id_name != 'НЗОК' or not cost_bearer_id_name or not main_dr_performing_doctor_id">
+							<button name="get_signature_nhif" string="Създай отчет към НЗОК" type="object" class="btn btn-outline-primary btn-md m-2" onclick="getSignaturefr_nhif()" invisible="fr_nhif_signed == 'signed'"/>
+						</div>
+						<separator class="col-lg-12 separator" invisible="not contents"/>
+						<div class="row" invisible="not contents">
+							<div class="col-lg-12">
+								<field name="contents" nolabel="1">
+									<list create="false" delete="false" edit="false" class="ko-list-main">
+										<field name="unit"/>
+										<field name="unit_quantity"/>
+										<field name="unit_price"/>
+										<field name="total_price"/>
+									</list>
+								</field>
+							</div>
+						</div>
+						<group class="col-lg-12">
+							<field name="last_xlsx_export" readonly="1" filename="last_xlsx_export_filename" invisible="not last_xlsx_export"/>
+							<field name="last_xlsx_export_filename" invisible="1"/>
+							<field name="last_pdf_export" readonly="1" filename="last_pdf_export_filename" invisible="not last_pdf_export"/>
+							<field name="last_pdf_export_filename" invisible="1"/>
+							<field name="last_xml_export" filename="last_xml_export_filename" invisible="not last_xml_export"/>
+							<field name="last_xml_export_filename" invisible="1"/>
+							<field name="allinaz_annex" filename="allinaz_annex_filename" invisible="not allinaz_annex"/>
+							<field name="allinaz_annex_filename" invisible="1"/>
+							<field name="invoice_attachment" filename="invoice_attachment_filename" invisible="not invoice_attachment"/>
+							<field name="invoice_attachment_filename" invisible="1"/>
+							<field name="join_to_zip" filename="join_to_zip_filename" invisible="not join_to_zip"/>
+							<field name="join_to_zip_filename" invisible="1"/>
+						</group>
+						<separator class="col-lg-12 separator" invisible="not contents"/>
+						<div class="d-flex instruction_sub" invisible="not contents">
+							<div class="instruction_text" id="click_01">Листа на прегледите</div>
+						</div>
+						<field name="records_in_financial_report" widget="many2many_tags" invisible="not contents"/>
+						<group class="col-lg-12 d-none">
+							<field name="fr_nhif" id="fr_nhif" widget="text" string="fr_nhif"/>
+							<field name="SignedInfo_fr_nhif" id="SignedInfo_fr_nhif" widget="text" string="SignedInfo"/>
+							<field name="SignedInfo_fr_nhif_signature" id="SignedInfo_fr_nhif_signature" widget="text" string="SignedInfo signature"/>
+							<field name="user_token_certificate" id="user_token_certificate" widget="text"/>
+							<field name="supermed_certificate" id="supermed_certificate" widget="text"/>
+							<field name="fr_nhif_signed" id="fr_nhif_signed"/>
+							<button name="download_xml" string="СВАЛИ XLS ОТЧЕТ" type="object" class="btn btn-outline-primary btn-md m-2"/>
+						</group>
+					</sheet>
+					<script type="text/javascript" src="/trinity_file_assets/static/src/js/getSignatureNHIF_fr.js"/>
+				</form>
+			</field>
+		</record>
+		<!-- Search Views -->
+		<record model="ir.ui.view" id="view_trinity_financial_reports_search">
+			<field name="name">trinity.financial.reports.search</field>
+			<field name="model">trinity.financial.reports</field>
+			<field name="arch" type="xml">
+				<search string="Financial report">
+					<field name="financial_reports_lrn"/>
+					<field name="cost_bearer_id"/>
+					<field name="main_dr_performing_doctor_id"/>
+				</search>
+			</field>
+		</record>
+		<!-- Actions to Return Model Views -->
+		<record id="action_trinity_financial_reports" model="ir.actions.act_window">
+			<field name="name">Отчети</field>
+			<field name="res_model">trinity.financial.reports</field>
+			<field name="view_mode">list,form</field>
+		</record>
+		<!-- Menu Items -->
+		<menuitem name="Отчети" id="menu_financial_reports_parent" parent="kojto_finance.menu_kojto_finance" sequence="250"/>
+		<menuitem name="Отчети към ДЗОФ и НЗОК" id="menu_financial_reports" parent="menu_financial_reports_parent" sequence="10" action="action_trinity_financial_reports"/>
+	</data>
+</odoo>

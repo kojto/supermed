@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record id="allinanz_annex2" model="ir.actions.report">
+            <field name="name">Приложение №7.2</field>
+            <field name="model">trinity.financial.reports</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">trinity_financial_reports.allinanz_annex</field>
+            <field name="report_file">trinity_financial_reports.allinanz_annex</field>
+            <field name="print_report_name">object.get_filename_allinaz_annex() + 'Приложение №7.2'</field>
+            <field name="attachment_use">True</field>
+            <field name="attachment">object.get_filename_allinaz_annex() + '.pdf'</field>
+            
+            <!-- Add binding to the trinity.financial.reports model -->
+            <field name="binding_model_id" ref="model_trinity_financial_reports"/>
+            <field name="binding_type">report</field>
+        </record>
+    </data>
+</odoo>

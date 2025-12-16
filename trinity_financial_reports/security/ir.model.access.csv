@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_trinity_financial_reports,trinity.financial.reports,model_trinity_financial_reports,,1,1,1,1
+access_trinity_financial_report_contents,trinity.financial.report.contents,model_trinity_financial_report_contents,,1,1,1,1
+access_trinity_rejected_payment,trinity.rejected.payment,model_trinity_rejected_payment,,1,1,1,1

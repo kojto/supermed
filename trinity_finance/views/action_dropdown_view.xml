@@ -1,0 +1,36 @@
+<odoo>
+    <!--
+	<record model="ir.actions.server" id="action_set_create_uid_from_user_id">
+		<field name="name">Set Create UID from User ID</field>
+		<field name="model_id" ref="kojto_finance.model_kojto_finance_invoices"/>
+		<field name="binding_model_id" ref="kojto_finance.model_kojto_finance_invoices"/>
+		<field name="binding_view_types">list</field>
+		<field name="state">code</field>
+		<field name="code">action = records.set_create_uid_from_user_id()</field>
+	</record>
+    <record id="action_populate_month_examinations_for_cost_bearer_contact" model="ir.actions.server">
+		<field name="name">Populate Month Examinations for Cost Bearer Contact</field>
+		<field name="model_id" ref="kojto_finance.model_kojto_finance_invoices"/>
+		<field name="binding_model_id" ref="kojto_finance.model_kojto_finance_invoices"/>
+		<field name="binding_view_types">list</field>
+		<field name="state">code</field>
+		<field name="code">action = records.populate_month_examinations_for_cost_bearer_contact()</field>
+	</record>
+    <record model="ir.actions.server" id="action_recompute_statement_dates">
+        <field name="name">Recompute Statement Dates</field>
+        <field name="model_id" ref="kojto_finance.model_kojto_finance_bank_statements"/>
+        <field name="binding_model_id" ref="kojto_finance.model_kojto_finance_bank_statements"/>
+        <field name="binding_view_types">list</field>
+        <field name="state">code</field>
+        <field name="code">action = records.recompute_statement_dates()</field>
+    </record>
+-->
+	<record id="action_set_examination_paid_status" model="ir.actions.server">
+		<field name="name">Set Examination Paid Status</field>
+		<field name="model_id" ref="kojto_finance.model_kojto_finance_invoices"/>
+		<field name="binding_model_id" ref="kojto_finance.model_kojto_finance_invoices"/>
+		<field name="binding_view_types">list</field>
+		<field name="state">code</field>
+		<field name="code">action = records.set_examination_paid_status()</field>
+	</record>
+</odoo>

@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <!-- Trinity Finance Invoices List View - Replaces kojto_finance.view_kojto_invoices_list -->
+        <record id="kojto_finance.view_kojto_invoices_list" model="ir.ui.view">
+            <field name="name">Trinity Finance Invoices List</field>
+            <field name="model">kojto.finance.invoices</field>
+            <field name="arch" type="xml">
+                <list class="ko-list-main view_kojto_invoices_list" string="Фактури" duplicate="false" default_order="date_issue desc, consecutive_number desc">
+                    <field name="user_id" string="Потребител" optional="show" />
+                    <field name="document_in_out_type" widget="badge" decoration-primary="document_in_out_type == 'outgoing' and active" decoration-info="document_in_out_type == 'incoming' and active" decoration-muted="not active" string=" " />
+                    <field name="consecutive_number" string="Документ №" />
+                    <field name="invoice_type" string="Тип" />
+                    <field name="date_issue" optional="show" string="Дата на издаване" widget="date" />
+                    <field name="counterparty_id" />
+                    <field name="subject" />
+                    <field name="total_price" optional="show" string="Обща сума" widget="monetary" options="{'currency_field': 'currency_id'}" />
+                    <field name="open_amount" optional="show" string="Отворена сума" widget="monetary" options="{'currency_field': 'base_currency_id'}" decoration-danger="open_amount != 0" />
+                    <field name="paid_amount" optional="show" string="Платена сума" widget="monetary" options="{'currency_field': 'base_currency_id'}" />
+                    <field name="examinations_in_invoice" optional="hide"/>
+                    <field name="company_bank_account_id" string="Сметка"/>
+                    <field name="force_paid_status" string="Закрита фактура" widget="boolean_toggle" />
+                    <field name="paid" string="Платена" widget="boolean_toggle" />
+                    <button type="object" name="copy_invoice" class="fa fa-copy" help="Копирай фактура" />
+                    <button type="object" name="action_open_popup_pdf" class="fa fa-file-pdf-o" invisible="document_in_out_type != 'outgoing' and not attachments" help="Отвори PDF" />
+                    <button name="print_document_as_pdf" type="object" class="fa fa-download" title="Изтегли PDF" />
+                </list>
+            </field>
+        </record>
+
+        <record id="kojto_finance.view_kojto_invoices_form" model="ir.ui.view">
+            <field name="name">Trinity Finance Invoices Form</field>
+            <field name="model">kojto.finance.invoices</field>
+            <field name="arch" type="xml">
+                <form>
+					<link rel="stylesheet" type="text/css" href="/trinity_file_assets/static/src/css/custom.css"/>
+					<style>
+                        .o_list_renderer tbody tr:has(td[colspan]:only-child):not(:has(a)) {
+                            display: none !important;
+                        }
+                        .o_list_renderer.o_renderer.table-responsive .o_list_table th[data-name="e_examination_lrn"],
+                        .o_list_renderer.o_renderer.table-responsive .o_list_table td[name="e_examination_lrn"] {
+                            max-width: 200px !important;
+                            text-align: left !important;
+                        }
+                        .o_list_renderer.o_renderer.table-responsive .o_list_table th[data-name="patient_full_name"],
+                        .o_list_renderer.o_renderer.table-responsive .o_list_table td[name="patient_full_name"] {
+                            max-width: 200px !important;
+                            text-align: left !important;
+                        }
+                        .o_list_renderer.o_renderer.table-responsive .o_list_table th[data-name="examination_type_id"],
+                        .o_list_renderer.o_renderer.table-responsive .o_list_table td[name="examination_type_id"] {
+                            max-width: 400px !important;
+                            text-align: left !important;
+                        }
+                        .o_list_renderer.o_renderer.table-responsive .o_list_table th[data-name="examination_type_id_price"],
+                        .o_list_renderer.o_renderer.table-responsive .o_list_table td[name="examination_type_id_price"] {
+                            max-width: 50px !important;
+                            text-align: right !important;
+                        }
+                        .o_list_renderer.o_renderer.table-responsive .o_list_table th[data-name="examination_type_id_price_onsite"],
+                        .o_list_renderer.o_renderer.table-responsive .o_list_table td[name="examination_type_id_price_onsite"] {
+                            max-width: 50px !important;
+                            text-align: right !important;
+                        }
+						.o_field_one2many[name="contents"] .o_list_table.o_list_table_ungrouped
+						tbody tr:last-child td {
+						font-weight: bold !important;
+						}
+						table > thead > tr {
+						border-left: 1px solid rgba(11, 83, 148, 0.2) !important;
+						border-right: 1px solid rgba(11, 83, 148, 0.2) !important;
+						border-bottom: 1px solid rgba(11, 83, 148, 0.2) !important;
+						border-top: 1px solid rgba(11, 83, 148, 0.2) !important;
+						}
+						table > thead > tr > th {
+						border-left: 0px !important;
+						border-right: 0px !important;
+						border-bottom: 0px !important;
+						border-top: 0px !important;
+						}
+					</style>
+                    <sheet class="ko-form-body">
+                        <div class="d-flex justify-content-between align-items-center mb-3 ko-form-main-header-line">
+                            <div class="w-100 px-0">
+                                <div class="row no-gutters">
+                                    <div class="col-lg-4 me-0 align-items-center">
+                                        <div class="ko-form-view-title">
+                                            <span>
+                                                <field name="invoice_type" readonly="1" />
+                                            </span>
+                                            <field name="consecutive_number" readonly="1" class="ko-form-view-title" />
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-7 d-flex align-items-center py-2 py-md-0">
+                                        <div class="d-flex align-items-center">
+                                            <field name="document_in_out_type" widget="selection_badge" class="ko-offer-wselection-badge" />
+                                            <div class="border-start border-4 mx-2" style="height: 24px;" />
+                                            <field name="language_id" widget="selection_badge" class="ko-offer-wselection-badge" />
+                                            <div class="border-start border-4 mx-2" style="height: 24px;" />
+                                            <field name="currency_id" widget="selection_badge" class="ko-offer-wselection-badge" />
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-1 d-flex align-items-center justify-content-end py-2 py-md-0">
+                                        <button name="action_translate_invoice" class="bg-transparent border-0 d-flex align-items-center tooltip-button ms-2" type="object" invisible="invoice_is_in_company_language">
+                                            <i>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-translate" viewBox="0 0 16 16">
+                                                    <path d="M4.545 6.714 4.11 8H3l1.862-5h1.284L8 8H6.833l-.435-1.286zm1.634-.736L5.5 3.956h-.049l-.679 2.022z"/>
+                                                    <path d="M0 2a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v3h3a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-3H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zm7.138 9.995q.289.451.63.846c-.748.575-1.673 1.001-2.768 1.292.178.217.451.635.555.867 1.125-.359 2.08-.844 2.886-1.494.777.665 1.739 1.165 2.93 1.472.133-.254.414-.673.629-.89-1.125-.253-2.057-.694-2.82-1.284.681-.747 1.222-1.651 1.621-2.757H14V8h-3v1.047h.765c-.318.844-.74 1.546-1.272 2.13a6 6 0 0 1-.415-.492 2 2 0 0 1-.94.31"/>
+                                                </svg>
+                                            </i>
+                                            <span class="custom-tooltip d-none">Превод</span>
+                                        </button>
+                                        <button name="action_import_invoice_content" class="bg-transparent border-0 d-flex align-items-center tooltip-button ms-2" type="object">
+                                            <i>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cloud-upload" viewBox="0 0 16 16">
+                                                    <path fill-rule="evenodd" d="M4.406 1.342A5.53 5.53 0 0 1 8 0c2.69 0 4.923 2 5.166 4.579C14.758 4.804 16 6.137 16 7.773 16 9.569 14.502 11 12.687 11H10a.5.5 0 0 1 0-1h2.688C13.979 10 15 8.988 15 7.773c0-1.216-1.02-2.228-2.313-2.228h-.5v-.5C12.188 2.825 10.328 1 8 1a4.53 4.53 0 0 0-2.941 1.1c-.757.652-1.153 1.438-1.153 2.055v.448l-.445.049C2.064 4.805 1 5.952 1 7.318 1 8.785 2.23 10 3.781 10H6a.5.5 0 0 1 0 1H3.781C1.708 11 0 9.366 0 7.318c0-1.763 1.266-3.223 2.942-3.593.143-.863.698-1.723 1.464-2.383"/>
+                                                    <path fill-rule="evenodd" d="M7.646 4.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V14.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708z"/>
+                                                </svg>
+                                            </i>
+                                            <span class="custom-tooltip d-none">Импорт</span>
+                                        </button>
+                                        <button name="print_document_as_pdf" class="bg-transparent border-0 d-flex align-items-center tooltip-button ms-2" type="object">
+                                            <i>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-printer" viewBox="0 0 16 16">
+                                                    <path d="M2.5 8a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1"/>
+                                                    <path d="M5 1a2 2 0 0 0-2 2v2H2a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h1v1a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-1h1a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-1V3a2 2 0 0 0-2-2zM4 3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2H4zm1 5a2 2 0 0 0-2 2v1H2a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v-1a2 2 0 0 0-2-2zm7 2v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1"/>
+                                                </svg>
+                                            </i>
+                                            <span class="custom-tooltip d-none">Печат</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <separator class="separator-slim-top" />
+                        <!-- General Information -->
+                        <div class="row">
+                            <group class="col-lg-6">
+                                <field name="subject" />
+                                <field name="subcode_id" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}" />
+                                <field name="consecutive_number" />
+                                <field name="consecutive_number_selection" string="Available Numbers" invisible="invoice_type in ['proforma'] or document_in_out_type == 'incoming'" />
+                                <field name="invoice_vat_treatment_id" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}" />
+                                <field name="invoice_vat_rate" />
+                                <field name="invoice_acc_template_id" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}" domain="invoice_acc_template_domain" />
+                                <field name="invoice_acc_subtype_id" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}" domain="invoice_acc_subtype_domain" />
+                                <field name="parent_invoice_id" invisible="invoice_type in ['invoice', 'proforma']" required="invoice_type in ['credit_note', 'debit_note']" options="{'no_open': True, 'no_create_edit': True, 'no_create': True}" domain="[('invoice_type', 'in', ['invoice', 'proforma']), ('document_in_out_type', '=', document_in_out_type)]" />
+                                <field name="parent_invoice_date_issue" readonly="1" invisible="invoice_type in ['invoice', 'proforma']" required="invoice_type in ['credit_note', 'debit_note']" options="{'no_open': True, 'no_create_edit': True, 'no_create': True}" />
+                            </group>
+                            <group class="col-lg-6">
+                                <field widget="selection_badge" name="invoice_type" string="Type" class="ko-offer-wselection-badge" />
+                                <field name="payment_terms_id" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}" />
+                                <field name="date_issue" widget="date" />
+                                <field name="date_tax_event" widget="date" />
+                                <field name="date_due" widget="date" />
+                                <field name="accounting_op_date" string="Acc Op Date" invisible="1" />
+                                <field name="counterpartys_reference" />
+                                <field name="exchange_rate_to_bgn" />
+                                <field name="exchange_rate_to_eur" />
+                            </group>
+                        </div>
+                        <separator class="col-lg-12 separator" />
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <h2 style="font-size: 18px;" label="0" invisible="document_in_out_type != 'outgoing'">From</h2>
+                                <h2 style="font-size: 18px;" label="0" invisible="document_in_out_type != 'incoming'">To</h2>
+                                <group class="col-lg-12">
+                                    <field name="company_id" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}" domain="[('res_company_id', '=', company_id)]" />
+                                    <field name="company_name_id" domain="[('contact_id', '=', company_id)]" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}" />
+                                    <field name="company_address_id" domain="[('contact_id', '=', company_id)]" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}" />
+                                    <field name="company_email_id" domain="[('contact_id', '=', company_id)]" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}" />
+                                    <field name="company_phone_id" domain="[('contact_id', '=', company_id)]" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}" />
+                                    <field name="company_tax_number_id" domain="[('contact_id', '=', company_id)]" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}" />
+                                    <field name="company_registration_number" />
+                                </group>
+                            </div>
+                            <div class="col-lg-6 mb-auto" style="margin-bottom: auto">
+                                <h2 style="font-size: 18px;" invisible="document_in_out_type != 'outgoing'">To</h2>
+                                <h2 style="font-size: 18px;" invisible="document_in_out_type != 'incoming'">From</h2>
+                                <group class="col-lg-12">
+                                    <field name="counterparty_id" options="{'no_open': True, 'no_create_edit': True, 'no_create': True}"/>
+                                    <field name="counterparty_name_id" domain="[('contact_id', '=', counterparty_id)]" context="{'default_contact_id': counterparty_id}" options="{'no_open': True, 'no_create_edit': True, 'no_create': True}"/>
+                                    <field name="counterparty_address_id" domain="[('contact_id', '=', counterparty_id)]" context="{'default_contact_id': counterparty_id}" options="{'no_open': True, 'no_create_edit': True, 'no_create': True}"/>
+                                    <field name="counterparty_email_id" domain="[('contact_id', '=', counterparty_id)]" context="{'default_contact_id': counterparty_id}" options="{'no_open': True, 'no_create_edit': True, 'no_create': True}"/>
+                                    <field name="counterparty_phone_id" domain="[('contact_id', '=', counterparty_id)]" context="{'default_contact_id': counterparty_id}" options="{'no_open': True, 'no_create_edit': True, 'no_create': True}"/>
+                                    <field name="counterparty_tax_number_id" domain="[('contact_id', '=', counterparty_id)]" context="{'default_contact_id': counterparty_id}" options="{'no_open': True, 'no_create_edit': True, 'no_create': True}"/>
+                                    <div class="o_form_label">Registration Number</div>
+                                    <div class="d-flex align-items-center justify-content-start gap-1">
+                                        <field name="counterparty_registration_number" class="w-auto mb-0" />
+                                        <span>/</span>
+                                        <field name="counterparty_type" class="w-auto mb-0" />
+                                        <span>/</span>
+                                        <field name="counterparty_registration_number_type" class="w-auto mb-0" />
+                                    </div>
+                                </group>
+                            </div>
+                        </div>
+                        <separator class="col-lg-12 separator" />
+                        <div class="row">
+                            <group class="col-lg-6">
+                                <field name="company_bank_account_id" domain="[('contact_id', '=', company_id)]" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}"/>
+                            </group>
+                            <group class="col-lg-6" invisible="company_bank_account_type != 'cash' or paid">
+                                <button name="generate_cash_transaction" string="Платено на каса" type="object" class="btn btn-primary btn-sm" invisible="invoice_type not in ['invoice']"/>
+                            </group>
+                            <group class="col-lg-6" invisible="company_bank_account_type != 'cash' or not paid or invoice_type not in ['invoice']">
+                                <span class="text-success fw-bolder">Успешно създадена касова транзакция!</span>
+                            </group>
+                        </div>
+                        <separator class="col-lg-12 separator" />
+                        <div class="row">
+                            <group class="col-lg-12">
+                                <field name="pre_content_text" class="mb-4" string="Коментар" />
+                            </group>
+                        </div>
+                        <separator class="col-lg-12 separator" />
+                        <div class="col-lg-12">
+                            <notebook>
+                                <page string="Content">
+                                    <field name="content_not_redistribution" nolabel="1">
+                                        <list editable="bottom" class="ko-list-main" default_order="position" decoration-danger="is_redistribution">
+                                            <field name="is_redistribution" string="Redistribution" widget="boolean_toggle" default_value="False" readonly="1" optional="hide" />
+                                            <field name="position" />
+                                            <field name="name" />
+                                            <field name="subcode_id" />
+                                            <field name="quantity" />
+                                            <field name="unit_id" options="{'no_open': True}" />
+                                            <field name="unit_price" />
+                                            <field name="pre_vat_total" />
+                                            <field name="vat_total" />
+                                            <button type="object" name="copy" class="b-0 text-black bg-transparent fa fa-copy" />
+                                        </list>
+                                    </field>
+                                </page>
+                                <page string="Redistribution" decoration-danger="invoice_has_invalid_redistribution">
+                                    <field name="content_is_redistribution" nolabel="1" context="{'default_is_redistribution': True}">
+                                        <list editable="bottom" class="ko-list-main" default_order="position" decoration-danger="not redistribution_is_valid">
+                                            <field name="is_redistribution" string="Redistribution" widget="boolean_toggle" readonly="1" optional="hide" force_save="1" />
+                                            <field name="redistribution_is_valid" string="Valid" widget="boolean_toggle" readonly="1" />
+                                            <field name="position" />
+                                            <field name="name" />
+                                            <field name="subcode_id" />
+                                            <field name="quantity" />
+                                            <field name="unit_id" options="{'no_open': True}" />
+                                            <field name="unit_price" />
+                                            <field name="pre_vat_total" string="Pre-VAT Total" decoration-danger="pre_vat_total &lt; 0" class="fw-bold" />
+                                            <field name="vat_total" />
+                                            <button type="object" name="copy" class="b-0 text-black bg-transparent fa fa-copy" />
+                                        </list>
+                                    </field>
+                                </page>
+                                <page string="Content Translation" invisible="invoice_is_in_company_language">
+                                    <field name="content" nolabel="1">
+                                        <list editable="bottom" class="ko-list-main" default_order="position" create="false">
+                                            <field name="position" readonly="1" />
+                                            <field name="name" readonly="1" />
+                                            <field name="name_translation" />
+                                        </list>
+                                    </field>
+                                </page>
+
+                                <page string="Child Documents" invisible="not child_document_ids">
+                                    <field name="child_document_ids" nolabel="1">
+                                        <list>
+                                            <field name="consecutive_number" />
+                                            <field name="invoice_type" />
+                                            <field name="date_issue" />
+                                            <field name="total_price" />
+                                            <field name="currency_id" />
+                                            <field name="open_amount" />
+                                            <field name="force_paid_status" />
+                                            <field name="paid" />
+                                        </list>
+                                    </field>
+                                </page>
+
+                                <page string="Accounting">
+                                    <field name="content" nolabel="1">
+                                        <list editable="bottom" class="ko-list-main" default_order="position" create="false">
+                                            <field name="position" readonly="1" width="10" />
+                                            <field name="name" readonly="1" width="100" />
+                                            <field name="vat_treatment_id" domain="[('vat_in_out_type', '=', parent.document_in_out_type)]" placeholder="Select VAT Treatment" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}" width="150" />
+                                            <field name="accounting_template_id" string="Acc Template" domain="accounting_template_domain" width="200" />
+                                            <field name="identifier_id" string="Acc Identifier" readonly="not requires_identifier_id" width="200" />
+                                            <field name="subtype_id" string="Acc Subtype" readonly="not requires_subtype_id" domain="subtype_domain" width="200" />
+                                            <field name="pre_vat_total" string="Pre VAT" decoration-danger="pre_vat_total &lt; 0" readonly="1" class="fw-bold" />
+                                            <field name="vat_rate" string="VAT %%" width="50" />
+                                        </list>
+                                    </field>
+                                </page>
+                                <page string="Payments">
+                                    <field name="transaction_allocation_ids" nolabel="1">
+                                        <list readonly="1" class="ko-list-main" create="false" options="{'no_create_edit': True, 'no_delete': True}">
+                                            <field name="transaction_date" />
+                                            <field name="transaction_id_number" string="Transaction ID"/>
+                                            <field name="id" string="Alloc. ID"/>
+                                            <field name="transaction_id" />
+                                            <field name="transaction_direction" />
+                                            <field name="bank_account_id" />
+                                            <field name="description" />
+                                            <field name="amount" widget="monetary" options="{'currency_field': 'transaction_currency'}"/>
+                                            <field name="transaction_currency" string=" " optional="hide"/>
+                                        </list>
+                                    </field>
+                                </page>
+                            </notebook>
+                        </div>
+                        <div class="row">
+                            <group class="col-lg-12 justify-content-end d-flex">
+                                <div>
+                                    <!-- Net Price Row -->
+                                    <div class="col-lg-9 ms-auto d-flex align-items-center">
+                                        <label for="pre_vat_total" class="me-2" />
+                                        <field name="pre_vat_total" style="width: 200px" class="text-end" />
+                                        <field name="currency_id" style="width: 60px" class="text-start p-1" readonly="1" options="{'no_create_edit': True, 'no_open': True}" />
+                                    </div>
+
+                                    <!-- VAT Row -->
+                                    <div class="col-lg-9 ms-auto d-flex align-items-center" invisible="custom_vat != 0">
+                                        <label for="vat_total" class="me-2" />
+                                        <field name="vat_total" style="width: 200px" class="text-end" />
+                                        <field name="currency_id" style="width: 60px" class="text-start p-1" readonly="1" options="{'no_create_edit': True, 'no_open': True}" />
+                                    </div>
+
+                                    <!-- Custom VAT Row -->
+                                    <div class="col-lg-9 ms-auto d-flex align-items-center">
+                                        <label for="custom_vat" class="me-2" />
+                                        <field name="custom_vat" style="width: 200px" class="text-end" />
+                                        <field name="currency_id" style="width: 60px" class="text-start p-1" readonly="1" options="{'no_create_edit': True, 'no_open': True}" />
+                                    </div>
+
+                                    <!-- Total Price Row -->
+                                    <div class="col-lg-9 ms-auto d-flex align-items-center">
+                                        <label for="total_price" class="me-2" />
+                                        <field name="total_price" style="width: 200px" class="text-end" />
+                                        <field name="currency_id" style="width: 60px" class="text-start p-1" readonly="1" options="{'no_create_edit': True, 'no_open': True}" />
+                                    </div>
+
+                                    <!-- Child Document Sum All Totals Row -->
+                                    <div class="col-lg-9 ms-auto d-flex align-items-center" invisible="not child_document_ids">
+                                        <label for="child_document_sum_all_totals" class="me-2" />
+                                        <field name="child_document_sum_all_totals" style="width: 200px" class="text-end" />
+                                        <field name="base_currency_id" style="width: 60px" class="text-start p-1" readonly="1" options="{'no_create_edit': True, 'no_open': True}" />
+                                    </div>
+
+                                    <!-- Paid Amount Row -->
+                                    <div class="col-lg-9 ms-auto d-flex align-items-center">
+                                        <label for="paid_amount" class="me-2" />
+                                        <field name="paid_amount" style="width: 200px" class="text-end" />
+                                        <field name="base_currency_id" style="width: 60px" class="text-start p-1" readonly="1" options="{'no_create_edit': True, 'no_open': True}" />
+                                    </div>
+
+                                    <!-- Open Amount Row -->
+                                    <div class="col-lg-9 ms-auto d-flex align-items-center">
+                                        <label for="open_amount" class="me-2" />
+                                        <field name="open_amount" style="width: 200px" class="text-end" />
+                                        <field name="base_currency_id" style="width: 60px" class="text-start p-1" readonly="1" options="{'no_create_edit': True, 'no_open': True}" />
+                                    </div>
+                                </div>
+                            </group>
+                        </div>
+                        <separator class="col-lg-12 separator"/>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <field name="examinations_in_invoice" nolabel="1">
+                                    <list class="ko-list-main">
+                                        <field name="e_examination_lrn"/>
+                                        <field name="patient_full_name"/>
+                                        <field name="examination_type_id"/>
+                                        <field name="examination_type_id_price"/>
+                                    </list>
+                                </field>
+                            </div>
+                        </div>
+                        <separator class="col-lg-12 separator"/>
+                        <div class="row">
+                            <group class="col-lg-6">
+                                <div style="">
+                                    <field name="attachments" widget="many2many_binary" nolabel="1" class="mt-2" invisible="id == False" />
+                                </div>
+                            </group>
+                        </div>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="kojto_finance.view_kojto_invoices_search" model="ir.ui.view">
+            <field name="name">kojto.finance.invoices.search</field>
+            <field name="model">kojto.finance.invoices</field>
+            <field name="arch" type="xml">
+                <search string="Search Invoices">
+                    <field name="consecutive_number" />
+                    <field name="name" string="Ref №" />
+                    <field name="subject" />
+                    <field name="counterparty_id" />
+                    <field name="date_issue" string="Issue Date" />
+                    <field name="accounting_op_date" string="Accounting Date" />
+                    <field name="company_bank_account_id" string="Сметка"/>
+                    <separator />
+                    <filter name="paid_invoices" string="Paid" domain="[('paid', '=', True)]" />
+                    <filter name="unpaid_invoices" string="Unpaid" domain="[('paid', '=', False)]" />
+                    <group expand="1" string="Grouping">
+                        <group string="Invoice Type">
+                            <filter name="invoice_type_proforma" string="Proforma Invoices" domain="[('invoice_type', '=', 'proforma')]" />
+                            <filter name="invoice_type_invoice" string="Invoices" domain="[('invoice_type', '=', 'invoice')]" />
+                            <filter name="invoice_type_credit_note" string="Credit Note" domain="[('invoice_type', '=', 'credit_note')]" />
+                            <filter name="invoice_type_debit_note" string="Debit Note" domain="[('invoice_type', '=', 'debit_note')]" />
+                            <filter name="invoice_incoming" string="Incoming" domain="[('document_in_out_type', '=', 'incoming')]" />
+                            <filter name="invoice_outgoing" string="Outgoing" domain="[('document_in_out_type', '=', 'outgoing')]" />
+                        </group>
+                        <group string="Date">
+                            <filter name="issue_date_today" string="Today" domain="[('date_issue', '=', context_today().strftime('%Y-%m-%d'))]" />
+                            <filter name="issue_date_this_week" string="This Week" domain="[('date_issue', '&gt;=', (context_today() - datetime.timedelta(days=7)).strftime('%Y-%m-%d'))]" />
+                            <filter name="issue_date_this_month" string="This Month" domain="[('date_issue', '&gt;=', context_today().strftime('%Y-%m-01')), ('date_issue', '&lt;', (context_today() + datetime.timedelta(days=32)).strftime('%Y-%m-01'))]" />
+                            <filter name="issue_date_last_month" string="Last Month" domain="[('date_issue', '&gt;=', (context_today() + relativedelta(months=-1, day=1)).strftime('%Y-%m-01')), ('date_issue', '&lt;', context_today().strftime('%Y-%m-%d'))]" />
+                        </group>
+                    </group>
+                </search>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<!-- List view definition -->
+		<record model="ir.ui.view" id="trinity_monthly_notification_list_view">
+			<field name="name">Trinity Monthly Notifications List</field>
+			<field name="model">trinity.monthly.notification</field>
+			<field name="arch" type="xml">
+				<list string="Trinity Monthly Notifications" default_order="date_from desc">
+					<field name="monthly_notification_num"/>
+					<field name="practice_code"/>
+					<field name="date_from"/>
+					<field name="date_to"/>
+					<field name="inv_type_code"/>
+					<field name="inv_type"/>
+					<field name="nhif_type_code"/>
+					<field name="nhif_type"/>
+					<field name="inv_summ"/>
+					<field name="inv_fl"/>
+					<field name="id_inv"/>
+					<field name="from_inv_num"/>
+					<field name="from_inv_date"/>
+                    <field name="invoice_id"/>
+					<!-- <button name="compute_patient_as_counterparty" icon="fa-key" type="object"/> -->
+				</list>
+			</field>
+		</record>
+		<!-- Form view definition -->
+		<record model="ir.ui.view" id="trinity_monthly_notification_form_view">
+			<field name="name">Trinity Monthly Notifications Form</field>
+			<field name="model">trinity.monthly.notification</field>
+			<field name="arch" type="xml">
+				<form string="Trinity Monthly Notifications">
+					<link rel="stylesheet" type="text/css" href="/trinity_file_assets/static/src/css/custom.css"/>
+					<style>
+						.clickable {
+						cursor: pointer;
+						}
+
+						.instruction_text {
+						margin: 10px 0;
+						border: none;
+						color: #0b5394;
+						font-family: Roboto condensed, Arial, san-serif;
+						font-weight: 500;
+						font-size: 14px;
+						}
+
+						.instruction_sub {
+						margin: 10px 0;
+						}
+
+						.form-check-label {
+						padding-left: 10px;
+						display: inline-flex;
+						}
+						.o_form_view .o_form_label {
+						min-width: 150px !important;
+						}
+                        .o_list_renderer tbody tr:has(td[colspan]:only-child):not(:has(a)) {
+                            display: none !important;
+                        }
+                        .o_list_renderer.o_renderer.table-responsive .o_list_table th[data-name="unit"],
+                        .o_list_renderer.o_renderer.table-responsive .o_list_table td[name="unit"] {
+                            max-width: 400px !important;
+                        }
+                        .o_list_renderer.o_renderer.table-responsive .o_list_table th[data-name="unit_code"],
+                        .o_list_renderer.o_renderer.table-responsive .o_list_table td[name="unit_code"] {
+                            max-width: 100px !important;
+                        }
+                        .o_list_renderer.o_renderer.table-responsive .o_list_table th[data-name="unit_quantity"],
+                        .o_list_renderer.o_renderer.table-responsive .o_list_table td[name="unit_quantity"] {
+                            max-width: 100px !important;
+                        }
+                        .o_list_renderer.o_renderer.table-responsive .o_list_table th[data-name="unit_price"],
+                        .o_list_renderer.o_renderer.table-responsive .o_list_table td[name="unit_price"] {
+                            max-width: 100px !important;
+                        }
+                        .o_list_renderer.o_renderer.table-responsive .o_list_table th[data-name="vat_rate"],
+                        .o_list_renderer.o_renderer.table-responsive .o_list_table td[name="vat_rate"] {
+                            max-width: 100px !important;
+                        }
+                        .o_list_renderer.o_renderer.table-responsive .o_list_table th[data-name="vat_amount"],
+                        .o_list_renderer.o_renderer.table-responsive .o_list_table td[name="vat_amount"] {
+                            max-width: 100px !important;
+                        }
+                        .o_list_renderer.o_renderer.table-responsive .o_list_table th[data-name="total_price"],
+                        .o_list_renderer.o_renderer.table-responsive .o_list_table td[name="total_price"] {
+                            max-width: 100px !important;
+                        }
+						.o_field_one2many[name="contents"] .o_list_table.o_list_table_ungrouped
+						tbody tr:last-child td {
+						font-weight: bold !important;
+						}
+						table > thead > tr {
+						border-left: 1px solid rgba(11, 83, 148, 0.2) !important;
+						border-right: 1px solid rgba(11, 83, 148, 0.2) !important;
+						border-bottom: 1px solid rgba(11, 83, 148, 0.2) !important;
+						border-top: 1px solid rgba(11, 83, 148, 0.2) !important;
+						}
+						table > thead > tr > th {
+						border-left: 0px !important;
+						border-right: 0px !important;
+						border-bottom: 0px !important;
+						border-top: 0px !important;
+						}
+					</style>
+					<sheet>
+						<div class="row">
+							<h1 style="font-weight: bold; text-align: center; margin: 10px 0 40px 0">Месечно известие</h1>
+						</div>
+						<div class="d-flex justify-content-end" invisible="invoice_id">
+							<button string="Създай фактура от месечно известие" type="object" name="create_invoice_from_monthly_notification" class="btn btn-outline-primary btn-md" invisible="not monthly_notification"/>
+						</div>
+						<div class="d-flex justify-content-end" invisible="not invoice_id">
+							<button name="get_signature_nhif" string="Създай фактура в НЗОК формат" type="object" class="btn btn-outline-primary btn-md m-2" onclick="getSignaturefr_nhif()" invisible="last_xml_export"/>
+						</div>
+						<div class="row">
+							<group class="col-lg-12" style="margin-bottom: auto">
+                                <separator class='col-lg-12 separator'/>
+								<field name="monthly_notification" filename="monthly_notification_filename" widget="binary"/>
+								<field name="monthly_notification_filename" invisible="1"/>
+							</group>
+							<group class="col-lg-12" invisible="not last_xml_export">
+                                <separator class='col-lg-12 separator'/>
+								<field name="last_xml_export" filename="last_xml_export_filename" widget="binary"/>
+								<field name="last_xml_export_filename" invisible="1"/>
+							</group>
+							<group class="col-lg-6" style="margin-bottom: auto">
+                                <separator class='col-lg-12 separator'/>
+								<field name="monthly_notification_num"/>
+								<field name="practice_code"/>
+								<field name="date_from"/>
+								<field name="date_to"/>
+								<field name="nhif_type_code"/>
+								<field name="nhif_type"/>
+								<field name="invoice_type"/>
+                                <field name="invoice_id" widget="link_to_record" options="{'no_create': true, 'no_edit': true}"/>
+							</group>
+							<group class="col-lg-6" style="margin-bottom: auto">
+                                <separator class='col-lg-12 separator'/>
+								<field name="inv_type_code"/>
+								<field name="inv_type"/>
+								<field name="inv_summ"/>
+								<field name="inv_fl"/>
+								<field name="id_inv"/>
+								<field name="from_inv_num"/>
+								<field name="from_inv_date"/>
+							</group>
+						</div>
+						<div class="row">
+							<div class="col-lg-12">
+                                <separator class='col-lg-12 separator'/>
+								<field name="contents" nolabel="1">
+									<list editable="bottom" class="ko-list-main">
+										<field name="unit_code"/>
+										<field name="unit"/>
+										<field name="unit_quantity"/>
+										<field name="unit_price"/>
+										<field name="vat_rate"/>
+										<field name="vat_amount"/>
+										<field name="total_price"/>
+									</list>
+								</field>
+							</div>
+						</div>
+						<table class="ms-auto me-3 border-0">
+							<tr>
+								<td style="width: 50%">ОБЩО без ДДС</td>
+								<td style="width: 5%"/>
+								<td style="width: 10%"/>
+								<td style="width: 10%"/>
+								<td style="width: 10%"/>
+								<td style="width: 10%; text-align: right">
+									<field style="text-align: right" name="pre_vat_total_contents"/>
+								</td>
+							</tr>
+							<tr>
+								<td style="width: 50%">ОБЩО ДДС</td>
+								<td style="width: 5%"/>
+								<td style="width: 10%"/>
+								<td style="width: 10%"/>
+								<td style="width: 10%"/>
+								<td style="width: 10%; text-align: right">
+									<field style="text-align: right" name="vat_amount_contents"/>
+								</td>
+							</tr>
+							<tr style="font-weight: 700">
+								<td style="width: 50%">ОБЩО</td>
+								<td style="width: 5%"/>
+								<td style="width: 10%"/>
+								<td style="width: 10%"/>
+								<td style="width: 10%"/>
+								<td style="width: 10%; text-align: right">
+									<field style="text-align: right" name="total_price_contents"/>
+								</td>
+							</tr>
+						</table>
+						<div class="row d-none">
+							<group class="col-lg-12">
+                                <separator class='col-lg-12 separator'/>
+                                <field name="fr_nhif" id="fr_nhif" widget="text" string="fr_nhif"/>
+                                <field name="SignedInfo_fr_nhif" id="SignedInfo_fr_nhif" widget="text" string="SignedInfo"/>
+                                <field name="SignedInfo_fr_nhif_signature" id="SignedInfo_fr_nhif_signature" widget="text" string="SignedInfo signature"/>
+                                <field name="user_token_certificate" id="user_token_certificate" widget="text"/>
+                                <field name="supermed_certificate" id="supermed_certificate" widget="text"/>
+                                <field name="fr_nhif_signed" id="fr_nhif_signed"/>
+                                <button name="download_xml" string="СВАЛИ XLS ОТЧЕТ" type="object" class="btn btn-outline-primary btn-md m-2"/>
+							</group>
+						</div>
+					</sheet>
+					<script type="text/javascript" src="/trinity_file_assets/static/src/js/getSignatureNHIF_fr.js"/>
+				</form>
+			</field>
+		</record>
+		<!-- Action definition to display the list view -->
+		<record model="ir.actions.act_window" id="action_trinity_monthly_notification">
+			<field name="name">Месечно известие</field>
+			<field name="res_model">trinity.monthly.notification</field>
+			<field name="view_mode">list,form</field>
+			<field name="help" type="html">
+				<p class="oe_view_nocontent_create">
+					Месечно известие
+				</p>
+			</field>
+		</record>
+		<!-- Menu item definition -->
+		<menuitem id="trinity_monthly_notification_menu_list" name="Месечни известия" parent="kojto_finance.menu_kojto_finance" action="action_trinity_monthly_notification" sequence="200"/>
+	</data>
+</odoo>

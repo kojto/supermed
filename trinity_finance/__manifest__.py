@@ -1,0 +1,32 @@
+# -*- coding: utf-8 -*-
+{
+    "name": "Trinity Finance",
+    "summary": "Finance management for Trinity medical center",
+    "description": "Finance module for managing invoices, monthly notifications, and financial operations integrated with Trinity examination system",
+    "author": "MG",
+    "website": "https://www.trinitymedcenter.com",
+    "category": "Tools",
+    "sequence": 9,
+    "version": "18.04.07",
+    "depends": [
+        "base",
+        "trinity_library",
+        "trinity_nomenclature",
+        "trinity_examination",
+        "trinity_financial_reports",
+        "kojto_landingpage",
+        "kojto_finance",
+        "trinity_medical_facility",
+    ],
+    "data": [
+        "security/ir.model.access.csv",
+        "views/action_dropdown_view.xml",
+        "views/trinity_montly_notification_views.xml",
+        "views/trinity_finance_buttons.xml",
+        "views/trinity_finance_inherit_views.xml",
+        "reports/trinity_finance_invoice_templates.xml",
+    ],
+    "installable": True,
+    "application": True,
+    "auto_install": False,
+}

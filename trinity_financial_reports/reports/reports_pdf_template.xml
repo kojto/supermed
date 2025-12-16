@@ -1,0 +1,38 @@
+<odoo>
+	<template id="trinity_financial_reports.allinanz_annex">
+		<t t-call="web.html_container">
+			<t t-call="web.internal_layout">
+				<t t-foreach="docs" t-as="o">
+					<div class="page">
+						<style>
+							p{font-family:'Arial',sans-serif; font-size: 12px; padding: 5px; margin: 0px}
+							h1{font-family:'Arial',sans-serif; font-size: 18px; font-weight: bold}
+						</style>
+						<div style="width: 100%; texl-align: right;padding: 10px"><h1>Приложение №7.2.</h1></div>
+						<div style="width: 100%; padding: 10px; border: 1px solid black">
+							<p>Изх. № …………/………… г.</p>
+							<p>До</p>
+							<p>ЗАД „Алианц България“</p>
+							<p><strong>ИСКАНЕ ЗА ВЪЗСТАНОВЯВАНЕ НА ЗДРАВНИ УСЛУГИ</strong></p>
+							<p>от <span t-field="o.company_name"/>, ЕИК  <span t-field="o.company_vat"/> по Договор за предоставяне на специализирана извънболнична медицинска помощ по абонаментно обслужване на застраховани лица № <span t-field="o.cost_bearer_id"/>, подписан от  <span t-field="o.cost_bearer_id"/> год.</p>
+							<p>Моля да бъде възстановена сумата от <span t-field="o.total_price"/> лева за предоставените здравни услуги на застрахованите лица за отчетен период: <span t-field="o.date_start"/> - <span t-field="o.date_end"/> г.</p>
+							<p><strong>Приложения:</strong></p>
+							<p>1. Отчетен доклад за предоставени здравни услуги;</p>
+							<p>2. Медицински документи, доказващи по основание и размер предоставените здравни услуги;</p>
+							<p>3. Потвърждения от застрахованите лица.</p>
+							<br/>
+							<br/>
+							<p>Моля претендираната за възстановяване сума да бъде преведена по следната банкова сметка:</p>
+							<p>Банка:  </p>
+							<p>IBAN: <span t-field="o.company_iban"/></p>
+							<p>BIC: <span t-field="o.company_bic"/></p>
+							<p>Титуляр на сметката: МЦ “Света Троица”</p>
+							<p>С подписване на това Искане за възстановяване на здравни услуги декларирам, че включените в него здравни услуги не са претендирани, възстановени и/или платени от трети лица, в т.ч. застраховащия, застрахованото лице, други застрахователи и НЗОК.</p>
+							<p><strong>За ИЗПЪЛНИТЕЛЯ:</strong> <span t-field="o.hospital_id.managing_director"/></p>
+						</div>
+					</div>
+				</t>
+			</t>
+		</t>
+	</template>
+</odoo>

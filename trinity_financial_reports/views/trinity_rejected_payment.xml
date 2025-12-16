@@ -1,0 +1,65 @@
+<odoo>
+	<data>
+		<!-- List Views -->
+		<record model="ir.ui.view" id="view_trinity_rejected_payment_list">
+			<field name="name">trinity.rejected.payment.list</field>
+			<field name="model">trinity.rejected.payment</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" default_order="rejected_payment_lrn desc">
+					<field name="rejected_payment_lrn"/>
+					<field name="cost_bearer_id"/>
+					<field name="company_vat"/>
+				</list>
+			</field>
+		</record>
+		<!-- Form Views -->
+		<record model="ir.ui.view" id="view_trinity_rejected_payment_form">
+			<field name="name">trinity.rejected.payment.form</field>
+			<field name="model">trinity.rejected.payment</field>
+			<field name="arch" type="xml">
+				<form>
+					<link rel="stylesheet" type="text/css" href="/trinity_file_assets/static/src/css/custom.css"/>
+					<sheet>
+						<div class="oe_title">
+							<h1>Съобщение за отхвърлена дейност</h1>
+						</div>
+						<group class="col-lg-12">
+							<field name="rejected_payment_lrn"/>
+						</group>
+						<group class="col-lg-12">
+							<field name="cost_bearer_id"/>
+						</group>
+						<group class="col-lg-12">
+							<field name="cost_bearer_message"/>
+						</group>
+						<group class="col-lg-12">
+							<field name="extracted_nrn"/>
+						</group>
+						<group class="col-lg-12">
+							<field name="extracted_lrn"/>
+						</group>
+					</sheet>
+				</form>
+			</field>
+		</record>
+		<!-- Search Views -->
+		<record model="ir.ui.view" id="view_trinity_rejected_payment_search">
+			<field name="name">trinity.rejected.payment.search</field>
+			<field name="model">trinity.rejected.payment</field>
+			<field name="arch" type="xml">
+				<search string="Financial report">
+					<field name="rejected_payment_lrn"/>
+					<field name="cost_bearer_id"/>
+				</search>
+			</field>
+		</record>
+		<!-- Actions to Return Model Views -->
+		<record id="action_trinity_rejected_payment" model="ir.actions.act_window">
+			<field name="name">Отхвърлена дейност</field>
+			<field name="res_model">trinity.rejected.payment</field>
+			<field name="view_mode">list,form</field>
+		</record>
+		<!-- Menu Items -->
+		<menuitem name="Отхвърлена дейност" id="menu_rejected_payment" parent="menu_financial_reports_parent" action="action_trinity_rejected_payment"/>
+	</data>
+</odoo>
