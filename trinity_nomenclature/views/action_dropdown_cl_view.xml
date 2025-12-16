@@ -1,0 +1,1607 @@
+<odoo>
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl001">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl001"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl001"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl002">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl002"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl002"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl003">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl003"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl003"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl004">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl004"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl004"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl005">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl005"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl005"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl006">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl006"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl006"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl007">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl007"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl007"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl008">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl008"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl008"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl009">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl009"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl009"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl010">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl010"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl010"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl011">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl011"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl011"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl012">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl012"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl012"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl013">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl013"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl013"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl014">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl014"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl014"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl015">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl015"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl015"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl016">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl016"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl016"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl017">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl017"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl017"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl018">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl018"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl018"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl019">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl019"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl019"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl020">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl020"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl020"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl021">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl021"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl021"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl022">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl022"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl022"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl023">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl023"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl023"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl024">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl024"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl024"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl025">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl025"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl025"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl026">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl026"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl026"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl027">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl027"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl027"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl028">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl028"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl028"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl029">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl029"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl029"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl030">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl030"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl030"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl031">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl031"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl031"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl032">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl032"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl032"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl033">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl033"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl033"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl034">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl034"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl034"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl035">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl035"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl035"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl036">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl036"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl036"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl037">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl037"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl037"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl038">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl038"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl038"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl039">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl039"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl039"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl040">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl040"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl040"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl041">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl041"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl041"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl042">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl042"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl042"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl043">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl043"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl043"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl044">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl044"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl044"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl045">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl045"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl045"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl046">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl046"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl046"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl047">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl047"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl047"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl049">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl049"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl049"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl050">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl050"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl050"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl051">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl051"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl051"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl052">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl052"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl052"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl053">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl053"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl053"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl054">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl054"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl054"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl055">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl055"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl055"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl056">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl056"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl056"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl057">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl057"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl057"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl058">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl058"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl058"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl059">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl059"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl059"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl060">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl060"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl060"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl061">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl061"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl061"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl062">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl062"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl062"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl063">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl063"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl063"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl064">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl064"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl064"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl065">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl065"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl065"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl066">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl066"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl066"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl067">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl067"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl067"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl068">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl068"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl068"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl069">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl069"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl069"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl070">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl070"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl070"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl071">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl071"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl071"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl072">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl072"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl072"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl073">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl073"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl073"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl074">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl074"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl074"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl075">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl075"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl075"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl076">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl076"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl076"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl077">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl077"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl077"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl078">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl078"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl078"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl079">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl079"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl079"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl080">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl080"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl080"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl081">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl081"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl081"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl082">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl082"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl082"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl083">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl083"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl083"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl084">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl084"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl084"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl085">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl085"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl085"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl086">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl086"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl086"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl087">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl087"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl087"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl088">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl088"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl088"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl089">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl089"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl089"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl090">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl090"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl090"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl091">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl091"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl091"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl092">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl092"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl092"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl093">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl093"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl093"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl094">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl094"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl094"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl095">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl095"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl095"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl096">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl096"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl096"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl097">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl097"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl097"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl098">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl098"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl098"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl099">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl099"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl099"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl100">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl100"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl100"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl101">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl101"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl101"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl102">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl102"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl102"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl103">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl103"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl103"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl104">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl104"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl104"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl105">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl105"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl105"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl106">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl106"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl106"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl107">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl107"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl107"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl108">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl108"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl108"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl109">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl109"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl109"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl110">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl110"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl110"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl111">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl111"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl111"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl112">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl112"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl112"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl113">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl113"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl113"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl114">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl114"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl114"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl115">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl115"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl115"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl116">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl116"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl116"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl117">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl117"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl117"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl118">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl118"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl118"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl119">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl119"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl119"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl120">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl120"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl120"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl121">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl121"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl121"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl122">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl122"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl122"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl123">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl123"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl123"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl124">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl124"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl124"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl125">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl125"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl125"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl126">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl126"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl126"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl127">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl127"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl127"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl128">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl128"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl128"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl129">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl129"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl129"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl130">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl130"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl130"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl131">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl131"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl131"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl132">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl132"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl132"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl133">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl133"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl133"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl134">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl134"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl134"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl135">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl135"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl135"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl136">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl136"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl136"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl137">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl137"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl137"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl138">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl138"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl138"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl139">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl139"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl139"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl140">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl140"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl140"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl141">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl141"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl141"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl142">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl142"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl142"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl143">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl143"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl143"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl144">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl144"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl144"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl145">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl145"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl145"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl146">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl146"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl146"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_delete_dublicate_records_based_on_key_cl147">
+        <field name="name">Изтрий дубликати</field>
+        <field name="model_id" ref="model_trinity_nomenclature_cl147"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature_cl147"/>
+        <field name="state">code</field>
+        <field name="code">
+records.delete_duplicate_records_based_on_key()
+        </field>
+    </record>
+</odoo>

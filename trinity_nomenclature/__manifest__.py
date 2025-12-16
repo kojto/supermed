@@ -1,0 +1,27 @@
+# -*- coding: utf-8 -*-
+{
+    "name": "Trinity Nomenclature",
+    "summary": "Medical nomenclature and classification system",
+    "description": "Nomenclature management module for managing medical classifications, CL codes, nomenclature imports, and medical coding systems",
+    "author": "MG",
+    "website": "https://www.trinitymedcenter.com",
+    "category": "Tools",
+    "sequence": 4,
+    "version": "18.04.07",
+    "depends": ["base", "kojto_landingpage"],
+    "data": [
+        "security/ir.model.access.csv",
+        "views/trinity_nomenclature.xml",
+        "views/trinity_nomenclature_cl_views.xml",
+        "views/trinity_nomenclature_cl_search_views.xml",
+        "views/trinity_nomenclature_actions.xml",
+        "views/trinity_nomenclature_buttons.xml",
+        "views/trinity_nomenclature_import_views.xml",
+        "views/trinity_nomenclature_menu_items.xml",
+        "views/action_dropdown_view.xml",
+        "views/action_dropdown_cl_view.xml",
+    ],
+    "installable": True,
+    "application": True,
+    "auto_install": False,
+}

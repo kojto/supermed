@@ -1,0 +1,2507 @@
+<odoo>
+	<data>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl001_search">
+			<field name="name">trinity.nomenclature.cl001.search</field>
+			<field name="model">trinity.nomenclature.cl001</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<field name="meta_fhir_mapping" string="FHIR Mapping"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl002_search">
+			<field name="name">trinity.nomenclature.cl002.search</field>
+			<field name="model">trinity.nomenclature.cl002</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl003_search">
+			<field name="name">trinity.nomenclature.cl003.search</field>
+			<field name="model">trinity.nomenclature.cl003</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl004_search">
+			<field name="name">trinity.nomenclature.cl004.search</field>
+			<field name="model">trinity.nomenclature.cl004</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl005_search">
+			<field name="name">trinity.nomenclature.cl005.search</field>
+			<field name="model">trinity.nomenclature.cl005</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl006_search">
+			<field name="name">trinity.nomenclature.cl006.search</field>
+			<field name="model">trinity.nomenclature.cl006</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl007_search">
+			<field name="name">trinity.nomenclature.cl007.search</field>
+			<field name="model">trinity.nomenclature.cl007</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl008_search">
+			<field name="name">trinity.nomenclature.cl008.search</field>
+			<field name="model">trinity.nomenclature.cl008</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl009_search">
+			<field name="name">trinity.nomenclature.cl009.search</field>
+			<field name="model">trinity.nomenclature.cl009</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+                    <filter string="Зелена рецепта" name="meta_required_prescription_category" domain="[('meta_required_prescription_category', '=', 'T6 - Рецепта - зелена')]"/>
+                    <filter string="Жълта рецепта" name="meta_required_prescription_category" domain="[('meta_required_prescription_category', '=', 'T7 - Рецепта - жълта')]"/>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl010_search">
+			<field name="name">trinity.nomenclature.cl010.search</field>
+			<field name="model">trinity.nomenclature.cl010</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl011_search">
+			<field name="name">trinity.nomenclature.cl011.search</field>
+			<field name="model">trinity.nomenclature.cl011</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl012_search">
+			<field name="name">trinity.nomenclature.cl012.search</field>
+			<field name="model">trinity.nomenclature.cl012</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl013_search">
+			<field name="name">trinity.nomenclature.cl013.search</field>
+			<field name="model">trinity.nomenclature.cl013</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl014_search">
+			<field name="name">trinity.nomenclature.cl014.search</field>
+			<field name="model">trinity.nomenclature.cl014</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl015_search">
+			<field name="name">trinity.nomenclature.cl015.search</field>
+			<field name="model">trinity.nomenclature.cl015</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl016_search">
+			<field name="name">trinity.nomenclature.cl016.search</field>
+			<field name="model">trinity.nomenclature.cl016</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl017_search">
+			<field name="name">trinity.nomenclature.cl017.search</field>
+			<field name="model">trinity.nomenclature.cl017</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl018_search">
+			<field name="name">trinity.nomenclature.cl018.search</field>
+			<field name="model">trinity.nomenclature.cl018</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl019_search">
+			<field name="name">trinity.nomenclature.cl019.search</field>
+			<field name="model">trinity.nomenclature.cl019</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl020_search">
+			<field name="name">trinity.nomenclature.cl020.search</field>
+			<field name="model">trinity.nomenclature.cl020</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl021_search">
+			<field name="name">trinity.nomenclature.cl021.search</field>
+			<field name="model">trinity.nomenclature.cl021</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl022_search">
+			<field name="name">trinity.nomenclature.cl022.search</field>
+			<field name="model">trinity.nomenclature.cl022</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+                    <field name="meta_nhif_code" string="Код по НЗОК"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+        <record model="ir.ui.view" id="view_trinity_nomenclature_cl022_prices_search">
+            <field name="name">trinity.nomenclature.cl022.prices.search</field>
+            <field name="model">trinity.nomenclature.cl022.prices</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="code" string="Код"/>
+                    <field name="description" string="Description"/>
+                    <field name="volume" string="Обем"/>
+                    <field name="price" string="Цена"/>
+                    <field name="active_from" string="Активна от"/>
+                    <filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+                    <filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+                    <group expand="0" string="Групирай по">
+                        <filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+                        <filter string="Код по НЗОК" name="group_code" context="{'group_by': 'code'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="view_trinity_nomenclature_cl050_prices_search">
+            <field name="name">trinity.nomenclature.cl050.prices.search</field>
+            <field name="model">trinity.nomenclature.cl050.prices</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="code" string="Код"/>
+                    <field name="description" string="Description"/>
+                    <field name="volume" string="Обем"/>
+                    <field name="price" string="Цена"/>
+                    <field name="active_from" string="Активна от"/>
+                    <filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+                    <filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+                    <group expand="0" string="Групирай по">
+                        <filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+                        <filter string="Код по НЗОК" name="group_code" context="{'group_by': 'code'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl023_search">
+			<field name="name">trinity.nomenclature.cl023.search</field>
+			<field name="model">trinity.nomenclature.cl023</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl024_search">
+			<field name="name">trinity.nomenclature.cl024.search</field>
+			<field name="model">trinity.nomenclature.cl024</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl025_search">
+			<field name="name">trinity.nomenclature.cl025.search</field>
+			<field name="model">trinity.nomenclature.cl025</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl026_search">
+			<field name="name">trinity.nomenclature.cl026.search</field>
+			<field name="model">trinity.nomenclature.cl026</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl027_search">
+			<field name="name">trinity.nomenclature.cl027.search</field>
+			<field name="model">trinity.nomenclature.cl027</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl028_search">
+			<field name="name">trinity.nomenclature.cl028.search</field>
+			<field name="model">trinity.nomenclature.cl028</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl029_search">
+			<field name="name">trinity.nomenclature.cl029.search</field>
+			<field name="model">trinity.nomenclature.cl029</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl030_search">
+			<field name="name">trinity.nomenclature.cl030.search</field>
+			<field name="model">trinity.nomenclature.cl030</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl031_search">
+			<field name="name">trinity.nomenclature.cl031.search</field>
+			<field name="model">trinity.nomenclature.cl031</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl032_search">
+			<field name="name">trinity.nomenclature.cl032.search</field>
+			<field name="model">trinity.nomenclature.cl032</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl033_search">
+			<field name="name">trinity.nomenclature.cl033.search</field>
+			<field name="model">trinity.nomenclature.cl033</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl034_search">
+			<field name="name">trinity.nomenclature.cl034.search</field>
+			<field name="model">trinity.nomenclature.cl034</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl035_search">
+			<field name="name">trinity.nomenclature.cl035.search</field>
+			<field name="model">trinity.nomenclature.cl035</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl036_search">
+			<field name="name">trinity.nomenclature.cl036.search</field>
+			<field name="model">trinity.nomenclature.cl036</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl037_search">
+			<field name="name">trinity.nomenclature.cl037.search</field>
+			<field name="model">trinity.nomenclature.cl037</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl038_search">
+			<field name="name">trinity.nomenclature.cl038.search</field>
+			<field name="model">trinity.nomenclature.cl038</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl039_search">
+			<field name="name">trinity.nomenclature.cl039.search</field>
+			<field name="model">trinity.nomenclature.cl039</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl040_search">
+			<field name="name">trinity.nomenclature.cl040.search</field>
+			<field name="model">trinity.nomenclature.cl040</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl041_search">
+			<field name="name">trinity.nomenclature.cl041.search</field>
+			<field name="model">trinity.nomenclature.cl041</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl042_search">
+			<field name="name">trinity.nomenclature.cl042.search</field>
+			<field name="model">trinity.nomenclature.cl042</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl043_search">
+			<field name="name">trinity.nomenclature.cl043.search</field>
+			<field name="model">trinity.nomenclature.cl043</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl044_search">
+			<field name="name">trinity.nomenclature.cl044.search</field>
+			<field name="model">trinity.nomenclature.cl044</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl045_search">
+			<field name="name">trinity.nomenclature.cl045.search</field>
+			<field name="model">trinity.nomenclature.cl045</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl046_search">
+			<field name="name">trinity.nomenclature.cl046.search</field>
+			<field name="model">trinity.nomenclature.cl046</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl047_search">
+			<field name="name">trinity.nomenclature.cl047.search</field>
+			<field name="model">trinity.nomenclature.cl047</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl049_search">
+			<field name="name">trinity.nomenclature.cl049.search</field>
+			<field name="model">trinity.nomenclature.cl049</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl050_search">
+			<field name="name">trinity.nomenclature.cl050.search</field>
+			<field name="model">trinity.nomenclature.cl050</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl051_search">
+			<field name="name">trinity.nomenclature.cl051.search</field>
+			<field name="model">trinity.nomenclature.cl051</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl052_search">
+			<field name="name">trinity.nomenclature.cl052.search</field>
+			<field name="model">trinity.nomenclature.cl052</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl053_search">
+			<field name="name">trinity.nomenclature.cl053.search</field>
+			<field name="model">trinity.nomenclature.cl053</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl054_search">
+			<field name="name">trinity.nomenclature.cl054.search</field>
+			<field name="model">trinity.nomenclature.cl054</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl055_search">
+			<field name="name">trinity.nomenclature.cl055.search</field>
+			<field name="model">trinity.nomenclature.cl055</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl056_search">
+			<field name="name">trinity.nomenclature.cl056.search</field>
+			<field name="model">trinity.nomenclature.cl056</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl057_search">
+			<field name="name">trinity.nomenclature.cl057.search</field>
+			<field name="model">trinity.nomenclature.cl057</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl058_search">
+			<field name="name">trinity.nomenclature.cl058.search</field>
+			<field name="model">trinity.nomenclature.cl058</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl059_search">
+			<field name="name">trinity.nomenclature.cl059.search</field>
+			<field name="model">trinity.nomenclature.cl059</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl060_search">
+			<field name="name">trinity.nomenclature.cl060.search</field>
+			<field name="model">trinity.nomenclature.cl060</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl061_search">
+			<field name="name">trinity.nomenclature.cl061.search</field>
+			<field name="model">trinity.nomenclature.cl061</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl062_search">
+			<field name="name">trinity.nomenclature.cl062.search</field>
+			<field name="model">trinity.nomenclature.cl062</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl063_search">
+			<field name="name">trinity.nomenclature.cl063.search</field>
+			<field name="model">trinity.nomenclature.cl063</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl064_search">
+			<field name="name">trinity.nomenclature.cl064.search</field>
+			<field name="model">trinity.nomenclature.cl064</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl065_search">
+			<field name="name">trinity.nomenclature.cl065.search</field>
+			<field name="model">trinity.nomenclature.cl065</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl066_search">
+			<field name="name">trinity.nomenclature.cl066.search</field>
+			<field name="model">trinity.nomenclature.cl066</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl067_search">
+			<field name="name">trinity.nomenclature.cl067.search</field>
+			<field name="model">trinity.nomenclature.cl067</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl068_search">
+			<field name="name">trinity.nomenclature.cl068.search</field>
+			<field name="model">trinity.nomenclature.cl068</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl069_search">
+			<field name="name">trinity.nomenclature.cl069.search</field>
+			<field name="model">trinity.nomenclature.cl069</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl070_search">
+			<field name="name">trinity.nomenclature.cl070.search</field>
+			<field name="model">trinity.nomenclature.cl070</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl071_search">
+			<field name="name">trinity.nomenclature.cl071.search</field>
+			<field name="model">trinity.nomenclature.cl071</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl072_search">
+			<field name="name">trinity.nomenclature.cl072.search</field>
+			<field name="model">trinity.nomenclature.cl072</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl073_search">
+			<field name="name">trinity.nomenclature.cl073.search</field>
+			<field name="model">trinity.nomenclature.cl073</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl074_search">
+			<field name="name">trinity.nomenclature.cl074.search</field>
+			<field name="model">trinity.nomenclature.cl074</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl075_search">
+			<field name="name">trinity.nomenclature.cl075.search</field>
+			<field name="model">trinity.nomenclature.cl075</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl076_search">
+			<field name="name">trinity.nomenclature.cl076.search</field>
+			<field name="model">trinity.nomenclature.cl076</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl077_search">
+			<field name="name">trinity.nomenclature.cl077.search</field>
+			<field name="model">trinity.nomenclature.cl077</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl078_search">
+			<field name="name">trinity.nomenclature.cl078.search</field>
+			<field name="model">trinity.nomenclature.cl078</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl079_search">
+			<field name="name">trinity.nomenclature.cl079.search</field>
+			<field name="model">trinity.nomenclature.cl079</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl080_search">
+			<field name="name">trinity.nomenclature.cl080.search</field>
+			<field name="model">trinity.nomenclature.cl080</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl081_search">
+			<field name="name">trinity.nomenclature.cl081.search</field>
+			<field name="model">trinity.nomenclature.cl081</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl082_search">
+			<field name="name">trinity.nomenclature.cl082.search</field>
+			<field name="model">trinity.nomenclature.cl082</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl083_search">
+			<field name="name">trinity.nomenclature.cl083.search</field>
+			<field name="model">trinity.nomenclature.cl083</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl084_search">
+			<field name="name">trinity.nomenclature.cl084.search</field>
+			<field name="model">trinity.nomenclature.cl084</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl085_search">
+			<field name="name">trinity.nomenclature.cl085.search</field>
+			<field name="model">trinity.nomenclature.cl085</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl086_search">
+			<field name="name">trinity.nomenclature.cl086.search</field>
+			<field name="model">trinity.nomenclature.cl086</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl087_search">
+			<field name="name">trinity.nomenclature.cl087.search</field>
+			<field name="model">trinity.nomenclature.cl087</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl088_search">
+			<field name="name">trinity.nomenclature.cl088.search</field>
+			<field name="model">trinity.nomenclature.cl088</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl089_search">
+			<field name="name">trinity.nomenclature.cl089.search</field>
+			<field name="model">trinity.nomenclature.cl089</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl090_search">
+			<field name="name">trinity.nomenclature.cl090.search</field>
+			<field name="model">trinity.nomenclature.cl090</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl091_search">
+			<field name="name">trinity.nomenclature.cl091.search</field>
+			<field name="model">trinity.nomenclature.cl091</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl092_search">
+			<field name="name">trinity.nomenclature.cl092.search</field>
+			<field name="model">trinity.nomenclature.cl092</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl093_search">
+			<field name="name">trinity.nomenclature.cl093.search</field>
+			<field name="model">trinity.nomenclature.cl093</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl094_search">
+			<field name="name">trinity.nomenclature.cl094.search</field>
+			<field name="model">trinity.nomenclature.cl094</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl095_search">
+			<field name="name">trinity.nomenclature.cl095.search</field>
+			<field name="model">trinity.nomenclature.cl095</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl096_search">
+			<field name="name">trinity.nomenclature.cl096.search</field>
+			<field name="model">trinity.nomenclature.cl096</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl097_search">
+			<field name="name">trinity.nomenclature.cl097.search</field>
+			<field name="model">trinity.nomenclature.cl097</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl098_search">
+			<field name="name">trinity.nomenclature.cl098.search</field>
+			<field name="model">trinity.nomenclature.cl098</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl099_search">
+			<field name="name">trinity.nomenclature.cl099.search</field>
+			<field name="model">trinity.nomenclature.cl099</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl100_search">
+			<field name="name">trinity.nomenclature.cl100.search</field>
+			<field name="model">trinity.nomenclature.cl100</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl101_search">
+			<field name="name">trinity.nomenclature.cl101.search</field>
+			<field name="model">trinity.nomenclature.cl101</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl102_search">
+			<field name="name">trinity.nomenclature.cl102.search</field>
+			<field name="model">trinity.nomenclature.cl102</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl103_search">
+			<field name="name">trinity.nomenclature.cl103.search</field>
+			<field name="model">trinity.nomenclature.cl103</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl104_search">
+			<field name="name">trinity.nomenclature.cl104.search</field>
+			<field name="model">trinity.nomenclature.cl104</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl105_search">
+			<field name="name">trinity.nomenclature.cl105.search</field>
+			<field name="model">trinity.nomenclature.cl105</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl106_search">
+			<field name="name">trinity.nomenclature.cl106.search</field>
+			<field name="model">trinity.nomenclature.cl106</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl107_search">
+			<field name="name">trinity.nomenclature.cl107.search</field>
+			<field name="model">trinity.nomenclature.cl107</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl108_search">
+			<field name="name">trinity.nomenclature.cl108.search</field>
+			<field name="model">trinity.nomenclature.cl108</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl109_search">
+			<field name="name">trinity.nomenclature.cl109.search</field>
+			<field name="model">trinity.nomenclature.cl109</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl110_search">
+			<field name="name">trinity.nomenclature.cl110.search</field>
+			<field name="model">trinity.nomenclature.cl110</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl111_search">
+			<field name="name">trinity.nomenclature.cl111.search</field>
+			<field name="model">trinity.nomenclature.cl111</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl112_search">
+			<field name="name">trinity.nomenclature.cl112.search</field>
+			<field name="model">trinity.nomenclature.cl112</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl113_search">
+			<field name="name">trinity.nomenclature.cl113.search</field>
+			<field name="model">trinity.nomenclature.cl113</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl114_search">
+			<field name="name">trinity.nomenclature.cl114.search</field>
+			<field name="model">trinity.nomenclature.cl114</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl115_search">
+			<field name="name">trinity.nomenclature.cl115.search</field>
+			<field name="model">trinity.nomenclature.cl115</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl116_search">
+			<field name="name">trinity.nomenclature.cl116.search</field>
+			<field name="model">trinity.nomenclature.cl116</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl117_search">
+			<field name="name">trinity.nomenclature.cl117.search</field>
+			<field name="model">trinity.nomenclature.cl117</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl118_search">
+			<field name="name">trinity.nomenclature.cl118.search</field>
+			<field name="model">trinity.nomenclature.cl118</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl119_search">
+			<field name="name">trinity.nomenclature.cl119.search</field>
+			<field name="model">trinity.nomenclature.cl119</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl120_search">
+			<field name="name">trinity.nomenclature.cl120.search</field>
+			<field name="model">trinity.nomenclature.cl120</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl121_search">
+			<field name="name">trinity.nomenclature.cl121.search</field>
+			<field name="model">trinity.nomenclature.cl121</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl122_search">
+			<field name="name">trinity.nomenclature.cl122.search</field>
+			<field name="model">trinity.nomenclature.cl122</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl123_search">
+			<field name="name">trinity.nomenclature.cl123.search</field>
+			<field name="model">trinity.nomenclature.cl123</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl124_search">
+			<field name="name">trinity.nomenclature.cl124.search</field>
+			<field name="model">trinity.nomenclature.cl124</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl125_search">
+			<field name="name">trinity.nomenclature.cl125.search</field>
+			<field name="model">trinity.nomenclature.cl125</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl126_search">
+			<field name="name">trinity.nomenclature.cl126.search</field>
+			<field name="model">trinity.nomenclature.cl126</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl127_search">
+			<field name="name">trinity.nomenclature.cl127.search</field>
+			<field name="model">trinity.nomenclature.cl127</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl128_search">
+			<field name="name">trinity.nomenclature.cl128.search</field>
+			<field name="model">trinity.nomenclature.cl128</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl129_search">
+			<field name="name">trinity.nomenclature.cl129.search</field>
+			<field name="model">trinity.nomenclature.cl129</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl130_search">
+			<field name="name">trinity.nomenclature.cl130.search</field>
+			<field name="model">trinity.nomenclature.cl130</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl131_search">
+			<field name="name">trinity.nomenclature.cl131.search</field>
+			<field name="model">trinity.nomenclature.cl131</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl132_search">
+			<field name="name">trinity.nomenclature.cl132.search</field>
+			<field name="model">trinity.nomenclature.cl132</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl133_search">
+			<field name="name">trinity.nomenclature.cl133.search</field>
+			<field name="model">trinity.nomenclature.cl133</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl134_search">
+			<field name="name">trinity.nomenclature.cl134.search</field>
+			<field name="model">trinity.nomenclature.cl134</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl135_search">
+			<field name="name">trinity.nomenclature.cl135.search</field>
+			<field name="model">trinity.nomenclature.cl135</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl136_search">
+			<field name="name">trinity.nomenclature.cl136.search</field>
+			<field name="model">trinity.nomenclature.cl136</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl137_search">
+			<field name="name">trinity.nomenclature.cl137.search</field>
+			<field name="model">trinity.nomenclature.cl137</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl138_search">
+			<field name="name">trinity.nomenclature.cl138.search</field>
+			<field name="model">trinity.nomenclature.cl138</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl139_search">
+			<field name="name">trinity.nomenclature.cl139.search</field>
+			<field name="model">trinity.nomenclature.cl139</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl140_search">
+			<field name="name">trinity.nomenclature.cl140.search</field>
+			<field name="model">trinity.nomenclature.cl140</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl141_search">
+			<field name="name">trinity.nomenclature.cl141.search</field>
+			<field name="model">trinity.nomenclature.cl141</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl142_search">
+			<field name="name">trinity.nomenclature.cl142.search</field>
+			<field name="model">trinity.nomenclature.cl142</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl143_search">
+			<field name="name">trinity.nomenclature.cl143.search</field>
+			<field name="model">trinity.nomenclature.cl143</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl144_search">
+			<field name="name">trinity.nomenclature.cl144.search</field>
+			<field name="model">trinity.nomenclature.cl144</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl145_search">
+			<field name="name">trinity.nomenclature.cl145.search</field>
+			<field name="model">trinity.nomenclature.cl145</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl146_search">
+			<field name="name">trinity.nomenclature.cl146.search</field>
+			<field name="model">trinity.nomenclature.cl146</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl147_search">
+			<field name="name">trinity.nomenclature.cl147.search</field>
+			<field name="model">trinity.nomenclature.cl147</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+        <record model="ir.ui.view" id="view_trinity_nomenclature_cl148_search">
+            <field name="name">trinity.nomenclature.cl148.search</field>
+            <field name="model">trinity.nomenclature.cl148</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name" string="Име"/>
+                    <field name="key" string="Key"/>
+                    <field name="description" string="Description"/>
+                    <filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+                    <filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+                    <group expand="0" string="Групирай по">
+                        <filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="view_trinity_nomenclature_cl149_search">
+            <field name="name">trinity.nomenclature.cl149.search</field>
+            <field name="model">trinity.nomenclature.cl149</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name" string="Име"/>
+                    <field name="key" string="Key"/>
+                    <field name="description" string="Description"/>
+                    <filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+                    <filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+                    <group expand="0" string="Групирай по">
+                        <filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="view_trinity_nomenclature_cl150_search">
+            <field name="name">trinity.nomenclature.cl150.search</field>
+            <field name="model">trinity.nomenclature.cl150</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name" string="Име"/>
+                    <field name="key" string="Key"/>
+                    <field name="description" string="Description"/>
+                    <filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+                    <filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+                    <group expand="0" string="Групирай по">
+                        <filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl997_search">
+			<field name="name">trinity.nomenclature.cl997.search</field>
+			<field name="model">trinity.nomenclature.cl997</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl998_search">
+			<field name="name">trinity.nomenclature.cl998.search</field>
+			<field name="model">trinity.nomenclature.cl998</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl999_search">
+			<field name="name">trinity.nomenclature.cl999.search</field>
+			<field name="model">trinity.nomenclature.cl999</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cls01_search">
+			<field name="name">trinity.nomenclature.cls01.search</field>
+			<field name="model">trinity.nomenclature.cls01</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cls02_search">
+			<field name="name">trinity.nomenclature.cls02.search</field>
+			<field name="model">trinity.nomenclature.cls02</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Име"/>
+					<field name="key" string="Key"/>
+					<field name="description" string="Description"/>
+					<filter string="Активни" name="active" domain="[('active', '=', True)]"/>
+					<filter string="Неактивни" name="inactive" domain="[('active', '=', False)]"/>
+					<group expand="0" string="Групирай по">
+						<filter string="Активност" name="group_active" context="{'group_by': 'active'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+	</data>
+</odoo>

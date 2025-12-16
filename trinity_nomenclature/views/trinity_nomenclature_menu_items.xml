@@ -1,0 +1,190 @@
+<odoo>
+	<data>
+		<menuitem name="Номенклатура" id="menu_nomenclatures_parent" sequence="13"/>
+		<menuitem name="Номенклатури" id="menu_trinity_nomenclature" parent="menu_nomenclatures_parent" action="action_trinity_nomenclature" sequence="1"/>
+		<menuitem name="Импорт" id="menu_import_group" parent="menu_nomenclatures_parent" sequence="2"/>
+		<menuitem name="Импорт НЗИС" id="menu_trinity_nomenclature_import_nhis" parent="menu_import_group" action="action_trinity_nomenclature_import_nhis" sequence="1"/>
+		<menuitem name="Импорт xlsx" id="menu_trinity_nomenclature_import_wizard" parent="menu_import_group" action="action_trinity_nomenclature_import_wizard" sequence="2"/>
+
+		<menuitem name="Импорт на данни в модели" id="menu_data_into_models" parent="menu_nomenclatures_parent" sequence="110"/>
+		<menuitem name="Импорт csv" id="menu_trinity_csv_import" parent="menu_data_into_models" action="action_trinity_csv_import" sequence="3"/>
+
+		<menuitem name="CL001-CL020" id="menu_cl001_020_group" parent="menu_nomenclatures_parent" sequence="10"/>
+		<menuitem name="CL021-CL040" id="menu_cl021_040_group" parent="menu_nomenclatures_parent" sequence="20"/>
+		<menuitem name="CL041-CL060" id="menu_cl001_060_group" parent="menu_nomenclatures_parent" sequence="30"/>
+		<menuitem name="CL061-CL080" id="menu_cl061_080_group" parent="menu_nomenclatures_parent" sequence="40"/>
+		<menuitem name="CL081-CL100" id="menu_cl081_100_group" parent="menu_nomenclatures_parent" sequence="50"/>
+		<menuitem name="CL101-CL120" id="menu_cl101_120_group" parent="menu_nomenclatures_parent" sequence="60"/>
+		<menuitem name="CL121-CL140" id="menu_cl121_140_group" parent="menu_nomenclatures_parent" sequence="70"/>
+		<menuitem name="CL141-CL160" id="menu_cl141_160_group" parent="menu_nomenclatures_parent" sequence="80"/>
+		<menuitem name="CL997-CL999, CLS" id="menu_system_group" parent="menu_nomenclatures_parent" sequence="90"/>
+		<menuitem name="Цени" id="menu_prices_group" parent="menu_nomenclatures_parent" sequence="100"/>
+		<!-- CL001-CL020 under menu_cl001_020_group -->
+		<menuitem name="CL001 - Пол" id="menu_trinity_nomenclature_cl001" parent="menu_cl001_020_group" action="action_trinity_nomenclature_cl001" sequence="1"/>
+		<menuitem name="CL002 - Статус на рецепта" id="menu_trinity_nomenclature_cl002" parent="menu_cl001_020_group" action="action_trinity_nomenclature_cl002" sequence="2"/>
+		<menuitem name="CL003 - Статус на Е-направление" id="menu_trinity_nomenclature_cl003" parent="menu_cl001_020_group" action="action_trinity_nomenclature_cl003" sequence="3"/>
+		<menuitem name="CL004 - Тип на идентификатор" id="menu_trinity_nomenclature_cl004" parent="menu_cl001_020_group" action="action_trinity_nomenclature_cl004" sequence="4"/>
+		<menuitem name="CL005 - Код на държава - ISO 3166 alpha-2" id="menu_trinity_nomenclature_cl005" parent="menu_cl001_020_group" action="action_trinity_nomenclature_cl005" sequence="5"/>
+		<menuitem name="CL006 - Код на специалност" id="menu_trinity_nomenclature_cl006" parent="menu_cl001_020_group" action="action_trinity_nomenclature_cl006" sequence="6"/>
+		<menuitem name="CL007 - Тип на рецепта" id="menu_trinity_nomenclature_cl007" parent="menu_cl001_020_group" action="action_trinity_nomenclature_cl007" sequence="7"/>
+		<menuitem name="CL008 - Начин на отпускане на рецепта (бяла)" id="menu_trinity_nomenclature_cl008" parent="menu_cl001_020_group" action="action_trinity_nomenclature_cl008" sequence="8"/>
+		<menuitem name="CL009 - Код на медикамент от регистрите на НСЦРЛП" id="menu_trinity_nomenclature_cl009" parent="menu_cl001_020_group" action="action_trinity_nomenclature_cl009" sequence="9"/>
+		<menuitem name="CL010 - Лекарствена форма" id="menu_trinity_nomenclature_cl010" parent="menu_cl001_020_group" action="action_trinity_nomenclature_cl010" sequence="10"/>
+		<menuitem name="CL011 - МКБ код на заболяване" id="menu_trinity_nomenclature_cl011" parent="menu_cl001_020_group" action="action_trinity_nomenclature_cl011" sequence="11"/>
+		<menuitem name="CL012 - Видове наблюдения при оценка на резултат от дейност" id="menu_trinity_nomenclature_cl012" parent="menu_cl001_020_group" action="action_trinity_nomenclature_cl012" sequence="12"/>
+		<menuitem name="CL013 - Път на въвеждане на медикамент" id="menu_trinity_nomenclature_cl013" parent="menu_cl001_020_group" action="action_trinity_nomenclature_cl013" sequence="13"/>
+		<menuitem name="CL014 - Тип на Е-направление" id="menu_trinity_nomenclature_cl014" parent="menu_cl001_020_group" action="action_trinity_nomenclature_cl014" sequence="14"/>
+		<menuitem name="CL015 - РЗОК номер на област" id="menu_trinity_nomenclature_cl015" parent="menu_cl001_020_group" action="action_trinity_nomenclature_cl015" sequence="15"/>
+		<menuitem name="CL016 - Код на заместване на медикамент" id="menu_trinity_nomenclature_cl016" parent="menu_cl001_020_group" action="action_trinity_nomenclature_cl016" sequence="16"/>
+		<menuitem name="CL017 - Код на районна фармацевтична колегия" id="menu_trinity_nomenclature_cl017" parent="menu_cl001_020_group" action="action_trinity_nomenclature_cl017" sequence="17"/>
+		<menuitem name="CL018 - Тип на изпращач или получател на НЗИС съобщение" id="menu_trinity_nomenclature_cl018" parent="menu_cl001_020_group" action="action_trinity_nomenclature_cl018" sequence="18"/>
+		<menuitem name="CL019 - Отрязък на рецептурна бланка" id="menu_trinity_nomenclature_cl019" parent="menu_cl001_020_group" action="action_trinity_nomenclature_cl019" sequence="19"/>
+		<menuitem name="CL020 - Мерна единица за времеви период" id="menu_trinity_nomenclature_cl020" parent="menu_cl001_020_group" action="action_trinity_nomenclature_cl020" sequence="20"/>
+		<!-- CL021-CL020 under menu_cl021_040_group -->
+		<menuitem name="CL021 - Повод за издаване на направление по НЗОК" id="menu_trinity_nomenclature_cl021" parent="menu_cl021_040_group" action="action_trinity_nomenclature_cl021" sequence="1"/>
+		<menuitem name="CL022 - Mедико-диагностична дейност" id="menu_trinity_nomenclature_cl022" parent="menu_cl021_040_group" action="action_trinity_nomenclature_cl022" sequence="2"/>
+		<menuitem name="CL023 - Роля на медицински специалист" id="menu_trinity_nomenclature_cl023" parent="menu_cl021_040_group" action="action_trinity_nomenclature_cl023" sequence="3"/>
+		<menuitem name="CL024 - Резултат от медико-диагностична дейност" id="menu_trinity_nomenclature_cl024" parent="menu_cl021_040_group" action="action_trinity_nomenclature_cl024" sequence="4"/>
+		<menuitem name="CL025 - Метод на получаване на резултат от медико-диагностична дейност" id="menu_trinity_nomenclature_cl025" parent="menu_cl021_040_group" action="action_trinity_nomenclature_cl025" sequence="5"/>
+		<menuitem name="CL026 - Лекарствен продукт по НЗОК" id="menu_trinity_nomenclature_cl026" parent="menu_cl021_040_group" action="action_trinity_nomenclature_cl026" sequence="6"/>
+		<menuitem name="CL027 - Приоритет за изпълнение" id="menu_trinity_nomenclature_cl027" parent="menu_cl021_040_group" action="action_trinity_nomenclature_cl027" sequence="7"/>
+		<menuitem name="CL028 - Скала на стойност на резултат" id="menu_trinity_nomenclature_cl028" parent="menu_cl021_040_group" action="action_trinity_nomenclature_cl028" sequence="8"/>
+		<menuitem name="CL029 - РЗОК номер на област и здравен район" id="menu_trinity_nomenclature_cl029" parent="menu_cl021_040_group" action="action_trinity_nomenclature_cl029" sequence="9"/>
+		<menuitem name="CL030 - Стойност в номенклатура на резултат от наблюдение" id="menu_trinity_nomenclature_cl030" parent="menu_cl021_040_group" action="action_trinity_nomenclature_cl030" sequence="10"/>
+		<menuitem name="CL031" id="menu_trinity_nomenclature_cl031" parent="menu_cl021_040_group" action="action_trinity_nomenclature_cl031" sequence="11"/>
+		<menuitem name="CL032 - Тип номенклатура на резултат от наблюдение" id="menu_trinity_nomenclature_cl032" parent="menu_cl021_040_group" action="action_trinity_nomenclature_cl032" sequence="12"/>
+		<menuitem name="CL033 - Статус на медико-диагностична дейност" id="menu_trinity_nomenclature_cl033" parent="menu_cl021_040_group" action="action_trinity_nomenclature_cl033" sequence="13"/>
+		<menuitem name="CL034 - Време за приемане на медикамент" id="menu_trinity_nomenclature_cl034" parent="menu_cl021_040_group" action="action_trinity_nomenclature_cl034" sequence="14"/>
+		<menuitem name="CL035 - Форма на дозировка" id="menu_trinity_nomenclature_cl035" parent="menu_cl021_040_group" action="action_trinity_nomenclature_cl035" sequence="15"/>
+		<menuitem name="CL036" id="menu_trinity_nomenclature_cl036" parent="menu_cl021_040_group" action="action_trinity_nomenclature_cl036" sequence="16"/>
+		<menuitem name="CL037 - Код на ваксина" id="menu_trinity_nomenclature_cl037" parent="menu_cl021_040_group" action="action_trinity_nomenclature_cl037" sequence="17"/>
+		<menuitem name="CL038 - Планова имунизация или реимунизация" id="menu_trinity_nomenclature_cl038" parent="menu_cl021_040_group" action="action_trinity_nomenclature_cl038" sequence="18"/>
+		<menuitem name="CL039 - Статус на Е-имунизация" id="menu_trinity_nomenclature_cl039" parent="menu_cl021_040_group" action="action_trinity_nomenclature_cl039" sequence="19"/>
+		<menuitem name="CL040 - Предприети действия относно подозиран лекарствен продукт" id="menu_trinity_nomenclature_cl040" parent="menu_cl021_040_group" action="action_trinity_nomenclature_cl040" sequence="20"/>
+		<!-- CL041-CL060 under menu_cl001_060_group -->
+		<menuitem name="CL041 - Код на област" id="menu_trinity_nomenclature_cl041" parent="menu_cl001_060_group" action="action_trinity_nomenclature_cl041" sequence="1"/>
+		<menuitem name="CL042 - Социална група" id="menu_trinity_nomenclature_cl042" parent="menu_cl001_060_group" action="action_trinity_nomenclature_cl042" sequence="2"/>
+		<menuitem name="CL043 - Статус на лице за имунизация" id="menu_trinity_nomenclature_cl043" parent="menu_cl001_060_group" action="action_trinity_nomenclature_cl043" sequence="3"/>
+		<menuitem name="CL044 - ЕКАТТЕ" id="menu_trinity_nomenclature_cl044" parent="menu_cl001_060_group" action="action_trinity_nomenclature_cl044" sequence="4"/>
+		<menuitem name="CL045 - Част от тялото за администриране на лекарство" id="menu_trinity_nomenclature_cl045" parent="menu_cl001_060_group" action="action_trinity_nomenclature_cl045" sequence="5"/>
+		<menuitem name="CL046 - Път на навлизане на лекарство в тялото" id="menu_trinity_nomenclature_cl046" parent="menu_cl001_060_group" action="action_trinity_nomenclature_cl046" sequence="6"/>
+		<menuitem name="CL047 - Причина за посещение при лекар" id="menu_trinity_nomenclature_cl047" parent="menu_cl001_060_group" action="action_trinity_nomenclature_cl047" sequence="7"/>
+		<menuitem name="CL049 - Класификация на преглед" id="menu_trinity_nomenclature_cl049" parent="menu_cl001_060_group" action="action_trinity_nomenclature_cl049" sequence="8"/>
+		<menuitem name="CL050 - Код на високо-специализирана дейност по НЗОК" id="menu_trinity_nomenclature_cl050" parent="menu_cl001_060_group" action="action_trinity_nomenclature_cl050" sequence="9"/>
+		<menuitem name="CL051 - Вид на преглед за медицинска експертиза по НЗОК" id="menu_trinity_nomenclature_cl051" parent="menu_cl001_060_group" action="action_trinity_nomenclature_cl051" sequence="10"/>
+		<menuitem name="CL052 - Причина за издаване на направление за ТЕЛК" id="menu_trinity_nomenclature_cl052" parent="menu_cl001_060_group" action="action_trinity_nomenclature_cl052" sequence="11"/>
+		<menuitem name="CL053 - Тип адрес" id="menu_trinity_nomenclature_cl053" parent="menu_cl001_060_group" action="action_trinity_nomenclature_cl053" sequence="12"/>
+		<menuitem name="CL054 - Специални медицински дейности - МКБ 9" id="menu_trinity_nomenclature_cl054" parent="menu_cl001_060_group" action="action_trinity_nomenclature_cl054" sequence="13"/>
+		<menuitem name="CL055 - Статус на преглед" id="menu_trinity_nomenclature_cl055" parent="menu_cl001_060_group" action="action_trinity_nomenclature_cl055" sequence="14"/>
+		<menuitem name="CL056 - Trinity Nomenclature CL056 - Медицински инструмент" id="menu_trinity_nomenclature_cl056" parent="menu_cl001_060_group" action="action_trinity_nomenclature_cl056" sequence="15"/>
+		<menuitem name="CL057 - Тип на медицински инструмент" id="menu_trinity_nomenclature_cl057" parent="menu_cl001_060_group" action="action_trinity_nomenclature_cl057" sequence="16"/>
+		<menuitem name="CL058 - Trinity Nomenclature CL058 - Производител на медицински инструмент" id="menu_trinity_nomenclature_cl058" parent="menu_cl001_060_group" action="action_trinity_nomenclature_cl058" sequence="17"/>
+		<menuitem name="CL059 - Тип на прием за хоспитализация" id="menu_trinity_nomenclature_cl059" parent="menu_cl001_060_group" action="action_trinity_nomenclature_cl059" sequence="18"/>
+		<menuitem name="CL060 - Насочваща институция" id="menu_trinity_nomenclature_cl060" parent="menu_cl001_060_group" action="action_trinity_nomenclature_cl060" sequence="19"/>
+		<!-- CL061-CL080 under menu_cl061_080_group -->
+		<menuitem name="CL061 - Причина за хоспитализация" id="menu_trinity_nomenclature_cl061" parent="menu_cl061_080_group" action="action_trinity_nomenclature_cl061" sequence="1"/>
+		<menuitem name="CL062 - Клинична пътека" id="menu_trinity_nomenclature_cl062" parent="menu_cl061_080_group" action="action_trinity_nomenclature_cl062" sequence="2"/>
+		<menuitem name="CL063 - Амбулаторна или клинична процедура" id="menu_trinity_nomenclature_cl063" parent="menu_cl061_080_group" action="action_trinity_nomenclature_cl063" sequence="3"/>
+		<menuitem name="CL064 - Семейно положение" id="menu_trinity_nomenclature_cl064" parent="menu_cl061_080_group" action="action_trinity_nomenclature_cl064" sequence="4"/>
+		<menuitem name="CL065 - Образование" id="menu_trinity_nomenclature_cl065" parent="menu_cl061_080_group" action="action_trinity_nomenclature_cl065" sequence="5"/>
+		<menuitem name="CL066 - Степен на тежест на състоянието" id="menu_trinity_nomenclature_cl066" parent="menu_cl061_080_group" action="action_trinity_nomenclature_cl066" sequence="6"/>
+		<menuitem name="CL067 - Времеви интервал от медицинско събитие" id="menu_trinity_nomenclature_cl067" parent="menu_cl061_080_group" action="action_trinity_nomenclature_cl067" sequence="7"/>
+		<menuitem name="CL068" id="menu_trinity_nomenclature_cl068" parent="menu_cl061_080_group" action="action_trinity_nomenclature_cl068" sequence="8"/>
+		<menuitem name="CL069 - Източник на финансиране" id="menu_trinity_nomenclature_cl069" parent="menu_cl061_080_group" action="action_trinity_nomenclature_cl069" sequence="9"/>
+		<menuitem name="CL070 - Кръвна група" id="menu_trinity_nomenclature_cl070" parent="menu_cl061_080_group" action="action_trinity_nomenclature_cl070" sequence="10"/>
+		<menuitem name="CL071 - Тип на алергична реакция" id="menu_trinity_nomenclature_cl071" parent="menu_cl061_080_group" action="action_trinity_nomenclature_cl071" sequence="11"/>
+		<menuitem name="CL072 - Категория на алергична реакция" id="menu_trinity_nomenclature_cl072" parent="menu_cl061_080_group" action="action_trinity_nomenclature_cl072" sequence="12"/>
+		<menuitem name="CL073 - Критичност на алергична реакция" id="menu_trinity_nomenclature_cl073" parent="menu_cl061_080_group" action="action_trinity_nomenclature_cl073" sequence="13"/>
+		<menuitem name="CL074 - Статус на Е-Хоспитализация" id="menu_trinity_nomenclature_cl074" parent="menu_cl061_080_group" action="action_trinity_nomenclature_cl074" sequence="14"/>
+		<menuitem name="CL075 - Резултат от хоспитализация" id="menu_trinity_nomenclature_cl075" parent="menu_cl061_080_group" action="action_trinity_nomenclature_cl075" sequence="15"/>
+		<menuitem name="CL076 - Роля на диагноза" id="menu_trinity_nomenclature_cl076" parent="menu_cl061_080_group" action="action_trinity_nomenclature_cl076" sequence="16"/>
+		<menuitem name="CL077 - Клиничен статус" id="menu_trinity_nomenclature_cl077" parent="menu_cl061_080_group" action="action_trinity_nomenclature_cl077" sequence="17"/>
+		<menuitem name="CL078 - Верификационен статус" id="menu_trinity_nomenclature_cl078" parent="menu_cl061_080_group" action="action_trinity_nomenclature_cl078" sequence="18"/>
+		<menuitem name="CL079 - Режим на хранене" id="menu_trinity_nomenclature_cl079" parent="menu_cl061_080_group" action="action_trinity_nomenclature_cl079" sequence="19"/>
+		<menuitem name="CL080 - Разпореждане след изписване" id="menu_trinity_nomenclature_cl080" parent="menu_cl061_080_group" action="action_trinity_nomenclature_cl080" sequence="20"/>
+		<!-- CL081-CL100 under menu_cl081_100_group -->
+		<menuitem name="CL081 - Статус на работоспособност" id="menu_trinity_nomenclature_cl081" parent="menu_cl081_100_group" action="action_trinity_nomenclature_cl081" sequence="1"/>
+		<menuitem name="CL082 - Имунизационна програма" id="menu_trinity_nomenclature_cl082" parent="menu_cl081_100_group" action="action_trinity_nomenclature_cl082" sequence="2"/>
+		<menuitem name="CL083 - Статус на доклад за медико-диагностична дейност" id="menu_trinity_nomenclature_cl083" parent="menu_cl081_100_group" action="action_trinity_nomenclature_cl083" sequence="3"/>
+		<menuitem name="CL084 - Тип лечебно заведение за извънболнична помощ" id="menu_trinity_nomenclature_cl084" parent="menu_cl081_100_group" action="action_trinity_nomenclature_cl084" sequence="4"/>
+		<menuitem name="CL085 - Вид лечебно заведение за болнична помощ" id="menu_trinity_nomenclature_cl085" parent="menu_cl081_100_group" action="action_trinity_nomenclature_cl085" sequence="5"/>
+		<menuitem name="CL086 - Тип лечебно заведение за болнична помощ" id="menu_trinity_nomenclature_cl086" parent="menu_cl081_100_group" action="action_trinity_nomenclature_cl086" sequence="6"/>
+		<menuitem name="CL087 - Вид лечебно заведение за извънболнична помощ" id="menu_trinity_nomenclature_cl087" parent="menu_cl081_100_group" action="action_trinity_nomenclature_cl087" sequence="7"/>
+		<menuitem name="CL088 - Резултат от дейност по профилактика" id="menu_trinity_nomenclature_cl088" parent="menu_cl081_100_group" action="action_trinity_nomenclature_cl088" sequence="8"/>
+		<menuitem name="CL089 - Етап на хоспитализация" id="menu_trinity_nomenclature_cl089" parent="menu_cl081_100_group" action="action_trinity_nomenclature_cl089" sequence="9"/>
+		<menuitem name="CL090 - Ефект от нежелана лекарствена реакция" id="menu_trinity_nomenclature_cl090" parent="menu_cl081_100_group" action="action_trinity_nomenclature_cl090" sequence="10"/>
+		<menuitem name="CL091 - Изход от нежелана лекарствена реакция" id="menu_trinity_nomenclature_cl091" parent="menu_cl081_100_group" action="action_trinity_nomenclature_cl091" sequence="11"/>
+		<menuitem name="CL092 - Зависимост или състояние" id="menu_trinity_nomenclature_cl092" parent="menu_cl081_100_group" action="action_trinity_nomenclature_cl092" sequence="12"/>
+		<menuitem name="CL093 - Връзка с нежелана лекарствена реакция" id="menu_trinity_nomenclature_cl093" parent="menu_cl081_100_group" action="action_trinity_nomenclature_cl093" sequence="13"/>
+		<menuitem name="CL094" id="menu_trinity_nomenclature_cl094" parent="menu_cl081_100_group" action="action_trinity_nomenclature_cl094" sequence="14"/>
+		<menuitem name="CL095 - ACHI Chapter" id="menu_trinity_nomenclature_cl095" parent="menu_cl081_100_group" action="action_trinity_nomenclature_cl095" sequence="15"/>
+		<menuitem name="CL096 - ACHI Block" id="menu_trinity_nomenclature_cl096" parent="menu_cl081_100_group" action="action_trinity_nomenclature_cl096" sequence="16"/>
+		<menuitem name="CL097 - Интерпретация на резултати" id="menu_trinity_nomenclature_cl097" parent="menu_cl081_100_group" action="action_trinity_nomenclature_cl097" sequence="17"/>
+		<menuitem name="CL098 - Тип място на раждане" id="menu_trinity_nomenclature_cl098" parent="menu_cl081_100_group" action="action_trinity_nomenclature_cl098" sequence="18"/>
+		<menuitem name="CL099 - Начин на раждане" id="menu_trinity_nomenclature_cl099" parent="menu_cl081_100_group" action="action_trinity_nomenclature_cl099" sequence="19"/>
+		<menuitem name="CL100 - Заключение след преглед за продължаване на лечението" id="menu_trinity_nomenclature_cl100" parent="menu_cl081_100_group" action="action_trinity_nomenclature_cl100" sequence="20"/>
+		<!-- CL101-CL120 under menu_cl101_120_group -->
+		<menuitem name="CL101 - Статус на настаняване в лечебно заведение" id="menu_trinity_nomenclature_cl101" parent="menu_cl101_120_group" action="action_trinity_nomenclature_cl101" sequence="1"/>
+		<menuitem name="CL102 - Тип е-документ" id="menu_trinity_nomenclature_cl102" parent="menu_cl101_120_group" action="action_trinity_nomenclature_cl102" sequence="2"/>
+		<menuitem name="CL103 - Родствена връзка" id="menu_trinity_nomenclature_cl103" parent="menu_cl101_120_group" action="action_trinity_nomenclature_cl103" sequence="3"/>
+		<menuitem name="CL104 - Употреба на тютюн" id="menu_trinity_nomenclature_cl104" parent="menu_cl101_120_group" action="action_trinity_nomenclature_cl104" sequence="4"/>
+		<menuitem name="CL105 - Статус на семейна здравна история" id="menu_trinity_nomenclature_cl105" parent="menu_cl101_120_group" action="action_trinity_nomenclature_cl105" sequence="5"/>
+		<menuitem name="CL106 - Зъбен код" id="menu_trinity_nomenclature_cl106" parent="menu_cl101_120_group" action="action_trinity_nomenclature_cl106" sequence="6"/>
+		<menuitem name="CL107 - Код на състояние на зъб" id="menu_trinity_nomenclature_cl107" parent="menu_cl101_120_group" action="action_trinity_nomenclature_cl107" sequence="7"/>
+		<menuitem name="CL108 - Зъбна повърхност" id="menu_trinity_nomenclature_cl108" parent="menu_cl101_120_group" action="action_trinity_nomenclature_cl108" sequence="8"/>
+		<menuitem name="CL109 - Степен на подвижност на зъб" id="menu_trinity_nomenclature_cl109" parent="menu_cl101_120_group" action="action_trinity_nomenclature_cl109" sequence="9"/>
+		<menuitem name="CL110 - Код на дентална дейност" id="menu_trinity_nomenclature_cl110" parent="menu_cl101_120_group" action="action_trinity_nomenclature_cl110" sequence="10"/>
+		<menuitem name="CL111 - Код на дентална диагноза" id="menu_trinity_nomenclature_cl111" parent="menu_cl101_120_group" action="action_trinity_nomenclature_cl111" sequence="11"/>
+		<menuitem name="CL112 - Тип на дентална дейност" id="menu_trinity_nomenclature_cl112" parent="menu_cl101_120_group" action="action_trinity_nomenclature_cl112" sequence="12"/>
+		<menuitem name="CL113 - Статус на Е-дентално лечение" id="menu_trinity_nomenclature_cl113" parent="menu_cl101_120_group" />
+		<menuitem name="CL114 - Лекарства съдържащи наркотични вещества по жълта рецепта (T7)" id="menu_trinity_nomenclature_cl114" parent="menu_cl101_120_group" action="action_trinity_nomenclature_cl114" sequence="14"/>
+		<menuitem name="CL115 - Лекарства съдържащи наркотични вещества по зелена рецепта (T6)" id="menu_trinity_nomenclature_cl115" parent="menu_cl101_120_group" action="action_trinity_nomenclature_cl115" sequence="15"/>
+		<menuitem name="CL116 - Причина за издаване на медицинска бележка" id="menu_trinity_nomenclature_cl116" parent="menu_cl101_120_group" action="action_trinity_nomenclature_cl116" sequence="16"/>
+		<menuitem name="CL117 - Място за провеждане на лечение и възстановяване" id="menu_trinity_nomenclature_cl117" parent="menu_cl101_120_group" action="action_trinity_nomenclature_cl117" sequence="17"/>
+		<menuitem name="CL118 - Статус за медицинска бележка" id="menu_trinity_nomenclature_cl118" parent="menu_cl101_120_group" action="action_trinity_nomenclature_cl118" sequence="18"/>
+		<menuitem name="CL119" id="menu_trinity_nomenclature_cl119" parent="menu_cl101_120_group" action="action_trinity_nomenclature_cl119" sequence="19"/>
+		<menuitem name="CL120 - Производител на устройството, използвано за полагане на подпис на пациента" id="menu_trinity_nomenclature_cl120" parent="menu_cl101_120_group" action="action_trinity_nomenclature_cl120" sequence="20"/>
+		<!-- CL121-CL140 under menu_cl121_140_group -->
+		<menuitem name="CL121 - Модел на устройството, използвано за полагане на подпис на пациента" id="menu_trinity_nomenclature_cl121" parent="menu_cl121_140_group" action="action_trinity_nomenclature_cl121" sequence="1"/>
+		<menuitem name="CL122 - Заболявания за проследяване и диспансеризация" id="menu_trinity_nomenclature_cl122" parent="menu_cl121_140_group" action="action_trinity_nomenclature_cl122" sequence="2"/>
+		<menuitem name="CL123 - Категория за управление на МСП" id="menu_trinity_nomenclature_cl123" parent="menu_cl121_140_group" action="action_trinity_nomenclature_cl123" sequence="3"/>
+		<menuitem name="CL124 - Статус на удостоверение за здравословно състояние" id="menu_trinity_nomenclature_cl124" parent="menu_cl121_140_group" action="action_trinity_nomenclature_cl124" sequence="4"/>
+		<menuitem name="CL125 - Тип на удостоверение за здравословно състояние" id="menu_trinity_nomenclature_cl125" parent="menu_cl121_140_group" action="action_trinity_nomenclature_cl125" sequence="5"/>
+		<menuitem name="CL126 - Групи рискови фактори за развитие на заболяване" id="menu_trinity_nomenclature_cl126" parent="menu_cl121_140_group" action="action_trinity_nomenclature_cl126" sequence="6"/>
+		<menuitem name="CL127 - Рискови фактори за развитие на заболяване" id="menu_trinity_nomenclature_cl127" parent="menu_cl121_140_group" action="action_trinity_nomenclature_cl127" sequence="7"/>
+		<menuitem name="CL128 - Обективен статус с резултат от физикален преглед" id="menu_trinity_nomenclature_cl128" parent="menu_cl121_140_group" action="action_trinity_nomenclature_cl128" sequence="8"/>
+		<menuitem name="CL129 - Пациенски характеристики за личен картон" id="menu_trinity_nomenclature_cl129" parent="menu_cl121_140_group" action="action_trinity_nomenclature_cl129" sequence="9"/>
+		<menuitem name="CL130 - Видове дейности и поддейности по НЗОК" id="menu_trinity_nomenclature_cl130" parent="menu_cl121_140_group" action="action_trinity_nomenclature_cl130" sequence="10"/>
+		<menuitem name="CL131 - Статус на попълване на анамнеза" id="menu_trinity_nomenclature_cl131" parent="menu_cl121_140_group" action="action_trinity_nomenclature_cl131" sequence="11"/>
+		<menuitem name="CL132 - График на профилактичните прегледи и дейности" id="menu_trinity_nomenclature_cl132" parent="menu_cl121_140_group" action="action_trinity_nomenclature_cl132" sequence="12"/>
+		<menuitem name="CL133 - Групи въпроси към прегледи при снемане на анамнеза" id="menu_trinity_nomenclature_cl133" parent="menu_cl121_140_group" action="action_trinity_nomenclature_cl133" sequence="13"/>
+		<menuitem name="CL134 - Въпроси към прегледи при снемане на анамнеза" id="menu_trinity_nomenclature_cl134" parent="menu_cl121_140_group" action="action_trinity_nomenclature_cl134" sequence="14"/>
+		<menuitem name="CL135 - Код на успешна операция получен от системата на БОВЛ" id="menu_trinity_nomenclature_cl135" parent="menu_cl121_140_group" action="action_trinity_nomenclature_cl135" sequence="15"/>
+		<menuitem name="CL136 - Видове дейности при профилактични прегледи" id="menu_trinity_nomenclature_cl136" parent="menu_cl121_140_group" action="action_trinity_nomenclature_cl136" sequence="16"/>
+		<menuitem name="CL137 - Статус на профилактичен преглед или дейност" id="menu_trinity_nomenclature_cl137" parent="menu_cl121_140_group" action="action_trinity_nomenclature_cl137" sequence="17"/>
+		<menuitem name="CL138 - Групи от допустими отговори при профилактика" id="menu_trinity_nomenclature_cl138" parent="menu_cl121_140_group" action="action_trinity_nomenclature_cl138" sequence="18"/>
+		<menuitem name="CL139 - Допустими отговори при профилактика" id="menu_trinity_nomenclature_cl139" parent="menu_cl121_140_group" action="action_trinity_nomenclature_cl139" sequence="19"/>
+		<menuitem name="CL140 - Допустими връзки при контакти в личен картон" id="menu_trinity_nomenclature_cl140" parent="menu_cl121_140_group" action="action_trinity_nomenclature_cl140" sequence="20"/>
+		<!-- CL141-CL146 under menu_cl141_160_group -->
+		<menuitem name="CL141 - Статус на дейност по профилактика" id="menu_trinity_nomenclature_cl141" parent="menu_cl141_160_group" action="action_trinity_nomenclature_cl141" sequence="1"/>
+		<menuitem name="CL142 - Код на дейност по профилактика" id="menu_trinity_nomenclature_cl142" parent="menu_cl141_160_group" action="action_trinity_nomenclature_cl142" sequence="2"/>
+		<menuitem name="CL143 - Скринингови програми" id="menu_trinity_nomenclature_cl143" parent="menu_cl141_160_group" action="action_trinity_nomenclature_cl143" sequence="3"/>
+		<menuitem name="CL144 - Резултат от дейност по профилактика" id="menu_trinity_nomenclature_cl144" parent="menu_cl141_160_group" action="action_trinity_nomenclature_cl144" sequence="4"/>
+		<menuitem name="CL145 - Източник на информацията при отговор по въпросник в профилактика" id="menu_trinity_nomenclature_cl145" parent="menu_cl141_160_group" action="action_trinity_nomenclature_cl145" sequence="5"/>
+		<menuitem name="CL146 - Статус на отпускане по рецепта" id="menu_trinity_nomenclature_cl146" parent="menu_cl141_160_group" action="action_trinity_nomenclature_cl146" sequence="6"/>
+		<menuitem name="CL147 - Вид на предписана терапия" id="menu_trinity_nomenclature_cl147" parent="menu_cl141_160_group" action="action_trinity_nomenclature_cl147" sequence="7"/>
+		<menuitem name="CL148 - Регистър на Заразните болести" id="menu_trinity_nomenclature_cl148" parent="menu_cl141_160_group" action="action_trinity_nomenclature_cl148" sequence="8"/>
+		<menuitem name="CL149 - Категоризация на случаите на заразни заболявания" id="menu_trinity_nomenclature_cl149" parent="menu_cl141_160_group" action="action_trinity_nomenclature_cl149" sequence="9"/>
+		<menuitem name="CL150 - Редки заболявания по Orphanet" id="menu_trinity_nomenclature_cl150" parent="menu_cl141_160_group" action="action_trinity_nomenclature_cl150" sequence="10"/>
+		<!-- Existing menu items for CL997-CL999, CLS01, CLS02 remain unchanged -->
+		<menuitem name="CL997" id="menu_trinity_nomenclature_cl997" parent="menu_system_group" action="action_trinity_nomenclature_cl997" sequence="1"/>
+		<menuitem name="CL998" id="menu_trinity_nomenclature_cl998" parent="menu_system_group" action="action_trinity_nomenclature_cl998" sequence="2"/>
+		<menuitem name="CL999" id="menu_trinity_nomenclature_cl999" parent="menu_system_group" action="action_trinity_nomenclature_cl999" sequence="3"/>
+		<menuitem name="CLS01" id="menu_trinity_nomenclature_cls01" parent="menu_system_group" action="action_trinity_nomenclature_cls01" sequence="4"/>
+		<menuitem name="CLS02" id="menu_trinity_nomenclature_cls02" parent="menu_system_group" action="action_trinity_nomenclature_cls02" sequence="5"/>
+        <!-- Prices under menu_prices_group -->
+        <menuitem name="CL022 - Медико-диагностична дейност Цени" id="menu_trinity_nomenclature_cl022_prices" parent="menu_prices_group" action="action_trinity_nomenclature_cl022_prices" sequence="1"/>
+        <menuitem name="CL050 - Преглед за медицинска експертиза по НЗОК Цени" id="menu_trinity_nomenclature_cl050_prices" parent="menu_prices_group" action="action_trinity_nomenclature_cl050_prices" sequence="2"/>
+        <menuitem name="CL062 - Клинични пътеки Цени" id="menu_trinity_nomenclature_cl062_prices" parent="menu_prices_group" action="action_trinity_nomenclature_cl062_prices" sequence="3"/>
+	</data>
+</odoo>

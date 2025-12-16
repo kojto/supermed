@@ -1,0 +1,13 @@
+<odoo>
+    <record model="ir.actions.server" id="action_create_or_update_nomenclature_record">
+        <field name="name">Създай/обнови CL запис</field>
+        <field name="model_id" ref="model_trinity_nomenclature"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_nomenclature"/>
+        <field name="state">code</field>
+        <field name="code">
+records.create_or_update_cl_record()
+action = {'type': 'ir.actions.act_window_close'}
+        </field>
+    </record>
+</odoo>

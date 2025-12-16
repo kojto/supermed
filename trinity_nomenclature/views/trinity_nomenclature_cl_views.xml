@@ -1,0 +1,2903 @@
+<odoo>
+	<data>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl001_list">
+			<field name="name">trinity.nomenclature.cl001.list</field>
+			<field name="model">trinity.nomenclature.cl001</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+					<field name="meta_fhir_mapping"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl002_list">
+			<field name="name">trinity.nomenclature.cl002.list</field>
+			<field name="model">trinity.nomenclature.cl002</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl003_list">
+			<field name="name">trinity.nomenclature.cl003.list</field>
+			<field name="model">trinity.nomenclature.cl003</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl004_list">
+			<field name="name">trinity.nomenclature.cl004.list</field>
+			<field name="model">trinity.nomenclature.cl004</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl005_list">
+			<field name="name">trinity.nomenclature.cl005.list</field>
+			<field name="model">trinity.nomenclature.cl005</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl006_list">
+			<field name="name">trinity.nomenclature.cl006.list</field>
+			<field name="model">trinity.nomenclature.cl006</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+					<field name="meta_description_bg_agent"/>
+					<field name="meta_role"/>
+					<field name="meta_nhif_code"/>
+					<field name="meta_nhif_name"/>
+					<field name="meta_clinical_speciality"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl007_list">
+			<field name="name">trinity.nomenclature.cl007.list</field>
+			<field name="model">trinity.nomenclature.cl007</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+					<field name="meta_nhif_document"/>
+					<field name="meta_description"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl008_list">
+			<field name="name">trinity.nomenclature.cl008.list</field>
+			<field name="model">trinity.nomenclature.cl008</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl009_list">
+			<field name="name">trinity.nomenclature.cl009.list</field>
+			<field name="model">trinity.nomenclature.cl009</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="meta_is_narcotic" widget="boolean_toggle"/>
+					<field name="meta_required_prescription_category"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key" optional="hide"/>
+					<field name="description" optional="hide"/>
+					<field name="meta_inn_code" optional="hide"/>
+					<field name="meta_inn" optional="hide"/>
+					<field name="meta_atc" optional="hide"/>
+					<field name="meta_form" optional="hide"/>
+					<field name="meta_form_bg" optional="hide"/>
+					<field name="meta_form_id" optional="show"/>
+					<field name="meta_package" optional="hide"/>
+					<field name="meta_permit_owner" optional="hide"/>
+					<field name="meta_permit_number" optional="hide"/>
+					<field name="meta_units" optional="hide"/>
+					<field name="meta_quantity" optional="hide"/>
+					<field name="meta_full_title" optional="hide"/>
+					<field name="meta_updated_on" optional="hide"/>
+					<field name="meta_status" optional="hide"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl010_list">
+			<field name="name">trinity.nomenclature.cl010.list</field>
+			<field name="model">trinity.nomenclature.cl010</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl011_list">
+			<field name="name">trinity.nomenclature.cl011.list</field>
+			<field name="model">trinity.nomenclature.cl011</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+					<field name="meta_reportable" widget="boolean_toggle"/>
+					<field name="meta_rare" widget="boolean_toggle"/>
+					<field name="meta_cancer" widget="boolean_toggle"/>
+					<field name="meta_diabetes" widget="boolean_toggle"/>
+					<field name="meta_mental" widget="boolean_toggle"/>
+					<field name="meta_contagious" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl012_list">
+			<field name="name">trinity.nomenclature.cl012.list</field>
+			<field name="model">trinity.nomenclature.cl012</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_display_value_bg"/>
+					<field name="meta_display_value_en"/>
+					<field name="meta_fhir_mapping"/>
+					<field name="meta_note"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl013_list">
+			<field name="name">trinity.nomenclature.cl013.list</field>
+			<field name="model">trinity.nomenclature.cl013</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl014_list">
+			<field name="name">trinity.nomenclature.cl014.list</field>
+			<field name="model">trinity.nomenclature.cl014</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+					<field name="meta_nhif_document"/>
+					<field name="meta_usage_instructions"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl015_list">
+			<field name="name">trinity.nomenclature.cl015.list</field>
+			<field name="model">trinity.nomenclature.cl015</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl016_list">
+			<field name="name">trinity.nomenclature.cl016.list</field>
+			<field name="model">trinity.nomenclature.cl016</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+					<field name="meta_usage_instructions"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl017_list">
+			<field name="name">trinity.nomenclature.cl017.list</field>
+			<field name="model">trinity.nomenclature.cl017</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl018_list">
+			<field name="name">trinity.nomenclature.cl018.list</field>
+			<field name="model">trinity.nomenclature.cl018</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+					<field name="meta_organization_bg"/>
+					<field name="meta_organization_en"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl019_list">
+			<field name="name">trinity.nomenclature.cl019.list</field>
+			<field name="model">trinity.nomenclature.cl019</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl020_list">
+			<field name="name">trinity.nomenclature.cl020.list</field>
+			<field name="model">trinity.nomenclature.cl020</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+					<field name="meta_plural_descriptionbg"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl021_list">
+			<field name="name">trinity.nomenclature.cl021.list</field>
+			<field name="model">trinity.nomenclature.cl021</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+					<field name="meta_nhif_mapping"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl022_list">
+			<field name="name">trinity.nomenclature.cl022.list</field>
+			<field name="model">trinity.nomenclature.cl022</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_display_value_en"/>
+					<field name="meta_display_value_bg"/>
+					<field name="meta_achi_chapter"/>
+					<field name="meta_achi_block"/>
+					<field name="meta_achi_code"/>
+					<field name="meta_nhif_code"/>
+					<field name="meta_nhif_package"/>
+					<field name="price" invisible="price == False"/>
+				</list>
+			</field>
+		</record>
+        <record model="ir.ui.view" id="view_trinity_nomenclature_cl022_prices_list">
+            <field name="name">trinity.nomenclature.cl022.prices.list</field>
+            <field name="model">trinity.nomenclature.cl022.prices</field>
+            <field name="arch" type="xml">
+                <list limit="100" sample="1" editable="bottom">
+                    <field name="active" widget="boolean_toggle"/>
+                    <field name="active_from"/>
+                    <field name="create_date"/>
+                    <field name="code"/>
+                    <field name="description"/>
+                    <field name="volume"/>
+                    <field name="price"/>
+                    <field name="currency_id"/>
+                </list>
+            </field>
+        </record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl023_list">
+			<field name="name">trinity.nomenclature.cl023.list</field>
+			<field name="model">trinity.nomenclature.cl023</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl024_list">
+			<field name="name">trinity.nomenclature.cl024.list</field>
+			<field name="model">trinity.nomenclature.cl024</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_display_value_en"/>
+					<field name="meta_display_value_bg"/>
+					<field name="meta_cl022_mapping"/>
+					<field name="meta_loinc"/>
+					<field name="meta_cl028_mapping"/>
+					<field name="meta_cl032_mapping"/>
+					<field name="meta_ucum"/>
+					<field name="meta_old_key"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl025_list">
+			<field name="name">trinity.nomenclature.cl025.list</field>
+			<field name="model">trinity.nomenclature.cl025</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+					<field name="meta_fhir_mapping"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl026_list">
+			<field name="name">trinity.nomenclature.cl026.list</field>
+			<field name="model">trinity.nomenclature.cl026</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+					<field name="meta_way_of_prescribing_code"/>
+					<field name="meta_quantity"/>
+					<field name="meta_divisible"/>
+					<field name="meta_narcotic"/>
+					<field name="meta_medical_supply_list_type"/>
+					<field name="meta_flag_to_stop"/>
+					<field name="meta_prescription_type"/>
+					<field name="meta_target_disease"/>
+					<field name="meta_completely_paid"/>
+					<field name="meta_cl009"/>
+					<field name="meta_mkbage"/>
+					<field name="meta_target_disease_all"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl027_list">
+			<field name="name">trinity.nomenclature.cl027.list</field>
+			<field name="model">trinity.nomenclature.cl027</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+					<field name="meta_latin"/>
+					<field name="meta_fhir_mapping"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl028_list">
+			<field name="name">trinity.nomenclature.cl028.list</field>
+			<field name="model">trinity.nomenclature.cl028</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_note"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl029_list">
+			<field name="name">trinity.nomenclature.cl029.list</field>
+			<field name="model">trinity.nomenclature.cl029</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl030_list">
+			<field name="name">trinity.nomenclature.cl030.list</field>
+			<field name="model">trinity.nomenclature.cl030</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+					<field name="meta_cl032_mapping"/>
+					<field name="meta_fhir_mapping"/>
+					<field name="meta_snomed"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl031_list">
+			<field name="name">trinity.nomenclature.cl031.list</field>
+			<field name="model">trinity.nomenclature.cl031</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl032_list">
+			<field name="name">trinity.nomenclature.cl032.list</field>
+			<field name="model">trinity.nomenclature.cl032</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl033_list">
+			<field name="name">trinity.nomenclature.cl033.list</field>
+			<field name="model">trinity.nomenclature.cl033</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+					<field name="meta_fhir_mapping"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl034_list">
+			<field name="name">trinity.nomenclature.cl034.list</field>
+			<field name="model">trinity.nomenclature.cl034</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+					<field name="meta_fhir_mapping"/>
+					<field name="meta_offset_allowed" widget="boolean_toggle"/>
+					<field name="meta_instructions"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl035_list">
+			<field name="name">trinity.nomenclature.cl035.list</field>
+			<field name="model">trinity.nomenclature.cl035</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl036_list">
+			<field name="name">trinity.nomenclature.cl036.list</field>
+			<field name="model">trinity.nomenclature.cl036</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl037_list">
+			<field name="name">trinity.nomenclature.cl037.list</field>
+			<field name="model">trinity.nomenclature.cl037</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_medicament_details"/>
+					<field name="meta_atc"/>
+					<field name="meta_inn"/>
+					<field name="meta_target_disease"/>
+					<field name="meta_vaccine_group"/>
+					<field name="meta_dose_quantity_ml"/>
+					<field name="meta_number_of_doses"/>
+					<field name="meta_days_to_next_dose"/>
+					<field name="meta_permit_number"/>
+					<field name="meta_permit_owner_id"/>
+					<field name="meta_permit_owner_name"/>
+					<field name="meta_mh_code"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl038_list">
+			<field name="name">trinity.nomenclature.cl038.list</field>
+			<field name="model">trinity.nomenclature.cl038</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_display_value_bg"/>
+					<field name="meta_display_value_en"/>
+					<field name="meta_display_transfered_data_bg"/>
+					<field name="meta_display_transfered_data_en"/>
+					<field name="meta_program_group"/>
+					<field name="meta_dose_number"/>
+					<field name="meta_cl082_mapping"/>
+					<field name="meta_min_age"/>
+					<field name="meta_max_age"/>
+					<field name="meta_rules"/>
+					<field name="meta_vaccine_additional_info"/>
+					<field name="meta_cl037_mapping_2023"/>
+					<field name="meta_cl037_mapping_2024"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl039_list">
+			<field name="name">trinity.nomenclature.cl039.list</field>
+			<field name="model">trinity.nomenclature.cl039</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl040_list">
+			<field name="name">trinity.nomenclature.cl040.list</field>
+			<field name="model">trinity.nomenclature.cl040</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl041_list">
+			<field name="name">trinity.nomenclature.cl041.list</field>
+			<field name="model">trinity.nomenclature.cl041</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl042_list">
+			<field name="name">trinity.nomenclature.cl042.list</field>
+			<field name="model">trinity.nomenclature.cl042</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl043_list">
+			<field name="name">trinity.nomenclature.cl043.list</field>
+			<field name="model">trinity.nomenclature.cl043</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl044_list">
+			<field name="name">trinity.nomenclature.cl044.list</field>
+			<field name="model">trinity.nomenclature.cl044</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl045_list">
+			<field name="name">trinity.nomenclature.cl045.list</field>
+			<field name="model">trinity.nomenclature.cl045</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl046_list">
+			<field name="name">trinity.nomenclature.cl046.list</field>
+			<field name="model">trinity.nomenclature.cl046</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl047_list">
+			<field name="name">trinity.nomenclature.cl047.list</field>
+			<field name="model">trinity.nomenclature.cl047</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+					<field name="meta_nhif_mapping"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl049_list">
+			<field name="name">trinity.nomenclature.cl049.list</field>
+			<field name="model">trinity.nomenclature.cl049</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+					<field name="meta_fhir_mapping"/>
+					<field name="meta_notes"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl050_list">
+			<field name="name">trinity.nomenclature.cl050.list</field>
+			<field name="model">trinity.nomenclature.cl050</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+					<field name="meta_type"/>
+					<field name="meta_achi_chapter"/>
+					<field name="meta_achi_block"/>
+					<field name="meta_achi_code"/>
+					<field name="meta_nhif_code"/>
+					<field name="meta_cl006"/>
+					<field name="meta_cl048"/>
+					<field name="meta_fhir"/>
+					<field name="price" invisible="price == False"/>
+				</list>
+			</field>
+		</record>
+        <record model="ir.ui.view" id="view_trinity_nomenclature_cl050_prices_list">
+            <field name="name">trinity.nomenclature.cl050.prices.list</field>
+            <field name="model">trinity.nomenclature.cl050.prices</field>
+            <field name="arch" type="xml">
+                <list limit="100" sample="1" editable="bottom">
+                    <field name="active" widget="boolean_toggle"/>
+                    <field name="active_from"/>
+                    <field name="create_date"/>
+                    <field name="code"/>
+                    <field name="description"/>
+                    <field name="volume"/>
+                    <field name="price"/>
+                    <field name="currency_id"/>
+                </list>
+            </field>
+        </record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl051_list">
+			<field name="name">trinity.nomenclature.cl051.list</field>
+			<field name="model">trinity.nomenclature.cl051</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl052_list">
+			<field name="name">trinity.nomenclature.cl052.list</field>
+			<field name="model">trinity.nomenclature.cl052</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+					<field name="meta_instructions"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl053_list">
+			<field name="name">trinity.nomenclature.cl053.list</field>
+			<field name="model">trinity.nomenclature.cl053</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl054_list">
+			<field name="name">trinity.nomenclature.cl054.list</field>
+			<field name="model">trinity.nomenclature.cl054</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl055_list">
+			<field name="name">trinity.nomenclature.cl055.list</field>
+			<field name="model">trinity.nomenclature.cl055</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl056_list">
+			<field name="name">trinity.nomenclature.cl056.list</field>
+			<field name="model">trinity.nomenclature.cl056</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_type"/>
+					<field name="meta_test_type"/>
+					<field name="meta_manifacturer"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl057_list">
+			<field name="name">trinity.nomenclature.cl057.list</field>
+			<field name="model">trinity.nomenclature.cl057</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl058_list">
+			<field name="name">trinity.nomenclature.cl058.list</field>
+			<field name="model">trinity.nomenclature.cl058</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_country"/>
+					<field name="meta_website"/>
+					<field name="meta_dgc_approved"/>
+					<field name="meta_bg_approved"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl059_list">
+			<field name="name">trinity.nomenclature.cl059.list</field>
+			<field name="model">trinity.nomenclature.cl059</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl060_list">
+			<field name="name">trinity.nomenclature.cl060.list</field>
+			<field name="model">trinity.nomenclature.cl060</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl061_list">
+			<field name="name">trinity.nomenclature.cl061.list</field>
+			<field name="model">trinity.nomenclature.cl061</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl062_list">
+			<field name="name">trinity.nomenclature.cl062.list</field>
+			<field name="model">trinity.nomenclature.cl062</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+					<field name="price"/>
+				</list>
+			</field>
+		</record>
+        <record model="ir.ui.view" id="view_trinity_nomenclature_cl062_prices_list">
+            <field name="name">trinity.nomenclature.cl062.prices.list</field>
+            <field name="model">trinity.nomenclature.cl062.prices</field>
+            <field name="arch" type="xml">
+                <list limit="100" sample="1" editable="bottom">
+                    <field name="active" widget="boolean_toggle"/>
+                    <field name="active_from"/>
+                    <field name="create_date"/>
+                    <field name="code"/>
+                    <field name="description"/>
+                    <field name="volume"/>
+                    <field name="price"/>
+                    <field name="currency_id"/>
+                </list>
+            </field>
+        </record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl063_list">
+			<field name="name">trinity.nomenclature.cl063.list</field>
+			<field name="model">trinity.nomenclature.cl063</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl064_list">
+			<field name="name">trinity.nomenclature.cl064.list</field>
+			<field name="model">trinity.nomenclature.cl064</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl065_list">
+			<field name="name">trinity.nomenclature.cl065.list</field>
+			<field name="model">trinity.nomenclature.cl065</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl066_list">
+			<field name="name">trinity.nomenclature.cl066.list</field>
+			<field name="model">trinity.nomenclature.cl066</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl067_list">
+			<field name="name">trinity.nomenclature.cl067.list</field>
+			<field name="model">trinity.nomenclature.cl067</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_applicable"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl068_list">
+			<field name="name">trinity.nomenclature.cl068.list</field>
+			<field name="model">trinity.nomenclature.cl068</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl069_list">
+			<field name="name">trinity.nomenclature.cl069.list</field>
+			<field name="model">trinity.nomenclature.cl069</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_display_value_bg"/>
+					<field name="meta_display_value_en"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl070_list">
+			<field name="name">trinity.nomenclature.cl070.list</field>
+			<field name="model">trinity.nomenclature.cl070</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl071_list">
+			<field name="name">trinity.nomenclature.cl071.list</field>
+			<field name="model">trinity.nomenclature.cl071</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+					<field name="meta_fhir_mapping"/>
+					<field name="meta_notes"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl072_list">
+			<field name="name">trinity.nomenclature.cl072.list</field>
+			<field name="model">trinity.nomenclature.cl072</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+					<field name="meta_fhir_mapping"/>
+					<field name="meta_notes"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl073_list">
+			<field name="name">trinity.nomenclature.cl073.list</field>
+			<field name="model">trinity.nomenclature.cl073</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+					<field name="meta_fhir_mapping"/>
+					<field name="meta_notes"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl074_list">
+			<field name="name">trinity.nomenclature.cl074.list</field>
+			<field name="model">trinity.nomenclature.cl074</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl075_list">
+			<field name="name">trinity.nomenclature.cl075.list</field>
+			<field name="model">trinity.nomenclature.cl075</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl076_list">
+			<field name="name">trinity.nomenclature.cl076.list</field>
+			<field name="model">trinity.nomenclature.cl076</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+					<field name="meta_fhir_mapping"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl077_list">
+			<field name="name">trinity.nomenclature.cl077.list</field>
+			<field name="model">trinity.nomenclature.cl077</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+					<field name="meta_fhir_mapping"/>
+					<field name="meta_notes"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl078_list">
+			<field name="name">trinity.nomenclature.cl078.list</field>
+			<field name="model">trinity.nomenclature.cl078</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+					<field name="meta_fhir_mapping"/>
+					<field name="meta_notes"/>
+					<field name="meta_orpha_diseases_label_bg"/>
+					<field name="meta_orpha_diseases_label_en"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl079_list">
+			<field name="name">trinity.nomenclature.cl079.list</field>
+			<field name="model">trinity.nomenclature.cl079</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+					<field name="meta_fhir_mapping"/>
+					<field name="meta_notes"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl080_list">
+			<field name="name">trinity.nomenclature.cl080.list</field>
+			<field name="model">trinity.nomenclature.cl080</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+					<field name="meta_fhir_mapping"/>
+					<field name="meta_notes"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl081_list">
+			<field name="name">trinity.nomenclature.cl081.list</field>
+			<field name="model">trinity.nomenclature.cl081</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl082_list">
+			<field name="name">trinity.nomenclature.cl082.list</field>
+			<field name="model">trinity.nomenclature.cl082</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl083_list">
+			<field name="name">trinity.nomenclature.cl083.list</field>
+			<field name="model">trinity.nomenclature.cl083</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+					<field name="meta_fhir_mapping"/>
+					<field name="meta_notes"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl084_list">
+			<field name="name">trinity.nomenclature.cl084.list</field>
+			<field name="model">trinity.nomenclature.cl084</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl085_list">
+			<field name="name">trinity.nomenclature.cl085.list</field>
+			<field name="model">trinity.nomenclature.cl085</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl086_list">
+			<field name="name">trinity.nomenclature.cl086.list</field>
+			<field name="model">trinity.nomenclature.cl086</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl087_list">
+			<field name="name">trinity.nomenclature.cl087.list</field>
+			<field name="model">trinity.nomenclature.cl087</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl088_list">
+			<field name="name">trinity.nomenclature.cl088.list</field>
+			<field name="model">trinity.nomenclature.cl088</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_display_value_bg"/>
+					<field name="meta_display_value_en"/>
+					<field name="meta_units"/>
+					<field name="meta_cl050_mapping"/>
+					<field name="meta_cl142_mapping"/>
+					<field name="meta_cl012_mapping"/>
+					<field name="meta_cl028_mapping"/>
+					<field name="meta_cl032_mapping"/>
+					<field name="meta_cl138_mapping"/>
+					<field name="meta_requires_text_conclusion" widget="boolean_toggle"/>
+					<field name="meta_note"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl089_list">
+			<field name="name">trinity.nomenclature.cl089.list</field>
+			<field name="model">trinity.nomenclature.cl089</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl090_list">
+			<field name="name">trinity.nomenclature.cl090.list</field>
+			<field name="model">trinity.nomenclature.cl090</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl091_list">
+			<field name="name">trinity.nomenclature.cl091.list</field>
+			<field name="model">trinity.nomenclature.cl091</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl092_list">
+			<field name="name">trinity.nomenclature.cl092.list</field>
+			<field name="model">trinity.nomenclature.cl092</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl093_list">
+			<field name="name">trinity.nomenclature.cl093.list</field>
+			<field name="model">trinity.nomenclature.cl093</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl094_list">
+			<field name="name">trinity.nomenclature.cl094.list</field>
+			<field name="model">trinity.nomenclature.cl094</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl095_list">
+			<field name="name">trinity.nomenclature.cl095.list</field>
+			<field name="model">trinity.nomenclature.cl095</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl096_list">
+			<field name="name">trinity.nomenclature.cl096.list</field>
+			<field name="model">trinity.nomenclature.cl096</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl097_list">
+			<field name="name">trinity.nomenclature.cl097.list</field>
+			<field name="model">trinity.nomenclature.cl097</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+					<field name="meta_fhir_mapping"/>
+					<field name="meta_notes"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl098_list">
+			<field name="name">trinity.nomenclature.cl098.list</field>
+			<field name="model">trinity.nomenclature.cl098</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl099_list">
+			<field name="name">trinity.nomenclature.cl099.list</field>
+			<field name="model">trinity.nomenclature.cl099</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" create="false" delete="false" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl100_list">
+			<field name="name">trinity.nomenclature.cl100.list</field>
+			<field name="model">trinity.nomenclature.cl100</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" create="false" delete="false" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl101_list">
+			<field name="name">trinity.nomenclature.cl101.list</field>
+			<field name="model">trinity.nomenclature.cl101</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" create="false" delete="false" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl102_list">
+			<field name="name">trinity.nomenclature.cl102.list</field>
+			<field name="model">trinity.nomenclature.cl102</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" create="false" delete="false" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl103_list">
+			<field name="name">trinity.nomenclature.cl103.list</field>
+			<field name="model">trinity.nomenclature.cl103</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" create="false" delete="false" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+					<field name="meta_fhir_mapping"/>
+					<field name="meta_notes"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl104_list">
+			<field name="name">trinity.nomenclature.cl104.list</field>
+			<field name="model">trinity.nomenclature.cl104</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" create="false" delete="false" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+					<field name="meta_risk_factor"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl105_list">
+			<field name="name">trinity.nomenclature.cl105.list</field>
+			<field name="model">trinity.nomenclature.cl105</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" create="false" delete="false" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+					<field name="meta_fhir_mapping"/>
+					<field name="meta_notes"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl106_list">
+			<field name="name">trinity.nomenclature.cl106.list</field>
+			<field name="model">trinity.nomenclature.cl106</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" create="false" delete="false" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+					<field name="meta_tooth_group"/>
+					<field name="meta_tooth_type"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl107_list">
+			<field name="name">trinity.nomenclature.cl107.list</field>
+			<field name="model">trinity.nomenclature.cl107</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" create="false" delete="false" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+					<field name="meta_nhif_mapping"/>
+					<field name="meta_nhif_text"/>
+					<field name="meta_incompatible_other_codes"/>
+					<field name="meta_required_other_codes"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl108_list">
+			<field name="name">trinity.nomenclature.cl108.list</field>
+			<field name="model">trinity.nomenclature.cl108</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" create="false" delete="false" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl109_list">
+			<field name="name">trinity.nomenclature.cl109.list</field>
+			<field name="model">trinity.nomenclature.cl109</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" create="false" delete="false" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl110_list">
+			<field name="name">trinity.nomenclature.cl110.list</field>
+			<field name="model">trinity.nomenclature.cl110</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" create="false" delete="false" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_display_value_en"/>
+					<field name="meta_notes"/>
+					<field name="meta_cl112_mapping"/>
+					<field name="meta_nhif_code"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl111_list">
+			<field name="name">trinity.nomenclature.cl111.list</field>
+			<field name="model">trinity.nomenclature.cl111</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" create="false" delete="false" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+					<field name="meta_cl011_mapping"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl112_list">
+			<field name="name">trinity.nomenclature.cl112.list</field>
+			<field name="model">trinity.nomenclature.cl112</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" create="false" delete="false" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl113_list">
+			<field name="name">trinity.nomenclature.cl113.list</field>
+			<field name="model">trinity.nomenclature.cl113</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" create="false" delete="false" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl114_list">
+			<field name="name">trinity.nomenclature.cl114.list</field>
+			<field name="model">trinity.nomenclature.cl114</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" create="false" delete="false" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl115_list">
+			<field name="name">trinity.nomenclature.cl115.list</field>
+			<field name="model">trinity.nomenclature.cl115</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" create="false" delete="false" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl116_list">
+			<field name="name">trinity.nomenclature.cl116.list</field>
+			<field name="model">trinity.nomenclature.cl116</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" create="false" delete="false" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl117_list">
+			<field name="name">trinity.nomenclature.cl117.list</field>
+			<field name="model">trinity.nomenclature.cl117</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" create="false" delete="false" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl118_list">
+			<field name="name">trinity.nomenclature.cl118.list</field>
+			<field name="model">trinity.nomenclature.cl118</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" create="false" delete="false" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl119_list">
+			<field name="name">trinity.nomenclature.cl119.list</field>
+			<field name="model">trinity.nomenclature.cl119</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" create="false" delete="false" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_display_value_bg"/>
+					<field name="meta_display_value_en"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl120_list">
+			<field name="name">trinity.nomenclature.cl120.list</field>
+			<field name="model">trinity.nomenclature.cl120</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" create="false" delete="false" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl121_list">
+			<field name="name">trinity.nomenclature.cl121.list</field>
+			<field name="model">trinity.nomenclature.cl121</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" create="false" delete="false" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+					<field name="meta_cl120_mapping"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl122_list">
+			<field name="name">trinity.nomenclature.cl122.list</field>
+			<field name="model">trinity.nomenclature.cl122</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" create="false" delete="false" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_cl011_mapping"/>
+					<field name="meta_main" widget="boolean_toggle"/>
+					<field name="meta_additional" widget="boolean_toggle"/>
+					<field name="meta_min_patient_age"/>
+					<field name="meta_max_patient_age"/>
+					<field name="meta_cl069_mapping"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl123_list">
+			<field name="name">trinity.nomenclature.cl123.list</field>
+			<field name="model">trinity.nomenclature.cl123</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" create="false" delete="false" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl124_list">
+			<field name="name">trinity.nomenclature.cl124.list</field>
+			<field name="model">trinity.nomenclature.cl124</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" create="false" delete="false" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl125_list">
+			<field name="name">trinity.nomenclature.cl125.list</field>
+			<field name="model">trinity.nomenclature.cl125</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" create="false" delete="false" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_display_value_bg"/>
+					<field name="meta_display_value_en"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl126_list">
+			<field name="name">trinity.nomenclature.cl126.list</field>
+			<field name="model">trinity.nomenclature.cl126</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" create="false" delete="false" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_display_value_bg"/>
+					<field name="meta_display_value_en"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl127_list">
+			<field name="name">trinity.nomenclature.cl127.list</field>
+			<field name="model">trinity.nomenclature.cl127</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" create="false" delete="false" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_risk_group_definition"/>
+					<field name="meta_cl126"/>
+					<field name="meta_cl011"/>
+					<field name="meta_data_from"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl128_list">
+			<field name="name">trinity.nomenclature.cl128.list</field>
+			<field name="model">trinity.nomenclature.cl128</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" create="false" delete="false" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_display_value_bg"/>
+					<field name="meta_display_value_en"/>
+					<field name="meta_min_age"/>
+					<field name="meta_max_age"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl129_list">
+			<field name="name">trinity.nomenclature.cl129.list</field>
+			<field name="model">trinity.nomenclature.cl129</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" create="false" delete="false" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_display_value_bg"/>
+					<field name="meta_display_value_en"/>
+					<field name="meta_cl088_mapping"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl130_list">
+			<field name="name">trinity.nomenclature.cl130.list</field>
+			<field name="model">trinity.nomenclature.cl130</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" create="false" delete="false" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_display_value_bg"/>
+					<field name="meta_display_value_en"/>
+					<field name="meta_type"/>
+					<field name="meta_type_short"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl131_list">
+			<field name="name">trinity.nomenclature.cl131.list</field>
+			<field name="model">trinity.nomenclature.cl131</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" create="false" delete="false" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_display_value_bg"/>
+					<field name="meta_display_value_en"/>
+					<field name="meta_fhir_mapping"/>
+					<field name="meta_notes"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl132_list">
+			<field name="name">trinity.nomenclature.cl132.list</field>
+			<field name="model">trinity.nomenclature.cl132</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" create="false" delete="false" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_display_value_bg"/>
+					<field name="meta_display_value_en"/>
+					<field name="meta_cl047_mapping"/>
+					<field name="meta_cl136_mapping"/>
+					<field name="meta_cl011_mapping"/>
+					<field name="meta_event_trigger"/>
+					<field name="meta_common_index"/>
+					<field name="meta_min_interval_from_common_index"/>
+					<field name="meta_max_interval_from_common_index"/>
+					<field name="meta_age"/>
+					<field name="meta_max_age"/>
+					<field name="meta_recurring" widget="boolean_toggle"/>
+					<field name="meta_repeat_every_x_years"/>
+					<field name="meta_gender"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl133_list">
+			<field name="name">trinity.nomenclature.cl133.list</field>
+			<field name="model">trinity.nomenclature.cl133</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" create="false" delete="false" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_display_value_bg"/>
+					<field name="meta_display_value_en"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl134_list">
+			<field name="name">trinity.nomenclature.cl134.list</field>
+			<field name="model">trinity.nomenclature.cl134</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" create="false" delete="false" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_display_value_bg"/>
+					<field name="meta_display_value_en"/>
+					<field name="meta_note"/>
+					<field name="meta_cl133"/>
+					<field name="meta_multiple_choice" widget="boolean_toggle"/>
+					<field name="meta_cl028"/>
+					<field name="meta_answer_nomenclature"/>
+					<field name="meta_ask_once" widget="boolean_toggle"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl135_list">
+			<field name="name">trinity.nomenclature.cl135.list</field>
+			<field name="model">trinity.nomenclature.cl135</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" create="false" delete="false" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_display_value_bg"/>
+					<field name="meta_display_value_en"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl136_list">
+			<field name="name">trinity.nomenclature.cl136.list</field>
+			<field name="model">trinity.nomenclature.cl136</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" create="false" delete="false" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_display_value_bg"/>
+					<field name="meta_display_value_en"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl137_list">
+			<field name="name">trinity.nomenclature.cl137.list</field>
+			<field name="model">trinity.nomenclature.cl137</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" create="false" delete="false" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_display_value_bg"/>
+					<field name="meta_display_value_en"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl138_list">
+			<field name="name">trinity.nomenclature.cl138.list</field>
+			<field name="model">trinity.nomenclature.cl138</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" create="false" delete="false" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_display_value_bg"/>
+					<field name="meta_display_value_en"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl139_list">
+			<field name="name">trinity.nomenclature.cl139.list</field>
+			<field name="model">trinity.nomenclature.cl139</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" create="false" delete="false" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_display_value_bg"/>
+					<field name="meta_display_value_en"/>
+					<field name="meta_cl138_mapping"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl140_list">
+			<field name="name">trinity.nomenclature.cl140.list</field>
+			<field name="model">trinity.nomenclature.cl140</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" create="false" delete="false" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl141_list">
+			<field name="name">trinity.nomenclature.cl141.list</field>
+			<field name="model">trinity.nomenclature.cl141</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" create="false" delete="false" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_display_value_bg"/>
+					<field name="meta_display_value_en"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl142_list">
+			<field name="name">trinity.nomenclature.cl142.list</field>
+			<field name="model">trinity.nomenclature.cl142</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" create="false" delete="false" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_description"/>
+					<field name="meta_descriptionen"/>
+					<field name="meta_achi_chapter"/>
+					<field name="meta_achi_block"/>
+					<field name="meta_achi_code"/>
+					<field name="meta_nhif_code"/>
+					<field name="meta_display_value_bg"/>
+					<field name="meta_display_value_en"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl143_list">
+			<field name="name">trinity.nomenclature.cl143.list</field>
+			<field name="model">trinity.nomenclature.cl143</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" create="false" delete="false" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_cl022"/>
+					<field name="meta_gender"/>
+					<field name="meta_cl006"/>
+					<field name="meta_min_age"/>
+					<field name="meta_max_age"/>
+					<field name="meta_min_interval"/>
+					<field name="meta_start_date"/>
+					<field name="meta_end_date"/>
+					<field name="meta_cl021"/>
+					<field name="meta_cl047"/>
+					<field name="meta_display_value_bg"/>
+					<field name="meta_display_value_en"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl144_list">
+			<field name="name">trinity.nomenclature.cl144.list</field>
+			<field name="model">trinity.nomenclature.cl144</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" create="false" delete="false" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_display_value_bg"/>
+					<field name="meta_display_value_en"/>
+					<field name="meta_units"/>
+					<field name="meta_cl142_mapping"/>
+					<field name="meta_cl012_mapping"/>
+					<field name="meta_cl028_mapping"/>
+					<field name="meta_cl138_mapping"/>
+					<field name="meta_requires_text_conclusion" widget="boolean_toggle"/>
+					<field name="meta_note"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl145_list">
+			<field name="name">trinity.nomenclature.cl145.list</field>
+			<field name="model">trinity.nomenclature.cl145</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" create="false" delete="false" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_display_value_bg"/>
+					<field name="meta_display_value_en"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl146_list">
+			<field name="name">trinity.nomenclature.cl146.list</field>
+			<field name="model">trinity.nomenclature.cl146</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" create="false" delete="false" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl147_list">
+			<field name="name">trinity.nomenclature.cl147.list</field>
+			<field name="model">trinity.nomenclature.cl147</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" create="false" delete="false" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl148_list">
+			<field name="name">trinity.nomenclature.cl148.list</field>
+			<field name="model">trinity.nomenclature.cl148</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" create="false" delete="false" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl149_list">
+			<field name="name">trinity.nomenclature.cl149.list</field>
+			<field name="model">trinity.nomenclature.cl149</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" create="false" delete="false" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl150_list">
+			<field name="name">trinity.nomenclature.cl150.list</field>
+			<field name="model">trinity.nomenclature.cl150</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" create="false" delete="false" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl997_list">
+			<field name="name">trinity.nomenclature.cl997.list</field>
+			<field name="model">trinity.nomenclature.cl997</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" create="false" delete="false" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_descriptionen"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl998_list">
+			<field name="name">trinity.nomenclature.cl998.list</field>
+			<field name="model">trinity.nomenclature.cl998</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" create="false" delete="false" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_source"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cl999_list">
+			<field name="name">trinity.nomenclature.cl999.list</field>
+			<field name="model">trinity.nomenclature.cl999</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" create="false" delete="false" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+					<field name="meta_display_value_en"/>
+					<field name="meta_display_value_bg"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cls01_list">
+			<field name="name">trinity.nomenclature.cls01.list</field>
+			<field name="model">trinity.nomenclature.cls01</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" create="false" delete="false" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_cls02_list">
+			<field name="name">trinity.nomenclature.cls02.list</field>
+			<field name="model">trinity.nomenclature.cls02</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" create="false" delete="false" editable="bottom">
+					<field name="active" widget="boolean_toggle"/>
+					<field name="create_date"/>
+					<field name="name"/>
+					<field name="key"/>
+                    <field name="current_version"/>
+					<field name="valid_since_version"/>
+					<field name="valid_until_version"/>
+					<field name="description"/>
+				</list>
+			</field>
+		</record>
+	</data>
+</odoo>

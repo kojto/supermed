@@ -1,0 +1,2061 @@
+<odoo>
+	<data>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature">
+			<field name="name">CL Номенклатури</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature</field>
+			<field name="view_mode">list,form</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай номенклатура
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl001">
+			<field name="name">CL001 - Пол</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl001</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL001 - Пол
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl002">
+			<field name="name">CL002 - Статус на Е-рецепта</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl002</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL002 - Статус на Е-рецепта
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl003">
+			<field name="name">CL003 - Статус на Е-направление</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl003</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL003 - Статус на Е-направление
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl004">
+			<field name="name">CL004 - Тип на идентификатор на физическо лице</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl004</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL004 - Тип на идентификатор на физическо лице
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl005">
+			<field name="name">CL005 - Държава</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl005</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL005 - Държава
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl006">
+			<field name="name">CL006 - Специалности</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl006</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL006 - Специалности
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl007">
+			<field name="name">CL007 - Тип на Е-рецепта</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl007</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL007 - Тип на Е-рецепта
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl008">
+			<field name="name">CL008 - Начин на употреба на Е-рецепта от тип T1</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl008</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL008 - Начин на употреба на Е-рецепта от тип Т1
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl009">
+			<field name="name">CL009 - Лекарствени продукти</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl009</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL009 - Лекарствени продукти
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl010">
+			<field name="name">CL010 - Лекарствени форми</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl010</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL010 - Лекарствени форми
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl011">
+			<field name="name">CL011 - МКБ</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl011</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL011 - МКБ
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl012">
+			<field name="name">CL012 - Класификация на оценката на резулта от медико-диагностична дейност</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl012</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL012 - Класификация на оценката на резулта от медико-диагностична дейност
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl013">
+			<field name="name">CL013 - Път за прилагане</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl013</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL013 - Път за прилагане
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl014">
+			<field name="name">CL014 - Тип на Е-направление</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl014</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL014 - Тип на Е-направление
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl015">
+			<field name="name">CL015 - РЗОК номер на област</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl015</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL015 - РЗОК номер на област
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl016">
+			<field name="name">CL016 - Код на заместване на лекарствен продукт</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl016</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL016 - Код на заместване на лекарствен продукт
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl017">
+			<field name="name">CL017 - Районна фармацевтична колегия</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl017</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL017 - Районна фармацевтична колегия
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl018">
+			<field name="name">CL018 - Тип на потребител на НЗИС съобщение</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl018</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL018 - Тип на потребител на НЗИС съобщение
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl019">
+			<field name="name">CL019 - Орязък на Е-рецепта от тип T3 по НЗОК</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl019</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL019 - Орязък на Е-рецепта от тип T3 по НЗОК
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl020">
+			<field name="name">CL020 - Времеви единици</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl020</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL020 - Времеви единици
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl021">
+			<field name="name">CL021 - Повод за издаване на направление по НЗОК</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl021</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL021 - Повод за издаване на направление по НЗОК
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl022">
+			<field name="name">CL022 - Медико-диагностична дейност</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl022</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL022 - Медико-диагностична дейност
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl022_prices">
+			<field name="name">CL022 - Цени</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl022.prices</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL022 - Цени
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl023">
+			<field name="name">CL023 - Роля на медицински специалист</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl023</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL023 - Роля на медицински специалист
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl024">
+			<field name="name">CL024 - Резултат от медико-диагностична дейност</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl024</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL024 - Резултат от медико-диагностична дейност
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl025">
+			<field name="name">CL025 - Метод на получаване на резултат от медико-диагностична дейност</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl025</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL025 - Метод на получаване на резултат от медико-диагностична дейност
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl026">
+			<field name="name">CL026 - Лекарствени продукти НЗОК</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl026</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL026 - Лекарствени продукти НЗОК
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl027">
+			<field name="name">CL027 - Приоритет за изпълнение</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl027</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL027 - Приоритет за изпълнение
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl028">
+			<field name="name">CL028 - Скала на стойност на резултат от медико-диагностична дейност</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl028</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL028 - Скала на стойност на резултат от медико-диагностична дейност
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl029">
+			<field name="name">CL029 - РЗОК номер на област със здравен район</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl029</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL029 - РЗОК номер на област със здравен район
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl030">
+			<field name="name">CL030 - Стойност от лабораторен резултат</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl030</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL030 - Стойност от лабораторен резултат
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl031">
+			<field name="name">CL031 - Код на лекарство от регистрите на НСЦРЛП</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl031</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL031 - Код на лекарство от регистрите на НСЦРЛП
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl032">
+			<field name="name">CL032 - Тип номенклатура на лабораторен резултат</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl032</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL032 - Тип номенклатура на лабораторен резултат
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl033">
+			<field name="name">CL033 - Статус на медико-диагностична дейност</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl033</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL033 - Статус на медико-диагностична дейност
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl034">
+			<field name="name">CL034 - Прием</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl034</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL034 - Прием
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl035">
+			<field name="name">CL035 - Лекарствени форми</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl035</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL035 - Лекарствени форми
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl036">
+			<field name="name">CL036 - Код на лекарство от регистрите на НСЦРЛП</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl036</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL036 - Код на лекарство от регистрите на НСЦРЛП
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl037">
+			<field name="name">CL037 - Ваксина</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl037</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL037 - Ваксина
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl038">
+			<field name="name">CL038 - Планова имунизация или реимунизация</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl038</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL038 - Планова имунизация или реимунизация
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl039">
+			<field name="name">CL039 - Статус на Е-имунизация</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl039</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL039 - Статус на Е-имунизация
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl040">
+			<field name="name">CL040 - Действие при нежелана реакция към лекарствен продукт</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl040</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL040 - Действие при нежелана реакция към лекарствен продукт
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl041">
+			<field name="name">CL041 - Област</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl041</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL041 - Област
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl042">
+			<field name="name">CL042 - Социална група</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl042</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL042 - Социална група
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl043">
+			<field name="name">CL043 - Статус на лице за имунизация</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl043</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL043 - Статус на лице за имунизация
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl044">
+			<field name="name">CL044 - ЕКАТТЕ</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl044</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL044 - ЕКАТТЕ
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl045">
+			<field name="name">CL045 - Част от тялото за администриране на лекарствен продукт</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl045</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL045 - Част от тялото за администриране на лекарствен продукт
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl046">
+			<field name="name">CL046 - Път на навлизане на лекарствен продукт в тялото</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl046</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL046 - Път на навлизане на лекарствен продукт в тялото
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl047">
+			<field name="name">CL047 - Причина за посещение при лекар</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl047</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL047 - Причина за посещение при лекар
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl049">
+			<field name="name">CL049 - Класификация на преглед</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl049</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL049 - Класификация на преглед
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl050">
+			<field name="name">CL050 - Специализирана дейност или манипулация</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl050</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL050 - Специализирана дейност или манипулация
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl050_prices">
+			<field name="name">CL050 - Цени</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl050.prices</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL050 - Цени
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl051">
+			<field name="name">CL051 - Вид на преглед за медицинска експертиза по НЗОК</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl051</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL051 - Вид на преглед за медицинска експертиза по НЗОК
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl052">
+			<field name="name">CL052 - Причина за издаване на направление за ТЕЛК</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl052</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL052 - Причина за издаване на направление за ТЕЛК
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl053">
+			<field name="name">CL053 - Тип адрес</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl053</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL053 - Тип адрес
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl054">
+			<field name="name">CL054 - Специални медицински дейности - МКБ 9</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl054</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL054 - Специални медицински дейности - МКБ 9
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl055">
+			<field name="name">CL055 - Статус на Е-преглед</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl055</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL055 - Статус на Е-преглед
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl056">
+			<field name="name">CL056 - Медицински инструмент</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl056</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL056 - Медицински инструмент
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl057">
+			<field name="name">CL057 - Тип на медицински инструмент</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl057</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL057 - Тип на медицински инструмент
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl058">
+			<field name="name">CL058 - Производител на медицински инструмент</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl058</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL058 - Производител на медицински инструмент
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl059">
+			<field name="name">CL059 - Тип на прием за хоспитализация</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl059</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL059 - Тип на прием за хоспитализация
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl060">
+			<field name="name">CL060 - Насочваща институция</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl060</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL060 - Насочваща институция
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl061">
+			<field name="name">CL061 - Причина за хоспитализация</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl061</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL061 - Причина за хоспитализация
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl062">
+			<field name="name">CL062 - Клинична пътека</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl062</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL062 - Клинична пътека
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl062_prices">
+			<field name="name">CL062 - Цени</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl062.prices</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL062 - Цени
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl063">
+			<field name="name">CL063 - Амбулаторна или клинична процедура</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl063</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL063 - Амбулаторна или клинична процедура
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl064">
+			<field name="name">CL064 - Семейно положение</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl064</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL064 - Семейно положение
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl065">
+			<field name="name">CL065 - Образование</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl065</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL065 - Образование
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl066">
+			<field name="name">CL066 - Степен на тежест на състоянието</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl066</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL066 - Степен на тежест на състоянието
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl067">
+			<field name="name">CL067 - Времеви интервал от медицинско събитие</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl067</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL067 - Времеви интервал от медицинско събитие
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl068">
+			<field name="name">CL068 - CL068</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl068</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL068 - CL068
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl069">
+			<field name="name">CL069 - Източник на финансиране</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl069</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL069 - Източник на финансиране
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl070">
+			<field name="name">CL070 - Кръвна група</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl070</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL070 - Кръвна група
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl071">
+			<field name="name">CL071 - Тип на алергична реакция</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl071</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL071 - Тип на алергична реакция
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl072">
+			<field name="name">CL072 - Категория на алергична реакция</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl072</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL072 - Категория на алергична реакция
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl073">
+			<field name="name">CL073 - Критичност на алергична реакция</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl073</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL073 - Критичност на алергична реакция
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl074">
+			<field name="name">CL074 - Статус на Е-хоспитализация</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl074</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL074 - Статус на Е-хоспитализация
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl075">
+			<field name="name">CL075 - Резултат от хоспитализация</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl075</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL075 - Резултат от хоспитализация
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl076">
+			<field name="name">CL076 - Роля на диагноза</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl076</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL076 - Роля на диагноза
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl077">
+			<field name="name">CL077 - Клиничен статус</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl077</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL077 - Клиничен статус
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl078">
+			<field name="name">CL078 - Верификационен статус</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl078</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL078 - Верификационен статус
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl079">
+			<field name="name">CL079 - Режим на хранене</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl079</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL079 - Режим на хранене
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl080">
+			<field name="name">CL080 - Разпореждане след болнично изписване</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl080</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL080 - Разпореждане след болнично изписване
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl081">
+			<field name="name">CL081 - Статус на работоспособност</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl081</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL081 - Статус на работоспособност
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl082">
+			<field name="name">CL082 - Имунизационна програма</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl082</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL082 - Имунизационна програма
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl083">
+			<field name="name">CL083 - Статус на доклад за специализирана дейност или манипулация</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl083</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL083 - Статус на доклад за специализирана дейност или манипулация
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl084">
+			<field name="name">CL084 - Тип лечебно заведение за извънболнична помощ</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl084</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL084 - Тип лечебно заведение за извънболнична помощ
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl085">
+			<field name="name">CL085 - Вид лечебно заведение за болнична помощ</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl085</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL085 - Вид лечебно заведение за болнична помощ
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl086">
+			<field name="name">CL086 - Тип лечебно заведение за болнична помощ</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl086</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL086 - Тип лечебно заведение за болнична помощ
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl087">
+			<field name="name">CL087 - Вид лечебно заведение за извънболнична помощ</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl087</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL087 - Вид лечебно заведение за извънболнична помощ
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl088">
+			<field name="name">CL088 - Резултат от специализирана дейност или манипулация</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl088</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL088 - Резултат от специализирана дейност или манипулация
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl089">
+			<field name="name">CL089 - Етап на хоспитализация</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl089</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL089 - Етап на хоспитализация
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl090">
+			<field name="name">CL090 - Ефект от нежелана лекарствена реакция</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl090</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL090 - Ефект от нежелана лекарствена реакция
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl091">
+			<field name="name">CL091 - Изход от нежелана лекарствена реакция</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl091</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL091 - Изход от нежелана лекарствена реакция
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl092">
+			<field name="name">CL092 - Зависимост или състояние</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl092</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL092 - Зависимост или състояние
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl093">
+			<field name="name">CL093 - Връзка с нежелана лекарствена реакция</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl093</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL093 - Връзка с нежелана лекарствена реакция
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl094">
+			<field name="name">CL094 - CL094</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl094</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL094 - CL094
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl095">
+			<field name="name">CL095 - ACHI Chapter</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl095</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL095 - ACHI Chapter
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl096">
+			<field name="name">CL096 - ACHI Block</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl096</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL096 - ACHI Block
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl097">
+			<field name="name">CL097 - Интерпретация на резултати</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl097</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL097 - Интерпретация на резултати
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl098">
+			<field name="name">CL098 - Място на раждане</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl098</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL098 - Място на раждане
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl099">
+			<field name="name">CL099 - Начин на раждане</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl099</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL099 - Начин на раждане
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl100">
+			<field name="name">CL100 - Заключение след преглед за продължаване на лечението</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl100</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL100 - Заключение след преглед за продължаване на лечението
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl101">
+			<field name="name">CL101 - CL101</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl101</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL101 - CL101
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl102">
+			<field name="name">CL102 - Тип е-документ</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl102</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL102 - Тип е-документ
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl103">
+			<field name="name">CL103 - CL103</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl103</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL103 - CL103
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl104">
+			<field name="name">CL104 - Употреба на тютюн</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl104</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL104 - Употреба на тютюн
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl105">
+			<field name="name">CL105 - Статус на семейна здравна история</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl105</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL105 - Статус на семейна здравна история
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl106">
+			<field name="name">CL106 - Зъбен код</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl106</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL106 - Зъбен код
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl107">
+			<field name="name">CL107 - Код на състояние на зъб</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl107</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL107 - Код на състояние на зъб
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl108">
+			<field name="name">CL108 - Зъбна повърхност</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl108</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL108 - Зъбна повърхност
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl109">
+			<field name="name">CL109 - Степен на подвижност на зъб</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl109</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL109 - Степен на подвижност на зъб
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl110">
+			<field name="name">CL110 - Код на дентална дейност</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl110</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL110 - Код на дентална дейност
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl111">
+			<field name="name">CL111 - Код на дентална диагноза</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl111</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL111 - Код на дентална диагноза
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl112">
+			<field name="name">CL112 - Тип на дентална дейност</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl112</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL112 - Тип на дентална дейност
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl113">
+			<field name="name">CL113 - Статус на Е-дентално лечение</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl113</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL113 - Статус на Е-дентално лечение
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl114">
+			<field name="name">CL114 - Лекарства съдържащи наркотични вещества по жълта рецепта (T7)</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl114</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL114 - Лекарства съдържащи наркотични вещества по жълта рецепта (T7)
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl115">
+			<field name="name">CL115 - Лекарства съдържащи наркотични вещества по зелена рецепта (T6)</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl115</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL115 - Лекарства съдържащи наркотични вещества по зелена рецепта (T6)
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl116">
+			<field name="name">CL116 - Причина за издаване на медицинска бележка</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl116</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL116 - Причина за издаване на медицинска бележка
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl117">
+			<field name="name">CL117 - Място за провеждане на лечение и възстановяване</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl117</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL117 - Място за провеждане на лечение и възстановяване
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl118">
+			<field name="name">CL118 - Статус за медицинска бележка</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl118</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL118 - Статус за медицинска бележка
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl119">
+			<field name="name">CL119 - CL119</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl119</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL119 - CL119
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl120">
+			<field name="name">CL120 - Производител на устройството, използвано за полагане на подпис на пациента</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl120</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL120 - Производител на устройството, използвано за полагане на подпис на пациента
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl121">
+			<field name="name">CL121 - Модел на устройството, използвано за полагане на подпис на пациента</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl121</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL121 - Модел на устройството, използвано за полагане на подпис на пациента
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl122">
+			<field name="name">CL122 - Заболявания за проследяване и диспансеризация</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl122</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL122 - Заболявания за проследяване и диспансеризация
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl123">
+			<field name="name">CL123 - Категория за управление на МСП</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl123</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL123 - Категория за управление на МСП
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl124">
+			<field name="name">CL124 - Статус на удостоверение за здравословно състояние</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl124</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL124 - Статус на удостоверение за здравословно състояние
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl125">
+			<field name="name">CL125 - Тип на удостоверение за здравословно състояние</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl125</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL125 - Тип на удостоверение за здравословно състояние
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl126">
+			<field name="name">CL126 - Групи рискови фактори за развитие на заболяване</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl126</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL126 - Групи рискови фактори за развитие на заболяване
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl127">
+			<field name="name">CL127 - Рискови фактори за развитие на заболяване</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl127</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL127 - Рискови фактори за развитие на заболяване
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl128">
+			<field name="name">CL128 - Обективен статус с резултат от физикален преглед</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl128</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL128 - Обективен статус с резултат от физикален преглед
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl129">
+			<field name="name">CL129 - Пациенски характеристики за личен картон</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl129</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL129 - Пациенски характеристики за личен картон
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl130">
+			<field name="name">CL130 - Видове дейности и поддейности по НЗОК</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl130</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL130 - Видове дейности и поддейности по НЗОК
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl131">
+			<field name="name">CL131 - Статус на попълване на анамнеза</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl131</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL131 - Статус на попълване на анамнеза
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl132">
+			<field name="name">CL132 - График на профилактичните прегледи и дейности</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl132</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL132 - График на профилактичните прегледи и дейности
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl133">
+			<field name="name">CL133 - Групи въпроси към прегледи при снемане на анамнеза</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl133</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL133 - Групи въпроси към прегледи при снемане на анамнеза
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl134">
+			<field name="name">CL134 - Въпроси към прегледи при снемане на анамнеза</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl134</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL134 - Въпроси към прегледи при снемане на анамнеза
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl135">
+			<field name="name">CL135 - Код на успешна операция получен от системата на БОВЛ</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl135</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL135 - Код на успешна операция получен от системата на БОВЛ
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl136">
+			<field name="name">CL136 - Видове дейности при профилактични прегледи</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl136</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL136 - Видове дейности при профилактични прегледи
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl137">
+			<field name="name">CL137 - Статус на профилактичен преглед или дейност</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl137</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL137 - Статус на профилактичен преглед или дейност
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl138">
+			<field name="name">CL138 - Групи от допустими отговори при профилактика</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl138</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL138 - Групи от допустими отговори при профилактика
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl139">
+			<field name="name">CL139 - Допустими отговори при профилактика</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl139</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL139 - Допустими отговори при профилактика
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl140">
+			<field name="name">CL140 - Допустими връзки при контакти в личен картон</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl140</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL140 - Допустими връзки при контакти в личен картон
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl141">
+			<field name="name">CL141 - Статус на дейност по профилактика</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl141</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL141 - Статус на дейност по профилактика
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl142">
+			<field name="name">CL142 - Код на дейност по профилактика</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl142</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL142 - Код на дейност по профилактика
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl143">
+			<field name="name">CL143 - Скринингови програми</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl143</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL143 - Скринингови програми
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl144">
+			<field name="name">CL144 - Резултат от дейност по профилактика</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl144</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL144 - Резултат от дейност по профилактика
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl145">
+			<field name="name">CL145 - Източник на информацията при отговор по въпросник в профилактика</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl145</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL145 - Източник на информацията при отговор по въпросник в профилактика
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl146">
+			<field name="name">CL146 - Статус на отпускане по рецепта</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl146</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL146 - Статус на отпускане по рецепта
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl147">
+			<field name="name">CL147 - Вид на предписана терапия</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl147</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL147 - Вид на предписана терапия
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl148">
+			<field name="name">CL148 - Регистър на Заразните болести</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl148</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL148 - Регистър на Заразните болести
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl149">
+			<field name="name">CL149 - Категоризация на случаите на заразни заболявания</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl149</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL149 - Категоризация на случаите на заразни заболявания
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl150">
+			<field name="name">CL150 - Редки заболявания по Orphanet</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl150</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL150 - Редки заболявания по Orphanet
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl997">
+			<field name="name">CL997 - Статус на специализирана заявка към НЗИС</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl997</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL997 - Статус на специализирана заявка към НЗИС
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl998">
+			<field name="name">CL998 - Предупреждение към издадени е-документи</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl998</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL998 - Предупреждение към издадени е-документи
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cl999">
+			<field name="name">CL999 - Код за грешка при комуникация с НЗИС</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cl999</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай CL999 - Код за грешка при комуникация с НЗИС
+				</p>
+			</field>
+		</record>
+
+
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cls01">
+			<field name="name">cls01</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cls01</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай cls01 - cls01
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_trinity_nomenclature_cls02">
+			<field name="name">cls02</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.nomenclature.cls02</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Създай cls02 - cls02
+				</p>
+			</field>
+		</record>
+
+	</data>
+</odoo>

@@ -1,0 +1,100 @@
+<odoo>
+	<!-- Wizard Form -->
+	<record id="view_trinity_nomenclature_import_wizard" model="ir.ui.view">
+		<field name="name">trinity.nomenclature.import.wizard.form</field>
+		<field name="model">trinity.nomenclature.import.wizard</field>
+		<field name="arch" type="xml">
+			<form string="Импорт на номенклатури от XLSX">
+				<link rel="stylesheet" type="text/css" href="/trinity_file_assets/static/src/css/custom.css"/>
+                <style>
+                    .modal-content {
+                        width: 600px !important;
+                        margin: auto;
+                    }
+                </style>
+				<group>
+					<field name="file" filename="filename"/>
+					<field name="filename" invisible="1"/>
+				</group>
+				<footer>
+					<button name="action_import" type="object" string="Импорт" class="btn-primary"/>
+					<button string="Отказ" class="btn-secondary" special="cancel"/>
+				</footer>
+			</form>
+		</field>
+	</record>
+	<!-- Action -->
+	<record id="action_trinity_nomenclature_import_wizard" model="ir.actions.act_window">
+		<field name="name">Импорт на номенклатури от XLSX</field>
+		<field name="res_model">trinity.nomenclature.import.wizard</field>
+		<field name="view_mode">form</field>
+		<field name="target">new</field>
+	</record>
+	<!-- Form Views -->
+	<record model="ir.ui.view" id="view_trinity_nomenclature_import_nhis_form">
+		<field name="name">trinity.nomenclature.import.nhis.form</field>
+		<field name="model">trinity.nomenclature.import.nhis</field>
+		<field name="arch" type="xml">
+			<form string="Импорт на номенклатури от НЗИС" create="false" edit="false">
+				<link rel="stylesheet" type="text/css" href="/trinity_file_assets/static/src/css/custom.css"/>
+                <style>
+                    .modal-content {
+                        width: 600px !important;
+                        margin: auto;
+                    }
+                </style>
+				<sheet>
+					<div class="row">
+						<div class="col-12 text-center">
+							<button name="post_all_nomenclature_requests" string="Изтегли всички НЗОК номенклатури" type="object" class="btn btn-primary"/>
+						</div>
+					</div>
+					<footer>
+						<button string="Затвори" class="btn-secondary" special="cancel"/>
+					</footer>
+				</sheet>
+			</form>
+		</field>
+	</record>
+	<!-- Action for the nomenclature import wizard  -->
+	<record id="action_trinity_nomenclature_import_nhis" model="ir.actions.act_window">
+		<field name="name">Импорт на номенклатури от НЗИС</field>
+		<field name="res_model">trinity.nomenclature.import.nhis</field>
+		<field name="view_mode">form</field>
+		<field name="target">new</field>
+	</record>
+	<!-- Form Views -->
+	<record model="ir.ui.view" id="view_trinity_csv_import_form">
+		<field name="name">trinity.csv.import.form</field>
+		<field name="model">trinity.csv.import</field>
+		<field name="arch" type="xml">
+			<form string="Импорт на данни от CSV" create="false" edit="false">
+				<link rel="stylesheet" type="text/css" href="/trinity_file_assets/static/src/css/custom.css"/>
+                <style>
+                    .modal-content {
+                        width: 600px !important;
+                        margin: auto;
+                    }
+                </style>
+				<sheet>
+                    <group>
+                        <field name="target_model" options="{'no_create': True}"/>
+                        <field name="file" filename="filename"/>
+                        <field name="filename" invisible="1"/>
+                    </group>
+                    <footer>
+                        <button name="action_import_csv" type="object" string="Импорт" class="btn-primary"/>
+                        <button string="Отказ" class="btn-secondary" special="cancel"/>
+                    </footer>
+				</sheet>
+			</form>
+		</field>
+	</record>
+	<!-- Action for the nomenclature import wizard  -->
+	<record id="action_trinity_csv_import" model="ir.actions.act_window">
+		<field name="name">Импорт на данни от CSV</field>
+		<field name="res_model">trinity.csv.import</field>
+		<field name="view_mode">form</field>
+		<field name="target">new</field>
+	</record>
+</odoo>

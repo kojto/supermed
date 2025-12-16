@@ -1,0 +1,60 @@
+<odoo>
+	<data>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_list">
+			<field name="name">trinity.nomenclature.list</field>
+			<field name="model">trinity.nomenclature</field>
+			<field name="arch" type="xml">
+				<list limit="200" sample="1" create="false" delete="false">
+					<field name="active" widget="boolean_toggle"/>
+                    <field name="is_from_nhif" widget="boolean_toggle"/>
+                    <field name="is_from_xlsx" widget="boolean_toggle"/>
+                    <field name="version"/>
+                    <button name="create_or_update_cl_record" type="object" title="Създай/Обнови" icon="fa-refresh"/>
+					<field name="create_date"/>
+                    <field name="write_date"/>
+					<field name="cl_value"/>
+					<field name="json_data_rows"/>
+					<field name="target_model"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_nomenclature_form">
+			<field name="name">trinity.nomenclature.form</field>
+			<field name="model">trinity.nomenclature</field>
+			<field name="arch" type="xml">
+				<form>
+					<link rel="stylesheet" type="text/css" href="/trinity_file_assets/static/src/css/custom.css"/>
+					<sheet>
+                        <div class="row">
+                            <group class="col-lg-6">
+                                <separator class="col-lg-12 separator"/>
+                                <field name="cl_value" readonly="1"/>
+                                <field name="target_model" readonly="1"/>
+                                <field name="description" readonly="1"/>
+                            </group>
+                            <group class="col-lg-6">
+                                <separator class="col-lg-12 separator"/>
+                                <field name="active" widget="boolean_toggle"/>
+                                <field name="version"/>
+                                <field name="is_from_nhif" widget="boolean_toggle"/>
+                                <field name="is_from_xlsx" widget="boolean_toggle"/>
+                            </group>
+                            <group class="col-lg-12">
+                                <separator class="col-lg-12 separator"/>
+                                <field name="csv_data" class="p-3"/>
+                            </group>
+                            <group class="col-lg-12">
+                                <separator class="col-lg-12 separator"/>
+                                <field name="json_data" class="p-3"/>
+                            </group>
+                            <group class="col-lg-12">
+                                <separator class="col-lg-12 separator"/>
+                                <field name="xml_data" class="p-3"/>
+                            </group>
+                        </div>
+					</sheet>
+				</form>
+			</field>
+		</record>
+    </data>
+</odoo>
