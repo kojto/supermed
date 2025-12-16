@@ -1,0 +1,75 @@
+<odoo>
+	<data>
+		<!-- List Views -->
+		<record model="ir.ui.view" id="view_trinity_token_list">
+			<field name="name">trinity.token.list</field>
+			<field name="model">trinity.token</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1">
+					<field name="token"/>
+					<field name="accessToken"/>
+					<field name="tokenType"/>
+					<field name="expiresIn"/>
+					<field name="issuedOn"/>
+					<field name="expiresOn"/>
+					<field name="refreshToken"/>
+					<field name="user_id"/>
+				</list>
+			</field>
+		</record>
+		<!-- Form Views -->
+		<record model="ir.ui.view" id="view_trinity_token_form">
+			<field name="name">trinity.token.form</field>
+			<field name="model">trinity.token</field>
+			<field name="arch" type="xml">
+				<form>
+					<link rel="stylesheet" type="text/css" href="/trinity_file_assets/static/src/css/custom.css"/>
+					<sheet>
+						<h1>Токен за НЗИС</h1>
+						<div class="row">
+							<div class="col-lg-6">
+								<separator class="col-lg-12 separator"/>
+								<field name="user_id" class="w-100" options="{'no_create': True, 'no_quick_create': True}"/>
+								<field name="token" class="w-100"/>
+								<field name="accessToken" class="w-100"/>
+								<field name="tokenType" class="w-100"/>
+								<field name="refreshToken" class="w-100"/>
+							</div>
+							<div class="col-lg-6">
+								<separator class="col-lg-12 separator"/>
+								<field name="expiresIn" class="w-100"/>
+								<field name="issuedOn" class="w-100"/>
+								<field name="expiresOn" class="w-100"/>
+								<field name="issuedOnDatetime" class="w-100"/>
+								<field name="expiresOnDatetime" class="w-100"/>
+							</div>
+						</div>
+					</sheet>
+				</form>
+			</field>
+		</record>
+		<!-- Search Views -->
+		<record model="ir.ui.view" id="view_trinity_token_search">
+			<field name="name">trinity.token.search</field>
+			<field name="model">trinity.token</field>
+			<field name="arch" type="xml">
+				<search string="Token">
+					<field name="token"/>
+				</search>
+			</field>
+		</record>
+		<!-- Actions to Return Model Views -->
+		<record model="ir.actions.act_window" id="action_trinity_token">
+			<field name="name">Токен</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.token</field>
+			<field name="view_mode">list,form</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+          Insert Your First Token
+        </p>
+			</field>
+		</record>
+	</data>
+</odoo>

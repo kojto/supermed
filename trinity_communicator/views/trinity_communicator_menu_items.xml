@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<!-- Parent Menu -->
+		<menuitem name="Комуникатор" id="menu_communicator_parent" parent="trinity_medical_facility.menu_medical_facility_parent" sequence="30"/>
+
+		<!-- Main Menu Items -->
+		<menuitem name="Заявки" id="menu_communicator" sequence="10" parent="menu_communicator_parent" action="action_trinity_communicator"/>
+		<menuitem name="Лог на заявките" id="menu_trinity_communication_log" parent="menu_communicator_parent" sequence="20" action="action_trinity_communication_log"/>
+		<menuitem name="Токен" id="menu_token" parent="menu_communicator_parent" sequence="30" action="action_trinity_token"/>
+		<menuitem id="menu_api_request" name="Тестови заявки" parent="menu_communicator_parent" sequence="40" action="action_api_request"/>
+	</data>
+</odoo>

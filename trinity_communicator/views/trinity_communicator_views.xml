@@ -1,0 +1,41 @@
+<odoo>
+	<data>
+		<!-- List Views -->
+		<record model="ir.ui.view" id="view_trinity_communicator_list">
+			<field name="name">trinity.communicator.list</field>
+			<field name="model">trinity.communicator</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" editable="bottom">
+					<field name="active" widget="boolean_toggle" class="w-100 d-flex justify-content-center"/>
+					<field name="is_for_testing" widget="boolean_toggle" class="w-100 d-flex justify-content-center"/>
+					<field name="action_name"/>
+					<field name="field_origin"/>
+					<field name="field_response"/>
+					<field name="url_value"/>
+					<field name="lrn_origin_field"/>
+				</list>
+			</field>
+		</record>
+		<!-- Search Views -->
+		<record model="ir.ui.view" id="view_trinity_communicator_search">
+			<field name="name">trinity.communicator.search</field>
+			<field name="model">trinity.communicator</field>
+			<field name="arch" type="xml">
+				<search string="action_name">
+					<field name="action_name"/>
+				</search>
+			</field>
+		</record>
+		<!-- Actions to Return Model Views -->
+		<record model="ir.actions.act_window" id="action_trinity_communicator">
+			<field name="name">Комуникатор</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.communicator</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face"/>
+			</field>
+		</record>
+	</data>
+</odoo>

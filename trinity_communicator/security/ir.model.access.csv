@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_trinity_communicator,trinity.communicator,model_trinity_communicator,,1,1,1,1
+access_trinity_communication_log,trinity.communication.log,model_trinity_communication_log,,1,1,1,1
+access_trinity_token,trinity.token,model_trinity_token,,1,1,1,1
+access_trinity_requests,trinity.requests,model_trinity_requests,,1,1,1,1
