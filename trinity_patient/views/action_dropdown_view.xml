@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="action_create_kojto_contact_record" model="ir.actions.server">
+            <field name="name">Create Kojto Contact Record</field>
+            <field name="model_id" ref="model_trinity_patient"/>
+            <field name="state">code</field>
+            <field name="code">
+                if records:
+                    action = records.create_kojto_contact_record()
+                    if action:
+                        action
+            </field>
+            <field name="binding_model_id" ref="model_trinity_patient"/>
+            <field name="binding_view_types">list</field>
+        </record>
+    </data>
+</odoo>

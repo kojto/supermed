@@ -1,0 +1,86 @@
+<odoo>
+	<data>
+		<!-- List Views -->
+		<record model="ir.ui.view" id="view_trinity_patient_costbearer_list">
+			<field name="name">trinity.patient.costbearer.list</field>
+			<field name="model">trinity.patient.costbearer</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" default_order="active_from desc">
+					<field name="patient_id" string="Пациент"/>
+					<field name="cost_bearer_id" string="Застраховка"/>
+					<field name="patient_insurance_no" string="Номер на застраховка"/>
+					<field name="patient_insurance_contract_no" string="Номер на договор" optional="show"/>
+					<field name="active" string="Активна" widget="boolean_toggle"/>
+					<field name="active_from" string="Активна от"/>
+					<field name="active_until" string="Активна до" optional="show"/>
+					<field name="create_date" string="Създадена" optional="hide"/>
+				</list>
+			</field>
+		</record>
+
+		<!-- Form Views -->
+		<record model="ir.ui.view" id="view_trinity_patient_costbearer_form">
+			<field name="name">trinity.patient.costbearer.form</field>
+			<field name="model">trinity.patient.costbearer</field>
+			<field name="arch" type="xml">
+				<form>
+					<link rel="stylesheet" type="text/css" href="/trinity_file_assets/static/src/css/custom.css"/>
+					<sheet>
+						<div class="oe_title">
+							<h1>Застраховка на пациент</h1>
+						</div>
+						<div class="row">
+							<group class="col-lg-6">
+								<field name="patient_id" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+								<field name="cost_bearer_id" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+								<field name="patient_insurance_no"/>
+								<field name="patient_insurance_contract_no"/>
+							</group>
+							<group class="col-lg-6">
+								<field name="active" widget="boolean_toggle"/>
+								<field name="active_from"/>
+								<field name="active_until"/>
+							</group>
+						</div>
+					</sheet>
+				</form>
+			</field>
+		</record>
+
+		<!-- Search Views -->
+		<record model="ir.ui.view" id="view_trinity_patient_costbearer_search">
+			<field name="name">trinity.patient.costbearer.search</field>
+			<field name="model">trinity.patient.costbearer</field>
+			<field name="arch" type="xml">
+				<search string="Застраховки на пациенти">
+					<field name="patient_id"/>
+					<field name="cost_bearer_id"/>
+					<field name="patient_insurance_no"/>
+					<field name="patient_insurance_contract_no"/>
+					<separator/>
+					<filter name="active" string="Активни" domain="[('active', '=', True)]"/>
+					<filter name="inactive" string="Неактивни" domain="[('active', '=', False)]"/>
+					<separator/>
+					<filter name="patient_costbearer" string="ПАЦИЕНТ" domain="[('cost_bearer_id.name', '=', 'ПАЦИЕНТ')]"/>
+					<filter name="nhif_costbearer" string="НЗОК" domain="[('cost_bearer_id.name', '=', 'НЗОК')]"/>
+					<filter name="other_costbearer" string="Други" domain="[('cost_bearer_id.name', 'not in', ['ПАЦИЕНТ', 'НЗОК'])]"/>
+				</search>
+			</field>
+		</record>
+
+		<!-- Actions -->
+		<record model="ir.actions.act_window" id="action_trinity_patient_costbearer">
+			<field name="name">Застраховки на пациенти</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.patient.costbearer</field>
+			<field name="view_mode">list,form</field>
+			<field name="context">{'search_default_active': 1}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">Създайте първия запис за застраховка на пациент.</p>
+			</field>
+		</record>
+
+		<!-- Menu Items -->
+		<menuitem name="Застраховки на пациенти" id="menu_trinity_patient_costbearer" parent="menu_patient_parent" sequence="2" action="action_trinity_patient_costbearer"/>
+	</data>
+</odoo>

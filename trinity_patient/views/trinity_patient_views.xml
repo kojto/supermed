@@ -1,0 +1,244 @@
+<odoo>
+	<data>
+		<!-- List Views -->
+		<record model="ir.ui.view" id="view_trinity_patient_list">
+			<field name="name">trinity.patient.list</field>
+			<field name="model">trinity.patient</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" default_order="create_date desc">
+					<field name="identifier_type" optional="hide"/>
+					<field name="identifier"/>
+					<field name="patient_full_name"/>
+					<field name="birth_date" optional="show"/>
+					<field name="phone" optional="show"/>
+					<field name="email" optional="hide"/>
+					<field name="gender" optional="hide"/>
+					<field name="city" optional="show"/>
+					<field name="county_bulgarian" optional="show"/>
+					<field name="zip_code" optional="hide"/>
+					<field name="country_bulgarian" optional="show"/>
+					<field name="general_practitioner_id" optional="hide"/>
+				</list>
+			</field>
+		</record>
+		<!-- Form Views -->
+		<record model="ir.ui.view" id="view_trinity_patient_form">
+			<field name="name">trinity.patient.form</field>
+			<field name="model">trinity.patient</field>
+			<field name="arch" type="xml">
+				<form>
+					<link rel="stylesheet" type="text/css" href="/trinity_file_assets/static/src/css/custom.css"/>
+					<style>
+                        .o_list_renderer.o_renderer.table-responsive .o_list_table th[data-name="active"],
+                        .o_list_renderer.o_renderer.table-responsive .o_list_table td[name="active"] {
+                            max-width: 100px !important; text-align: left !important;
+                        }
+                        .o_list_renderer tbody tr:has(td[colspan]:only-child):not(:has(a)) {
+                            display: none !important;
+                        }
+                        .o_list_renderer.o_renderer.table-responsive .o_list_table th[data-name="name"],
+                        .o_list_renderer.o_renderer.table-responsive .o_list_table td[name="name"] {
+                            max-width: 800px !important; text-align: left !important;
+                        }
+                        .o_list_renderer.o_renderer.table-responsive .o_list_table th[data-name="cost_bearer_id"],
+                        .o_list_renderer.o_renderer.table-responsive .o_list_table td[name="cost_bearer_id"] {
+                            max-width: 150px !important;
+                        }
+                        .o_list_renderer.o_renderer.table-responsive .o_list_table th[data-name="patient_insurance_no"],
+                        .o_list_renderer.o_renderer.table-responsive .o_list_table td[name="patient_insurance_no"] {
+                            max-width: 150px !important;
+                        }
+                        .o_list_renderer.o_renderer.table-responsive .o_list_table th[data-name="patient_insurance_contract_no"],
+                        .o_list_renderer.o_renderer.table-responsive .o_list_table td[name="patient_insurance_contract_no"] {
+                            max-width: 150px !important;
+                        }
+                        .o_list_renderer.o_renderer.table-responsive .o_list_table th[data-name="active_from"],
+                        .o_list_renderer.o_renderer.table-responsive .o_list_table td[name="active_from"] {
+                            max-width: 150px !important;
+                        }
+                        .o_list_renderer.o_renderer.table-responsive .o_list_table th[data-name="active_until"],
+                        .o_list_renderer.o_renderer.table-responsive .o_list_table td[name="active_until"] {
+                            max-width: 150px !important;
+                        }
+                        .o_list_renderer.o_renderer.table-responsive .o_list_table th[data-name="e_examination_lrn"],
+                        .o_list_renderer.o_renderer.table-responsive .o_list_table td[name="e_examination_lrn"] {
+                            max-width: 150px !important; text-align: left !important;
+                        }
+
+                        .o_list_renderer.o_renderer.table-responsive .o_list_table th[data-name="examination_type_id"],
+                        .o_list_renderer.o_renderer.table-responsive .o_list_table td[name="examination_type_id"] {
+                            max-width: 150px !important;
+                        }
+                        .o_list_renderer.o_renderer.table-responsive .o_list_table th[data-name="diagnosis"],
+                        .o_list_renderer.o_renderer.table-responsive .o_list_table td[name="diagnosis"] {
+                            max-width: 200px !important;
+                        }
+                        .o_list_renderer.o_renderer.table-responsive .o_list_table th[data-name="referral_authoredOn"],
+                        .o_list_renderer.o_renderer.table-responsive .o_list_table td[name="referral_authoredOn"] {
+                            max-width: 150px !important; text-align: left !important;
+                        }
+                        .o_list_renderer.o_renderer.table-responsive .o_list_table th[data-name="referral_category"],
+                        .o_list_renderer.o_renderer.table-responsive .o_list_table td[name="referral_category"] {
+                            max-width: 150px !important;
+                        }
+                        .o_list_renderer.o_renderer.table-responsive .o_list_table th[data-name="referral_qualification_name"],
+                        .o_list_renderer.o_renderer.table-responsive .o_list_table td[name="referral_qualification_name"] {
+                            max-width: 200px !important;
+                        }
+                        .o_list_renderer.o_renderer.table-responsive .o_list_table th[data-name="prescription_authoredOn"],
+                        .o_list_renderer.o_renderer.table-responsive .o_list_table td[name="prescription_authoredOn"] {
+                            max-width: 150px !important; text-align: left !important;
+                        }
+                        .o_list_renderer.o_renderer.table-responsive .o_list_table th[data-name="prescription_category"],
+                        .o_list_renderer.o_renderer.table-responsive .o_list_table td[name="prescription_category"] {
+                            max-width: 150px !important;
+                        }
+                        .o_list_renderer.o_renderer.table-responsive .o_list_table th[data-name="medication_medicationCode_DisplayValue"],
+                        .o_list_renderer.o_renderer.table-responsive .o_list_table td[name="medication_medicationCode_DisplayValue"] {
+                            max-width: 200px !important;
+                        }
+
+						table > thead > tr {
+						border-left: 1px solid rgba(11, 83, 148, 0.2) !important;
+						border-right: 1px solid rgba(11, 83, 148, 0.2) !important;
+						border-bottom: 1px solid rgba(11, 83, 148, 0.2) !important;
+						border-top: 1px solid rgba(11, 83, 148, 0.2) !important;
+						}
+
+						table > thead > tr > th {
+						border-left: 0px !important;
+						border-right: 0px !important;
+						border-bottom: 0px !important;
+						border-top: 0px !important;
+						}
+					</style>
+					<sheet class="form-body">
+						<div class="d-flex justify-content-end">
+							<button name="create_report" string="Съзай преглед" type="object" class="btn btn-outline-primary btn-md"/>
+                            <button name="current_hospitalization_fetch" string="Провери текуща хоспитализация" type="object" class="btn btn-outline-primary btn-md"/>
+						</div>
+						<div class="oe_title">
+							<h1>Пациент</h1>
+						</div>
+						<div class="row">
+							<div class="col-lg-6 d-flex">
+								<field name="first_name" placeholder="Име"/>
+								<field name="middle_name" placeholder="Презиме"/>
+								<field name="last_name" placeholder="Фамилия"/>
+							    <button name="create_related_contact" type="object" class="btn btn-sm pt-0 pb-2" invisible="related_contact_id" title="Създай контакт">
+									<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" color="#3f51b4" viewBox="0 0 16 16">
+										<path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H1s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C9.516 10.68 8.289 10 6 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
+										<path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5"/>
+									</svg>
+								</button>
+							    <button name="open_related_contact" type="object" class="btn btn-sm pt-0 pb-2" invisible="not related_contact_id" title="Отвори контакт">
+									<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" color="#3f51b4" viewBox="0 0 16 16">
+										<path d="M5 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4m4-2.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5M9 8a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4A.5.5 0 0 1 9 8m1 2.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5"/>
+										<path d="M2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zM1 4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H8.96q.04-.245.04-.5C9 10.567 7.21 9 5 9c-2.086 0-3.8 1.398-3.984 3.181A1 1 0 0 1 1 12z"/>
+									</svg>
+								</button>
+							</div>
+						</div>
+						<div class="row">
+							<group class="col-lg-6">
+                                <separator class="col-lg-12 separator"/>
+								<div class="o_form_label">Идентификатор</div>
+								<div name="identifierinfo" class="d-flex">
+									<field name="identifier_type" placeholder="Тип на идентификатора" nolabel="1" widget="selection_input" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}" class="w-25"/>
+									<field name="identifier" placeholder="ЕГН" nolabel="1" class="w-75"/>
+								</div>
+								<div class="o_form_label">Дата на раждане / Пол</div>
+								<div name="bdayand gender" class="d-flex">
+									<field name="birth_date" placeholder="Дата на раждане" nolabel="1" class="w-75"/>
+									<field name="gender" placeholder="Пол" nolabel="1" widget="selection_input" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}" class="w-25"/>
+								</div>
+								<div class="o_form_label">Гражданство</div>
+								<div name="nationality">
+									<field name="nationality" nolabel="1" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+								</div>
+								<div class="o_form_label">Телефон</div>
+								<div name="phone">
+									<field name="phone" placeholder="Тел.:"/>
+								</div>
+                                <field name="related_contact_id" invisible="1"/>
+							</group>
+							<group class="col-lg-6">
+                                <separator class='col-lg-12 separator'/>
+								<field name="ekatte_key" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+								<field name="rhifareanumber_key" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+								<field name="county_bulgarian" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+								<field name="country_bulgarian" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+							</group>
+						</div>
+                        <div class="row">
+                            <group class="col-lg-12">
+                                <separator class='col-lg-12 separator'/>
+                                <field name="cost_bearer_ids" domain="[]" context="{'active_test': False}">
+                                    <list editable="bottom" order="active_from desc" class="ko-list-main">
+                                        <field name="active" widget="boolean_toggle"/>
+                                        <field name="cost_bearer_id" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+                                        <field name="patient_insurance_no"/>
+                                        <field name="patient_insurance_contract_no"/>
+                                        <field name="active_from"/>
+                                        <field name="active_until"/>
+                                    </list>
+                                </field>
+                            </group>
+                        </div>
+                        <div class="row d-none">
+                            <group class="col-lg-12">
+                                <separator class='col-lg-12 separator'/>
+                                <field name="examination_type_ids">
+                                    <list editable="bottom" order="active_from desc" class="ko-list-main">
+                                        <field name="name"/>
+                                    </list>
+                                </field>
+                            </group>
+                        </div>
+                        <div class="row">
+                            <group class="col-lg-8">
+                                <separator class="col-lg-12 separator"/>
+                                <field name="general_practitioner_id" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+                            </group>
+							<group class="col-lg-1">
+                                <separator class="col-lg-12 separator"/>
+								<field name="mrzString" nolabel="1"/>
+							</group>
+						</div>
+					</sheet>
+					<script type="text/javascript" src="/trinity_patient/static/src/js/custom.js"/>
+				</form>
+			</field>
+		</record>
+		<!-- Search Views -->
+		<record model="ir.ui.view" id="view_trinity_patient_search">
+			<field name="name">trinity.patient.search</field>
+			<field name="model">trinity.patient</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="patient_full_name"/>
+					<field name="identifier"/>
+					<separator/>
+					<filter name="male" domain="[('gender','=','male')]"/>
+					<group expand="1">
+						<filter name="gender" context="{'group_by':'gender'}"/>
+						<filter name="identifier_type" context="{'group_by':'identifier_type'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<!-- Actions to Return Model Views -->
+		<record model="ir.actions.act_window" id="action_trinity_patient">
+			<field name="name">Пациенти</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.patient</field>
+			<field name="view_mode">list,form</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">Регистрирай пациент</p>
+			</field>
+		</record>
+		<!-- Menu Items -->
+		<menuitem name="Пациенти" id="menu_patient_parent" action="action_trinity_patient" sequence="3"/>
+	</data>
+</odoo>

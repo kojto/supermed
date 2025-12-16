@@ -1,0 +1,78 @@
+h2 {
+	font-size: 18px;
+	padding-bottom: 10px;
+}
+
+span:empty {
+	display: none;
+}
+
+.o_form_label.o_form_label_readonly {
+	opacity: 1 !important;
+	font-weight: 500 !important;
+	font-size: 14px
+}
+
+.o_inner_group .o_field_widget {
+	width: 100%;
+	color: black;
+	font-weight: 500;
+	font-size: 14px
+}
+
+.o_input {
+	background-color: rgba(11, 83, 148, 0.05);
+	border: 1px solid rgba(11, 83, 148, 0.2);
+	border-radius: 2px;
+	background-position: right 4px center !important;
+}
+
+.o_input:not(:hover):not(:focus) {
+	color: black;
+	font-weight: 500;
+	font-size: 14px
+}
+
+.o_form_view .o_form_label {
+	color: black;
+	font-weight: 500;
+	font-size: 14px;
+	width: 220px
+}
+
+.o_form_label {
+	white-space: nowrap;
+}
+
+.container {
+	text-align: center;
+	margin-bottom: 40px;
+	margin-top: 20px
+}
+
+.o_field_widget {
+	padding-right: 5px;
+	font-size: 14px;
+	font-weight: 500;
+	color: black
+}
+
+.o_radio_item {
+	display: inline-block
+}
+
+.nowrap {
+	white-space: nowrap;
+}
+
+.o_dropdown_button {
+	visibility: visible !important
+}
+
+@media (max-width: 1200px) {
+	.o_form_view .o_form_sheet_bg >
+
+	.o_form_sheet {
+		max-width: 100% !important;
+	}
+}

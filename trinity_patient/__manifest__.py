@@ -1,0 +1,26 @@
+{
+    "name": "Trinity Patients",
+    "summary": "Patient management system",
+    "description": "Patient management module for managing patient records, insurance information, and patient-related data",
+    "author": "MG",
+    "website": "https://www.trinitymedcenter.com",
+    "category": "Tools",
+    "sequence": 2,
+    "version": "18.04.07",
+    "depends": [
+        "base",
+        "trinity_costbearer",
+        "trinity_medical_facility",
+        "trinity_nomenclature",
+        "trinity_examination_type",
+        "kojto_landingpage",
+    ],
+    "data": [
+        "security/ir.model.access.csv",
+        "views/trinity_patient_views.xml",
+        "views/trinity_patient_buttons.xml",
+        "views/trinity_patient_insurance_views.xml",
+        "views/action_dropdown_view.xml",
+        "static/src/js/custom.js",
+    ],
+}
