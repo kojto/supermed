@@ -1,0 +1,218 @@
+<odoo>
+	<data>
+		<!-- List Views -->
+		<record model="ir.ui.view" id="view_trinity_medical_notice_list">
+			<field name="name">trinity.medical.notice.list</field>
+			<field name="model">trinity.medical.notice</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" default_order="medicalNotice_lrn desc" create="False">
+					<!-- User related fields -->
+					<field name='user_id' string='Текущ потребител' optional='hide'/>
+					<field name='user_token_expiresOnDatetime' string='Срок на изтичане на токена' optional='hide'/>
+					<field name='user_token_certificate' string='Сертификат за токен' optional='hide'/>
+					<!-- Company related fields -->
+					<field name='company_id' string='Компания' optional='hide'/>
+					<field name='company_vat' string='ДДС номер' optional='hide'/>
+					<field name='company_name' string='Име на компанията' optional='hide'/>
+					<!-- Medical notice fields -->
+					<field name='response_nrnMedicalNotice' string='НРН на мед. бележка'/>
+					<field name='medicalNotice_basedOn_lrn' string='Основано на амб.' optional='hide'/>
+					<field name='medicalNotice_basedOn_nrn' string='Основано на' optional='hide'/>
+					<field name='medicalNotice_lrn' string='Медицинска бележка №'/>
+					<field name='medicalNotice_reason' string='Причина' optional='hide'/>
+					<field name='medicalNotice_code' string='Код на диагнозата' optional='hide'/>
+					<field name='medicalNotice_fromDate' string='От дата' optional='show'/>
+					<field name='medicalNotice_toDate' string='До дата' optional='show'/>
+					<field name='medicalNotice_location' string='Място на лечение' optional='hide'/>
+					<field name='medicalNotice_institution' string='Служи пред' optional='hide'/>
+					<field name='medicalNotice_note' string='Бележка' optional='hide'/>
+					<!-- Subject related fields -->
+					<field name='subject_identifier' string='Идентификатор' optional='hide'/>
+					<field name='subject_identifierType' string='Тип идентификатор' optional='hide'/>
+					<field name='subject_nhifInsuranceNumber' string='Номер на застраховка НЗОК' optional='hide'/>
+					<field name='subject_birthDate' string='Дата на раждане' optional='hide'/>
+					<field name='subject_gender' string='Пол' optional='hide'/>
+					<field name='subject_age' string='Възраст' optional='hide'/>
+					<field name='subject_given' string='Собствено име' optional='hide'/>
+					<field name='subject_middle' string='Бащино име' optional='hide'/>
+					<field name='subject_family' string='Фамилно име' optional='hide'/>
+					<field name='subject_full' string='Пациент' optional='show'/>
+					<field name='subject_country' string='Държава' optional='hide'/>
+					<field name='subject_county' string='Област' optional='hide'/>
+					<field name='subject_city' string='Град' optional='hide'/>
+					<field name='subject_postalCode' string='Пощенски код' optional='hide'/>
+					<field name='subject_phone' string='Телефонен номер' optional='hide'/>
+					<field name='subject_email' string='Имейл' optional='hide'/>
+					<!-- Performer related fields -->
+					<field name='performer_pmi' string='ПМИ изпълнител' optional='hide'/>
+					<field name='performer_pmiDeputy' string='Заместник ПМИ' optional='hide'/>
+					<field name='performer_qualification_code' string='Квалификация' optional='hide'/>
+					<field name='performer_role' string='Роля' optional='hide'/>
+					<field name='performer_practiceNumber' string='Номер на практика' optional='hide'/>
+					<field name='performer_phone' string='Телефон' optional='hide'/>
+					<field name='performer_email' string='Имейл' optional='hide'/>
+					<!-- Response related fields -->
+					<field name='response_sender' string='Изпращач' optional='hide'/>
+					<field name='response_senderId' string='Идентификатор на изпращача' optional='hide'/>
+					<field name='response_recipient' string='Получател' optional='hide'/>
+					<field name='response_recipientId' string='Идентификатор на получателя' optional='hide'/>
+					<field name='response_messageId' string='ID на съобщението' optional='hide'/>
+					<field name='response_messageType' string='Тип съобщение' optional='hide'/>
+					<field name='response_createdOn' string='Създадено на' optional='hide'/>
+					<field name='response_nrnMedicalNotice' string='НРН медицинско уведомление' optional='hide'/>
+					<field name='response_lrn' string='ЛРН отговор' optional='hide'/>
+					<!-- Warnings related fields -->
+					<field name='warnings_code' string='Код на предупреждението' optional='hide'/>
+					<field name='warnings_description' string='Описание на предупреждението' optional='hide'/>
+					<field name='warnings_source' string='Източник на предупреждението' optional='hide'/>
+					<field name='warnings_nrnTarget' string='НРН целево предупреждение' optional='hide'/>
+					<!-- Various fields -->
+					<field name='C041' string='C041' optional='hide'/>
+					<field name='C041_signed' string='C041 подписан' optional='hide'/>
+					<field name='SignedInfo_C041' string='Информация за подписа C041' optional='hide'/>
+					<field name='SignedInfo_C041_signature' string='Подпис C041' optional='hide'/>
+					<field name='C045' string='C045' optional='hide'/>
+					<field name='C045_signed' string='C045 подписан' optional='hide'/>
+					<field name='SignedInfo_C045' string='Информация за подписа C045' optional='hide'/>
+					<field name='SignedInfo_C045_signature' string='Подпис C045' optional='hide'/>
+					<field name='C042' string='C042' optional='hide'/>
+					<field name='C046' string='C046' optional='hide'/>
+				</list>
+			</field>
+		</record>
+		<!-- Form Views -->
+		<record model="ir.ui.view" id="view_trinity_medical_notice_form">
+			<field name="name">trinity.medical.notice.form</field>
+			<field name="model">trinity.medical.notice</field>
+			<field name="arch" type="xml">
+				<form create="False">
+					<link rel="stylesheet" type="text/css" href="/trinity_file_assets/static/src/css/custom.css"/>
+					<sheet>
+						<div class="d-flex justify-content-between align-items-center mb-3 ko-form-main-header-line">
+							<div class="w-100 px-0">
+								<div class="row no-gutters">
+									<div class="col-lg-8">
+										<div class="ko-form-view-title mt-1 ms-0">
+											<span>Медицинска бележка</span>
+										</div>
+									</div>
+									<div class="col-lg-4" invisible="response_status == 2" groups="trinity_medical_facility.group_trinity_doctor_users">
+										<div class="d-flex justify-content-end">
+											<div invisible="not user_token_is_expired">
+												<button name="getToken" string="Изгради връзка с НЗИС" type="object" class="btn btn-outline-danger btn-sm" onclick="getToken()"/>
+											</div>
+											<div invisible="user_token_is_expired">
+												<button name="getSignatureC041" string="Активирай" type="object" class="btn btn-outline-primary btn-sm" onclick="getSignatureC041()" invisible="response_nrnMedicalNotice"/>
+												<button name="getSignatureC045" string="Анулирай" type="object" class="btn btn-outline-primary btn-sm" onclick="getSignatureC045()" invisible="not response_nrnMedicalNotice"/>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class='row'>
+							<group class="col-lg-6">
+                                <separator class='col-lg-12 separator'/>
+								<field name="subject_full" readonly="1"/>
+								<field name="subject_identifier" readonly="1"/>
+								<field name="subject_birthDate" readonly="1"/>
+							</group>
+							<group class="col-lg-6">
+								<separator class='col-lg-12 separator'/>
+                                <field name="response_status" string="Статус" readonly="1"/>
+								<field name="response_nrnMedicalNotice" readonly="1" string="НРН" invisible="response_nrnMedicalNotice == False"/>
+								<field name="medicalNotice_basedOn_nrn" string="Мед. бележка към НРН"/>
+								<field name="medicalNotice_reason" string="Причина"/>
+								<field name="medicalNotice_code" invisible="medicalNotice_code == False" string="Код"/>
+							</group>
+							<group class="col-lg-6">
+								<separator class='col-lg-12 separator'/>
+								<field name="medicalNotice_fromDate" string="От дата"/>
+								<field name="medicalNotice_toDate" string="До дата"/>
+								<field name="medicalNotice_location" string="Местоположение"/>
+								<field name="medicalNotice_institution" string="Институция"/>
+								<field name="medicalNotice_note" string="Бележка"/>
+							</group>
+							<group class="col-lg-6">
+								<separator class='col-lg-12 separator'/>
+								<field name="performer_pmi" string="Издаващ лекар"/>
+								<field name="performer_qualification_code" string="Специалност"/>
+								<field name="performer_practiceNumber" string="Номер на практика"/>
+								<field name="performer_phone" string="Телефон"/>
+								<field name="performer_email" string="Имейл"/>
+							</group>
+							<group class="col-lg-6 d-none">
+								<field name="response_sender" string="Изпращач"/>
+								<field name="response_senderId" string="ID на изпращач"/>
+								<field name="response_recipient" string="Получател"/>
+								<field name="response_recipientId" string="ID на получателя"/>
+								<field name="response_messageId" string="ID на съобщението"/>
+								<field name="response_messageType" string="Тип съобщение"/>
+								<field name="response_createdOn" string="Създадено на"/>
+								<field name="response_lrn" string="LRN отговор"/>
+								<field name="warnings_code" string="Код на предупреждението"/>
+								<field name="warnings_description" string="Описание на предупреждението"/>
+								<field name="warnings_source" string="Източник на предупреждението"/>
+								<field name="warnings_nrnTarget" string="Цел на NRN предупреждението"/>
+							</group>
+							<group class="col-lg-12 d-none">
+								<field name="C041" string="C041"/>
+								<field name="C041_signed" string="C041 подписан"/>
+								<field name="SignedInfo_C041" string="Подписана информация C041"/>
+								<field name="SignedInfo_C041_signature" string="Подпис C041"/>
+								<button name="C041_api_request" string="Активирай" type="object"/>
+								<field name="C045" string="C045"/>
+								<field name="C045_signed" string="C045 подписан"/>
+								<field name="SignedInfo_C045" string="Подписана информация C045"/>
+								<field name="SignedInfo_C045_signature" string="Подпис C045"/>
+								<field name="C042" string="C042"/>
+								<field name="C046" string="C046"/>
+								<button name="C045_api_request" string="Анулирай" type="object"/>
+								<!-- Token fields -->
+								<field name="user_token_certificate" id="user_token_certificate" widget="text"/>
+								<field name="supermed_certificate" id="supermed_certificate" widget="text"/>
+								<field name="tokenRequest" id="tokenRequest" widget="text" string="tokenRequest"/>
+								<field name="SignedInfo_tokenRequest" id="SignedInfo_tokenRequest" widget="text" string="SignedInfo_tokenRequest"/>
+								<field name="SignedInfo_tokenRequest_signature" id="SignedInfo_tokenRequest_signature" widget="text" string="SignedInfo_tokenRequest_signature"/>
+								<field name="tokenRequest_signed" id="tokenRequest_signed" widget="text" string="tokenRequest_signed"/>
+								<field name="tokenResponse" id="tokenResponse" widget="text" string="tokenResponse"/>
+								<field name="user_token_expiresOnDatetime" id="user_token_expiresOnDatetime" string="user_token_expiresOnDatetime"/>
+								<field name="user_token_is_expired" id="user_token_is_expired" string="user token is expired"/>
+								<button name="post_token_api_request" string="post_token_api_request" type="object"/>
+							</group>
+						</div>
+					</sheet>
+				<script type="text/javascript" src="/trinity_file_assets/static/src/js/getToken.js"/>
+				<script type="text/javascript" src="/trinity_file_assets/static/src/js/getSignature.js"/>
+				<script type="text/javascript" src="/trinity_file_assets/static/src/js/getSignatureNhifMessages.js"/>
+				</form>
+			</field>
+		</record>
+		<!-- Search Views -->
+		<record model="ir.ui.view" id="view_trinity_medical_notice_search">
+			<field name="name">trinity.medical.notice.search</field>
+			<field name="model">trinity.medical.notice</field>
+			<field name="arch" type="xml">
+				<search string="medical">
+					<field name='medicalNotice_lrn'/>
+					<field name='performer_pmi'/>
+					<field name='subject_identifier'/>
+				</search>
+			</field>
+		</record>
+		<!-- Actions to Return Model Views -->
+		<record model="ir.actions.act_window" id="action_trinity_medical_notice">
+			<field name="name">Медицински бележки</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.medical.notice</field>
+			<field name="view_mode">list,form</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">Медицински бележки</p>
+			</field>
+		</record>
+		<!-- Menu Items -->
+		<menuitem name="Други" id="menu_trinity_commons" sequence="20"/>
+		<menuitem name="Медицински бележки" parent="menu_trinity_commons" id="menu_medical_notice" action="action_trinity_medical_notice" sequence="10"/>
+	</data>
+</odoo>

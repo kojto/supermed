@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_trinity_medical_notice,trinity.medical.notice,model_trinity_medical_notice,,1,1,1,1
+access_trinity_deputization_update,trinity.deputization.update,model_trinity_deputization_update,,1,1,1,1
+access_trinity_deputization_check,trinity.deputization.check,model_trinity_deputization_check,,1,1,1,1
