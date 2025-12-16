@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- Cron job to lock old examinations daily -->
+        <record id="ir_cron_lock_old_examinations" model="ir.cron">
+            <field name="name">Заключи прегледи по-стари от 1 месец</field>
+            <field name="model_id" ref="model_trinity_examination"/>
+            <field name="state">code</field>
+            <field name="code">model.search([]).cron_lock_old_examinations()</field>
+            <field name="user_id" ref="base.user_root"/>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="nextcall" eval="(DateTime.now() + timedelta(days=1)).replace(hour=2, minute=0, second=0, microsecond=0).strftime('%Y-%m-%d %H:%M:%S')"/>
+            <field name="priority">10</field>
+            <field name="active" eval="True"/>
+        </record>
+    </data>
+</odoo>

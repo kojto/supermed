@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_trinity_dashboard,trinity.dashboard,model_trinity_dashboard,kojto_base.kojto_all_human_users,1,1,1,1
+access_trinity_dashboard_contents,trinity.dashboard.access_trinity_dashboard_contents,model_trinity_dashboard_contents,kojto_base.kojto_all_human_users,1,1,1,1
+

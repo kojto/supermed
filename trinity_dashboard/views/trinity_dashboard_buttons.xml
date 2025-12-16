@@ -1,0 +1,24 @@
+<odoo>
+	<data>
+		<record model="ir.ui.view" id="view_kojto_landingpage_form_inherit">
+			<field name="name">kojto.landingpage.form.inherit</field>
+			<field name="model">kojto.landingpage</field>
+			<field name="inherit_id" ref="kojto_landingpage.view_kojto_landingpage_form"/>
+			<field name="arch" type="xml">
+				<xpath expr="//comment()[.=' Button group 15 ']" position="after">
+					<!-- Base -->
+					<div class="landing_page_item">
+						<button name="open_trinity_dashboard" type="object" class="btn landing_page_button">
+							<div class="o_button_icon">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="landing_page_svg_icon">
+									<path fill-rule="evenodd" d="M0 0h1v15h15v1H0zm14.817 3.113a.5.5 0 0 1 .07.704l-4.5 5.5a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61 4.15-5.073a.5.5 0 0 1 .704-.07"/>
+								</svg>
+							</div>
+							<span class="landing_page_text">СТАТИСТИКА</span>
+						</button>
+					</div>
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

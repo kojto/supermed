@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="trinity_examination_pdf_wp_nhif_mri_letter">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <div class="page page-break-after">
+                        <link rel="stylesheet" type="text/css" href="/trinity_file_assets/static/src/css/trinity_examination_pdf_wp_mri.css"/>
+                        <table>
+                            <tr>
+                                <th class="bordered" style="border: 1px solid black !important;" colspan="2">
+                                    <p>Г-жа/Д-р......................................</p>
+                                </th>
+                                <th colspan="2"/>
+                                <th colspan="2"/>
+                            </tr>
+                            <tr>
+                                <td class="bordered" style="width:20%; border: 1px solid black !important;">
+                                    <p>1. За отговор</p>
+                                    <p>2. За изпълнение</p>
+                                    <p>3. За доклад</p>
+                                    <p>4. За становище</p>
+                                    <p>5. На вниманието</p>
+                                    <p>................................</p>
+                                    <p>6. Към архив</p>
+                                </td>
+                                <td class="bordered" style="width:20%; border: 1px solid black !important;">
+                                    <p>7. Към дело</p>
+                                    <p>8. Срок ...........</p>
+                                    <p>Дата...............</p>
+                                    <br/>
+                                    <p>Директор:</p>
+                                </td>
+                                <td style="width:10%"/>
+                                <td style="width:10%"/>
+                                <td style="width:20%"/>
+                                <td style="width:20%">
+                                    <p style="font-weight: bold">ДО</p>
+                                    <p style="font-weight: bold">ДИРЕКТОРА</p>
+                                    <p style="font-weight: bold">СЗОК</p>
+                                </td>
+                            </tr>
+                        </table>
+                        <div style="text-align: center; padding:10px 0">
+                            <h1>УВЕДОМИТЕЛНО ПИСМО<br/>ОТ<br/>
+                                <span t-field="o.hospital_id.managing_director"/>
+                            </h1>
+                        </div>
+                        <table>
+                            <tbody>
+                                <tr class="tb_chapter">
+                                    <td class="tb_subtitle">ВИД ПРАКТИКА</td>
+                                    <td class="tb_txt">
+                                        <span>
+                                            <span t-field="o.company_id.name"/>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr class="tb_chapter">
+                                    <td class="tb_subtitle">№ НА ДОГОВОРА СЪС СЗОК</td>
+                                    <td class="tb_txt">
+                                        <span>
+                                            <span t-field="o.hospital_id.nhif_contract_no"/>
+                                            от <span t-field="o.hospital_id.nhif_contract_date"/>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr class="tb_chapter">
+                                    <td class="tb_subtitle">АДРЕС:</td>
+                                    <td class="tb_txt">
+                                        <span>
+                                            <span t-field="o.company_id.street"/>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr class="tb_chapter">
+                                    <td class="tb_subtitle">ТЕЛЕФОН:</td>
+                                    <td class="tb_txt">
+                                        <span>0878 600 519</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div style="text-align: center; padding:10px 0">
+                            <h1>УВАЖАЕМИ ГОСПОДИН/Г-ЖО/ ДИРЕКТОР,<br/>УВЕДОМЯВАМЕ ВИ, ЧЕ</h1>
+                        </div>
+                        <table>
+                            <tbody>
+                                <tr class="tb_chapter">
+                                    <td class="tb_txt">
+                                            <span>при преглед НРН: </span>
+                                            <span t-field="o.e_examination_nrn"/>
+                                            <span>от: </span>
+                                            <span t-esc="o.examination_open_dtm.strftime('%d.%m.%Y')"/>
+                                            <span t-field="o.patient_first_name"/>
+                                            <span t-field="o.patient_middle_name"/>
+                                            <span t-field="o.patient_last_name"/>
+                                            <span>с ЕГН/ЛКЧ: </span>
+                                            <span t-field="o.patient_identifier_id"/>
+                                            <span>род. на: </span>
+                                            <span t-field="o.patient_identifier_id.birth_date"/>
+                                            <span>бе поставена диагноза: </span>
+                                            <t t-foreach="o.icd_codes" t-as="icd">
+                                                <span t-field="icd.key"/> - <span t-field="icd.description"/>
+                                            </t>
+                                            <span>Моля да отпуснете средства за ядрено-магнитен резонанс с цел допълнително изясняване на диагнозата и избор на подходящото лечение.</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table>
+                            <tbody>
+                                <tr class="tb_chapter">
+                                    <td class="tb_txt">
+                                        <span>ДАТА </span>
+                                        <span t-esc="o.examination_open_dtm.strftime('%d.%m.%Y')"/>
+                                    </td>
+                                    <td class="tb_txt">
+                                        <span>С УВАЖЕНИЕ:......................<br/>(ПОДПИС И
+                                                ПЕЧАТ)</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div style="text-align: center">
+                            <h1>Уведомление, по чл.19 от Закона за защита на личните данни</h1>
+                        </div>
+                        <table>
+                            <tbody>
+                                <tr class="tb_chapter">
+                                    <td class="tb_txt">
+                                        <span>Национална здравноосигурителна каса/НЗОК/ е администратор на лични данни с идентификационен номер 0052412 с представител Управителя на НЗОК. Предоставените от Вас лични данни, при условията на чл.19 от Закона за защита на личните данни №ЗЗЛД/ се събират, обработват и съхраняват от НЗОК/РЗОК за нуоюдите на услугата, поискана от Вас.</span>
+                                        <span>Достъпът до информация за личните Ви данни е гарантиран в хода на цялата процедура по издаването на съответния документ. Трети лица могат да получат информация само в случаите предвидени в закона. При непредставяне на лични данни НЗОК-РЗОК не може да осигури поисканата услуга.</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div style="text-align: center">
+                            <h1>УВЕДОМЕНО ЛИЦЕ</h1>
+                        </div>
+                        <div style="text-align: center">
+                            <span t-field="o.patient_first_name"/>
+                            <span t-field="o.patient_middle_name"/>
+                            <span t-field="o.patient_last_name"/>
+                            <br/>
+                            <span>............................................................
+                                    /родител, настойник, попечител/</span>
+                        </div>
+                        <table>
+                            <tbody>
+                                <tr class="tb_chapter">
+                                    <td class="tb_txt">
+                                        <span>Дата </span>
+                                        <span t-esc="o.examination_open_dtm.strftime('%d.%m.%Y')"/>
+                                    </td>
+                                    <td class="tb_txt">
+                                        <span>ПОДПИС:</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

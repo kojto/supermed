@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<template id="trinity_examination_pdf_wp_al">
+			<t t-call="web.html_container">
+				<t t-foreach="docs" t-as="o">
+					<div class="logo-container">
+						<img t-att-src="'data:image/svg+xml;base64,%s' % (o.company_id.logo.decode('utf-8') if o.company_id.logo else '')" style="width: 200px"/>
+					</div>
+					<div class="page">
+						<h1 style="text-align: center">АМБУЛАТОРЕН ЛИСТ</h1>
+						<div style="text-align: center">
+							<span t-field="o.examination_type"/>
+							<br/>
+							<span>№: </span>
+							<span t-field="o.e_examination_lrn"/>
+							<t t-if="o.e_examination_nrn">
+								<span> НРН: </span>
+								<span t-field="o.e_examination_nrn"/>
+							</t>
+						</div>
+						<table style="width: 100%; margin-top: 1cm; margin-bottom: 1cm;">
+							<tr>
+								<td style="width: 50%;">
+									<span t-esc="o.patient_first_name.title() if o.patient_first_name else ''"/>
+									<span t-esc="o.patient_middle_name.title() if o.patient_middle_name else ''"/>
+									<span t-esc="o.patient_last_name.title() if o.patient_last_name else ''"/>
+									<br/>
+									<span>ЕГН: </span>
+									<span t-field="o.patient_identifier_id"/>
+									<br/>
+									<span>Дата на раждане: </span>
+									<span t-esc="o.patient_identifier_id.birth_date.strftime('%d.%m.%Y')"/>
+									<br/>
+									<t t-if="o.patient_identifier_id.cost_bearer_ids and o.cost_bearer_id">
+										<t t-set="matching_insurance" t-value="o.patient_identifier_id.cost_bearer_ids.filtered(lambda i: i.cost_bearer_id == o.cost_bearer_id)"/>
+										<t t-if="matching_insurance">
+											<span t-if="matching_insurance[0].cost_bearer_id">Носител на разходите:</span>
+											<span t-field="matching_insurance[0].cost_bearer_id"/>
+											<span t-if="matching_insurance[0].patient_insurance_no">Клиентски №:</span>
+											<span t-field="matching_insurance[0].patient_insurance_no" t-if="matching_insurance[0].patient_insurance_no"/>
+											<span t-if="matching_insurance[0].patient_insurance_contract_no">Полица №:</span>
+											<span t-field="matching_insurance[0].patient_insurance_contract_no" t-if="matching_insurance[0].patient_insurance_contract_no"/>
+										</t>
+									</t>
+								</td>
+								<td style="text-align: right;">
+									<span t-esc="o.examination_open_dtm.strftime('%d.%m.%Y')"/>
+								</td>
+							</tr>
+						</table>
+						<table class="maintxt">
+							<tbody>
+								<tr>
+									<td class="tb_subtitle">МКБ</td>
+									<td>
+										<t t-foreach="o.icd_codes" t-as="icd">
+											<div>
+												<span t-field="icd.key"/> - <span t-field="icd.description"/>
+											</div>
+										</t>
+									</td>
+								</tr>
+								<tr>
+									<td class="tb_subtitle">Диагноза</td>
+									<td class="tb_txt">
+										<span t-field="o.diagnosis"/>
+									</td>
+								</tr>
+								<tr>
+									<td class="tb_subtitle">Анамнеза</td>
+									<td class="tb_txt">
+										<span t-field="o.medical_history"/>
+									</td>
+								</tr>
+								<tr>
+									<td class="tb_subtitle">Обективно</td>
+									<td class="tb_txt">
+										<span t-field="o.objective_condition"/>
+									</td>
+								</tr>
+								<tr>
+									<td class="tb_subtitle">Изследвания</td>
+									<td class="tb_txt">
+										<span t-field="o.assessment_notes"/>
+									</td>
+								</tr>
+								<tr>
+									<td class="tb_subtitle">Терапия</td>
+									<td class="tb_txt">
+										<span t-field="o.therapy_note"/>
+									</td>
+								</tr>
+								<tr t-if="o.conclusion or o.examination_conclusion or o.examination_dischargeDisposition">
+									<td class="tb_subtitle">Заключение</td>
+									<td class="tb_txt">
+										<div t-if="o.conclusion"><span t-field="o.conclusion"/></div>
+                                        <div t-if="o.examination_conclusion">Препоръчвам: <span t-field="o.examination_conclusion"/></div>
+                                        <div t-if="o.examination_dischargeDisposition">Място за провеждане на лечението: <span t-field="o.examination_dischargeDisposition"/></div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<div style="margin: 1cm 0 1cm 5cm;">
+							<span t-field="o.main_dr_performing_doctor_id"/>
+							<br/>
+							<span t-field="o.main_dr_performing_qualification_name"/>
+						</div>
+						<div>
+							<table class="maintxt" t-if="o.signature_file" >
+								<tbody>
+									<tr>
+										<td style="vertical-align: middle;">Получих копие от амбулаторния лист:</td>
+										<td style="vertical-align: middle;">
+                                            <img t-att-src="'data:image/png;base64,%s' % o.signature_file.decode('utf-8')" style="width: 100px"/>
+										</td>
+									</tr>
+									<tr>
+										<td style="vertical-align: middle;"/>
+										<td style="vertical-align: middle;">/<span t-esc="o.patient_first_name.title() if o.patient_first_name else ''"/> <span t-esc="o.patient_last_name.title() if o.patient_last_name else ''"/>/</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</t>
+			</t>
+		</template>
+	</data>
+</odoo>

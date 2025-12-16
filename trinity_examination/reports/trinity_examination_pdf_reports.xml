@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<odoo>
+	<data>
+		<record id="trinity_examination_pdf_report_wp_amb_list" model="ir.actions.report">
+			<field name="name">Амбулаторен лист</field>
+			<field name="model">trinity.examination</field>
+			<field name="report_type">qweb-pdf</field>
+			<field name="report_name">trinity_examination.trinity_examination_pdf_wp_al</field>
+			<field name="report_file">trinity_examination.trinity_examination_pdf_wp_al</field>
+			<field name="print_report_name">'aмбулаторен лист - ' + object.name</field>
+			<field name="binding_model_id" ref="model_trinity_examination"/>
+			<field name="binding_type">report</field>
+		</record>
+		<record id="trinity_examination_pdf_report_wp_etap_epikrisis" model="ir.actions.report">
+			<field name="name">Амбулаторен лист</field>
+			<field name="model">trinity.examination</field>
+			<field name="report_type">qweb-pdf</field>
+			<field name="report_name">trinity_examination.trinity_examination_pdf_wp_ee</field>
+			<field name="report_file">trinity_examination.trinity_examination_pdf_wp_ee</field>
+			<field name="print_report_name">'Етапна епикриза - ' + object.name</field>
+			<field name="binding_model_id" ref="model_trinity_examination"/>
+			<field name="binding_type">report</field>
+		</record>
+		<record id="trinity_examination_pdf_report_wp_nhif_mri_letter" model="ir.actions.report">
+			<field name="name">Писмо към НЗОК</field>
+			<field name="model">trinity.examination</field>
+			<field name="report_type">qweb-pdf</field>
+			<field name="report_name">trinity_examination.trinity_examination_pdf_wp_nhif_mri_letter</field>
+			<field name="report_file">trinity_examination.trinity_examination_pdf_wp_nhif_mri_letter</field>
+			<field name="print_report_name">'Писмо към НЗОК - ' + object.name</field>
+			<field name="binding_model_id" ref="model_trinity_examination"/>
+			<field name="binding_type">report</field>
+		</record>
+	</data>
+</odoo>

@@ -1,0 +1,544 @@
+<odoo>
+	<data>
+		<!-- List Views -->
+		<record model="ir.ui.view" id="view_trinity_examination_list">
+			<field name="name">trinity.examination.list</field>
+			<field name="model">trinity.examination</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" default_order="e_examination_lrn desc">
+					<field name="isLocked" widget="boolean_toggle" optional="show" groups="base.group_erp_manager"/>
+					<field name="e_examination_lrn"/>
+					<field name="e_examination_nrn"/>
+					<field name="doctor_id" optional="hide" groups="base.group_erp_manager"/>
+					<field name="hospital_id" optional="hide" groups="base.group_erp_manager"/>
+					<field name="basedOn_e_examination_nrn" decoration-bf="1" optional="show"/>
+					<field name="basedOn_e_examination_nrn_date" decoration-bf="1" optional="show"/>
+					<field name="basedOn_e_examination_nrn_sentbyDoctorId" optional="hide"/>
+					<field name="basedOn_e_examination_nrn_sentbyPractice" optional="hide"/>
+					<field name="basedOn_e_examination_nrn_sentbyDoctor_qualification_code" optional="hide"/>
+					<field name="previous_e_examination_nrn" optional="hide"/>
+					<field name="patient_first_name" optional="show"/>
+					<field name="patient_last_name" optional="show"/>
+					<field name="patient_identifier_id" optional="show"/>
+					<field name="patient_birth_date" optional="hide"/>
+					<field name="examination_open_dtm" optional="hide"/>
+					<field name="main_dr_performing_doctor_id" optional="hide"/>
+					<field name="main_dr_performing_initials" optional="show"/>
+					<field name="icd_code" optional="show"/>
+					<field name="diagnosis" optional="show"/>
+					<field name="medical_history" optional="show"/>
+					<field name="objective_condition" optional="show"/>
+					<field name="assessment_notes" optional="show"/>
+					<field name="therapy_note" optional="show"/>
+					<field name="conclusion" optional="hide"/>
+					<field name="invoice_id" optional="hide"/>
+					<field name="examination_type_id" optional="show"/>
+					<field name="examination_type_id_price" class="text-end" optional="show"/>
+					<field name="examination_paid" widget="boolean_toggle" optional="hide" groups="base.group_erp_manager"/>
+					<field name="examination_paid_date" optional="hide"/>
+					<field name="rejected_payment" optional="hide" decoration-danger="rejected_payment == 'yes'"/>
+				</list>
+			</field>
+		</record>
+		<!-- Form Views -->
+		<record model="ir.ui.view" id="view_trinity_examination_form">
+			<field name="name">trinity.examination.form</field>
+			<field name="model">trinity.examination</field>
+			<field name="arch" type="xml">
+				<form create="false">
+					<link rel="stylesheet" type="text/css" href="/trinity_file_assets/static/src/css/custom.css"/>
+					<style>
+                        .o_list_renderer tbody tr:has(td[colspan]:only-child):not(:has(a)) {
+                            display: none !important;
+                        }
+                        .o_list_renderer.o_renderer.table-responsive .o_list_table th[data-name="key"],
+                        .o_list_renderer.o_renderer.table-responsive .o_list_table td[name="key"] {
+                            max-width: 50px !important; text-align: left !important;
+                        }
+                        .o_list_renderer.o_renderer.table-responsive .o_list_table th[data-name="description"],
+                        .o_list_renderer.o_renderer.table-responsive .o_list_table td[name="description"] {
+                            max-width: 600px !important;
+                        }
+                        .o_list_renderer.o_renderer.table-responsive .o_list_table th[data-name="name"],
+                        .o_list_renderer.o_renderer.table-responsive .o_list_table td[name="name"] {
+                            max-width: 600px !important; text-align: left !important;
+                        }
+						.o_field_one2many[name="contents"] .o_list_table.o_list_table_ungrouped
+						tbody tr:last-child td {
+						font-weight: bold !important;
+						}
+						table > thead > tr {
+						border-left: 1px solid rgba(11, 83, 148, 0.2) !important;
+						border-right: 1px solid rgba(11, 83, 148, 0.2) !important;
+						border-bottom: 1px solid rgba(11, 83, 148, 0.2) !important;
+						border-top: 1px solid rgba(11, 83, 148, 0.2) !important;
+						}
+						table > thead > tr > th {
+						border-left: 0px !important;
+						border-right: 0px !important;
+						border-bottom: 0px !important;
+						border-top: 0px !important;
+						}
+
+						.ai-tools-container {
+							right: 20px; bottom: 100px; width: 200px; min-height: 80px;
+							border-color: rgba(7, 56, 101, 0.15) !important;
+							z-index: 1050;
+							box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
+							backdrop-filter: blur(10px);
+						}
+						.ai-tools-title {
+							font-size: 11px; font-weight: 500;
+							color: rgba(7, 56, 101, 0.7);
+							letter-spacing: 0.3px;
+							text-transform: uppercase;
+						}
+						.ai-tool-button {
+							width: 40px; height: 40px;
+							background-color: rgba(7, 56, 101, 0.05);
+							border-width: 1px !important;
+							border-color: rgba(7, 56, 101, 0.7) !important;
+							border-radius: 50% !important;
+							padding: 0;
+							transition: all 0.2s ease;
+                            margin: auto;
+						}
+						.ai-tool-button-small,
+						.ai-tool-button-large {
+							background-color: rgba(7, 56, 101, 0.05);
+							border-color: rgba(7, 56, 101, 0.7) !important;
+							transition: all 0.2s ease;
+						}
+						.ai-tool-color {
+							color: rgba(7, 56, 101, 0.7) !important;
+						}
+						.ai-tool-button {
+							pointer-events: auto !important;
+						}
+						.ai-tool-button:hover:not(:disabled),
+                        .ai-tool-button-large:hover:not(:disabled),
+                        .ai-tool-button-small:hover:not(:disabled) {
+							background-color: rgb(245 245 245) !important;;
+						}
+
+						.ai-tool-button:not(:disabled),
+                        .ai-tool-button-large:not(:disabled),
+                        .ai-tool-button-small:not(:disabled) {
+							cursor: pointer;
+						}
+
+						.model_used .o_input {
+							border: 0 !important;
+							background-color: transparent !important;
+							text-align: center;
+							color: rgba(7, 56, 101, 0.7) !important;
+						}
+					</style>
+					<sheet class="form-body">
+						<div class="d-flex justify-content-between align-items-center mb-4">
+							<!-- Left Buttons -->
+							<div class="d-flex align-items-center" groups="trinity_medical_facility.group_trinity_doctor_users">
+								<!-- NHIS Buttons -->
+								<div invisible="not user_token_is_expired">
+									<button name="getToken" string="Изгради връзка с НЗИС" type="object" class="btn btn-outline-danger btn-sm" onclick="getToken()" invisible="response_status_key not in ['0', '1', '2']"/>
+								</div>
+								<div invisible="user_token_is_expired">
+									<button name="getSignatureX013" string="Изпрати към НЗИС" type="object" class="btn btn-outline-primary btn-sm" onclick="getSignatureX013()" invisible="user_token_is_expired or response_status_key not in ['0'] or not X013"/>
+									<button name="getSignatureX009" string="Коригирай" type="object" class="btn btn-outline-primary btn-sm" onclick="getSignatureX009()" invisible="user_token_is_expired or response_status_key not in ['2'] or not X009"/>
+									<button name="getSignatureX007" string="Анулирай" type="object" class="btn btn-outline-primary btn-sm" onclick="getSignatureX007()" invisible="user_token_is_expired or response_status_key not in ['2'] or not X007"/>
+								</div>
+							</div>
+							<!-- Right Buttons -->
+							<div class="d-flex align-items-center ms-auto">
+								<button name="copy_and_open" class="bg-transparent border-0 d-flex align-items-center tooltip-button" type="object" aria-label="Copy">
+									<i class="fa fa-copy" style="color: #073865;"/>
+									<span class="custom-tooltip d-none">Дублирай преглед</span>
+								</button>
+								<button name="create_kojto_finance_invoice_from_examination" class="bg-transparent border-0 d-flex align-items-center tooltip-button" type="object" aria-label="Copy" invisible="examination_type_id_price_onsite &lt;= 0">
+									<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-medical" viewBox="0 0 16 16" style="color: #073865;">
+										<path d="M7.5 5.5a.5.5 0 0 0-1 0v.634l-.549-.317a.5.5 0 1 0-.5.866L6 7l-.549.317a.5.5 0 1 0 .5.866l.549-.317V8.5a.5.5 0 1 0 1 0v-.634l.549.317a.5.5 0 1 0 .5-.866L8 7l.549-.317a.5.5 0 1 0-.5-.866l-.549.317zm-2 4.5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1zm0 2a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1z"/>
+										<path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2M9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5z"/>
+									</svg>
+									<span class="custom-tooltip d-none">Създай фактура за преглед</span>
+								</button>
+								<div class="dropdown ms-2 mb-1" invisible="response_status_key not in ['2']">
+									<button name="dropdown_empty" class="bg-transparent border-0 d-flex align-items-center tooltip-button" type="button" id="dropdownActionsButton" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Actions">
+										<i><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-folder-plus" viewBox="0 0 16 16" style="color: #073865;"><path d="m.5 3 .04.87a2 2 0 0 0-.342 1.311l.637 7A2 2 0 0 0 2.826 14H9v-1H2.826a1 1 0 0 1-.995-.91l-.637-7A1 1 0 0 1 2.19 4h11.62a1 1 0 0 1 .996 1.09L14.54 8h1.005l.256-2.819A2 2 0 0 0 13.81 3H9.828a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 6.172 1H2.5a2 2 0 0 0-2 2m5.672-1a1 1 0 0 1 .707.293L7.586 3H2.19q-.362.002-.683.12L1.5 2.98a1 1 0 0 1 1-.98z"></path><path d="M13.5 9a.5.5 0 0 1 .5.5V11h1.5a.5.5 0 1 1 0 1H14v1.5a.5.5 0 1 1-1 0V12h-1.5a.5.5 0 0 1 0-1H13V9.5a.5.5 0 0 1 .5-.5"></path></svg></i>
+										<span class="custom-tooltip d-none">Издай документ</span>
+									</button>
+									<div class="dropdown-menu" aria-labelledby="dropdownActionsButton" style="overflow-x: hidden;">
+										<button name="issue_referral" string="Направление" type="object" class="dropdown-item" title="Издай направление"/>
+										<button name="issue_prescription" string="Рецепта" type="object" class="dropdown-item"  title="Издай рецепта"/>
+										<button name="issue_medical_notice" string="Бележка" type="object" class="dropdown-item" title="Издай бележка"/>
+									</div>
+								</div>
+								<div class="dropdown ms-2 mb-1">
+									<button name="dropdown_empty" class="bg-transparent border-0 d-flex align-items-center tooltip-button" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Actions">
+										<i><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-printer me-1" viewBox="0 0 16 16" style="color: #073865;"><path d="M2.5 8a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1"/><path d="M5 1a2 2 0 0 0-2 2v2H2a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h1v1a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-1h1a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-1V3a2 2 0 0 0-2-2zM4 3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2H4zm1 5a2 2 0 0 0-2 2v1H2a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v-1a2 2 0 0 0-2-2zm7 2v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1"/></svg></i>
+										<span class="custom-tooltip d-none">Печат</span>
+									</button>
+									<div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="overflow-x: hidden;">
+										<button name="print_amb_list_as_pdf" string="Амбулаторен лист" type="object" class="dropdown-item" onclick="this.closest('.dropdown-menu').classList.remove('show')" />
+										<button name="print_etap_epikrisis_as_pdf" string="Етапна епикриза" type="object" class="dropdown-item" onclick="this.closest('.dropdown-menu').classList.remove('show')" />
+										<button name="print_combined_amb_mri_pdf" string="Писмо НЗОК за ЯМР" type="object" class="dropdown-item" onclick="this.closest('.dropdown-menu').classList.remove('show')" />
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="text-center">
+							<h1>Преглед</h1>
+							<div class="fs-5 text-uppercase fw-bold">
+								<div class="o_field_widget o_readonly_modifier o_field_char" invisible="not e_examination_nrn">
+                                    <span>Амб. лист №: </span>
+								</div>
+								<field name="e_examination_lrn" readonly="1" force_save="1"/>
+							</div>
+							<div class="fs-5 text-uppercase fw-bold">
+								<div class="o_field_widget o_readonly_modifier o_field_char" invisible="not e_examination_nrn">
+									<span>НРН: </span>
+								</div>
+								<field name="e_examination_nrn" readonly="1" force_save="1"/>
+								<div class="o_field_widget o_readonly_modifier o_field_char">
+									<span> СТАТУС: </span>
+								</div>
+								<field name="response_status" readonly="1" force_save="1" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+							</div>
+							<div class="fs-5 text-uppercase fw-bold" invisible="not nzis_error_message">
+								<field name="nzis_error_message" readonly="1" force_save="1" class="text-danger"/>
+							</div>
+                            <div invisible="not hospitalization_active_today">
+                                <field name="hospitalization_active_today" readonly="1" force_save="1" decoration-danger="isHospitalised" decoration-success="not isHospitalised"/>
+							</div>
+						</div>
+						<div class="row">
+							<group class="col-lg-6 d-block">
+                                <separator class="col-lg-12 separator"/>
+								<div class="d-flex">
+									<div class="text-dark fw-medium fs-6" style="min-width: 180px;">
+										Пациент:</div>
+									<field name="patient_full_name" readonly="1" style="width: auto;"/>
+									<button type="object" name="open_patient_record" class="fa fa-external-link" title="Отвори пациент"/>
+                                    <button name="getSignatureH001" type="object" class="fa fa-hospital-o" onclick="getSignatureH001()" invisible="user_token_is_expired" title="Провери текуща хоспитализация"/>
+								</div>
+								<div class="d-flex mt-2">
+									<div class="text-dark fw-medium fs-6" style="min-width: 180px;">
+										ЕГН/ЛНЧ:</div>
+									<field class="col-lg-12" style="width: fit-content" name="patient_identifier_id" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}" readonly="response_status_key in ['2', '3', '4']"/>
+								</div>
+								<div class="d-flex mt-2">
+									<div class="text-dark fw-medium fs-6" style="min-width: 180px;">
+										Възраст:</div>
+									<field class="col-lg-12" style="width: fit-content" name="patient_age" widget="integer" readonly="1"/>
+								</div>
+								<div invisible="patient_gender != 2">
+									<div class="d-flex mt-2" invisible="patient_age &lt; 12 or patient_age &gt; 55">
+										<div class="text-dark fw-medium fs-6" style="min-width: 180px;">Бременна ли е?</div>
+										<field class="col-lg-12" style="width: fit-content" name="patient_isPregnant" widget="boolean_toggle" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}" readonly="response_status_key in ['2', '3', '4']"/>
+									</div>
+									<div class="d-flex mt-2" invisible="not patient_isPregnant">
+										<div class="text-dark fw-medium fs-6" style="min-width: 180px;">Гестационна седмица:</div>
+										<field class="col-lg-12" style="width: fit-content" name="patient_gestationalWeek" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}" readonly="response_status_key in ['2', '3', '4']"/>
+									</div>
+									<div class="d-flex mt-2" invisible="patient_age &lt; 12 or patient_age &gt; 55 or patient_isPregnant">
+										<div class="text-dark fw-medium fs-6" style="min-width: 180px;">Кърми ли?</div>
+										<field class="col-lg-12" style="width: fit-content" name="patient_isBreastFeeding" widget="boolean_toggle" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}" readonly="response_status_key in ['2', '3', '4']"/>
+									</div>
+								</div>
+							</group>
+							<group class="col-lg-6">
+                                <separator class="col-lg-12 separator"/>
+								<field name="examination_open_dtm" readonly="response_status_key in ['2', '3', '4']"/>
+								<field name="examination_close_dtm" readonly="response_status_key in ['2', '3', '4']"/>
+								<field name="basedOn_e_examination_nrn" readonly="1" invisible="not basedOn_e_examination_nrn"/>
+								<field name="clinicalStatus" widget="selection_input" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}" readonly="response_status_key in ['2', '3', '4']"/>
+								<field name="verificationStatus" widget="selection_input" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}" readonly="response_status_key in ['2', '3', '4']"/>
+								<field name="onsetDateTime" widget="datetime" readonly="response_status_key in ['2', '3', '4']"/>
+                                <field name="examination_conclusion" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+                                <field name="examination_dischargeDisposition" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+							</group>
+							<group class="col-lg-6" groups="base.group_system">
+								<field name="examination_type_id" class="w-50" domain="['&amp;', ('id','in', patient_examination_type_ids), '|', ('valid_for_specialities','=', False), ('valid_for_specialities','in', [main_dr_performing_qualification_code])]" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+                                <separator class="col-lg-12 separator"/>
+								<field name="e_examination_lrn" force_save="1"/>
+								<field name="e_examination_nrn"/>
+								<field name="examination_open_dtm"/>
+								<field name="examination_close_dtm"/>
+								<field name="examination_paid_date"/>
+								<field name="basedOn_e_examination_nrn" force_save="1"/>
+								<field name="basedOn_e_examination_nrn_date" force_save="1"/>
+								<field name="basedOn_e_examination_nrn_sentbyPractice" force_save="1"/>
+								<field name="basedOn_e_examination_nrn_sentbyDoctorId" force_save="1"/>
+								<field name="basedOn_e_examination_nrn_sentbyDoctor_qualification_code" force_save="1"/>
+							</group>
+						</div>
+						<div class="row d-none">
+							<group class="col-lg-12">
+								<field name="previous_e_examination_lrn"/>
+								<field name="previous_e_examination_nrn"/>
+								<field name="previous_examination_open_dtm"/>
+								<field name="previous_examination_open_dtm_30d"/>
+							</group>
+						</div>
+						<separator class="col-lg-12 separator"/>
+						<div class="row">
+							<div class="col-lg-12">
+								<field name="icd_codes" nolabel="1" readonly="isLocked">
+									<list editable="bottom" class="ko-list-main">
+										<field name="key" string="MKB Код"/>
+										<field name="description" string="Описание"/>
+									</list>
+								</field>
+							</div>
+						</div>
+						<div class="row">
+							<group class="col-lg-12">
+								<field name="diagnosis" readonly="isLocked"/>
+                                <separator class="col-lg-12 separator" invisible="not isLocked"/>
+								<field name="medical_history" readonly="isLocked"/>
+                                <separator class="col-lg-12 separator" invisible="not isLocked"/>
+								<field name="objective_condition" readonly="isLocked"/>
+                                <separator class="col-lg-12 separator" invisible="not isLocked"/>
+								<field name="assessment_notes" readonly="isLocked"/>
+                                <separator class="col-lg-12 separator" invisible="not isLocked"/>
+								<field name="therapy_note" readonly="isLocked"/>
+                                <separator class="col-lg-12 separator" invisible="not isLocked"/>
+								<field name="conclusion" readonly="isLocked"/>
+                                <separator class="col-lg-12 separator" invisible="not isLocked"/>
+							</group>
+							<group class="col-lg-6" invisible="response_status_key in ['2', '3', '4']">
+								<field name="template_id"/>
+							</group>
+							<group class="col-lg-6" invisible="response_status_key in ['2', '3', '4']">
+								<field name="template_e_examination_lrn" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+							</group>
+						</div>
+                        <separator class="col-lg-12 separator"/>
+						<div class="row">
+							<div class="col-lg-12 d-flex w-100">
+							    <label for="examination_type_id" class="me-3">Вид услуга</label>
+								<field name="examination_type_id" class="w-50" domain="['&amp;', ('id','in', patient_examination_type_ids), '|', ('valid_for_specialities','=', False), ('valid_for_specialities','in', [main_dr_performing_qualification_code])]" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}" readonly="response_status_key in ['2', '3', '4']"/>
+                            </div>
+							<group class="col-lg-12 d-none">
+									<field name="cost_bearer_id"/>
+							</group>
+							<group class="col-lg-12 d-none">
+									<field name="main_dr_performing_doctor_id"/>
+							</group>
+						</div>
+                        <separator class="col-lg-12 separator"/>
+						<div class="row">
+							<group class="col-lg-6" invisible="isPatientSigner">
+								<field name="parent_identifier_type" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}" readonly="response_status_key in ['2', '3', '4']"/>
+								<field name="parent_identifier_id" readonly="response_status_key in ['2', '3', '4']"/>
+								<field name="parent_first_name" readonly="response_status_key in ['2', '3', '4']"/>
+								<field name="parent_last_name" readonly="response_status_key in ['2', '3', '4']"/>
+							</group>
+							<group class="col-lg-6" invisible="not signature_file">
+                                <field name="signature_file" widget="image" class="w-50" string="Подпис на родител/настойник:" invisible="isPatientSigner"/>
+                                <field name="signature_file" widget="image" class="w-50" string="Подпис на пациента:" invisible="not isPatientSigner"/>
+							</group>
+							<group class="col-lg-6" invisible="signature_file">
+								<button name="getPatientPadSignature" string="Подпис на родител/настойник:" type="object" class="btn btn-outline-success btn-md" onclick="onMainWindowLoad(); setTimeout(getSignature, 1000);" invisible="isPatientSigner"/>
+								<button name="getPatientPadSignature" string="Подпис на пациента:" type="object" class="btn btn-outline-success btn-md" onclick="onMainWindowLoad(); setTimeout(getSignature, 1000);" invisible="not isPatientSigner"/>
+							</group>
+						</div>
+                        <div class="row" invisible="response_status_key not in ['2']" groups="base.group_system">
+							<group class="col-lg-12">
+                                <separator class="col-lg-12 separator"/>
+								<field name="examination_correctionReason"/>
+								<field name="examination_correctionHistory" invisible="not examination_correctionHistory" readonly="1" widget="text"/>
+							</group>
+                        </div>
+						<group>
+							<group class="col-lg-12" groups="base.group_system">
+                                <separator class="col-lg-12 separator"/>
+								<field name="conversation_with_patient"/>
+                                <separator class="col-lg-12 separator"/>
+								<field name="signPen_X_message"/>
+								<field name="signPen_X_message_hash_sha256"/>
+								<field name="SignData"/>
+								<field name="RsaSignature"/>
+								<field name="signatureCert"/>
+								<field name="PadType"/>
+								<field name="SerialNumber"/>
+								<field name="FirmwareVersion"/>
+								<field name="RSASupport"/>
+								<field name="biometryCertID"/>
+								<field name="RSAScheme"/>
+                                <separator class="col-lg-12 separator"/>
+								<field name="H001" id="H001" widget="text"/>
+								<field name="X013" id="X013" widget="text"/>
+								<field name="X009" id="X009" widget="text"/>
+								<field name="X007" id="X007" widget="text"/>
+								<field name="nhif_xml" id="nhif_xml" widget="text"/>
+								<field name="Signature_b64"/>
+                                <separator class="col-lg-12 separator"/>
+							</group>
+							<group class="col-lg-12 d-none">
+								<field name="examination_type"/>
+								<field name="financingSource"/>
+								<field name="response_status_key"/>
+								<field name="isPatientSigner"/>
+								<field name="conversation_with_patient"/>
+								<field name="isLocked" widget="boolean_toggle"/>
+							</group>
+							<group class="col-lg-12 d-none">
+								<field name="X007" id="X007" widget="text"/>
+								<field name="SignedInfo_X007" id="SignedInfo_X007" widget="text"/>
+								<field name="SignedInfo_X007_signature" id="SignedInfo_X007_signature" widget="text"/>
+								<field name="X007_signed" id="X007_signed"/>
+								<field name="X008" id="X008"/>
+                                <separator class="col-lg-12 separator"/>
+								<field name="X009" id="X009" widget="text"/>
+								<field name="SignedInfo_X009" id="SignedInfo_X009" widget="text"/>
+								<field name="SignedInfo_X009_signature" id="SignedInfo_X009_signature" widget="text"/>
+								<field name="X009_signed" id="X009_signed"/>
+								<field name="X010" id="X010"/>
+                                <separator class="col-lg-12 separator"/>
+								<field name="X013" id="X013" widget="text"/>
+								<field name="SignedInfo_X013" id="SignedInfo_X013" widget="text"/>
+								<field name="SignedInfo_X013_signature" id="SignedInfo_X013_signature" widget="text"/>
+								<field name="X013_signed" id="X013_signed"/>
+								<field name="X014" id="X014"/>
+                                <separator class="col-lg-12 separator"/>
+								<field name="H001" id="H001" widget="text"/>
+                                <field name="SignedInfo_H001" id="SignedInfo_H001" widget="text"/>
+                                <field name="SignedInfo_H001_signature" id="SignedInfo_H001_signature" widget="text"/>
+                                <field name="H001_signed" id="H001_signed"/>
+                                <field name="H002" id="H002" widget="text"/>
+							</group>
+							<group class="col-lg-12 d-none">
+								<field name="SignedInfo_tokenRequest" id="SignedInfo_tokenRequest" widget="text"/>
+								<field name="SignedInfo_tokenRequest_signature" id="SignedInfo_tokenRequest_signature" widget="text"/>
+								<field name="tokenRequest" id="tokenRequest" widget="text"/>
+								<field name="tokenRequest_signed" id="tokenRequest_signed" widget="text"/>
+								<field name="tokenResponse" id="tokenResponse" widget="text"/>
+								<field name="supermed_certificate" id="supermed_certificate" widget="text"/>
+								<field name="user_id" id="user_id"/>
+								<field name="user_token_certificate" id="user_token_certificate" widget="text"/>
+								<field name="user_token_expiresOnDatetime" id="user_token_expiresOnDatetime"/>
+								<field name="user_token_is_expired" id="user_token_is_expired"/>
+							</group>
+							<group class="col-lg-12 d-none">
+								<button name="X007_api_request" string="Изпрати" type="object" class=""/>
+								<button name="X009_api_request" string="Изпрати" type="object" class=""/>
+								<button name="X013_api_request" string="Изпрати" type="object" class=""/>
+                                <button name="H001_api_request" string="Изпрати" type="object" class=""/>
+								<button name="post_token_api_request" string="post_token_api_request" type="object" class=""/>
+							</group>
+						</group>
+						<group class="d-none">
+							<div style="display: flex; justify-content: left;">Status:</div>
+							<div style="display: flex; justify-content: left;">
+								<p id="status">Not connected</p>
+							</div>
+						</group>
+						<div class="row">
+							<group class="col-lg-12 d-none">
+								<field name="signPen_X_message"/>
+								<field name="signPen_X_message_hash_sha256"/>
+								<field name="SignData"/>
+								<field name="RsaSignature"/>
+								<field name="Signature_b64"/>
+								<field name="signatureCert"/>
+								<field name="PadType"/>
+								<field name="SerialNumber"/>
+								<field name="FirmwareVersion"/>
+								<field name="RSASupport"/>
+								<field name="biometryCertID"/>
+								<field name="RSAScheme"/>
+								<div id="log"/>
+							</group>
+						</div>
+						<separator class="col-lg-12 separator-invisible"/>
+						<div class="col-lg-12 d-none" style="display: flex; justify-content: right;">
+							<canvas id="sigCanvas" style="width: 30%"/>
+							<img id="Signature_0" style="width: 30%" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAAOwwAADsMBx2+oZAAAABp0RVh0U29mdHdhcmUAUGFpbnQuTkVUIHYzLjUuMTAw9HKhAAAADElEQVQYV2P4//8/AAX+Av6nNYGEAAAAAElFTkSuQmCC"/>
+						</div>
+						<!-- Fixed AI Buttons Container -->
+						<div groups="trinity_medical_facility.group_trinity_doctor_ai" class="position-fixed bg-white border border-1 rounded-4 px-3 py-3 d-flex flex-column align-items-center shadow-sm ai-tools-container" style="width: 220px;">
+							<div class="text-center ai-tools-title mb-3 fw-bolder">
+								AI инструменти
+							</div>
+                            <div class="d-flex justify-content-center gap-2 w-100">
+								<button id="micButton_conversation_with_patient_0" name="emptyButton" type="object" class="mic-button bg-transparent border d-flex align-items-center justify-content-center ai-tool-button tooltip-button" onclick="event.preventDefault(); event.stopPropagation(); return false;">
+									<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-mic" viewBox="0 0 16 16" style="color: rgba(7, 56, 101, 0.7);">
+										<path d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3 8V7a.5.5 0 0 1 .5-.5"/>
+										<path d="M10 8a2 2 0 1 1-4 0V3a2 2 0 1 1 4 0zM8 0a3 3 0 0 0-3 3v5a3 3 0 0 0 6 0V3a3 3 0 0 0-3-3"/>
+									</svg>
+									<span class="custom-tooltip">Запис</span>
+								</button>
+                            </div>
+							<separator class="separator w-100" style="background-color: rgba(7, 56, 101, 0.15); height: 1px; margin: 10px 0;" invisible="not conversation_with_patient"/>
+							<div class="d-flex justify-content-center w-100" invisible="not conversation_with_patient">
+								<button name="generate_anamnesis_with_ai" type="object" class="btn btn-sm text-start w-100 bg-transparent border-0 shadow-none ai-tool-button-large d-flex align-items-center gap-3 px-2 py-2 my-2 fw-bold" style="color: rgba(7, 56, 101, 0.7);">
+									<span class="d-flex align-items-center justify-content-center ai-tool-color" style="width: 30px; height: 30px;">
+										<svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 -960 960 960" fill="currentColor" stroke="currentColor" stroke-width="30">
+											<path d="m749-403-4-15q34-31 53-71.24 19-40.23 19-85.5 0-45.26-19-86.76-19-41.5-53-72.5l4-12q37.07 32.58 57.53 77.07Q827-624.44 827-574.82q0 49.17-21 94Q785-436 749-403Zm-98-118-2-11q10-8 14-20t4-23q0-13-4-23.5T649-617l2-12q11 9 17.5 23t6.5 31q0 15-6.5 30T651-521Zm-282 37q-38.55 0-65.27-26.23Q277-536.45 277-574.87q0-38.41 26.73-65.77Q330.45-668 369-668t65.27 27.36Q461-613.28 461-574.87q0 38.42-26.73 64.64Q407.55-484 369-484ZM133-236v-37q0-17 9-25.5t24-17.5q52-30 107-43.5t96-13.5q41 0 96 13.5T572-316q14 9 23.5 17.5T605-273v37H133Zm20-20h432v-17q0-11.55-8-17.28-8-5.72-19-11.72-49-31-101-41t-88-10q-36 0-88 10t-101 41q-11 6-19 11.72-8 5.73-8 17.28v17Zm216.21-248Q399-504 420-524.5t21-50.58q0-30.08-21.21-51.5t-51-21.42Q339-648 318-626.58t-21 51.5q0 30.08 21.21 50.58t51 20.5Zm-.21-71Zm0 319Z"/>
+										</svg>
+									</span>
+									<span class="flex-grow-1 fw-bold ai-tool-color">Генерирай анамнеза</span>
+								</button>
+							</div>
+						</div>
+					</sheet>
+					<script type="text/javascript" src="/trinity_file_assets/static/src/js/getToken.js"/>
+				<script type="text/javascript" src="/trinity_file_assets/static/src/js/getSignature.js"/>
+				<script type="text/javascript" src="/trinity_file_assets/static/src/js/getSignatureNhifMessages.js"/>
+					<script type="text/javascript" src="/trinity_file_assets/static/src/js/signotec.js"/>
+					<script type="text/javascript" src="/trinity_file_assets/static/src/js/speech_to_text.js"/>
+					<img id="Sigma" style="display: none;" src="data:image/png;base64,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"/>
+				</form>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_examination_search">
+			<field name="name">trinity.examination.search</field>
+			<field name="model">trinity.examination</field>
+			<field name="arch" type="xml">
+				<search string="Examination">
+					<field name="e_examination_lrn"/>
+					<field name="e_examination_nrn"/>
+					<field name="patient_identifier_id"/>
+					<field name="patient_first_name"/>
+					<field name="patient_last_name"/>
+					<field name="examination_type_id"/>
+					<field name="diagnosis"/>
+					<field name="main_dr_performing_doctor_id"/>
+					<field name="main_dr_performing_initials"/>
+                    <separator/>
+                    <group expand="0" string="Групиране по">
+                        <filter string="Услуга" name="examination_type_id" context="{'group_by': 'examination_type_id'}"/>
+                    </group>
+                    <separator/>
+                    <filter name="НЗОК" string="НЗОК" domain="[('cost_bearer_id.name', '=', 'НЗОК')]"/>
+                    <filter name="ПАЦИЕНТ" string="ПАЦИЕНТ" domain="[('cost_bearer_id.name', '=', 'ПАЦИЕНТ')]"/>
+                    <filter name="АЛИАНЦ" string="АЛИАНЦ" domain="[('cost_bearer_id.name', '=', 'АЛИАНЦ')]"/>
+                    <filter name="БУЛСТРАД" string="БУЛСТРАД" domain="[('cost_bearer_id.name', '=', 'БУЛСТРАД')]"/>
+                    <filter name="ДЖЕНЕРАЛИ" string="ДЖЕНЕРАЛИ" domain="[('cost_bearer_id.name', '=', 'ДЖЕНЕРАЛИ')]"/>
+                    <filter name="ДОВЕРИЕ" string="ДОВЕРИЕ" domain="[('cost_bearer_id.name', '=', 'ДОВЕРИЕ')]"/>
+                    <filter name="ДЗИ" string="ДЗИ" domain="[('cost_bearer_id.name', '=', 'ДЗИ')]"/>
+                    <filter name="УНИКА" string="УНИКА" domain="[('cost_bearer_id.name', '=', 'УНИКА')]"/>
+                    <filter name="ЖЗИ" string="ЖЗИ" domain="[('cost_bearer_id.name', '=', 'ЖЗИ')]"/>
+                    <filter name="СЪГЛАСИЕ" string="СЪГЛАСИЕ" domain="[('cost_bearer_id.name', '=', 'СЪГЛАСИЕ')]"/>
+                    <filter name="ЗК БЪЛГАРИЯ" string="ЗК БЪЛГАРИЯ" domain="[('cost_bearer_id.name', '=', 'ЗК БЪЛГАРИЯ')]"/>
+                    <filter name="всички_останали" string="Всички останали" domain="[('cost_bearer_id.name', 'not in', ['НЗОК', 'ПАЦИЕНТ', 'АЛИАНЦ', 'БУЛСТРАД', 'ДЖЕНЕРАЛИ', 'ДОВЕРИЕ', 'ДЗИ', 'УНИКА', 'ЖЗИ', 'СЪГЛАСИЕ', 'ЗК БЪЛГАРИЯ'])]"/>
+                    <separator/>
+                    <filter name="examination_paid" string="Платени" domain="[('examination_paid', '=', True)]"/>
+                    <filter name="examination_paid" string="Неплатени" domain="[('examination_paid', '=', False)]"/>
+				</search>
+			</field>
+		</record>
+		<record model="ir.actions.act_window" id="action_trinity_examination">
+			<field name="name">Прегледи</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.examination</field>
+			<field name="view_mode">list,form</field>
+			<field name="context">{'display_id': True}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">Създай преглед.</p>
+			</field>
+		</record>
+		<menuitem name="Прегледи" id="menu_report_parent" sequence="2"/>
+		<menuitem name="Прегледи" id="menu_trinity_examination" parent="menu_report_parent" action="action_trinity_examination" sequence="10"/>
+	</data>
+</odoo>

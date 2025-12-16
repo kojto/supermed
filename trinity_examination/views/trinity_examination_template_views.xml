@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<!-- List Views -->
+		<record id="view_trinity_examination_template__list" model="ir.ui.view">
+			<field name="name">trinity.examination.template.list</field>
+			<field name="model">trinity.examination.template</field>
+			<field name="arch" type="xml">
+				<list default_order="template_id desc" limit="100">
+					<field decoration-bf="1" name="template_id"/>
+					<field name="create_uid" optional="show" string="Създаден от"/>
+					<field name="diagnosis" optional="show"/>
+					<field name="medical_history" optional="hide"/>
+					<field name="objective_condition" optional="hide"/>
+					<field name="assessment_notes" optional="hide"/>
+					<field name="therapy_note" optional="hide"/>
+					<field name="conclusion" optional="hide"/>
+				</list>
+			</field>
+		</record>
+		<!-- Form Views -->
+		<record id="view_trinity_examination_template__form" model="ir.ui.view">
+			<field name="name">trinity.examination.template.form</field>
+			<field name="model">trinity.examination.template</field>
+			<field name="arch" type="xml">
+				<form>
+					<link href="/trinity_file_assets/static/src/css/custom.css" rel="stylesheet" type="text/css"/>
+					<style>
+                        .o_list_renderer tbody tr:has(td[colspan]:only-child):not(:has(a)) {
+                            display: none !important;
+                        }
+                        .o_list_renderer.o_renderer.table-responsive .o_list_table th[data-name="icd_code"],
+                        .o_list_renderer.o_renderer.table-responsive .o_list_table td[name="icd_code"] {
+                            max-width: 100px !important;
+                        }
+                        .o_list_renderer.o_renderer.table-responsive .o_list_table th[data-name="description"],
+                        .o_list_renderer.o_renderer.table-responsive .o_list_table td[name="description"] {
+                            max-width: 600px !important;
+                        }
+						.o_field_one2many[name="contents"] .o_list_table.o_list_table_ungrouped
+						tbody tr:last-child td {
+						font-weight: bold !important;
+						}
+						table > thead > tr {
+						border-left: 1px solid rgba(11, 83, 148, 0.2) !important;
+						border-right: 1px solid rgba(11, 83, 148, 0.2) !important;
+						border-bottom: 1px solid rgba(11, 83, 148, 0.2) !important;
+						border-top: 1px solid rgba(11, 83, 148, 0.2) !important;
+						}
+						table > thead > tr > th {
+						border-left: 0px !important;
+						border-right: 0px !important;
+						border-bottom: 0px !important;
+						border-top: 0px !important;
+						}
+
+					</style>
+					<sheet class="form-body">
+						<div  class="text-center mt-3 mb-4">
+							<h1>
+                                Шаблон за преглед
+                            </h1>
+						</div>
+						<div class="row">
+							<group class="col-lg-6">
+								<field name="template_id"/>
+							</group>
+						</div>
+						<separator class="col-lg-12 separator"/>
+						<div class="row">
+							<div class="col-lg-12">
+								<field name="icd_codes" nolabel="1">
+									<list editable="bottom" class="ko-list-main">
+										<field name="key" string="MKB Код"/>
+										<field name="description" string="Описание"/>
+									</list>
+								</field>
+							</div>
+						</div>
+						<separator class="col-lg-12 separator"/>
+						<div class="row">
+							<group>
+								<field name="diagnosis"/>
+								<field name="medical_history"/>
+								<field name="objective_condition"/>
+								<field name="assessment_notes"/>
+								<field name="therapy_note"/>
+								<field name="conclusion"/>
+							</group>
+						</div>
+					</sheet>
+				</form>
+			</field>
+		</record>
+		<!-- Search Views -->
+		<record id="view_trinity_examination_template__search" model="ir.ui.view">
+			<field name="name">trinity.examination.template.search</field>
+			<field name="model">trinity.examination.template</field>
+			<field name="arch" type="xml">
+				<search string="Report Template">
+					<field name="template_id"/>
+					<field name="diagnosis"/>
+				</search>
+			</field>
+		</record>
+		<!-- Actions to Return Model Views -->
+		<record id="action_trinity_examination_template" model="ir.actions.act_window">
+			<field name="name">Шаблони</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.examination.template</field>
+			<field name="view_mode">list,form</field>
+			<field name="context">{'display_id': True}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+                    Направи шаблон.
+                </p>
+			</field>
+		</record>
+		<!-- Menu Items -->
+		<menuitem action="action_trinity_examination_template" id="menu_report_template" name="Шаблони за прегледи" parent="menu_report_parent" sequence="20"/>
+	</data>
+</odoo>

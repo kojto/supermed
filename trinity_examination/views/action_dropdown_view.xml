@@ -1,0 +1,14 @@
+<odoo>
+    <!--
+    <record model="ir.actions.server" id="compute_create_signature_record">
+        <field name="name">Create Signature Record</field>
+        <field name="model_id" ref="model_trinity_examination"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_trinity_examination"/>
+        <field name="state">code</field>
+        <field name="code">
+records.create_signature_record()
+        </field>
+        </record>
+        -->
+</odoo>

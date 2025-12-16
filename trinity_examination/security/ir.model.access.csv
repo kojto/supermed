@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_trinity_examination,trinity.examination,model_trinity_examination,,1,1,1,1
+access_trinity_examination_template,trinity.examination.template,model_trinity_examination_template,,1,1,1,1
+access_trinity_examination_fetch,trinity.examination.fetch,model_trinity_examination_fetch,,1,1,1,1
+

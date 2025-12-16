@@ -1,0 +1,341 @@
+<odoo>
+	<data>
+		<!-- List Views -->
+		<record model="ir.ui.view" id="view_trinity_dashboard_list">
+			<field name="name">trinity.dashboard.list</field>
+			<field name="model">trinity.dashboard</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" default_order="name desc" create="false" delete="false" edit="false">
+					<field name="name"/>
+					<field name="user_id" optional="show"/>
+					<field name="company_id" optional="show"/>
+					<field name="company_vat" optional="show"/>
+					<field name="company_name" optional="hide"/>
+					<field name="currency_id" optional="hide"/>
+					<field name="main_dr_performing_doctor_id" optional="show"/>
+					<field name="date_start" optional="show"/>
+					<field name="date_end" optional="show"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_dashboard_contents_list">
+			<field name="name">trinity.dashboard.contents.list</field>
+			<field name="model">trinity.dashboard.contents</field>
+			<field name="arch" type="xml">
+				<list string="Съдържание на статистиката" default_order="position asc">
+					<field name="position" optional="show"/>
+					<field name="cost_bearer"/>
+					<field name="total_count"/>
+					<field name="total_amount" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+					<field name="rejected_count" optional="show"/>
+					<field name="rejected_amount" widget="monetary" options="{'currency_field': 'currency_id'}" optional="show"/>
+					<field name="payout_count" optional="show"/>
+					<field name="payout_amount" widget="monetary" options="{'currency_field': 'currency_id'}" optional="show"/>
+					<field name="dashboard_id" optional="hide"/>
+					<field name="company_id" optional="hide"/>
+					<field name="currency_id" optional="hide"/>
+				</list>
+			</field>
+		</record>
+		<!-- Form Views -->
+		<record model="ir.ui.view" id="view_trinity_dashboard_form">
+			<field name="name">trinity.dashboard.form</field>
+			<field name="model">trinity.dashboard</field>
+			<field name="arch" type="xml">
+				<form create="false" delete="false" class="autoSaveScript">
+					<link rel="stylesheet" type="text/css" href="/trinity_file_assets/static/src/css/custom.css"/>
+					<style>
+						.o_list_renderer tbody tr:has(td[colspan]:only-child):not(:has(a)) {
+						display: none !important;
+						}
+						.o_list_renderer.o_renderer.table-responsive .o_list_table
+						th[data-name="cost_bearer"] {
+						max-width: 100px !important; font-weight: bold !important;font-size: 12px
+						!important;text-align: start !important;
+						}
+						.o_list_renderer.o_renderer.table-responsive .o_list_table
+						td[name="cost_bearer"] {
+						text-align: start !important;font-size: 12px !important;
+						}
+						.o_list_renderer.o_renderer.table-responsive .o_list_table
+						th[data-name="total_amount"] {
+						max-width: 100px !important; font-weight: bold !important;font-size: 12px
+						!important;
+						}
+						.o_list_renderer.o_renderer.table-responsive .o_list_table
+						th[data-name="total_count"] {
+						max-width: 100px !important; font-weight: bold !important;font-size: 12px
+						!important;
+						}
+						.o_list_renderer.o_renderer.table-responsive .o_list_table
+						th[data-name="rejected_amount"] {
+						max-width: 100px !important; font-weight: bold !important;font-size: 12px
+						!important;
+						}
+						.o_list_renderer.o_renderer.table-responsive .o_list_table
+						th[data-name="rejected_count"] {
+						max-width: 100px !important; font-weight: bold !important;font-size: 12px
+						!important;
+						}
+						.o_list_renderer.o_renderer.table-responsive .o_list_table
+						th[data-name="payout_amount"] {
+						max-width: 100px !important; font-weight: bold !important;font-size: 12px
+						!important;
+						}
+						.o_list_renderer.o_renderer.table-responsive .o_list_table
+						th[data-name="payout_count"] {
+						max-width: 100px !important; font-weight: bold !important;font-size: 12px
+						!important;
+						}
+						.o_field_one2many[name="contents"] .o_list_table.o_list_table_ungrouped
+						tbody tr:last-child td {
+						font-weight: bold !important;
+						}
+						table > thead > tr {
+						border-left: 1px solid rgba(11, 83, 148, 0.2) !important;
+						border-right: 1px solid rgba(11, 83, 148, 0.2) !important;
+						border-bottom: 1px solid rgba(11, 83, 148, 0.2) !important;
+						border-top: 1px solid rgba(11, 83, 148, 0.2) !important;
+						}
+						table > thead > tr > th {
+						border-left: 0px !important;
+						border-right: 0px !important;
+						border-bottom: 0px !important;
+						border-top: 0px !important;
+						}
+					</style>
+					<sheet>
+						<div class="d-flex align-items-center mb-4">
+							<div class="fs-2 fw-bold text-dark">Статистика</div>
+							<button name="create_dashboard_content" type="object" icon="fa-refresh" class="btn btn-link border-0 mb-1"/>
+						</div>
+						<div class="row mb-2" groups="kojto_base.kojto_administrator">
+							<label string="за лекар:" for="main_dr_performing_doctor_id" class="o_form_label col-lg-3"/>
+							<field name="main_dr_performing_doctor_id" class="col-lg-6" domain="[('active', '=', True)]" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+						</div>
+						<div class="row mb-2">
+							<label string="от:/до:" for="date_start" class="o_form_label col-lg-3"/>
+							<field class="col-lg-3" name="date_start"/>
+							<field class="col-lg-3" name="date_end"/>
+						</div>
+						<div class="row mb-2">
+							<label for="set_dates_to_current_month" class="o_form_label col-lg-3"/>
+							<div class="d-flex justify-content-evenly col-lg-6 pe-1">
+								<button string="" class="btn btn-outline-primary btn-md fa fa-angle-double-left" type="object" name="backward_one_year"/>
+								<button string="" class="btn btn-outline-primary btn-md fa fa-angle-left" type="object" name="backward_one_month"/>
+								<button string="днес" type="object" name="set_dates_to_today" class="btn btn-outline-primary btn-md"/>
+								<button string="тази седмица" type="object" name="set_dates_to_current_week" class="btn btn-outline-primary btn-md"/>
+								<button string="този месец" type="object" name="set_dates_to_current_month" class="btn btn-outline-primary btn-md"/>
+								<button string="този година" type="object" name="set_dates_to_current_year" class="btn btn-outline-primary btn-md"/>
+								<button string="" class="btn btn-outline-primary btn-md fa fa-angle-right" type="object" name="forward_one_month"/>
+								<button string="" class="btn btn-outline-primary btn-md fa fa-angle-double-right" type="object" name="forward_one_year"/>
+							</div>
+						</div>
+						<separator class="col-lg-12 separator"/>
+						<div class="row">
+							<group class="col-lg-12">
+                                <label string="Суми в лв." for="contents"/>
+								<field name="contents" nolabel="1">
+									<list create="false" delete="false" edit="false" class="ko-list-main">
+										<field name="cost_bearer"/>
+										<field name="total_amount"/>
+										<field name="rejected_amount"/>
+										<field name="payout_amount"/>
+                                        <field name="pending_amount"/>
+									</list>
+								</field>
+							</group>
+						</div>
+						<separator class="col-lg-12 separator"/>
+						<div class="row">
+							<group class="col-lg-12">
+                                <label string="Брой" for="contents"/>
+								<field name="contents" nolabel="1">
+									<list create="false" delete="false" edit="false" class="ko-list-main">
+										<field name="cost_bearer"/>
+										<field name="total_count"/>
+										<field name="rejected_count"/>
+										<field name="payout_count"/>
+                                        <field name="pending_count"/>
+									</list>
+								</field>
+							</group>
+						</div>
+						<separator class="col-lg-12 separator"/>
+						<table style="border: 0.1px solid rgba(11, 83, 148, 0.2); width: 100%; margin-top: 20px">
+							<tr style="background-color: rgba(11, 83, 148, 0.1)">
+								<td/>
+								<td/>
+								<td/>
+								<td/>
+								<td style="padding:5px 10px; text-align: right;">свали данните като .xlsx <button class="fa fa-download" type="object" name="export_monthly_data_to_xlsx"/>
+								</td>
+							</tr>
+						</table>
+					</sheet>
+					<script type="text/javascript" src="/trinity_file_assets/static/src/js/autoSaveScript.js"/>
+				</form>
+			</field>
+		</record>
+		<!-- Form View for Trinity Dashboard Contents -->
+		<record model="ir.ui.view" id="view_trinity_dashboard_contents_form">
+			<field name="name">trinity.dashboard.contents.form</field>
+			<field name="model">trinity.dashboard.contents</field>
+			<field name="arch" type="xml">
+				<form create="false" delete="false" class="autoSaveScript">
+					<link rel="stylesheet" type="text/css" href="/trinity_file_assets/static/src/css/custom.css"/>
+					<style>
+						.o_list_renderer tbody tr:has(td[colspan]:only-child):not(:has(a)) {
+							display: none !important;
+						}
+						.o_list_renderer.o_renderer.table-responsive .o_list_table
+						th[data-name="e_examination_lrn"] {
+						max-width: 80px !important; font-weight: bold !important;font-size: 12px
+						!important;
+						}
+                        .o_list_renderer.o_renderer.table-responsive .o_list_table
+						th[data-name="main_dr_performing_doctor_id"] {
+						max-width: 80px !important; font-weight: bold !important;font-size: 12px
+						!important;
+						}
+						.o_list_renderer.o_renderer.table-responsive .o_list_table
+						th[data-name="patient_full_name"] {
+						max-width: 80px !important; font-weight: bold !important;font-size: 12px
+						!important;
+						}
+						.o_list_renderer.o_renderer.table-responsive .o_list_table
+						th[data-name="examination_type_id"] {
+						max-width: 160px !important; font-weight: bold !important;font-size: 12px
+						!important;
+						}
+						.o_list_renderer.o_renderer.table-responsive .o_list_table
+						th[data-name="examination_paid_date"] {
+						max-width: 40px !important; font-weight: bold !important;font-size: 12px
+						!important;
+						}
+						.o_list_renderer.o_renderer.table-responsive .o_list_table
+						th[data-name="examination_type_id_price"] {
+						max-width: 40px !important; font-weight: bold !important;font-size: 12px
+						!important; text-align: center !important;
+						}
+						/* Align price values to the end (right) in embedded lists */
+						.o_field_widget[name="records_in_dashboard_payout_content"] .o_list_table td[name="examination_type_id_price"],
+						.o_field_widget[name="records_in_dashboard_content"] .o_list_table td[name="examination_type_id_price"],
+						.o_field_widget[name="records_in_dashboard_rejected_content"] .o_list_table td[name="examination_type_id_price"] {
+							text-align: right !important;
+						}
+						table > thead > tr {
+						border-left: 1px solid rgba(11, 83, 148, 0.2) !important;
+						border-right: 1px solid rgba(11, 83, 148, 0.2) !important;
+						border-bottom: 1px solid rgba(11, 83, 148, 0.2) !important;
+						border-top: 1px solid rgba(11, 83, 148, 0.2) !important;
+						}
+						table > thead > tr > th {
+						border-left: 0px !important;
+						border-right: 0px !important;
+						border-bottom: 0px !important;
+						border-top: 0px !important;
+						}
+                        h3, h4 {
+                            color: #3f51b4;
+                        }
+                        .modal-title {
+                            display: none !important;
+                        }
+					</style>
+					<sheet>
+                        <div class="row d-flex">
+                            <h3 class="mb-3">Прегледи включени в статистиката за периода от <field name="dashboard_date_start" widget="date" readonly="1"/> до <field name="dashboard_date_end" widget="date" readonly="1"/></h3>
+                        </div>
+                        <separator class="col-lg-12 separator"/>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <h4 class="mb-3">Изплатени прегледи този период</h4>
+                                <field name="records_in_dashboard_payout_content" nolabel="1">
+                                    <list create="false" delete="false" edit="false" class="ko-list-main">
+                                        <field name="e_examination_lrn"/>
+                                        <field name="main_dr_performing_doctor_id"/>
+                                        <field name="patient_full_name"/>
+                                        <field name="examination_type_id"/>
+                                        <field name="examination_paid_date"/>
+                                        <field name="examination_type_id_price"/>
+                                    </list>
+                                </field>
+                            </div>
+                            <div class="col-lg-12">
+                                <h4 class="mb-3 mt-5">Прегледани този период</h4>
+                                <field name="records_in_dashboard_content" nolabel="1">
+                                    <list create="false" delete="false" edit="false" class="ko-list-main">
+                                        <field name="e_examination_lrn"/>
+                                        <field name="main_dr_performing_doctor_id"/>
+                                        <field name="patient_full_name"/>
+                                        <field name="examination_type_id"/>
+                                        <field name="examination_type_id_price"/>
+                                    </list>
+                                </field>
+                            </div>
+                            <div class="col-lg-12">
+                                <h4 class="mb-3 mt-5">Отхвърлени прегледи</h4>
+                                <field name="records_in_dashboard_rejected_content" nolabel="1">
+                                    <list create="false" delete="false" edit="false" class="ko-list-main">
+                                        <field name="e_examination_lrn"/>
+                                        <field name="main_dr_performing_doctor_id"/>
+                                        <field name="patient_full_name"/>
+                                        <field name="examination_type_id"/>
+                                        <field name="examination_paid_date"/>
+                                        <field name="examination_type_id_price"/>
+                                    </list>
+                                </field>
+                            </div>
+                            <div class="col-lg-12">
+                                <h4 class="mb-3 mt-5">Фактурирани/неплатени прегледи</h4>
+                                <field name="records_in_dashboard_pending_content" nolabel="1">
+                                    <list create="false" delete="false" edit="false" class="ko-list-main">
+                                        <field name="e_examination_lrn"/>
+                                        <field name="main_dr_performing_doctor_id"/>
+                                        <field name="patient_full_name"/>
+                                        <field name="examination_type_id"/>
+                                        <field name="examination_paid_date"/>
+                                        <field name="examination_type_id_price"/>
+                                    </list>
+                                </field>
+                            </div>
+                        </div>
+					</sheet>
+				</form>
+			</field>
+		</record>
+		<!-- Search Views -->
+		<record model="ir.ui.view" id="view_trinity_dashboard_search">
+			<field name="name">trinity.dashboard.search</field>
+			<field name="model">trinity.dashboard</field>
+			<field name="arch" type="xml">
+				<search string="dashboard">
+					<field name="main_dr_performing_doctor_id"/>
+					<field name="date_start"/>
+					<field name="date_end"/>
+					<field name="currency_id"/>
+				</search>
+			</field>
+		</record>
+		<!-- Actions to Return Model Views -->
+		<record model="ir.actions.act_window" id="action_trinity_dashboard">
+			<field name="name">Статистика</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.dashboard</field>
+			<field name="view_mode">list,form</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">Създай</p>
+			</field>
+		</record>
+        <record model="ir.actions.act_window" id="action_trinity_dashboard_contents">
+            <field name="name">Съдържание на статистиката</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">trinity.dashboard.contents</field>
+            <field name="view_mode">form</field>
+        </record>
+		<!-- Menu Items -->
+		<menuitem name="Статистика" id="menu_dashboard" parent="kojto_finance.menu_kojto_finance" sequence="300" action="action_trinity_dashboard"/>
+	</data>
+</odoo>

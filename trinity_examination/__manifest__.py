@@ -1,0 +1,30 @@
+# -*- coding: utf-8 -*-
+{
+    "name": "Trinity Examination",
+    "summary": "Medical examination management system",
+    "description": "Medical examination management module for managing examinations, templates, fetching examination data, and generating examination reports",
+    "author": "MG",
+    "website": "https://www.trinitymedcenter.com",
+    "category": "Tools",
+    "version": "18.04.07",
+    "depends": ["base", "trinity_patient", "trinity_file_assets", "trinity_medical_facility", "trinity_library", "trinity_nomenclature", "trinity_costbearer", "trinity_examination_type", "trinity_communicator", "kojto_landingpage", "kojto_file_assets"],
+    "external_dependencies": {
+        "python": ["openai", "httpx"],
+    },
+    "data": [
+        "security/ir.model.access.csv",
+        "data/ir_cron_data.xml",
+        "views/trinity_examination_views.xml",
+        "views/trinity_examination_template_views.xml",
+        "views/trinity_examination_fetch_views.xml",
+        "views/trinity_examination_buttons.xml",
+        "views/trinity_examination_inherit_patient_views.xml",
+        "views/action_dropdown_view.xml",
+        "reports/trinity_examination_pdf_wp_al.xml",
+        "reports/trinity_examination_pdf_wp_ee.xml",
+        "reports/trinity_examination_pdf_wp_mri.xml",
+        "reports/trinity_examination_pdf_reports.xml",
+    ],
+    "installable": True,
+    "auto_install": False,
+}
