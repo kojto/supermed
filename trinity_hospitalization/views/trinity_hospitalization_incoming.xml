@@ -1,0 +1,116 @@
+<odoo>
+	<data>
+		<!-- List Views -->
+		<record model="ir.ui.view" id="view_trinity_hospitalisation_incoming_list">
+			<field name="name">trinity.hospitalisation.incoming.list</field>
+			<field name="model">trinity.hospitalisation.incoming</field>
+			<field name="arch" type="xml">
+				<list default_order="create_date desc, hospitalization_authoredOn desc" create="false">
+					<field name='create_date' string='Дата на изтегляне' optional='show'/>
+					<field name='hospitalization_authoredOn' optional='hide'/>
+					<field name='subject_full_name'/>
+					<field name='hospitalization_nrnHospitalization'/>
+					<field name='hospitalization_lrn'/>
+					<field name='hospitalization_admissionType' optional='show'/>
+					<field name='hospitalization_practiceNumber' optional='show'/>
+				</list>
+			</field>
+		</record>
+		<!-- Form Views -->
+		<record model="ir.ui.view" id="view_trinity_hospitalisation_incoming_form">
+			<field name="name">trinity.hospitalisation.incoming.form</field>
+			<field name="model">trinity.hospitalisation.incoming</field>
+			<field name="arch" type="xml">
+				<form>
+					<link rel="stylesheet" type="text/css" href="/trinity_file_assets/static/src/css/custom.css"/>
+					<sheet>
+						<div class="d-flex justify-content-between align-items-center mb-3 ko-form-main-header-line">
+							<div class="w-100 px-0">
+								<div class="row no-gutters">
+									<div class="col-lg-8">
+										<div class="ko-form-view-title mt-1 ms-0">
+											<span/>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class='row'>
+							<group class='col-lg-6'>
+								<separator class='col-lg-12 separator'/>
+								<field name="subject_full_name"/>
+							</group>
+							<group class='col-lg-6'>
+								<separator class='col-lg-12 separator'/>
+								<field name="hospitalization_nrnHospitalization" readonly="1"/>
+								<field name="hospitalization_lrn" readonly="1"/>
+								<field name="hospitalization_status" readonly="1"/>
+								<field name="hospitalization_authoredOn" readonly="1"/>
+							</group>
+							<group class='col-lg-6'>
+								<separator class='col-lg-12 separator'/>
+								<field name="hospitalization_basedOn" readonly="1"/>
+								<field name="hospitalization_admissionType" readonly="1"/>
+								<field name="hospitalization_reasonCode" readonly="1"/>
+								<field name="hospitalization_practiceNumber" readonly="1"/>
+							</group>
+							<group class='col-lg-6'>
+								<separator class='col-lg-12 separator'/>
+								<field name="hospitalization_clinicalPathway" readonly="1"/>
+								<field name="hospitalization_outpatientProcedure" readonly="1"/>
+								<field name="hospitalization_dischargeClinicalPathway" readonly="1"/>
+								<field name="hospitalization_dischargeOutpatientProcedure" readonly="1"/>
+							</group>
+							<group class='col-lg-6'>
+								<separator class='col-lg-12 separator'/>
+								<field name="hospitalization_directedBy" readonly="1"/>
+								<field name="hospitalization_admissionDate" readonly="1"/>
+								<field name="hospitalization_dischargeDate" readonly="1"/>
+								<field name="hospitalization_daysHospitalized" readonly="1"/>
+							</group>
+							<group class="col-lg-6">
+								<separator class='col-lg-12 separator'/>
+								<field name="hospitalization_elapsedTime" readonly="1"/>
+								<field name="hospitalization_severity" readonly="1"/>
+								<field name="hospitalization_financingSource" readonly="1"/>
+								<field name="hospitalization_outcome" readonly="1"/>
+							</group>
+							<group class='col-lg-12' invisible="not hospitalization_correctionReason">
+								<separator class='col-lg-12 separator'/>
+								<field name="hospitalization_correctionReason" readonly="1"/>
+							</group>
+							<group class='col-lg-12' invisible="not hospitalization_note">
+								<separator class='col-lg-12 separator'/>
+								<field name="hospitalization_note" readonly="1"/>
+							</group>
+							<group class='col-lg-12' invisible="not hospitalization_dischargeNote">
+								<separator class='col-lg-12 separator'/>
+								<field name="hospitalization_dischargeNote" readonly="1"/>
+							</group>
+						</div>
+					</sheet>
+				</form>
+			</field>
+		</record>
+		<!-- Actions to Return Model Views -->
+		<record model="ir.actions.act_window" id="action_trinity_hospitalisation_incoming_form">
+			<field name="name"/>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.hospitalisation.incoming</field>
+			<field name="view_mode">form</field>
+			<field name="target">current</field>
+		</record>
+		<record model="ir.actions.act_window" id="action_trinity_hospitalisation_incoming_list">
+			<field name="name">Входящи хоспитализации</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.hospitalisation.incoming</field>
+			<field name="view_mode">list,form</field>
+			<field name="target">current</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face"/>
+			</field>
+		</record>
+		<!-- Menu Items -->
+		<menuitem name="Входящи хоспитализации" id="menu_hospitalisation_incoming_list" parent="menu_hospitalisation_parent" action="action_trinity_hospitalisation_incoming_list" sequence="20"/>
+	</data>
+</odoo>

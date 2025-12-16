@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- List View -->
+        <record model="ir.ui.view" id="view_trinity_patient_intake_list">
+            <field name="name">trinity.form.patient.intake.list</field>
+            <field name="model">trinity.form.patient.intake</field>
+            <field name="arch" type="xml">
+                <list limit="100" sample="1" default_order="first_name desc">
+                    <field name="first_name" string="Име"/>
+                    <field name="last_name" string="Фамилия"/>
+                    <field name="email" string="Имейл" optional="show"/>
+                    <field name="phone" string="Телефон" optional="show"/>
+                    <field name="identifier_type" string="Тип идентификатор" optional="show"/>
+                    <field name="identifier" string="Идентификатор" optional="show"/>
+                    <field name="birth_date" string="Дата на раждане"/>
+                    <field name="appointment_date" string="Дата на преглед" optional="show"/>
+                    <field name="main_dr_performing" string="Лекар" optional="show"/>
+                    <field name="visit_type" string="Тип преглед" optional="show"/>
+                    <field name="timestamp" string="Клеймо за време" optional="show"/>
+                </list>
+            </field>
+        </record>
+
+        <!-- Form View -->
+        <record model="ir.ui.view" id="view_trinity_patient_intake_form">
+            <field name="name">trinity.form.patient.intake.form</field>
+            <field name="model">trinity.form.patient.intake</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>Пациент</h1>
+                        </div>
+                        <div class="row">
+                            <group class="col-lg-6">
+                                <separator class="col-lg-12 separator"/>
+                                <field name="first_name"/>
+                                <field name="last_name"/>
+                                <field name="identifier_type"/>
+                                <field name="identifier"/>
+                                <field name="birth_date"/>
+                                <field name="email"/>
+                                <field name="phone"/>
+                            </group>
+                            <group class="col-lg-6">
+                                <separator class="col-lg-12 separator"/>
+                                <field name="appointment_date"/>
+                                <field name="main_dr_performing"/>
+                                <field name="visit_type"/>
+                                <field name="timestamp" readonly="1"/>
+                                <field name="consent"/>
+                            </group>
+                            <group class="col-lg-12">
+                                <separator class="col-lg-12 separator"/>
+                                <field name="complaints" widget="text"/>
+                                <field name="tests_performed" widget="text"/>
+                                <field name="medications" widget="text"/>
+                                <field name="allergy_details" widget="text"/>
+                                <field name="oncological_disease_details" widget="text"/>
+                                <field name="autoimmune_disease_details" widget="text"/>
+                                <field name="implants_details" widget="text"/>
+                            </group>
+                            <group class="col-lg-12">
+                                <separator class="col-lg-12 separator"/>
+                                <field name="attached_pdf_ids"/>
+                            </group>
+                            <group class="col-lg-12">
+                                <separator class="col-lg-12 separator"/>
+                                <field name="medical_history" widget="text"/>
+                                <field name="objective_condition" widget="text"/>
+                                <field name="assessment_notes" widget="text"/>
+                                <field name="therapy_note" widget="text"/>
+                            </group>
+                        </div>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Search View -->
+        <record model="ir.ui.view" id="view_trinity_patient_intake_search">
+            <field name="name">trinity.form.patient.intake.search</field>
+            <field name="model">trinity.form.patient.intake</field>
+            <field name="arch" type="xml">
+                <search string="patients">
+                    <field name="first_name"/>
+                    <field name="last_name"/>
+                    <field name="email"/>
+                    <field name="phone"/>
+                    <field name="identifier_type"/>
+                    <field name="appointment_date"/>
+                    <field name="main_dr_performing"/>
+                </search>
+            </field>
+        </record>
+
+        <!-- Action -->
+        <record model="ir.actions.act_window" id="action_trinity_form_patient_intake">
+            <field name="name">Form Patient Intake</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">trinity.form.patient.intake</field>
+            <field name="view_mode">list,form</field>
+            <field name="context">{}</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">Създай пациентски формуляр</p>
+            </field>
+        </record>
+
+        <!-- Menu Item -->
+        <menuitem name="Формуляри" id="menu_trinity_form_patient_intake" parent="trinity_medical_facility.menu_medical_facility_parent" action="action_trinity_form_patient_intake" sequence="400"/>
+    </data>
+</odoo>

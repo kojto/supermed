@@ -1,0 +1,166 @@
+<odoo>
+	<data>
+		<!-- List Views -->
+		<record model="ir.ui.view" id="view_trinity_hospitalisation_fetch_list">
+			<field name="name">trinity.hospitalisation.fetch.list</field>
+			<field name="model">trinity.hospitalisation.fetch</field>
+			<field name="arch" type="xml">
+				<list>
+					<field name="main_dr_performing_doctor_id" optional="show"/>
+					<field name="fetch_nrnHospitalization" optional="show"/>
+					<field name="fetch_identifier_type" optional="show"/>
+					<field name="fetch_identifier" optional="show"/>
+					<field name="fetch_fromDate" optional="hide"/>
+					<field name="fetch_toDate" optional="hide"/>
+					<field name="fetch_practiceNumber" optional="hide"/>
+					<field name="H002" optional="hide"/>
+				</list>
+			</field>
+		</record>
+		<!-- Form Views -->
+		<record model="ir.ui.view" id="view_trinity_hospitalisation_fetch_form">
+			<field name="name">trinity.hospitalisation.fetch.form</field>
+			<field name="model">trinity.hospitalisation.fetch</field>
+			<field name="arch" type="xml">
+				<form class="autoSaveScript">
+					<style>
+                        .o_form_view .o_form_sheet_bg {
+                        margin: 0 auto !important;
+                        }
+						.o_list_renderer tbody tr:has(td[colspan]:only-child):not(:has(a)) {
+						display: none !important;
+						}
+						.o_list_renderer.o_renderer.table-responsive .o_list_table
+						th[data-name="hospitalization_nrnHospitalization"] {
+						max-width: 200px !important; font-weight: bold !important;font-size: 12px
+						!important;text-align: start !important;
+						}
+						.o_list_renderer.o_renderer.table-responsive .o_list_table
+						th[data-name="hospitalization_status"] {
+						max-width: 200px !important; font-weight: bold !important;font-size: 12px
+						!important;text-align: start !important;
+						}
+						.o_list_renderer.o_renderer.table-responsive .o_list_table
+						th[data-name="hospitalization_authoredOn"] {
+						max-width: 200px !important; font-weight: bold !important;font-size: 12px
+						!important;text-align: start !important;
+						}
+						table > thead > tr {
+						border-left: 1px solid rgba(11, 83, 148, 0.2) !important;
+						border-right: 1px solid rgba(11, 83, 148, 0.2) !important;
+						border-bottom: 1px solid rgba(11, 83, 148, 0.2) !important;
+						border-top: 1px solid rgba(11, 83, 148, 0.2) !important;
+						}
+						table > thead > tr > th {
+						border-left: 0px !important;
+						border-right: 0px !important;
+						border-bottom: 0px !important;
+						border-top: 0px !important;
+						}
+					</style>
+					<link rel="stylesheet" type="text/css" href="/trinity_file_assets/static/src/css/custom.css"/>
+					<link rel="stylesheet" type="text/css" href="/trinity_file_assets/static/src/css/remove_control_panel.css"/>
+					<sheet>
+						<div style="display: flex; justify-content: right;" invisible="incoming_hospitalisation_ids or error_reason">
+							<div invisible="not user_token_is_expired">
+								<button name="getToken" string="Изгради връзка с НЗИС" type="object" class="btn btn-outline-danger btn-sm" onclick="getToken()"/>
+							</div>
+							<div invisible="user_token_is_expired">
+								<button name="getSignatureH001" string="Изпрати към НЗИС" type="object" class="btn btn-outline-primary btn-sm" onclick="getSignatureH001()"/>
+							</div>
+						</div>
+						<div style="display: flex; justify-content: right;" invisible="not (incoming_hospitalisation_ids or error_reason)">
+							<div>
+								<button name="fetch_new_hospitalisation" string="Изтегли нова хоспитализация" type="object" class="btn btn-outline-primary btn-sm"/>
+							</div>
+						</div>
+                        <div class="row" invisible="incoming_hospitalisation_ids">
+                            <div class="fs-2 fw-bold text-primary text-center" invisible="error_reason">Провери текуща хоспитализация</div>
+                            <div class="fs-2 fw-bold text-danger text-center" invisible="not error_reason">Грешка от НЗИС</div>
+                            <group class="col-lg-6 m-auto">
+                                <separator class="col-lg-12 separator"/>
+                                <field name="fetch_nrnHospitalization" widget="input"/>
+                                <field name="fetch_fromDate" widget="date" readonly="error_reason"/>
+                                <field name="fetch_toDate" widget="date" readonly="error_reason"/>
+                                <field name="fetch_identifier_type" widget="input" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}" readonly="error_reason"/>
+                                <field name="fetch_identifier" widget="input" readonly="error_reason"/>
+                                <field name="fetch_practiceNumber" widget="input" readonly="error_reason"/>
+                            </group>
+                        </div>
+                        <div class="row" invisible="not error_reason">
+                            <div class="col-lg-6 m-auto">
+                                <separator class="col-lg-12 separator"/>
+                                <div class="mb-4 fs-3 fw-bold text-danger">
+                                    <field name="error_type" readonly="1" class="fs-3 fw-bold text-danger d-inline"/>
+                                    <field name="error_reason" readonly="1" class="fs-3 fw-bold text-danger d-inline"/>
+                                </div>
+                            </div>
+                        </div>
+						<div class="row" invisible="not incoming_hospitalisation_ids">
+                            <div class="mb-1 fs-2 fw-bold text-primary">Хоспитализации намерени за:</div>
+                            <div class="mb-4 fs-2 fw-bold text-primary">
+                                <field name="fetch_subject_full_name" readonly="1" nolabel="1"/>
+                            </div>
+							<div class="col-lg-12">
+								<field name="incoming_hospitalisation_ids" nolabel="1">
+									<list default_order="hospitalization_authoredOn desc" create="false" delete="false">
+										<field name='hospitalization_nrnHospitalization'/>
+										<field name='hospitalization_status'/>
+										<field name='hospitalization_authoredOn'/>
+                                    </list>
+								</field>
+							</div>
+						</div>
+						<group class='col-lg-12 d-none'>
+							<field name="H001" id="H001" widget="text"/>
+							<field name="H002" id="H002" widget="text"/>
+							<field name="H002_raw" id="H002_raw" widget="text"/>
+							<field name="SignedInfo_H001" id="SignedInfo_H001" widget="text"/>
+							<field name="SignedInfo_H001_signature" id="SignedInfo_H001_signature" widget="text"/>
+							<field name="user_token_certificate" id="user_token_certificate" widget="text"/>
+							<field name="supermed_certificate" id="supermed_certificate" widget="text"/>
+							<field name="H001_signed" id="H001_signed"/>
+							<field name="tokenRequest" id="tokenRequest" widget="text"/>
+							<field name="SignedInfo_tokenRequest" id="SignedInfo_tokenRequest" widget="text"/>
+							<field name="SignedInfo_tokenRequest_signature" id="SignedInfo_tokenRequest_signature" widget="text"/>
+							<field name="tokenRequest_signed" id="tokenRequest_signed" widget="text"/>
+							<field name="tokenResponse" id="tokenResponse" widget="text"/>
+							<field name="user_token_expiresOnDatetime"/>
+							<field name="user_token_is_expired" id="user_token_is_expired"/>
+						</group>
+						<group class='col-lg-12 d-none'>
+							<button name="H001_api_request" type="object"/>
+							<button name="post_token_api_request" type="object"/>
+						</group>
+					</sheet>
+					<script type="text/javascript" src="/trinity_file_assets/static/src/js/getToken.js"/>
+					<script type="text/javascript" src="/trinity_file_assets/static/src/js/getSignature.js"/>
+					<script type="text/javascript" src="/trinity_file_assets/static/src/js/getSignatureNhifMessages.js"/>
+					<script type="text/javascript" src="/trinity_file_assets/static/src/js/autoSaveScript.js"/>
+				</form>
+			</field>
+		</record>
+		<!-- Actions to Return Model Views -->
+		<record model="ir.actions.act_window" id="action_trinity_hospitalisation_fetch_form">
+			<field name="name"/>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.hospitalisation.fetch</field>
+			<field name="view_mode">form</field>
+			<field name="target">current</field>
+		</record>
+		<record model="ir.actions.act_window" id="action_trinity_hospitalisation_fetch_list">
+			<field name="name">Изтеглени хоспитализации</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.hospitalisation.fetch</field>
+			<field name="view_mode">list,form</field>
+			<field name="target">current</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face"/>
+			</field>
+		</record>
+		<!-- Menu Items -->
+		<menuitem name="Хоспитализации" id="menu_hospitalisation_parent" sequence="5"/>
+		<menuitem name="Изтегли" id="menu_hospitalisation_fetch_form" parent="menu_hospitalisation_parent" action="action_trinity_hospitalisation_fetch_form" sequence="10"/>
+		<menuitem name="Изтеглени хоспитализации" id="menu_hospitalisation_fetch_list" parent="menu_hospitalisation_parent" action="action_trinity_hospitalisation_fetch_list" sequence="40"/>
+	</data>
+</odoo>
