@@ -1,0 +1,129 @@
+<odoo>
+	<data>
+		<!-- List Views -->
+		<record model="ir.ui.view" id="view_trinity_costbearer_list">
+			<field name="name">trinity.costbearer.list</field>
+			<field name="model">trinity.costbearer</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1">
+					<field name="active" string="Активна" optional="show" widget="boolean_toggle" class="w-100 d-flex justify-content-center"/>
+					<!-- Company Information -->
+					<field name="name"/>
+					<field name="full_name" optional="show"/>
+					<field name="vat_number"/>
+					<field name="financingSource" optional="show"/>
+					<field name="associated_contact_id" optional="show"/>
+					<!-- Contact Person Details -->
+					<field name="first_name" optional="hide"/>
+					<field name="middle_name" optional="hide"/>
+					<field name="last_name" optional="hide"/>
+					<field name="email" optional="hide"/>
+					<field name="phone" optional="hide"/>
+					<!-- Address Information -->
+					<field name="address_line" optional="hide"/>
+					<field name="address_line2" optional="hide"/>
+					<field name="city" optional="hide"/>
+					<field name="state_id" optional="hide"/>
+					<field name="zip_code" optional="hide"/>
+					<field name="country_id" optional="hide"/>
+				</list>
+			</field>
+		</record>
+		<!-- Form Views -->
+		<record model="ir.ui.view" id="view_trinity_costbearer_form">
+			<field name="name">trinity.costbearer.form</field>
+			<field name="model">trinity.costbearer</field>
+			<field name="arch" type="xml">
+				<form>
+					<link rel="stylesheet" type="text/css" href="/trinity_file_assets/static/src/css/custom.css"/>
+					<sheet>
+						<div class="d-flex justify-content-between align-items-center mb-3 ko-form-main-header-line">
+							<div class="w-100 px-0">
+								<div class="row no-gutters">
+									<div class="col-lg-8">
+										<div class="ko-form-view-title mt-1 ms-0">
+											<span>Контрагент</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<separator class='col-lg-12 separator'/>
+						<div class='row'>
+							<group class='col-lg-6'>
+								<field name="name" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}" string="Име"/>
+								<field name="full_name" string="Пълно име" placeholder="Въведете пълно име"/>
+								<field name="financingSource" string="Вид източник на финансиране" placeholder="Въведете източник на финансиране"/>
+								<field name="vat_number" string="ДДС номер" placeholder="Въведете ДДС номер"/>
+								<field name="active_from" widget="date"/>
+								<field name="active_until" widget="date"/>
+								<field name="active" widget="boolean_toggle"/>
+								<field name="associated_contact_id" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}" string="Свързан контакт"/>
+							</group>
+							<separator class='col-lg-12 separator'/>
+							<group class='col-lg-6'>
+								<label for="address_line" string="Адрес"/>
+								<div class="o_address_format">
+									<field name="address_line" placeholder="Адрес, ред 1" class="o_address_slistt"/>
+									<field name="address_line2" placeholder="Адрес, ред 2" class="o_address_slistt"/>
+									<field name="city" placeholder="Град" class="o_address_city"/>
+									<field name="state_id" class="o_address_state" placeholder="Област / Регион"/>
+									<field name="zip_code" placeholder="Пощенски код" class="o_address_zip"/>
+									<field name="country_id" placeholder="Държава" class="o_address_country"/>
+								</div>
+							</group>
+							<group class='col-lg-6'>
+								<label for="first_name" string="Имена"/>
+								<div name="name_div" class="d-flex">
+									<field name="first_name" placeholder="Първо име"/>
+									<span class="oe_inline o_form_label mx-3"/>
+									<field name="middle_name" placeholder="Презиме"/>
+									<span class="oe_inline o_form_label mx-3"/>
+									<field name="last_name" placeholder="Фамилия"/>
+								</div>
+								<field name="email" widget="email" string="Имейл" placeholder="Въведете имейл"/>
+								<field name="phone" widget="phone" string="Телефон" placeholder="Въведете телефонен номер"/>
+							</group>
+							<separator class='col-lg-12 separator'/>
+							<group class='col-lg-6'>
+								<field name="attach" filename="attach_char" string="Договор"/>
+								<field name="attach_char" invisible="1"/>
+							</group>
+						</div>
+					</sheet>
+				</form>
+			</field>
+		</record>
+		<!-- Search Views -->
+		<record model="ir.ui.view" id="view_trinity_costbearer_search">
+			<field name="name">trinity.costbearer.search</field>
+			<field name="model">trinity.costbearer</field>
+			<field name="arch" type="xml">
+				<search string="Insurance">
+					<filter name="active" string="Active" domain="[('active', '=', True)]"/>
+					<filter name="inactive" string="Inactive" domain="[('active', '=', False)]"/>
+					<separator/>
+					<field name="name"/>
+					<field name="email"/>
+					<field name="phone"/>
+					<field name="first_name" string="Contact Person"/>
+				</search>
+			</field>
+		</record>
+		<!-- Actions to Return Model Views -->
+		<record model="ir.actions.act_window" id="action_trinity_costbearer">
+			<field name="name">Контрагенти</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.costbearer</field>
+			<field name="view_mode">list,form,pivot</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+                    Създай
+                </p>
+			</field>
+		</record>
+		<!-- Menu Items -->
+		<menuitem name="Контрагенти" id="menu_costbearer" parent="trinity_medical_facility.menu_medical_facility_parent" sequence="50" action="action_trinity_costbearer"/>
+	</data>
+</odoo>

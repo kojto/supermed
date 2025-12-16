@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_trinity_costbearer,trinity.costbearer,model_trinity_costbearer,kojto_base.kojto_administrator,1,1,1,1
+access_trinity_costbearer_all_human_users,trinity.costbearer,model_trinity_costbearer,kojto_base.kojto_all_human_users,1,1,1,1
