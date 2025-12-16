@@ -1,0 +1,220 @@
+<odoo>
+	<data>
+		<!-- List Views -->
+		<record model="ir.ui.view" id="view_trinity_referral_issue_dashboard_list">
+			<field name="name">trinity.referral.issue.dashboard.list</field>
+			<field name="model">trinity.referral.issue.dashboard</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1" default_order="name desc" create="false" delete="false" edit="false">
+					<field name="name"/>
+					<field name="user_id" optional="show"/>
+					<field name="company_id" optional="show"/>
+					<field name="company_vat" optional="show"/>
+					<field name="company_name" optional="hide"/>
+					<field name="currency_id" optional="hide"/>
+					<field name="main_dr_performing_doctor_id" optional="show"/>
+					<field name="date_start" optional="show"/>
+					<field name="date_end" optional="show"/>
+				</list>
+			</field>
+		</record>
+		<!-- Form Views -->
+		<record model="ir.ui.view" id="view_trinity_referral_issue_dashboard_form">
+			<field name="name">trinity.referral.issue.dashboard.form</field>
+			<field name="model">trinity.referral.issue.dashboard</field>
+			<field name="arch" type="xml">
+				<form create="false" delete="false" class="autoSaveScript">
+					<link rel="stylesheet" type="text/css" href="/trinity_file_assets/static/src/css/custom.css"/>
+					<style>
+						.o_list_renderer tbody tr:has(td[colspan]:only-child):not(:has(a)) {
+						display: none !important;
+						}
+						.o_list_renderer.o_renderer.table-responsive .o_list_table th[data-name="over_limit"] {
+						max-width: 50px !important;
+						}
+						.o_list_renderer.o_renderer.table-responsive .o_list_table th[data-name="referral_category_id"] {
+						max-width: 200px !important; text-align: start !important;
+						}
+						.o_list_renderer.o_renderer.table-responsive .o_list_table th[data-name="referral_category_key"] {
+						max-width: 30px !important;
+						}
+						.o_list_renderer.o_renderer.table-responsive .o_list_table th[data-name="total_count"] {
+						max-width: 100px !important;
+						}
+						.o_list_renderer.o_renderer.table-responsive .o_list_table th[data-name="total_amount"] {
+						max-width: 100px !important;
+						}
+                        .o_list_renderer.o_renderer.table-responsive .o_list_table th[data-name="count_allowed"] {
+                        max-width: 100px !important;
+                        }
+                        .o_list_renderer.o_renderer.table-responsive .o_list_table th[data-name="amount_allowed"] {
+                        max-width: 100px !important;
+                        }
+                        div[name="contents"] td.o_data_cell.o_monetary_cell div[name="referral_category_id"] span {
+                        font-size: 12px !important;
+                        }
+                        div[name="contents"] td.o_data_cell.o_monetary_cell div[name="referral_category_key"] span {
+                        font-size: 12px !important;
+                        }
+                        div[name="contents"] td.o_data_cell.o_monetary_cell div[name="total_amount"] span {
+                        font-size: 12px !important;
+                        }
+                        div[name="contents"] td.o_data_cell.o_monetary_cell div[name="total_count"] span {
+                        font-size: 12px !important;
+                        }
+                        div[name="contents"] td.o_data_cell.o_monetary_cell div[name="count_allowed"] span {
+                        font-size: 12px !important;
+                        }
+                        div[name="contents"] td.o_data_cell.o_monetary_cell div[name="amount_allowed"] span {
+                        font-size: 12px !important;
+                        }
+						table > thead > tr {
+						border-left: 1px solid rgba(11, 83, 148, 0.2) !important;
+						border-right: 1px solid rgba(11, 83, 148, 0.2) !important;
+						border-bottom: 1px solid rgba(11, 83, 148, 0.2) !important;
+						border-top: 1px solid rgba(11, 83, 148, 0.2) !important;
+						}
+						table > thead > tr > th {
+						border-left: 0px !important;
+						border-right: 0px !important;
+						border-bottom: 0px !important;
+						border-top: 0px !important;
+						}
+					</style>
+					<sheet>
+                        <div class="d-flex align-items-center">
+                            <div class="fs-3 fw-bold text-dark">Статистика за издадени направления</div>
+						</div>
+                        <div class="d-flex align-items-center mb-4 gap-2">
+                            <div class="fs-3 fw-bold text-dark">за периода:</div>
+                            <field name="date_start" class="fs-4 fw-bold text-dark mt-2" readonly="1"/>
+                            <div class="fs-4 fw-bold text-dark me-1">-</div>
+                            <field name="date_end" class="fs-4 fw-bold text-dark mt-2" readonly="1"/>
+						</div>
+						<div class="row mb-2">
+							<div class="d-flex col-lg-4">
+								<button string="" class="btn btn-outline-primary btn-xs text-nowrap fa fa-angle-double-left" type="object" name="backward_one_year" title="Назад една година"/>
+								<button string="" class="btn btn-outline-primary btn-xs text-nowrap fa fa-angle-left" type="object" name="backward_one_quarter" title="Назад едно тримесечие"/>
+								<button string="това тримесечие" type="object" name="set_dates_to_current_quarter" class="btn btn-outline-primary btn-xs text-nowrap"/>
+								<button string="тази година" type="object" name="set_dates_to_current_year" class="btn btn-outline-primary btn-xs text-nowrap"/>
+								<button string="" class="btn btn-outline-primary btn-xs text-nowrap fa fa-angle-right" type="object" name="forward_one_quarter" title="Напред едно тримесечие"/>
+								<button string="" class="btn btn-outline-primary btn-xs text-nowrap fa fa-angle-double-right" type="object" name="forward_one_year" title="Напред една година"/>
+							</div>
+						</div>
+						<separator class="col-lg-12 separator" groups="kojto_base.kojto_administrator"/>
+						<div class="row mb-2" groups="kojto_base.kojto_administrator">
+                            <label string="за лекар:" for="main_dr_performing_doctor_id" class="o_form_label col-lg-3"/>
+							<field name="main_dr_performing_doctor_id" class="col-lg-4" domain="[('active', '=', True)]" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}" groups="kojto_base.kojto_administrator"/>
+						</div>
+						<separator class="col-lg-12 separator"/>
+						<div class="row">
+							<div class="col-lg-12">
+								<field name="contents" nolabel="1">
+									<list create="false" delete="false" edit="false" class="ko-list-main" decoration-danger="over_limit">
+                                        <field name="isLimited_by_amount" column_invisible="1"/>
+                                        <field name="isLimited_by_count" column_invisible="1"/>
+                                        <field name="referral_category_key"/>
+                                        <field name="referral_category_id"/>
+										<field name="total_count"/>
+										<field name="total_amount" widget="monetary" options="{'currency_field': 'currency_id'}" invisible="not isLimited_by_amount"/>
+								        <field name="count_allowed" invisible="not isLimited_by_count"/>
+								        <field name="amount_allowed" widget="monetary" options="{'currency_field': 'currency_id'}" invisible="not isLimited_by_amount"/>
+										<field name="currency_id" column_invisible="1"/>
+                                        <field name="over_limit" column_invisible="1"/>
+									</list>
+								</field>
+							</div>
+						</div>
+						<separator class="col-lg-12 separator"/>
+						<table style="border: 0.1px solid rgba(11, 83, 148, 0.2); width: 100%; margin-top: 20px">
+							<tr style="background-color: rgba(11, 83, 148, 0.1)">
+								<td/>
+								<td/>
+								<td/>
+								<td/>
+								<td style="padding:5px 10px; text-align: right;">свали данните като .xlsx <button class="fa fa-download" type="object" name="export_monthly_data_to_xlsx"/>
+								</td>
+							</tr>
+						</table>
+					</sheet>
+					<script type="text/javascript" src="/trinity_file_assets/static/src/js/autoSaveScript.js"/>
+				</form>
+			</field>
+		</record>
+		<!-- Search Views -->
+		<record model="ir.ui.view" id="view_trinity_referral_issue_dashboard_search">
+			<field name="name">trinity.referral.issue.dashboard.search</field>
+			<field name="model">trinity.referral.issue.dashboard</field>
+			<field name="arch" type="xml">
+				<search string="dashboard">
+					<field name="main_dr_performing_doctor_id"/>
+					<field name="date_start"/>
+					<field name="date_end"/>
+					<field name="currency_id"/>
+				</search>
+			</field>
+		</record>
+		<!-- Actions to Return Model Views -->
+		<record model="ir.actions.act_window" id="action_trinity_referral_issue_dashboard">
+			<field name="name">Статистика за издадени направления</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.referral.issue.dashboard</field>
+			<field name="view_mode">list,form</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">Създай</p>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_referral_issue_dashboard_contents_list">
+			<field name="name">trinity.referral.issue.dashboard.contents.list</field>
+			<field name="model">trinity.referral.issue.dashboard.contents</field>
+			<field name="arch" type="xml">
+				<list string="Съдържание на статистиката" default_order="position asc">
+					<field name="position" optional="show"/>
+					<field name="referral_category_key" optional="hide"/>
+					<field name="referral_category_id"/>
+					<field name="total_count"/>
+					<field name="total_amount" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+					<field name="currency_id" column_invisible="1"/>
+					<field name="dashboard_id" optional="hide"/>
+					<field name="company_id" optional="hide"/>
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_referral_issue_dashboard_contents_form">
+			<field name="name">trinity.referral.issue.dashboard.contents.form</field>
+			<field name="model">trinity.referral.issue.dashboard.contents</field>
+			<field name="arch" type="xml">
+				<form string="Ред на статистиката">
+					<sheet>
+						<group>
+							<group>
+								<field name="referral_category_key"/>
+								<field name="referral_category_id"/>
+								<field name="position"/>
+							</group>
+							<group>
+								<field name="total_count" readonly="1"/>
+								<field name="total_amount" readonly="1" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+								<field name="currency_id" readonly="1"/>
+							</group>
+						</group>
+						<group>
+							<field name="dashboard_id" readonly="1"/>
+							<field name="company_id" readonly="1"/>
+						</group>
+					</sheet>
+				</form>
+			</field>
+		</record>
+		<record model="ir.actions.act_window" id="action_trinity_referral_issue_dashboard_contents">
+			<field name="name">Съдържание на статистиката</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.referral.issue.dashboard.contents</field>
+			<field name="view_mode">list,form</field>
+		</record>
+		<!-- Menu Items -->
+		<menuitem name="Статистика" parent="menu_referral_parent" id="menu_referral_issue_dashboard" sequence="50" action="action_trinity_referral_issue_dashboard"/>
+		<!--menuitem name="Съдържание на статистиката" parent="menu_referral_parent" id="menu_referral_issue_dashboard_contents" sequence="60" action="action_trinity_referral_issue_dashboard_contents"/-->
+	</data>
+</odoo>

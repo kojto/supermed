@@ -1,0 +1,27 @@
+# -*- coding: utf-8 -*-
+{
+    "name": "Trinity Referral",
+    "summary": "Medical referral management system",
+    "description": "Referral management module for managing incoming and outgoing referrals, referral issues, NHIF allowed referrals, and referral validation",
+    "author": "MG",
+    "website": "https://www.trinitymedcenter.com",
+    "category": "Tools",
+    "sequence": 4,
+    "version": "18.04.07",
+    "depends": ["base", "trinity_examination", "kojto_landingpage"],
+    "data": [
+        "security/ir.model.access.csv",
+        "views/trinity_referral_fetch.xml",
+        "views/trinity_referral_issue.xml",
+        "views/trinity_referral_issue_template.xml",
+        "views/trinity_referral_issue_dashboard_views.xml",
+        "views/trinity_referral_issue_nhif_allowed_views.xml",
+        "views/trinity_referral_incoming.xml",
+        "views/trinity_referral_check.xml",
+        "views/trinity_referral_buttons.xml",
+        "views/trinity_referral_inherit_patient_views.xml",
+    ],
+    "installable": True,
+    "application": True,
+    "auto_install": False,
+}

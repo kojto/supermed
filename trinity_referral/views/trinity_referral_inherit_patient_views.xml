@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="view_trinity_patient_form_inherit_referral" model="ir.ui.view">
+            <field name="name">trinity.patient.form.inherit.referral</field>
+            <field name="model">trinity.patient</field>
+            <field name="inherit_id" ref="trinity_patient.view_trinity_patient_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//sheet" position="inside">
+                    <div class="row" invisible="not referral_issue_ids">
+                        <group class="col-lg-12">
+                            <separator class="col-lg-12 separator"/>
+                            <field name="referral_issue_ids">
+                                <list class="ko-list-main" default_order="referral_authoredOn desc" create="false" delete="false">
+                                    <field name="referral_authoredOn"/>
+                                    <field name="referral_category"/>
+                                    <field name="referral_qualification_name"/>
+                                </list>
+                            </field>
+                        </group>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

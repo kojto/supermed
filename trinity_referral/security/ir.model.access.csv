@@ -1,0 +1,10 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_trinity_referral_issue,trinity.referral.issue,model_trinity_referral_issue,,1,1,1,1
+access_trinity_referral_issue_template,trinity.referral.issue.template,model_trinity_referral_issue_template,,1,1,1,1
+access_trinity_referral_issue_dashboard,trinity.referral.issue.dashboard,model_trinity_referral_issue_dashboard,kojto_base.kojto_all_human_users,1,1,1,1
+access_trinity_referral_issue_dashboard_contents,trinity.referral.issue.dashboard.contents,model_trinity_referral_issue_dashboard_contents,kojto_base.kojto_all_human_users,1,1,1,1
+access_trinity_referral_fetch,trinity.referral.fetch,model_trinity_referral_fetch,,1,1,1,1
+access_trinity_referral_incoming,trinity.referral.incoming,model_trinity_referral_incoming,,1,1,1,1
+access_trinity_referral_check,trinity.referral.check,model_trinity_referral_check,,1,1,1,1
+access_trinity_referral_issue_nhif_allowed,trinity.referral.issue.nhif.allowed,model_trinity_referral_issue_nhif_allowed,kojto_base.kojto_all_human_users,1,1,1,1
+access_trinity_referral_issue_nhif_allowed_contents,trinity.referral.issue.nhif.allowed.contents,model_trinity_referral_issue_nhif_allowed_contents,kojto_base.kojto_all_human_users,1,1,1,1

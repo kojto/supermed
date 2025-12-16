@@ -1,0 +1,130 @@
+<odoo>
+	<data>
+		<record id="view_trinity_referral_issue_nhif_allowed_list" model="ir.ui.view">
+			<field name="name">trinity.referral.issue.nhif.allowed.list</field>
+			<field name="model">trinity.referral.issue.nhif.allowed</field>
+			<field name="arch" type="xml">
+				<list default_order="date_start desc" create="true" delete="false">
+					<field name="name"/>
+					<field name="main_dr_performing_doctor_id" optional="show"/>
+					<field name="date_start" optional="show"/>
+					<field name="date_end" optional="show"/>
+					<field name="company_id" optional="show"/>
+				</list>
+			</field>
+		</record>
+
+		<record id="view_trinity_referral_issue_nhif_allowed_form" model="ir.ui.view">
+			<field name="name">trinity.referral.issue.nhif.allowed.form</field>
+			<field name="model">trinity.referral.issue.nhif.allowed</field>
+			<field name="arch" type="xml">
+                <form create="true" delete="false">
+                    <style>
+						.o_list_renderer tbody tr:has(td[colspan]:only-child):not(:has(a)) {
+						display: none !important;
+						}
+                        .o_field_one2many[name="contents"] .o_list_table.o_list_table_ungrouped tbody tr:last-child td {
+                        font-weight: bold !important;
+                        }
+                        .o_list_renderer.o_renderer.table-responsive .o_list_table th[data-name="referral_category_id"],
+                        .o_list_renderer.o_renderer.table-responsive .o_list_table th[data-name="total_count"],
+                        .o_list_renderer.o_renderer.table-responsive .o_list_table th[data-name="total_amount"] {
+                        max-width: 150px !important;
+                        font-weight: bold !important;
+                        font-size: 12px !important;
+                        text-align: start !important;
+                        }
+                        .o_list_renderer.o_renderer.table-responsive .o_list_table th[data-name="referral_category_key"] {
+                        max-width: 50px !important;
+                        font-weight: bold !important;
+                        font-size: 12px !important;
+                        text-align: start !important;
+                        }
+                        .o_list_renderer.o_renderer.table-responsive .o_list_table th[data-name="isLimited_by_amount"] {
+                        max-width: 80px !important;
+                        text-align: left !important;
+                        }
+                        .o_list_renderer.o_renderer.table-responsive .o_list_table th[data-name="isLimited_by_count"] {
+                        max-width: 80px !important;
+                        text-align: left !important;
+                        }
+                        .o_list_renderer.o_renderer.table-responsive .o_list_table td[name="referral_category_id"],
+                        .o_list_renderer.o_renderer.table-responsive .o_list_table td[name="referral_category_key"],
+                        .o_list_renderer.o_renderer.table-responsive .o_list_table td[name="total_count"],
+                        .o_list_renderer.o_renderer.table-responsive .o_list_table td[name="total_amount"] {
+                        font-size: 12px !important;
+                        }
+                        table > thead > tr {
+                        border-left: 1px solid rgba(11, 83, 148, 0.2) !important;
+                        border-right: 1px solid rgba(11, 83, 148, 0.2) !important;
+                        border-bottom: 1px solid rgba(11, 83, 148, 0.2) !important;
+                        border-top: 1px solid rgba(11, 83, 148, 0.2) !important;
+                        }
+                        table > thead > tr > th {
+                        border-left: 0px !important;
+                        border-right: 0px !important;
+                        border-bottom: 0px !important;
+                        border-top: 0px !important;
+                        }
+                        .o_form_view .o_form_sheet_bg {
+                            margin: 0 auto !important;
+                        }
+                    </style>
+                    <sheet>
+                        <div class="d-flex align-items-center">
+                            <div class="fs-3 fw-bold text-dark">Регулативен стандарт на НЗОК</div>
+						</div>
+                        <div class="row">
+                            <group class="col-lg-6">
+                                <separator class="col-lg-12 separator"/>
+                                <field name="main_dr_performing_doctor_id" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+                                <field name="date_start"/>
+                                <field name="date_end"/>
+                            </group>
+                        </div>
+                        <separator class="col-lg-12 separator"/>
+                        <group>
+                            <field name="contents">
+                                <list editable="bottom" class="ko-list-main">
+                                    <field name="isLimited_by_amount" widget="boolean_toggle"/>
+                                    <field name="isLimited_by_count" widget="boolean_toggle"/>
+                                    <field name="referral_category_key"/>
+                                    <field name="referral_category_id" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+                                    <field name="total_count" invisible="isLimited_by_amount"/>
+                                    <field name="total_amount" widget="monetary" options="{'currency_field': 'currency_id'}" invisible="isLimited_by_count"/>
+                                    <field name="currency_id" column_invisible="1"/>
+                                </list>
+                            </field>
+                        </group>
+                    </sheet>
+                </form>
+			</field>
+		</record>
+
+		<record id="view_trinity_referral_issue_nhif_allowed_search" model="ir.ui.view">
+			<field name="name">trinity.referral.issue.nhif.allowed.search</field>
+			<field name="model">trinity.referral.issue.nhif.allowed</field>
+			<field name="arch" type="xml">
+				<search string="NHIF Allowed">
+					<field name="name"/>
+					<field name="main_dr_performing_doctor_id"/>
+					<filter name="current_quarter" string="Текущо тримесечие" domain="[('date_start','&lt;=', context_today()), ('date_end','&gt;=', context_today())]"/>
+					<filter name="my_records" string="Моите" domain="[('create_uid', '=', uid)]"/>
+					<group expand="0" string="Групиране">
+						<filter name="group_doctor" string="Лекар" context="{'group_by': 'main_dr_performing_doctor_id'}"/>
+						<filter name="group_company" string="Компания" context="{'group_by': 'company_id'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+
+		<record id="action_trinity_referral_issue_nhif_allowed" model="ir.actions.act_window">
+			<field name="name">НЗОК разрешени направления</field>
+			<field name="res_model">trinity.referral.issue.nhif.allowed</field>
+			<field name="view_mode">list,form</field>
+			<field name="search_view_id" ref="view_trinity_referral_issue_nhif_allowed_search"/>
+		</record>
+
+		<menuitem id="menu_referral_issue_nhif_allowed" name="Регулативен стандарт" parent="menu_referral_parent" sequence="60" action="action_trinity_referral_issue_nhif_allowed"/>
+	</data>
+</odoo>

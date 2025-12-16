@@ -1,0 +1,219 @@
+<odoo>
+	<data>
+		<!-- List Views -->
+		<record model="ir.ui.view" id="view_trinity_referral_issue_list">
+			<field name="name">trinity.referral.issue.list</field>
+			<field name="model">trinity.referral.issue</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1">
+                    <field name='requester_doctor_full_name' optional='hide'/>
+					<field name='referral_authoredOn'/>
+                    <field name='response_nrnReferral' optional='show'/>
+                    <field name='response_status' optional='show'/>
+					<field name='subject_full' optional='show'/>
+                    <field name='subject_phone' optional='show'/>
+					<field name='referral_category_name' optional='show'/>
+					<field name='referral_qualification_name' optional='show'/>
+					<field name='laboratory_code' optional='show'/>
+					<field name='specializedActivities_code' optional='show'/>
+					<field name="referral_price" optional="show" invisible="referral_price == False"/>
+					<field name='hospitalization_clinicalPathway_key' optional='show'/>
+					<field name='diagnosis_code_key' optional='show' string='МКБ код'/>
+				</list>
+			</field>
+		</record>
+		<!-- Form Views -->
+		<record model="ir.ui.view" id="view_trinity_referral_issue_form">
+			<field name="name">trinity.referral.issue.form</field>
+			<field name="model">trinity.referral.issue</field>
+			<field name="arch" type="xml">
+				<form create="false">
+					<link rel="stylesheet" type="text/css" href="/trinity_file_assets/static/src/css/custom.css"/>
+					<sheet>
+						<div class="d-flex justify-content-between align-items-center mb-3 ko-form-main-header-line">
+							<div class="w-100 px-0">
+								<div class="row no-gutters">
+									<div class="col-lg-8">
+										<div class="ko-form-view-title mt-1 ms-0">
+											<span>
+												<field name="referral_category" readonly="1"/>
+											</span>
+										</div>
+									</div>
+									<div class="col-lg-4" invisible="response_status.key == '4'" groups="trinity_medical_facility.group_trinity_doctor_users">
+										<div style="display: flex; justify-content: right;">
+											<div invisible="not user_token_is_expired">
+												<button name="getToken" string="Изгради връзка с НЗИС" type="object" class="btn btn-outline-danger btn-sm" onclick="getToken()"/>
+											</div>
+											<div invisible="user_token_is_expired">
+												<button name="getSignatureR001" string="Активирай направление" type="object" class="btn btn-outline-primary btn-sm" onclick="getSignatureR001()" invisible="response_nrnReferral"/>
+												<button name="getSignatureR007" string="Анулирай направление" type="object" class="btn btn-outline-primary btn-sm" onclick="getSignatureR007()" invisible="not response_nrnReferral"/>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class='row'>
+							<group class='col-lg-6'>
+                                <separator class='col-lg-12 separator'/>
+								<field name="subject_full" string="Пациент"/>
+                                <field name="subject_identifier" string="Идентификатор"/>
+                                <field name="subject_birthDate" string="Дата на раждане"/>
+                                <field name="subject_gender" string="Пол"/>
+								<field name="subject_phone" string="Телефон"/>
+							</group>
+							<group class='col-lg-6'>
+                                <separator class='col-lg-12 separator'/>
+								<field name="response_status" string="Статус" readonly="1"/>
+								<field name="response_nrnReferral" string="НРН №" invisible="not response_nrnReferral" readonly="1"/>
+								<field name='referral_authoredOn' string='Дата на издаване' readonly="1"/>
+								<field name='referral_basedOn_lrn' readonly="1"/>
+								<field name='diagnosis_code' string='МКБ код'/>
+								<field name='referral_price' string='Цена' invisible="referral_price == False"/>
+							</group>
+						</div>
+						<div class='row'>
+							<group class='col-lg-12'>
+                                <separator class='col-lg-12 separator'/>
+								<field name='template_id' options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}" string='Шаблон'/>
+							</group>
+						</div>
+						<div class='row'>
+							<group class='col-lg-6'>
+                                <separator class='col-lg-12 separator'/>
+								<field name='referral_category' options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+								<field name='referral_type' options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+								<field name='referral_financingSource' widget="input" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+							</group>
+							<group invisible="referral_category_key != 'R1'" class='col-lg-6'>
+                                <separator class='col-lg-12 separator'/>
+								<field name='laboratory_code_root' string='Лабораторен код' options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}" domain="[('meta_nhif_code', '!=', '---')]"/>
+								<field name='laboratory_code' string='НЗОК код'/>
+							</group>
+							<group invisible="referral_category_key != 'R2'" class='col-lg-6'>
+                                <separator class='col-lg-12 separator'/>
+								<field name='referral_qualification' string='Код на специалност' options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+								<field name='referral_qualification_nhif' string='Специалност по НЗОК' readonly="1"/>
+								<field name='referral_qualification_name' string='Име на специалност' readonly="1"/>
+							</group>
+							<group invisible="referral_category_key != 'R3'" class='col-lg-6'>
+                                <separator class='col-lg-12 separator'/>
+								<field name='referral_qualification' string='Код на специалност' options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+								<field name='referral_qualification_name' string='Специалност'/>
+								<field name='referral_qualification_nhif' string='Специалност по НЗОК'/>
+								<field name='specializedActivities_code_root' string='Специализирана дейност'/>
+							</group>
+							<group invisible="referral_category_key != 'R4'" class='col-lg-6'>
+                                <separator class='col-lg-12 separator'/>
+								<field name='hospitalization_admissionType' string='Тип на прием в болница' options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+								<field name='hospitalization_directedBy' string='Изпратен от' options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+								<field name='hospitalization_clinicalPathway' string='Клинична пътека' options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+								<field name='hospitalization_outpatientProcedure' string='Амбулаторна процедура' options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+							</group>
+							<group invisible="referral_category_key != 'R5'" class='col-lg-6'>
+                                <separator class='col-lg-12 separator'/>
+								<field name='referral_qualification_name' string='Име на специалност'/>
+								<field name='referral_qualification' string='Сециалност'/>
+								<field name='referral_qualification_nhif' string='НЗОК код специалност'/>
+								<field name='medicalExpertise_examType' string='Тип на изследване'/>
+							</group>
+							<group invisible="referral_category_key != 'R8'" class='col-lg-6'>
+                                <separator class='col-lg-12 separator'/>
+								<field name='workIncapacity_reason' string='Причина'/>
+								<field name='workIncapacity_addressType' string='Адрес'/>
+								<field name='workIncapacity_isHomeVisitNecessary' string='Домашно посещение?'/>
+								<field name='employer_name' string='Работодател' readonly="response_status.key != '0'"/>
+								<field name='employer_identificationCode' string='ЕИК:' readonly="response_status.key != '0'"/>
+								<field name='employer_position' string='Позиция при работодателя' readonly="response_status.key != '0'"/>
+								<field name='employer_phone' string='Телефон на работодателя' readonly="response_status.key != '0'"/>
+								<field name='employer_email' string='Имейл на работодателя' readonly="response_status.key != '0'"/>
+								<field name='employer_country' string='Държава' readonly="response_status.key != '0'"/>
+								<field name='employer_county' string='Област' readonly="response_status.key != '0'"/>
+								<field name='employer_ekatte' string='ЕКАТТЕ код' readonly="response_status.key != '0'"/>
+								<field name='employer_city' string='Град' readonly="response_status.key != '0'"/>
+								<field name='employer_line' string='Адрес' readonly="response_status.key != '0'"/>
+								<field name='employer_postalCode' string='Пощенски код' readonly="response_status.key != '0'"/>
+								<field name='attached_documents_type' string='Тип на документа' readonly="response_status.key != '0'"/>
+								<field name='attached_documents_date' string='Дата на документа' readonly="response_status.key != '0'"/>
+								<field name='attached_documents_number' string='Номер на документа' readonly="response_status.key != '0'"/>
+								<field name='attached_documents_isNrn' string='Е НРН?' readonly="response_status.key != '0'"/>
+								<field name='attached_documents_note' string='Бележка към документа' readonly="response_status.key != '0'"/>
+							</group>
+						</div>
+						<div class='row' invisible="not response_nrnReferral or (response_status and response_status.key == '4')">
+							<group class='col-lg-12' >
+                                <separator class='col-lg-12 separator'/>
+								<field name='cancelReason' string='В случай на анулиране въведете причина'/>
+							</group>
+						</div>
+						<div class='row d-none'>
+							<group class='col-lg-12'>
+								<field name="R001" id="R001" widget="text" string="R001"/>
+								<field name="R002" id="R002" widget="text" string="R002"/>
+								<field name="SignedInfo_R001" id="SignedInfo_R001" widget="text" string="SignedInfo"/>
+								<field name="SignedInfo_R001_signature" id="SignedInfo_R001_signature" widget="text" string="SignedInfo signature"/>
+								<field name="R001_signed" id="R001_signed"/>
+								<button name="R001_api_request" string="R001_api_request" type="object"/>
+								<field name="R007" id="R007" widget="text" string="R007"/>
+								<field name="R008" id="R008" widget="text" string="R008"/>
+								<field name="SignedInfo_R007" id="SignedInfo_R007" widget="text" string="SignedInfo"/>
+								<field name="SignedInfo_R007_signature" id="SignedInfo_R007_signature" widget="text" string="SignedInfo signature"/>
+								<field name="R007_signed" id="R007_signed"/>
+								<button name="R007_api_request" string="R007_api_request" type="object"/>
+								<field name="user_token_certificate" id="user_token_certificate" widget="text"/>
+								<field name="supermed_certificate" id="supermed_certificate" widget="text"/>
+								<field name="tokenRequest" id="tokenRequest" widget="text" string="tokenRequest"/>
+								<field name="SignedInfo_tokenRequest" id="SignedInfo_tokenRequest" widget="text" string="SignedInfo_tokenRequest"/>
+								<field name="SignedInfo_tokenRequest_signature" id="SignedInfo_tokenRequest_signature" widget="text" string="SignedInfo_tokenRequest_signature"/>
+								<field name="tokenRequest_signed" id="tokenRequest_signed" widget="text" string="tokenRequest_signed"/>
+								<field name="tokenResponse" id="tokenResponse" widget="text" string="tokenResponse"/>
+								<field name="user_token_expiresOnDatetime" id="user_token_expiresOnDatetime" string="user_token_expiresOnDatetime"/>
+								<field name="user_token_is_expired" id="user_token_is_expired" string="user token is expired"/>
+								<button name="post_token_api_request" string="post_token_api_request" type="object"/>
+							</group>
+						</div>
+					</sheet>
+				<script type="text/javascript" src="/trinity_file_assets/static/src/js/getToken.js"/>
+				<script type="text/javascript" src="/trinity_file_assets/static/src/js/getSignature.js"/>
+				<script type="text/javascript" src="/trinity_file_assets/static/src/js/getSignatureNhifMessages.js"/>
+				</form>
+			</field>
+		</record>
+		<!-- Search Views -->
+		<record model="ir.ui.view" id="view_trinity_referral_issue_search">
+			<field name="name">trinity.referral.issue.search</field>
+			<field name="model">trinity.referral.issue</field>
+			<field name="arch" type="xml">
+				<search string="referral">
+					<field name='requester_doctor_full_name' string='лекар'/>
+					<field name='requester_pmi' string='УИН'/>
+					<field name='subject_identifier' string='ЕГН'/>
+					<field name='referral_lrn' string='Направление №'/>
+					<field name='referral_authoredOn' string='Дата на издаване'/>
+					<field name='referral_category' string='Категория направление'/>
+					<field name='referral_type' string='Тип направление'/>
+					<field name='referral_rhifAreaNumber' string='РЗОК №'/>
+					<field name='referral_basedOn_nrn' string='Основано на НРН'/>
+					<field name='referral_basedOn_lrn' string='Основано на Амб. №'/>
+					<field name='laboratory_code' string='НЗОК код'/>
+				</search>
+			</field>
+		</record>
+		<!-- Actions to Return Model Views -->
+		<record model="ir.actions.act_window" id="action_trinity_referral_issue">
+			<field name="name">Изходящи направления</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.referral.issue</field>
+			<field name="view_mode">list,form</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Изходящи направления
+				</p>
+			</field>
+		</record>
+		<!-- Menu Items -->
+		<menuitem name="Изходящи направления" id="menu_referral_issue" parent="menu_referral_parent" action="action_trinity_referral_issue" sequence="30"/>
+	</data>
+</odoo>

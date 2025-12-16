@@ -1,0 +1,154 @@
+<odoo>
+	<data>
+		<!-- List Views -->
+		<record model="ir.ui.view" id="view_trinity_referral_incoming_list">
+			<field name="name">trinity.referral.incoming.list</field>
+			<field name="model">trinity.referral.incoming</field>
+			<field name="arch" type="xml">
+				<list default_order="create_date desc, referral_authoredOn desc" create="false">
+					<field name='requester_full_name' optional='hide'/>
+					<field name='create_date' string='Дата на изтегляне' optional='show'/>
+					<field name='referral_authoredOn' optional='hide'/>
+					<field name='subject_full_name'/>
+					<field name='referral_category_name' optional='show'/>
+					<field name='referral_qualification_name' optional='show'/>
+					<field name='specializedActivities_code' optional='show'/>
+					<field name='laboratory_code' optional='show'/>
+					<field name='hospitalization_clinicalPathway' optional='hide'/>
+					<field name='diagnosis_code' optional='hide'/>
+				</list>
+			</field>
+		</record>
+		<!-- Form Views -->
+		<record model="ir.ui.view" id="view_trinity_referral_incoming_form">
+			<field name="name">trinity.referral.incoming.form</field>
+			<field name="model">trinity.referral.incoming</field>
+			<field name="arch" type="xml">
+				<form>
+					<link rel="stylesheet" type="text/css" href="/trinity_file_assets/static/src/css/custom.css"/>
+					<sheet>
+						<div class="d-flex justify-content-between align-items-center mb-3 ko-form-main-header-line">
+							<div class="w-100 px-0">
+								<div class="row no-gutters">
+									<div class="col-lg-8">
+										<div class="ko-form-view-title mt-1 ms-0">
+											<span/>
+										</div>
+									</div>
+									<div class="col-lg-4">
+										<div style="display: flex; justify-content: right;">
+											<button name="create_trinity_examination_record" string="Създай преглед" type="object" class="btn btn-outline-primary btn-md"/>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class='row'>
+							<group class='col-lg-6'>
+								<separator class='col-lg-12 separator'/>
+								<field name="subject_full_name"/>
+							</group>
+							<group class='col-lg-6' invisible="not laboratory_code">
+								<separator class='col-lg-12 separator'/>
+								<field name='laboratory_code' readonly="1"/>
+							</group>
+							<group class='col-lg-6' invisible="not referral_qualification_name">
+								<separator class='col-lg-12 separator'/>
+								<field name='referral_qualification_name' readonly="1"/>
+							</group>
+							<group class='col-lg-6' invisible="not specializedActivities_code">
+								<separator class='col-lg-12 separator'/>
+								<field name='specializedActivities_code' readonly="1"/>
+							</group>
+							<group class='col-lg-6' invisible="not medicalExpertise_examType">
+								<separator class='col-lg-12 separator'/>
+								<field name='medicalExpertise_examType' readonly="1"/>
+							</group>
+							<group class='col-lg-6' invisible="not hospitalization_admissionType">
+								<separator class='col-lg-12 separator'/>
+								<field name='hospitalization_admissionType' readonly="1"/>
+								<field name='hospitalization_directedBy' readonly="1"/>
+								<field name='hospitalization_clinicalPathway' readonly="1"/>
+								<field name='hospitalization_outpatientProcedure' readonly="1"/>
+							</group>
+							<group class="col-lg-6">
+								<separator class='col-lg-12 separator'/>
+								<field name="requester_full_name" readonly="1"/>
+								<field name="requester_qualification_name" readonly="1"/>
+							</group>
+							<group class='col-lg-6'>
+								<separator class='col-lg-12 separator'/>
+								<field name="response_nrnReferral" readonly="1"/>
+								<field name="referral_authoredOn" readonly="1"/>
+								<field name="referral_category_name" readonly="1"/>
+								<field name="referral_type" readonly="1"/>
+								<field name="referral_basedOn_nrn" readonly="1"/>
+								<field name="referral_financingSource" readonly="1"/>
+                                <field name="referral_rhifAreaNumber" readonly="1"/>
+							</group>
+							<group class="col-lg-6">
+								<separator class='col-lg-12 separator'/>
+								<field name="diagnosis_code" readonly="1"/>
+								<field name="diagnosis_additionalCode" readonly="1" invisible="not diagnosis_additionalCode"/>
+								<field name="diagnosis_use" readonly="1"/>
+								<field name="diagnosis_rank" readonly="1" invisible="not diagnosis_rank"/>
+								<field name="diagnosis_clinicalStatus" readonly="1" invisible="not diagnosis_clinicalStatus"/>
+								<field name="diagnosis_verificationStatus" readonly="1" invisible="not diagnosis_verificationStatus"/>
+								<field name="diagnosis_onsetDateTime" readonly="1" invisible="not diagnosis_onsetDateTime"/>
+								<field name="diagnosis_note" readonly="1" invisible="not diagnosis_note"/>
+							</group>
+							<group class="col-lg-6">
+								<separator class='col-lg-12 separator'/>
+                                <field name="comorbidity_code" readonly="1"/>
+                                <field name="comorbidity_additionalCode" readonly="1" invisible="not comorbidity_additionalCode"/>
+                                <field name="comorbidity_use" readonly="1"/>
+                                <field name="comorbidity_rank" readonly="1" invisible="not comorbidity_rank"/>
+                                <field name="comorbidity_clinicalStatus" readonly="1" invisible="not comorbidity_clinicalStatus"/>
+                                <field name="comorbidity_verificationStatus" readonly="1" invisible="not comorbidity_verificationStatus"/>
+                                <field name="comorbidity_onsetDateTime" readonly="1" invisible="not comorbidity_onsetDateTime"/>
+                                <field name="comorbidity_note" readonly="1" invisible="not comorbidity_note"/>
+							</group>
+							<group class="col-lg-6">
+								<separator class='col-lg-12 separator'/>
+								<field name="examination_type_id" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+							</group>
+						</div>
+					</sheet>
+				</form>
+			</field>
+		</record>
+		<!-- Search Views -->
+		<record model="ir.ui.view" id="view_trinity_referral_incoming_search">
+			<field name="name">trinity.referral.incoming.search</field>
+			<field name="model">trinity.referral.incoming</field>
+			<field name="arch" type="xml">
+				<search>
+                    <filter name='referral_category_name' string='Категория направление' />
+                    <filter name='specializedActivities_code' string='Дейност' />
+                    <filter name='medicalExpertise_examType' string='Вид на изпит' />
+                    <filter name='referral_qualification_name' string='За специалност' />
+                    <filter name='laboratory_code' string='Лаб. код' />
+                    <separator/>
+					<field name='referral_category_name'/>
+					<field name='subject_full_name'/>
+					<field name='requester_full_name'/>
+				</search>
+			</field>
+		</record>
+		<!-- Actions to Return Model Views -->
+		<record model="ir.actions.act_window" id="action_trinity_referral_incoming">
+			<field name="name">Входящи направления</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.referral.incoming</field>
+			<field name="view_mode">list,form</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+
+				</p>
+			</field>
+		</record>
+		<!-- Menu Items -->
+		<menuitem name="Входящи направления" id="menu_referral_incoming" parent="menu_referral_parent" action="action_trinity_referral_incoming" sequence="20"/>
+	</data>
+</odoo>
