@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record model="ir.ui.view" id="view_trinity_medical_facility_doctors_list">
+			<field name="name">trinity.medical.facility.doctors.list</field>
+			<field name="model">trinity.medical.facility.doctors</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1">
+					<field name="active" optional="show" widget="boolean_toggle" />
+					<field name="is_administrator" optional="show" widget="boolean_toggle" />
+					<field name="initials" />
+					<field name="full_name" optional="show" />
+                    <field name="user_id" optional="show" />
+					<field name="qualification_code" optional="show" />
+					<field name="description_bg" optional="show" />
+                    <field name="habilitation" widget="boolean_toggle" />
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_medical_facility_doctors_form">
+			<field name="name">trinity.medical.facility.doctors.form</field>
+			<field name="model">trinity.medical.facility.doctors</field>
+			<field name="arch" type="xml">
+				<form>
+					<link rel="stylesheet" type="text/css" href="/trinity_file_assets/static/src/css/custom.css" />
+					<style>
+                    .o_list_renderer.o_renderer.table-responsive .o_list_table th[data-name="active"],
+                    .o_list_renderer.o_renderer.table-responsive .o_list_table td[name="active"] {
+                        max-width: 100px !important; text-align: left !important;
+                    }
+                    .o_list_renderer tbody tr:has(td[colspan]:only-child):not(:has(a)) {
+                        display: none !important;
+                    }
+                    .o_list_renderer.o_renderer.table-responsive .o_list_table th[data-name="deduction"],
+                    .o_list_renderer.o_renderer.table-responsive .o_list_table td[name="deduction"] {
+                        max-width: 150px !important;
+                    }
+                    .o_list_renderer.o_renderer.table-responsive .o_list_table th[data-name="deduction_type"],
+                    .o_list_renderer.o_renderer.table-responsive .o_list_table td[name="deduction_type"] {
+                        max-width: 150px !important;
+                    }
+                    .o_list_renderer.o_renderer.table-responsive .o_list_table th[data-name="deduction_description"],
+                    .o_list_renderer.o_renderer.table-responsive .o_list_table td[name="deduction_description"] {
+                        max-width: 500px !important;
+                    }
+                    .o_list_renderer.o_renderer.table-responsive .o_list_table th[data-name="active_from"],
+                    .o_list_renderer.o_renderer.table-responsive .o_list_table td[name="active_from"] {
+                        max-width: 150px !important;
+                    }
+                    .o_list_renderer.o_renderer.table-responsive .o_list_table th[data-name="active_until"],
+                    .o_list_renderer.o_renderer.table-responsive .o_list_table td[name="active_until"] {
+                        max-width: 150px !important;
+                    }
+
+                    table > thead > tr {
+                    border-left: 1px solid rgba(11, 83, 148, 0.2) !important;
+                    border-right: 1px solid rgba(11, 83, 148, 0.2) !important;
+                    border-bottom: 1px solid rgba(11, 83, 148, 0.2) !important;
+                    border-top: 1px solid rgba(11, 83, 148, 0.2) !important;
+                    }
+
+                    table > thead > tr > th {
+                    border-left: 0px !important;
+                    border-right: 0px !important;
+                    border-bottom: 0px !important;
+                    border-top: 0px !important;
+                    }
+                    </style>
+					<sheet>
+						<div class="oe_title">
+							<h1>Лекар</h1>
+						</div>
+                        <div class="row">
+                            <group class="col-lg-12">
+                                <label for="first_name" />
+                                <div class="d-flex">
+                                    <field name="title"/>
+                                    <field name="first_name" placeholder="Име" />
+                                    <field name="middle_name" placeholder="Презиме" />
+                                    <field name="last_name" placeholder="Фамилия" />
+                                    <field name="initials" placeholder="Инициали" />
+                                </div>
+								<field name="address_line" placeholder="Адрес" />
+                            </group>
+                            <group class="col-lg-6">
+                                <field name="city" placeholder="Град" />
+                                <field name="ekatte_key" placeholder="Ekatte" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+                                <field name="zip_code" placeholder="п.к." />
+                                <field name="rhifareanumber_key" placeholder="РЗИ код" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+                            </group>
+                            <group class="col-lg-6">
+                                <field name="county_bulgarian" placeholder="Област" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+                                <field name="country_bulgarian" placeholder="Държава" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+                                <field name="email" widget="email" />
+                                <field name="phone" />
+                            </group>
+                            <group class="col-lg-6">
+                                <separator class="col-lg-12 separator" />
+                                <field name="birth_date" style="max-width: 120px;" placeholder="Дата на раждане" />
+                                <field name="gender" style="max-width: 120px;" placeholder="пол" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+                                <field name="identifier" string="ЕГН" />
+                            </group>
+                            <group class="col-lg-6">
+                                <separator class="col-lg-12 separator" />
+                                <field name="doctor_id" />
+                                <field name="qualification_code" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+                                <field name="qualification_code_nhif" />
+                                <field name="habilitation" widget="boolean_toggle" />
+                            </group>
+                            <group class="col-lg-6">
+                                <separator class="col-lg-12 separator" />
+                                <field name="active" widget="boolean_toggle" />
+                                <field name="is_administrator" widget="boolean_toggle" />
+                                <field name="user_id" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+                                <field name="related_cash_bank_account_id" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+                            </group>
+                            <group class="col-lg-6">
+                                <separator class="col-lg-12 separator" />
+                                <field name="accessToken" string="Токен за вход в НЗИС" />
+                                <field name="expiresOnDatetime" string="Валиден до" />
+                                <field name="url_logo" string="Лого" />
+                            </group>
+                        </div>
+                        <div class="row">
+                            <group class="col-lg-12">
+                                <separator class="col-lg-12 separator" />
+                                <field name="token_certificate" string="Сертификат на токена" />
+                            </group>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <separator class='col-lg-12 separator'/>
+                                <div class="mb-3 text-uppercase text-start fw-bold text-dark">Удръжки</div>
+                                <field name="deductions" nolabel="1" domain="[]" context="{'active_test': False}">
+                                    <list editable="bottom" order="active_from desc" class="ko-list-main">
+                                        <field name="active" widget="boolean_toggle"/>
+                                        <field name="deduction" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+                                        <field name="deduction_type" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+                                        <field name="deduction_description" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+                                        <field name="active_from"/>
+                                        <field name="active_until"/>
+                                    </list>
+                                </field>
+                            </div>
+                        </div>
+					</sheet>
+				</form>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_medical_facility_doctors_search">
+			<field name="name">trinity.medical.facility.doctors.search</field>
+			<field name="model">trinity.medical.facility.doctors</field>
+			<field name="arch" type="xml">
+				<search string="Doctor">
+					<field name="doctor_id" string="Doctor ID" />
+					<field name="full_name" string="Full Name" />
+					<separator />
+					<filter name="male" string="Male" domain="[('gender','=','male')]" />
+					<filter name="active" string="Active" domain="[('active', '=', True)]" />
+					<filter name="inactive" string="Inactive" domain="[('active', '=', False)]" />
+					<group expand="1" string="Group By">
+						<filter name="gender" string="Gender" context="{'group_by':'gender'}" />
+						<filter name="identifier_type" string="Identifier Type" context="{'group_by':'identifier_type'}" />
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.actions.act_window" id="action_trinity_medical_facility_doctors">
+			<field name="name">Лекари</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.medical.facility.doctors</field>
+			<field name="view_mode">list,form</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">Създай</p>
+			</field>
+		</record>
+	</data>
+</odoo>

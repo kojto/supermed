@@ -1,0 +1,16 @@
+<odoo>
+	<data>
+		<record id="group_trinity_doctor_users" model="res.groups">
+			<field name="name">Trinity Doctor Users</field>
+		</record>
+		<record id="group_trinity_doctors_habilitated" model="res.groups">
+			<field name="name">Trinity Doctors Habilitated Users</field>
+		</record>
+		<record id="group_trinity_doctors_not_habilitated" model="res.groups">
+			<field name="name">Trinity Doctors Not-Habilitated Users</field>
+		</record>
+		<record id="group_trinity_doctor_ai" model="res.groups">
+			<field name="name">Trinity Doctor AI Users</field>
+		</record>
+	</data>
+</odoo>

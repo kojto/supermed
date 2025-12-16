@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record model="ir.ui.view" id="view_trinity_medical_facility_doctors_deductions_list">
+			<field name="name">trinity.medical.facility.doctors.deductions.list</field>
+			<field name="model">trinity.medical.facility.doctors.deductions</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1">
+					<field name="active" optional="show" widget="boolean_toggle" />
+                    <field name="deduction" optional="show" />
+                    <field name="deduction_type" optional="show" />
+                    <field name="deduction_description" optional="show" />
+                    <field name="active_from" optional="show" />
+                    <field name="active_until" optional="show" />
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_medical_facility_doctors_deductions_search">
+			<field name="name">trinity.medical.facility.doctors.deductions.search</field>
+			<field name="model">trinity.medical.facility.doctors.deductions</field>
+			<field name="arch" type="xml">
+				<search string="Doctor">
+					<field name="doctor_id" string="Doctor ID" />
+					<field name="deduction" string="Deduction" />
+					<field name="deduction_type" string="Deduction Type" />
+					<field name="deduction_description" string="Deduction Description" />
+					<field name="active_from" string="Active From" />
+					<field name="active_until" string="Active Until" />
+					<separator />
+					<filter name="active" string="Active" domain="[('active', '=', True)]" />
+					<filter name="inactive" string="Inactive" domain="[('active', '=', False)]" />
+					<group expand="1" string="Group By">
+						<filter name="deduction_type" string="Deduction Type" context="{'group_by':'deduction_type'}" />
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.actions.act_window" id="action_trinity_medical_facility_doctors_deductions">
+			<field name="name">Лекари</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.medical.facility.doctors.deductions</field>
+			<field name="view_mode">list</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">Създай</p>
+			</field>
+		</record>
+	</data>
+</odoo>

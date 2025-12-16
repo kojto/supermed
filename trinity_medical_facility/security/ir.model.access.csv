@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_trinity_medical_facility_doctors,trinity.medical.facility.doctors,model_trinity_medical_facility_doctors,,1,1,1,1
+access_trinity_medical_facility_doctors_deductions,trinity.medical.facility.doctors.deductions,model_trinity_medical_facility_doctors_deductions,,1,1,1,1
+access_trinity_medical_facility_doctors_external,trinity.medical.facility.doctors.external,model_trinity_medical_facility_doctors_external,,1,1,1,1
+access_trinity_medical_facility,trinity.medical.facility,model_trinity_medical_facility,,1,1,1,1

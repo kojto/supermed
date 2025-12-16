@@ -1,0 +1,135 @@
+<odoo>
+	<data>
+		<!-- List Views -->
+		<record model="ir.ui.view" id="view_trinity_medical_facility_doctors_external_list">
+			<field name="name">trinity.medical.facility.doctors.external.list</field>
+			<field name="model">trinity.medical.facility.doctors.external</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1">
+					<field name="doctor_id"/>
+                    <field name="name" optional="show"/>
+					<field name="email" optional="hide"/>
+					<field name="phone" optional="hide"/>
+					<field name="identifier_type" optional="hide"/>
+					<field name="identifier" optional="hide"/>
+					<field name="hospital_no" optional="hide"/>
+					<field name="birth_date" optional="hide"/>
+					<field name="gender" optional="hide"/>
+					<field name="address_line" optional="hide"/>
+					<field name="city" optional="hide"/>
+					<field name="county_bulgarian" optional="hide"/>
+					<field name="county_key" optional="hide"/>
+					<field name="country_bulgarian" optional="hide"/>
+					<field name="country_key" optional="hide"/>
+					<field name="ekatte_key" optional="hide"/>
+					<field name="ekatte_bulgarian" optional="hide"/>
+					<field name="zip_code" optional="hide"/>
+					<field name="qualification_name" optional="show"/>
+					<field name="qualification_code_nhif" optional="hide"/>
+					<field name="qualification_code" optional="hide"/>
+					<field name="description_bg_agent" optional="hide"/>
+				</list>
+			</field>
+		</record>
+		<!-- Form Views -->
+		<record model="ir.ui.view" id="view_trinity_medical_facility_doctors_external_form">
+			<field name="name">trinity.medical.facility.doctors.external.form</field>
+			<field name="model">trinity.medical.facility.doctors.external</field>
+			<field name="arch" type="xml">
+				<form>
+					<link rel="stylesheet" type="text/css" href="/trinity_file_assets/static/src/css/custom.css"/>
+					<sheet>
+						<div class="oe_title">
+							<h1>Външни лекари</h1>
+						</div>
+						<div class="row">
+							<group class="col-lg-12">
+								<label for="first_name"/>
+								<div class="d-flex">
+									<field name="title" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+									<field name="first_name" placeholder="Име"/>
+									<field name="middle_name" placeholder="Презиме"/>
+									<field name="last_name" placeholder="Фамилия"/>
+								</div>
+								<field name="email" widget="email"/>
+								<field name="phone"/>
+							</group>
+							<group class="col-lg-6">
+								<field name="address_line" placeholder="Адрес"/>
+								<field name="city" placeholder="Град"/>
+								<field name="ekatte_key" placeholder="Ekatte" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+								<field name="rhifAreaNumber" placeholder="Номер на РЗИ област"/>
+								<field name="zip_code" placeholder="п.к."/>
+							</group>
+							<group class="col-lg-6">
+								<field name="county_bulgarian" placeholder="Област" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+								<field name="country_bulgarian" placeholder="Държава" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+							</group>
+							<group class="col-lg-6">
+								<separator class="col-lg-12 separator"/>
+								<field name="doctor_id"/>
+								<field name="qualification_name"/>
+								<field name="qualification_code_nhif"/>
+								<field name="qualification_code" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+								<field name="hospital_no"/>
+							</group>
+							<group class="col-lg-6">
+								<separator class="col-lg-12 separator"/>
+								<field name="identifier_type" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+								<field name="identifier"/>
+							</group>
+							<group class="col-lg-6">
+								<separator class="col-lg-12 separator"/>
+								<field name="birth_date" style="max-width: 120px;" placeholder="Дата на раждане"/>
+								<field name="gender" style="max-width: 120px;" placeholder="Пол" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+							</group>
+							<group class="col-lg-6">
+								<separator class="col-lg-12 separator"/>
+								<field name="attach" filename="attach_char" string="Диплома за лекар"/>
+								<field name="attach_char" invisible="1"/>
+								<field name="attach1" filename="attach_char1" string="Диплома за специалност"/>
+								<field name="attach_char1" invisible="1"/>
+								<field name="attach2" filename="attach_char2" string="Сертификат от Лекарски съюз"/>
+								<field name="attach_char2" invisible="1"/>
+								<field name="attach3" filename="attach_char3" string="Договор с Тринити МЦ"/>
+								<field name="attach_char3" invisible="1"/>
+							</group>
+						</div>
+					</sheet>
+				</form>
+			</field>
+		</record>
+		<!-- Search Views -->
+		<record model="ir.ui.view" id="view_trinity_medical_facility_doctors_external_search">
+			<field name="name">trinity.medical.facility.doctors.external.search</field>
+			<field name="model">trinity.medical.facility.doctors.external</field>
+			<field name="arch" type="xml">
+				<search string="Лекар">
+					<field name="doctor_id"/>
+					<field name="name"/>
+					<field name="qualification_name"/>
+					<separator/>
+					<filter name="male" string="Male" domain="[('gender','=','male')]"/>
+					<group expand="1" string="Group By">
+						<filter name="gender" string="Пол" context="{'group_by':'gender'}"/>
+						<filter name="county_bulgarian" string="Област" context="{'group_by':'county_bulgarian'}"/>
+						<filter name="qualification_name" context="{'group_by':'qualification_name'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<!-- Actions to Return Model Views -->
+		<record model="ir.actions.act_window" id="action_trinity_medical_facility_doctors_external">
+			<field name="name">Външни лекари</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.medical.facility.doctors.external</field>
+			<field name="view_mode">list,form</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+          Създайте Вашия първи лекари.
+        </p>
+			</field>
+		</record>
+	</data>
+</odoo>

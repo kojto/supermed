@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<!-- List Views -->
+		<record model="ir.ui.view" id="view_trinity_medical_facility_list">
+			<field name="name">trinity.medical.facility.list</field>
+			<field name="model">trinity.medical.facility</field>
+			<field name="arch" type="xml">
+				<list limit="100" sample="1">
+					<field name="hospital_no" />
+					<field name="hospital_id" optional="show" />
+					<field name="managing_director" optional="show" />
+					<field name="nhif_contract_no" optional="show" />
+					<field name="nhif_contract_date" optional="show" />
+					<field name="nhif_Number" optional="show" />
+					<field name="bank_name" optional="show" />
+					<field name="IBAN_no" optional="show" />
+					<field name="bic_code" optional="show" />
+				</list>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_medical_facility_form">
+			<field name="name">trinity.medical.facility.form</field>
+			<field name="model">trinity.medical.facility</field>
+			<field name="arch" type="xml">
+				<form>
+					<link rel="stylesheet" type="text/css" href="/trinity_file_assets/static/src/css/custom.css" />
+					<sheet>
+						<div class="oe_title">
+							<h1>Лечебно заведение</h1>
+						</div>
+                        <div class="row">
+                            <group class="col-lg-6">
+                                <separator class="col-lg-12 separator" />
+                                <field name="hospital_id" placeholder="ЛЗ" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+                                <field name="hospital_no" placeholder="№ на ЛЗ" />
+                                <field name="managing_director" placeholder="МОЛ" />
+                                <field name="legal_form" placeholder="Правна форма" />
+                            </group>
+                            <group class="col-lg-6">
+                                <separator class="col-lg-12 separator" />
+                                <field name="nhif_contract_no" placeholder="№ на дог. НЗОК" />
+                                <field name="nhif_contract_date" placeholder="Дата на дог. НЗОК" />
+                                <field name="nhif_Number" placeholder="Номер в НЗОК" />
+                                <field name="nhif_area_code" placeholder="РЗОК номер на област" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+                            </group>
+                            <group class="col-lg-6">
+                                <separator class="col-lg-12 separator" />
+                                <field name="related_contact_id" placeholder="Свързан контакт" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+                                <field name="IBAN_no" placeholder="IBAN" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}" invisible="not related_contact_id"/>
+                                <field name="bic_code" placeholder="BIC код" invisible="not related_contact_id"/>
+                                <field name="bank_name" placeholder="Банка" invisible="not related_contact_id"/>
+                            </group>
+                            <group class="col-lg-6">
+                                <separator class="col-lg-12 separator" />
+                                <field name="inpatient_hospital_type_cl084" placeholder="Тип лечебно заведение за болнична помощ" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+                                <field name="inpatient_hospital_subtype_cl085" placeholder="Вид лечебно заведение за болнична помощ" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+                                <field name="outpatient_hospital_type_cl086" placeholder="Тип лечебно заведение за извънболнична помощ" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+                                <field name="outpatient_hospital_subtype_cl087" placeholder="Вид лечебно заведение за извънболнична помощ" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}"/>
+                            </group>
+                            <group class="col-lg-6">
+                                <separator class="col-lg-12 separator" />
+                                <field name="logo" filename="logo_filename"/>
+                                <field name="logo_filename" invisible="1"/>
+                            </group>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12 mb-5">
+                                <separator class="col-lg-12 separator" />
+                                <h3>AI конфигурация</h3>
+                            </div>
+                            <group class="col-lg-6">
+                                <field name="ai_external_provider"/>
+                                <field name="ai_external_model"/>
+                                <field name="ai_external_api_key"/>
+                                <field name="ai_external_api_url"/>
+                            </group>
+                            <group class="col-lg-6">
+                                <field name="ai_external_temperature" class="text-right"/>
+                                <field name="ai_external_top_p" class="text-right"/>
+                                <field name="ai_external_max_tokens" class="text-right"/>
+                                <field name="ai_external_api_timeout" class="text-right"/>
+                                <field name="ai_external_api_retries" class="text-right"/>
+                            </group>
+                        </div>
+					</sheet>
+				</form>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="view_trinity_medical_facility_search">
+			<field name="name">trinity.medical.facility.search</field>
+			<field name="model">trinity.medical.facility</field>
+			<field name="arch" type="xml">
+				<search string="Hospital">
+					<field name="hospital_no" string="№ на ЛЗ" />
+					<field name="hospital_id" string="ЛЗ" />
+					<field name="managing_director" string="МОЛ" />
+					<field name="nhif_contract_no" string="№ на дог. НЗОК" />
+					<field name="nhif_Number" string="Номер в НЗОК" />
+					<separator />
+					<filter name="has_contract" string="С договор НЗОК" domain="[('nhif_contract_no','!=',False)]" />
+					<filter name="has_nhif" string="С номер в НЗОК" domain="[('nhif_Number','!=',False)]" />
+					<group expand="1" string="Group By">
+						<filter name="hospital_id" string="ЛЗ" context="{'group_by':'hospital_id'}" />
+						<filter name="bank_name" string="Банка" context="{'group_by':'bank_name'}" />
+					</group>
+				</search>
+			</field>
+		</record>
+		<record model="ir.actions.act_window" id="action_trinity_medical_facility">
+			<field name="name">Болници</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">trinity.medical.facility</field>
+			<field name="view_mode">list,form</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">Създай</p>
+			</field>
+		</record>
+	</data>
+</odoo>

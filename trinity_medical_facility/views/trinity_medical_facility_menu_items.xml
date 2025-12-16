@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<!-- Parent Menu -->
+		<menuitem name="Лечебно заведение" id="menu_medical_facility_parent" sequence="18" />
+		<!-- Main Menu Items -->
+        <menuitem name="Лечебно заведение" id="menu_medical_facility" parent="menu_medical_facility_parent" sequence="10" action="action_trinity_medical_facility" />
+		<menuitem name="Лекари" id="menu_medical_facility_doctors" parent="menu_medical_facility_parent" sequence="20" />
+
+		<menuitem name="Лекари вътрешни" id="menu_medical_facility_doctors_internal" parent="menu_medical_facility_doctors" sequence="10" action="action_trinity_medical_facility_doctors" />
+		<menuitem name="Удръжки" id="menu_trinity_medical_facility_doctors_deductions" parent="menu_medical_facility_doctors" sequence="20" action="action_trinity_medical_facility_doctors_deductions" />
+		<menuitem name="Лекари външни" id="menu_medical_facility_doctors_external" parent="menu_medical_facility_doctors" sequence="30" action="action_trinity_medical_facility_doctors_external"/>
+	</data>
+</odoo>
