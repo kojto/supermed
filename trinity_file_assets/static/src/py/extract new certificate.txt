@@ -1,0 +1,22 @@
+cd /opt/odoo18/custom/addons/certificates/OpenSSL/
+sudo openssl pkcs12 -in marin.guentchev.pfx -nocerts -out supermed2025_private.pem -nodes
+sudo openssl pkcs12 -in marin.guentchev.pfx -clcerts -nokeys -out supermed2025_certificate.crt
+cat supermed2025_private.pem
+cat supermed2025_certificate.crt
+ls -l supermed2025_private.pem supermed2025_certificate.crt
+sudo chown odoo18:odoo18 supermed2025_private.pem supermed2025_certificate.crt
+sudo chmod 600 supermed2025_private.pem
+sudo chmod 644 supermed2025_certificate.crt
+sudo -u odoo18 cat supermed2025_private.pem
+sudo -u odoo18 cat supermed2025_certificate.crt
+sudo chmod -R o+rx /opt/odoo18/custom/addons/certificates/OpenSSL/
+sudo systemctl restart odoo
+
+sudo openssl pkcs12 -in marin.guentchev.pfx -nocerts -out supermed2025_private.pem -nodes
+sudo openssl pkcs12 -in marin.guentchev.pfx -clcerts -nokeys -out supermed2025_certificate.crt
+
+sudo chmod 600 supermed2025_private.pem
+sudo chmod 644 supermed2025_certificate.crt
+
+sudo chown odoo18:odoo18 /opt/odoo18/custom/addons/certificates/OpenSSL/supermed2025_certificate.crt
+sudo chown odoo18:odoo18 /opt/odoo18/custom/addons/certificates/OpenSSL/supermed2025_private.pem

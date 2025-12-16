@@ -1,0 +1,65 @@
+/* Base styles */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&subset=cyrillic&display=swap');
+
+@page {
+    font-family: 'Roboto Condensed', sans-serif;
+    size: A4;
+    margin: 10mm 10mm 15mm 10mm;
+    padding: 5mm 0;
+    background: white;
+    color: black;
+}
+h1 {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 10px auto 0px auto;
+    padding: 5px;
+    line-height: 2;
+}
+p {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 12px !important;
+    line-height: 1.2 !important;
+    margin: 0;
+    padding: 0 0 0 5px;
+}
+table {
+    font-family: 'Roboto Condensed', sans-serif;
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0;
+    line-height: 1.2;
+}
+span {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 12px;
+    line-height: 1.2;
+    margin: 0;
+    padding: 0;
+}
+.bordered {
+    border: 1px solid black !important;
+}
+.tb_subtitle {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    padding-right: 10px;
+    border-right: 1px solid black !important;
+    padding-left: 5px;
+    width: 30%;
+}
+.tb_txt {
+    font-size: 12px;
+    padding-left: 5px;
+    width: 70%;
+}
+.tb_chapter {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 12px;
+    padding: 10px 0;
+}
+.dotClass::after {
+    content: '.';
+}

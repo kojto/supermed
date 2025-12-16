@@ -1,0 +1,31 @@
+<odoo>
+	<data>
+		<record model="ir.ui.view" id="view_kojto_landingpage_form_inherit">
+			<field name="name">kojto.landingpage.form.inherit</field>
+			<field name="model">kojto.landingpage</field>
+			<field name="inherit_id" ref="kojto_landingpage.view_kojto_landingpage_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//comment()[.=' Button group 14 ']" position="after">
+					<!-- Base -->
+					<div class="landing_page_item" groups="kojto_base.kojto_administrator">
+						<button name="open_trinity_examination_type_list_view" type="object"
+							class="btn landing_page_button">
+							<div class="o_button_icon">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+									class="landing_page_svg_icon">
+									<path
+										d="M5 10.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5m0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5" />
+									<path
+										d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2" />
+									<path
+										d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1z" />
+								</svg>
+							</div>
+							<span class="landing_page_text">УСЛУГИ</span>
+						</button>
+					</div>
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

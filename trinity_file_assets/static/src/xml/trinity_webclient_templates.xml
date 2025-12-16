@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<template id="trinity_modified_web_layout" inherit_id="web.layout" name="Trinity Modified Web Layout">
+		<xpath expr="//title" position="replace">
+			<title t-esc="'SUPERMED'"/>
+		</xpath>
+		<xpath expr="//link[@rel='shortcut icon']" position="attributes">
+			<attribute name="href">/trinity_file_assets/static/src/img/favicon.ico</attribute>
+		</xpath>
+	</template>
+	<template id="trinity_modified_login_layout" inherit_id="web.login_layout" name="Trinity Modified Login Layout">
+		<xpath expr="//t[@t-call='web.frontend_layout']" position="after">
+			<style>
+				body {
+					margin: 0;
+					padding: 0;
+					height: 100vh;
+					background-image: url('/trinity_file_assets/static/src/img/background.svg') !important;
+					background-size: cover;
+					background-position: center;
+					background-repeat: no-repeat;
+					background-attachment: fixed;
+				}
+			</style>
+		</xpath>
+	</template>
+</odoo>

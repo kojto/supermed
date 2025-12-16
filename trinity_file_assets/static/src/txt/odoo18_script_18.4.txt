@@ -1,0 +1,209 @@
+#!/bin/bash
+
+# STEP 1 ############# nano install_odoo18.sh
+# STEP 2 - copy this content ton the new file
+# STEP 3 - run ####### sudo chmod +x install_odoo18.sh && sudo ./install_odoo18.sh
+
+# for trinity
+# STEP 4 - sudo apt install certbot python3-certbot-nginx -y
+# STEP 4 - sudo certbot --nginx -d d.supermed.bg
+
+WEBSITE_NAME="supermed.bg *.supermed.bg"
+ADMIN_EMAIL="info@drguentchev.com"
+SSH_PORT="22"
+INSTALL_CERTBOT="FALSE"
+ODOO_DB_PASSWORD="123456"  # Set the PostgreSQL password explicitly
+
+# Update package list and install base dependencies
+sudo apt-get update
+sudo apt-get install -y python3-pip python3-dev libxml2-dev libxslt1-dev zlib1g-dev \
+    libsasl2-dev libldap2-dev build-essential libssl-dev libffi-dev libmysqlclient-dev \
+    libjpeg-dev libpq-dev libjpeg8-dev liblcms2-dev libblas-dev libatlas-base-dev
+
+# Install Node.js and Less for Odoo
+sudo apt-get install -y npm
+sudo ln -s /usr/bin/nodejs /usr/bin/node
+sudo npm install -g less less-plugin-clean-css
+sudo apt-get install -y node-less
+
+# Install PostgreSQL
+sudo apt-get install -y postgresql
+
+# Create PostgreSQL user 'odoo18' if it doesn’t exist
+if ! sudo -u postgres psql -c '\du' | grep -qw odoo18; then
+    sudo -u postgres psql -c "CREATE USER odoo18 WITH CREATEDB SUPERUSER PASSWORD '$ODOO_DB_PASSWORD';"
+fi
+
+# Create system user 'odoo18' if it doesn’t exist
+if id "odoo18" &>/dev/null; then
+    :
+else
+    sudo adduser --system --home=/opt/odoo18 --group odoo18
+fi
+
+# Configure odoo18 user
+sudo usermod -s /bin/bash odoo18
+sudo usermod -aG sudo odoo18
+sudo chown -R odoo18:odoo18 /opt/odoo18
+sudo passwd odoo18
+sudo chmod -R 777 /opt/odoo18
+
+# Install Git and clone Odoo repository
+sudo apt-get install -y git
+sudo su - odoo18 -s /bin/bash -c "git clone https://www.github.com/odoo/odoo --depth 1 --branch saas-18.4 --single-branch /opt/odoo18/"
+
+# Create and configure virtual environment
+sudo apt install -y python3-venv
+sudo python3 -m venv /opt/odoo18/venv
+sudo chown -R odoo18:odoo18 /opt/odoo18/venv
+
+# Install cmake
+sudo apt-get install -y cmake
+
+# Install WeasyPrint system dependencies
+sudo apt-get install -y libcairo2 libpango-1.0-0 libpangocairo-1.0-0 libgdk-pixbuf-2.0-0
+
+sudo apt-get install -y poppler-utils
+
+# Install Python dependencies in the virtual environment
+sudo su - odoo18 -s /bin/bash -c "/opt/odoo18/venv/bin/pip install weasyprint==62.3"
+sudo su - odoo18 -s /bin/bash -c "/opt/odoo18/venv/bin/pip install svgwrite==1.4.3"
+sudo su - odoo18 -s /bin/bash -c "/opt/odoo18/venv/bin/pip install -r /opt/odoo18/requirements.txt"
+sudo su - odoo18 -s /bin/bash -c "/opt/odoo18/venv/bin/pip install googletrans==4.0.0rc1"
+sudo su - odoo18 -s /bin/bash -c "/opt/odoo18/venv/bin/pip install shapely==2.0.6"
+sudo su - odoo18 -s /bin/bash -c "/opt/odoo18/venv/bin/pip install ezdxf==1.3.3"
+sudo su - odoo18 -s /bin/bash -c "/opt/odoo18/venv/bin/pip install binpacking==1.5.1"
+sudo su - odoo18 -s /bin/bash -c "/opt/odoo18/venv/bin/pip install rectpack==0.2.2"
+sudo su - odoo18 -s /bin/bash -c "/opt/odoo18/venv/bin/pip install pulp==2.9.0"
+#sudo su - odoo18 -s /bin/bash -c "/opt/odoo18/venv/bin/pip install face_recognition==1.3.0"
+sudo su - odoo18 -s /bin/bash -c "/opt/odoo18/venv/bin/pip install numpy==2.1.1"
+sudo su - odoo18 -s /bin/bash -c "/opt/odoo18/venv/bin/pip install Pillow==10.4.0"
+sudo su - odoo18 -s /bin/bash -c "/opt/odoo18/venv/bin/pip install psycopg2-binary==2.9.9"
+sudo su - odoo18 -s /bin/bash -c "/opt/odoo18/venv/bin/pip install xlsxwriter==3.2.0"
+sudo su - odoo18 -s /bin/bash -c "/opt/odoo18/venv/bin/pip install pandas openpyxl"
+sudo su - odoo18 -s /bin/bash -c "/opt/odoo18/venv/bin/pip install openai"
+sudo su - odoo18 -s /bin/bash -c "/opt/odoo18/venv/bin/pip install deep_translator"
+
+
+sudo apt install ghostscript
+
+# Create custom addons directory
+sudo mkdir -p /opt/odoo18/custom/addons
+sudo chown -R odoo18:odoo18 /opt/odoo18/custom/addons
+
+# Configure Odoo
+sudo cp /opt/odoo18/debian/odoo.conf /etc/odoo18.conf
+sudo bash -c "cat <<EOF > /etc/odoo18.conf
+[options]
+admin_passwd = admin
+db_host = localhost
+db_port = 5432
+db_user = odoo18
+db_password = $ODOO_DB_PASSWORD
+addons_path = /opt/odoo18/addons,/opt/odoo18/custom/addons
+logfile = /var/log/odoo/odoo18.log
+EOF"
+sudo chown odoo18:odoo18 /etc/odoo18.conf
+sudo chmod 640 /etc/odoo18.conf
+
+# Set up logging
+sudo mkdir -p /var/log/odoo
+sudo chown odoo18:root /var/log/odoo
+sudo touch /var/log/odoo/odoo18.log
+sudo chown odoo18:root /var/log/odoo/odoo18.log
+sudo chmod 640 /var/log/odoo/odoo18.log
+
+# Create systemd service file
+sudo bash -c 'cat <<EOF > /etc/systemd/system/odoo18.service
+[Unit]
+Description=Odoo18
+Documentation=http://www.odoo.com
+
+[Service]
+Type=simple
+User=odoo18
+ExecStart=/opt/odoo18/venv/bin/python3 /opt/odoo18/odoo-bin -c /etc/odoo18.conf
+Restart=on-failure
+
+[Install]
+WantedBy=default.target
+EOF'
+sudo chmod 755 /etc/systemd/system/odoo18.service
+sudo chown root:root /etc/systemd/system/odoo18.service
+
+# Reload systemd, start, and enable Odoo service
+sudo systemctl daemon-reload
+sudo systemctl start odoo18.service
+sudo systemctl enable odoo18.service
+
+# Install and configure Nginx
+sudo apt install -y nginx
+sudo rm /etc/nginx/sites-enabled/default
+cat <<EOF | sudo tee /etc/nginx/sites-available/odoo
+server {
+    listen 80;
+    server_name $WEBSITE_NAME;
+
+    location / {
+        proxy_pass http://127.0.0.1:8069;
+        proxy_set_header Host \$host;
+        proxy_set_header X-Real-IP \$remote_addr;
+        proxy_set_header X-Forwarded-For \$proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto \$scheme;
+        proxy_set_header X-Frame-Options SAMEORIGIN;
+        proxy_redirect off;
+    }
+
+    client_max_body_size 50M;
+    proxy_connect_timeout 600s;
+    proxy_read_timeout 600s;
+    proxy_send_timeout 600s;
+}
+EOF
+sudo ln -s /etc/nginx/sites-available/odoo /etc/nginx/sites-enabled/
+
+# Test Nginx configuration and restart
+if sudo nginx -t; then
+    sudo systemctl restart nginx
+else
+    echo "Nginx configuration test failed. Please check /etc/nginx/sites-available/odoo"
+    exit 1
+fi
+
+# Configure firewall
+sudo apt install -y ufw
+sudo ufw allow 'Nginx Full'
+sudo ufw allow "$SSH_PORT/tcp"
+sudo ufw allow 8069/tcp
+sudo ufw allow 8072/tcp
+sudo ufw --force enable
+
+# Ensure SSH service is running
+sudo systemctl start ssh
+sudo systemctl enable ssh
+sudo systemctl restart ssh
+
+# Optional Certbot installation
+if [[ "$INSTALL_CERTBOT" == "True" ]]; then
+    if [[ -z "$WEBSITE_NAME" || -z "$ADMIN_EMAIL" ]]; then
+        echo "WEBSITE_NAME and ADMIN_EMAIL must be set for Certbot installation"
+        exit 1
+    fi
+    sudo apt-get remove certbot --purge -y
+    sudo apt update
+    sudo apt install -y certbot python3-certbot-nginx
+    sudo certbot --nginx -d "$WEBSITE_NAME" --non-interactive --agree-tos -m "$ADMIN_EMAIL"
+    sudo systemctl enable certbot.timer
+    sudo systemctl start certbot.timer
+fi
+
+# Restart Odoo to ensure all changes are applied
+sudo systemctl restart odoo18
+
+# Display status
+echo "Odoo 18 installation complete. Checking service status..."
+sudo systemctl status odoo18
+
+# sudo apt install certbot python3-certbot-nginx -y
+# sudo certbot --nginx -d d.supermed.bg
+
