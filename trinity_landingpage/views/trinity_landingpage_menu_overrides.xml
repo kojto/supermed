@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <menuitem name="Администрация" id="trinity_landingpage.menu_trinity_landingpage_administration" sequence="100"/>
+
+		<menuitem name="Комисионни номера" id="kojto_commission_codes.menu_commission_codes" parent="trinity_landingpage.menu_trinity_landingpage_administration" sequence="10" />
+        <menuitem name="Базови модули" id="kojto_base.menu_kojto_base" parent="trinity_landingpage.menu_trinity_landingpage_administration" sequence="20"/>
+		<menuitem name="Контакти" id="kojto_contacts.menu_kojto_contacts" parent="trinity_landingpage.menu_trinity_landingpage_administration" sequence="30" action="kojto_contacts.action_kojto_contacts"/>
+		<menuitem name="Договори" id="kojto_contracts.menu_kojto_contracts_parent" parent="trinity_landingpage.menu_trinity_landingpage_administration" sequence="40"/>
+		<menuitem name="Служители" id="kojto_hr.menu_kojto_hr_employees_parent" parent="trinity_landingpage.menu_trinity_landingpage_administration" sequence="50" />
+		<menuitem name="Оферти" id="kojto_offers.menu_kojto_offers_parent" parent="trinity_landingpage.menu_trinity_landingpage_administration" sequence="60"/>
+		<menuitem name="Актви" id="kojto_assets.menu_kojto_asset_parent" parent="trinity_landingpage.menu_trinity_landingpage_administration" sequence="70" />
+    </data>
+</odoo>
